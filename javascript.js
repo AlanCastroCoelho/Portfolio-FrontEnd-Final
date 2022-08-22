@@ -1,4 +1,4 @@
-/////// Circular Text Start Code ///////
+/////// Circular Text- Hero Section - Start Code ///////
 
 const text = document.querySelector(".text p");
 text.innerHTML = text.innerText
@@ -9,4 +9,5 @@ text.innerHTML = text.innerText
   )
   .join("");
 
-/////// Circular Text End Code ///////
+/////// Circular Text - Hero Section - End Code ///////
+
