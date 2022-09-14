@@ -86,7 +86,7 @@
                 <div class="cardd-logo">
                   <ion-icon name="planet"></ion-icon>
                 </div>
-                <div class="cardd-icon">
+                <div class="cardd-icon arrow-down">
                   <ion-icon name="arrow-down-sharp"></ion-icon>
                 </div>
                 <div class="text-wrapper">
@@ -205,7 +205,7 @@
 
       <div class="row d-flex align-items-center gx-5">
 
-        <div class="col-4 gy-5 d-flex justify-content-center">
+        <div class="col-sm-4 gy-5 d-flex justify-content-center">
           <div class="about-pic-div">
             <img src="Assets/PhotoPerfil2.png" id="profile-photo" alt="">
             <div class="change-profile-photo">
@@ -217,10 +217,10 @@
             <input type="file" id="file">
           </div>
         </div>
-        <div class="col-8">
+        <div class="col-sm-8">
 
           <div class="row mt-5">
-            <div class="col-12 d-flex align-items-center p-0">
+            <div class="col-12 d-flex align-items-center p-0 ">
 
               <h3 id="about-me-name" class="text-headers">Alan Castro Coelho</h3>
               <div class="edit-button-container" onclick="change_name(0,1)">
@@ -231,7 +231,7 @@
             <input type="text" class="editable-inputs" id="edit-name-about-me" oninput="myFunction2(this.value,1)">
           </div>
           <div class="row mt-3 d-flex flex-column">
-            <div class="col-12 d-flex align-items-center p-0">
+            <div class="col-12 d-flex align-items-center about-me-paragraph-container">
               <p class="text-paragraphs" id="about-me-paragraph">Lore"Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit,
                 sed do eiusmod
@@ -249,12 +249,12 @@
 
 
       <div class="row mt-5">
-        <div class="col">
+        <div class="col-sm-6">
           <div class="header-educacion d-flex justify-content-between align-items-center">
             <h4 class="text-headers">Educación</h4>
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm-6">
           <div class="header-experiencia-laboral d-flex justify-content-between align-items-center">
             <h4 class="text-headers">Experiencia Laboral</h4>
 
@@ -289,24 +289,13 @@
       </div>
 
       <div class="row mt-5 mb-4">
-        <div class="col">
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
 
           <div class="header-front-end d-flex justify-content-center">
             <h4 class="text-headers">Front-End</h4>
           </div>
 
-        </div>
-        <div class="col">
 
-          <div class="header-back-end d-flex justify-content-center">
-            <h4 class="text-headers">Back-End</h4>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="row skills-front-back mb-5">
-        <div class="col-6 d-flex justify-content-center">
           <div class="glass-card p-5">
             <div class="skills-title-language">
               <h5>html</h5>
@@ -349,12 +338,12 @@
 
           </div>
 
-
-
         </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
 
-
-        <div class="col-6 d-flex justify-content-center">
+          <div class="header-back-end d-flex justify-content-center">
+            <h4 class="text-headers">Back-End</h4>
+          </div>
 
           <div class="glass-card p-5">
             <div class="skills-title-language">
@@ -389,6 +378,23 @@
             </div>
 
           </div>
+
+        </div>
+      </div>
+
+      <div class="row skills-front-back mb-5">
+        <div class="col-6 d-flex justify-content-center">
+
+
+
+
+        </div>
+
+
+        <div class="col-6 d-flex justify-content-center">
+
+
+
         </div>
       </div>
 
@@ -610,53 +616,50 @@
   </section>
 
   <section class="container-fluid d-flex justify-content-center" id="contact-container">
-    <div class="row proyects-section mt-5">
-      <hr class="horizontal-bar">
 
-      <div class="col-4">
-        <div class="left-side-contact">
-          <div class="contact-form">
-            <form action="">
-              <input type="text" name="fullname" id="fullname" placeholder="Full Name">
-              <input type="email" name="email" id="email" placeholder="E-mail">
-              <p class="message">
-                <label for="">Message</label>
-                <textarea name="message" rows="3"></textarea>
-              </p>
-              <div class="button-container">
-                <button type="submit">
-                  Send
-                </button>
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div>
+    <hr class="horizontal-bar">
 
 
-      <div class="col-4">
-        <div class="center-side-contact"></div>
-        <!--Espacio para Elemento 3D-->
-      </div>
-
-      <div class="col-4">
-        <div class="right-side-contact">
-          <h6 class="text-title-section">Contact.</h6>
-          <p class="text-paragraphs">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-
+    <div class="left-side-contact">
+      <div class="contact-form">
+        <form action="">
+          <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+          <input type="email" name="email" id="email" placeholder="E-mail">
+          <p class="message">
+            <label for="">Message</label>
+            <textarea name="message" rows="3"></textarea>
           </p>
-          <div class="email-icon-container">
-            <ion-icon name="mail-outline"></ion-icon>
-            <span>alancasstrocoelho@gmail.com</span>
+          <div class="button-container">
+            <button type="submit">
+              Send
+            </button>
           </div>
-        </div>
+
+        </form>
       </div>
-      <hr class="horizontal-bar">
     </div>
+
+
+
+
+    <div class="center-side-contact"></div>
+    <!--Espacio para Elemento 3D-->
+
+
+
+    <div class="right-side-contact">
+      <h6 class="text-title-section">Contact.</h6>
+      <p class="text-paragraphs">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+      </p>
+      <div class="email-icon-container">
+        <ion-icon name="mail-outline"></ion-icon>
+        <span>alancasstrocoelho@gmail.com</span>
+      </div>
+    </div>
+
+    <hr class="horizontal-bar">
+
 
   </section>
 

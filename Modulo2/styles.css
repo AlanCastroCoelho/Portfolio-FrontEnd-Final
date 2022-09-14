@@ -322,7 +322,7 @@ container {
 }
 
 .about-me .text-wrapper {
-  font-size: 70px;
+  font-size: 60px;
   opacity: 1;
 }
 
@@ -343,7 +343,7 @@ container {
 
 .about-me .cardd-container:hover .cardd-title {
   right: 10px;
-  font-size: 4rem;
+
 }
 
 .cardd-container:hover .preview-text {
@@ -422,14 +422,18 @@ container {
   color: #000;
 }
 
-@media(max-width:992px) {
+@media(max-width:991px) {
 
   .about-me .cardd-container {
-    height: 29vh;
+    height: 25vh;
+  }
+
+  .about-me .text-wrapper {
+    font-size: 38px;
   }
 
   .contact .cardd-container {
-    height: 29vh;
+    height: 25vh;
   }
 
   .cardd .preview-text {
@@ -437,10 +441,8 @@ container {
     top: 0;
     right: 0;
     padding: 45px;
-    font-size: 20px;
     font-weight: 400;
     transition: all 0.2s ease;
-
   }
 
   .cardd-title {
@@ -478,6 +480,10 @@ container {
   -webkit-text-stroke: 1px white;
   transition: 0.2s ease-out;
   letter-spacing: 4px;
+}
+
+.about-me-paragraph-container {
+  padding: 0px;
 }
 
 .text-headers {
@@ -897,20 +903,25 @@ h5 {
   background-color: black;
   font-family: 'Dongle', sans-serif;
   overflow: hidden;
+  display: grid;
+  grid-template-areas: "left center right";
 }
 
 .left-side-contact {
   padding: 181px 0px;
+  grid-area: left;
 }
 
 .right-side-contact {
   padding: 181px 0px;
   text-align: end;
   color: white;
+  grid-area: right;
 }
 
 .center-side-contact {
   padding: 181px 0px;
+  grid-area: center;
 }
 
 
@@ -1017,10 +1028,22 @@ p>label {
 
 }
 
+@media(max-width:941px) {
+  .about-pic-div {
+    height: 400px;
+    width: 400px;
+  }
+}
+
 @media (max-width:768px) {
 
   html {
     font-size: 12px;
+  }
+
+  #decrative-star {
+    width: 60px;
+    height: auto;
   }
 
   .text-title-section {
@@ -1039,6 +1062,39 @@ p>label {
     letter-spacing: 1px;
   }
 
+  .about-pic-div {
+    height: 400px;
+    width: 400px;
+  }
+
+  #contact-container {
+    background-color: black;
+    font-family: 'Dongle', sans-serif;
+    overflow: hidden;
+    grid-template-areas:
+      "top"
+      "center"
+      "bottom";
+  }
+
+  .left-side-contact {
+    padding: 181px 0px;
+    grid-area: top;
+  }
+
+  .center-side-contact {
+    padding: 181px 0px;
+    grid-area: center;
+  }
+
+  .right-side-contact {
+    padding: 181px 0px;
+    text-align: end;
+    color: white;
+    grid-area: bottom;
+  }
+
+
 }
 
 @media (max-width:742px) {
@@ -1048,6 +1104,109 @@ p>label {
 
   .hero-title {
     height: 5rem;
+  }
+
+  #decrative-star {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width:735px) {
+
+  #about-me-name {
+    font-size: 2rem;
+  }
+
+  .header-container {
+    height: 1000px;
+  }
+
+}
+
+@media (max-width:716px) {
+  .about-pic-div {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width:620px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .hero-title {
+    height: 4.5rem;
+  }
+
+
+  .text {
+    width: 460px;
+    height: 460px;
+  }
+
+  .text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 230px;
+  }
+
+  .circle {
+    height: 460px;
+  }
+
+
+}
+
+@media(max-width:575px) {
+
+  #about-me-name {
+    margin: auto;
+  }
+
+  #about-me-paragraph {
+    text-align: justify;
+    padding: 15px 25px;
+  }
+
+  .about-me-paragraph-container {
+    padding: 0px 15px;
+  }
+}
+
+@media(max-width:542px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-title {
+    height: 4rem;
+  }
+
+  .text {
+    width: 400px;
+    height: 400px;
+  }
+
+  .text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 200px;
+  }
+
+  .circle {
+    height: 400px;
+  }
+
+}
+
+@media (max-width:530px) {
+  #about-me-name {
+    font-size: 2rem;
   }
 }
 
@@ -1059,8 +1218,9 @@ p>label {
   }
 
   .btn {
-    --bs-btn-padding-y: .1rem;
+    --bs-btn-padding-y: .19rem;
     --bs-btn-padding-x: 5rem;
+    --bs-btn-font-size: 12px;
   }
 
   .header-container {
@@ -1140,6 +1300,11 @@ p>label {
     letter-spacing: 1px;
   }
 
+  #about-me-name {
+    font-size: 1.6rem;
+  }
+
+
 }
 
 @media (max-width:320px) {
@@ -1153,9 +1318,19 @@ p>label {
   }
 
   .cardd-container {
+    height: 13vh;
+  }
 
-    height: 15vh;
+  .about-me .cardd-container {
+    height: 13vh;
+  }
 
+  .contact .cardd-container {
+    height: 13vh;
+  }
+
+  .text-wrapper {
+    display: none;
   }
 
   .titles-container {
@@ -1170,5 +1345,27 @@ p>label {
   .text-title-section {
     font-size: 5rem;
     letter-spacing: 1px;
+  }
+
+  .cardd-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 35px;
+    z-index: 2;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+
+  .preview-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    font-size: 2.7rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
   }
 }
