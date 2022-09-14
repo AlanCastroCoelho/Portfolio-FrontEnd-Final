@@ -7,6 +7,9 @@ body {
   padding: 0;
 }
 
+html {
+  font-size: 15px;
+}
 
 /*Scroll Personalizado*/
 
@@ -32,21 +35,35 @@ font-family: 'Dongle', sans-serif; Buttons & Titles
 
 header {
   background-color: black;
+  overflow: hidden;
 }
 
+.header-container {
+  height: 1145px;
+}
+
+.login-section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
 .btn {
   font-family: "Syncopate", sans-serif;
+  --bs-btn-padding-y: 3px;
+  --bs-btn-padding-x: 45px;
+  --bs-btn-font-size: 15px;
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: none;
   --bs-btn-border-color: var(--bs-white);
   --bs-btn-border-radius: 1rem;
   --bs-btn-hover-color: var(--bs-white);
   --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-color: var(--bs-black);
+  --bs-btn-active-bg: white;
 }
+
+
 
 
 .horizontal-line {
@@ -60,12 +77,18 @@ header {
   opacity: 100;
 }
 
+#decrative-star {
+  width: 70px;
+  height: auto;
+}
+
 /* Circular Text*/
 /* Circular Text*/
 
+
+
 .circle {
   position: relative;
-  display: flex;
   width: 520px;
   height: 520px;
   border-radius: 50%;
@@ -76,13 +99,14 @@ header {
 
 .text {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 520px;
+  height: 520px;
   color: white;
   font-family: "Share Tech", sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1rem;
   animation: rotateText 18s linear infinite;
+
 }
 
 @keyframes rotateText {
@@ -113,12 +137,12 @@ h1 {
   text-align: center;
   position: absolute;
   font-family: 'Dela Gothic One', cursive;
-  font-size: 6.2rem;
+  font-size: 8rem;
 }
 
 .hero-title {
   display: block;
-  height: 6.5rem;
+  height: 8rem;
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
@@ -131,6 +155,8 @@ h1 {
   color: white;
   text-shadow: 0 0 50px rgba(255, 255, 255, 0.205);
 }
+
+
 
 /*HERO TITLE END*/
 /*HERO TITLE END*/
@@ -149,7 +175,6 @@ container {
 /* card basic styling */
 
 .cardd-container {
-
   position: relative;
   height: 30vh;
   transition: all 0.3s ease-out;
@@ -161,14 +186,11 @@ container {
 }
 
 .cardd {
-
   overflow: hidden;
 }
 
 .cardd-container:hover {
   transform: scale(0.92);
-
-  cursor: pointer;
 }
 
 .cardd-icon {
@@ -185,7 +207,7 @@ container {
   bottom: 0;
   left: 0;
   padding: 50px;
-  font-size: 40px;
+  font-size: 2.8rem;
   font-weight: 400;
   transition: all 0.2s ease;
 }
@@ -195,7 +217,7 @@ container {
   top: 50%;
   left: -20%;
   transform: translate(0, -50%);
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 400;
   white-space: nowrap;
   transition: 0.2s ease-out;
@@ -226,6 +248,64 @@ container {
 /* custom styling for nav items */
 
 /* about-me */
+
+#file {
+  display: none;
+}
+
+.about-pic-div {
+  position: relative;
+  border-radius: 15%;
+  border: 2px solid white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 530px;
+  width: 400px;
+}
+
+
+.profile-photo {
+  object-fit: cover;
+
+}
+
+.change-profile-photo {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #2500da;
+
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+  display: none;
+}
+
+.change-photo-button {
+  border-radius: 15px;
+  height: 60%;
+  width: 80%;
+  color: #fff;
+  font-size: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+
+}
+
+#edit-cloud-icon {
+  font-size: 40px;
+}
+
+.change-profile-photo:hover {
+  position: absolute;
+}
+
+
 
 .link-to-section {
   color: white;
@@ -263,12 +343,12 @@ container {
 
 .about-me .cardd-container:hover .cardd-title {
   right: 10px;
-  font-size: 60px;
+  font-size: 4rem;
 }
 
 .cardd-container:hover .preview-text {
   left: 10px;
-  font-size: 60px;
+  font-size: 4rem;
 
 }
 
@@ -284,6 +364,8 @@ container {
 
 
 /* skills */
+
+.skills-front-back {}
 
 .skills .cardd-container {
   background: #AFAFAF;
@@ -371,26 +453,24 @@ container {
 
 #about-me-section {
   width: 95%;
+  overflow: hidden;
 }
 
 .titles-container {
   display: flex;
-
   justify-content: end;
   align-items: center;
-
   background: #2900e8;
   border-radius: 80px;
   transition: all 0.3s ease-out;
   overflow: hidden;
   height: 4rem;
-
 }
 
-.titles-text {
+.text-title-section {
   font-family: 'Dongle', sans-serif;
   font-weight: 400;
-  font-size: 90px;
+  font-size: 6rem;
   position: relative;
   top: 10px;
   right: 7px;
@@ -400,36 +480,60 @@ container {
   letter-spacing: 4px;
 }
 
-h3 {
+.text-headers {
   font-family: 'Dela Gothic One', cursive;
   text-transform: uppercase;
   color: white;
-  position: relative;
-
+  font-size: 1.8rem;
 }
 
-.paragraph {
+
+#about-me-name {
+  font-size: 2.5rem;
+}
+
+.text-paragraphs {
   color: white;
   font-family: 'Dongle', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+}
+
+#about-me-paragraph {
   text-align: left;
 }
 
-.header-experiencia-laboral {
-  color: white;
-
+.edit-button-container {
+  margin-left: 15px;
+  border-radius: 40px;
+  padding: 10px;
+  background-color: white;
+  color: #000;
+  display: none;
 }
 
-.header-educacion {
+
+.edit-button-container:hover {
   color: white;
+  background-color: #003cff;
 }
+
+
+.edit-button {}
+
+.editable-inputs {
+  display: none;
+}
+
+.header-experiencia-laboral {}
+
+.header-educacion {}
 
 /*SKILLS SECTION*/
 
 /*Title & Subtitles*/
 #skills-container {
   background-color: #0D0D0D;
-
+  overflow: hidden;
 }
 
 .skills-section {
@@ -443,29 +547,26 @@ h3 {
 }
 
 .subtitles-container {
+  margin-bottom: 3rem;
+}
+
+.subtitles {
   color: white;
   font-family: 'Dongle', sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.6rem;
+  text-align: center;
 }
 
-#subtitle-black {
+#proyects-subtitle {
   color: #000;
 }
 
 /*Cards & Progress Bars*/
 
-.header-front-end {
-  color: white;
-  font-family: 'Dela Gothic One', cursive;
-  text-transform: uppercase;
-}
+.header-front-end {}
 
-.header-back-end {
-  color: white;
-  font-family: 'Dela Gothic One', cursive;
-  text-transform: uppercase;
-}
+.header-back-end {}
 
 .circle-shape-1 {
   position: absolute;
@@ -493,21 +594,23 @@ h3 {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 30px;
-
+  width: 75%;
   backdrop-filter: blur(15px);
+}
+
+#glass-card-programs {
+  width: 88%;
 }
 
 .skills-title-language {
   color: transparent;
   font-family: 'Dongle', sans-serif;
-  margin: 0;
+  -webkit-text-stroke: 1px white;
 }
 
 h5 {
-  font-family: 'Dongle', sans-serif;
   font-weight: 400;
-  font-size: 53px;
-  -webkit-text-stroke: 1px white;
+  font-size: 3.6rem;
   margin: 0;
   padding: 0;
 }
@@ -537,10 +640,10 @@ h5 {
   text-transform: uppercase;
 }
 
-h6 .skills-titles {
+.skills-titles {
   color: white;
   font-family: 'Dongle', sans-serif;
-  font-size: 40px;
+  font-size: 2.6rem;
 }
 
 
@@ -551,6 +654,7 @@ h6 .skills-titles {
 
 #proyects-container {
   background-color: white;
+  overflow: hidden;
 
 }
 
@@ -572,6 +676,7 @@ h6 .skills-titles {
   padding: 100px 40px;
   border-radius: 20px;
   animation: bganimation 15s infinite;
+  overflow: hidden;
 }
 
 /*
@@ -791,6 +896,7 @@ h6 .skills-titles {
 #contact-container {
   background-color: black;
   font-family: 'Dongle', sans-serif;
+  overflow: hidden;
 }
 
 .left-side-contact {
@@ -810,7 +916,9 @@ h6 .skills-titles {
 
 /*LEFT SIDE*/
 /*////////////////////*/
-.contact-form {}
+.contact-form {
+  font-size: 1.7rem;
+}
 
 .contact-form form input,
 .contact-form form textarea {
@@ -846,8 +954,8 @@ h6 .skills-titles {
 
 
 .contact-form form button {
-  width: 20%;
-  padding: .05em;
+  width: 100%;
+
   border-radius: 10px;
 
 }
@@ -869,10 +977,198 @@ p>label {
 
 .email-icon-container ion-icon {
   margin-right: 15px;
-  font-size: 25px;
+
 }
 
 .right-side-contact P,
 .right-side-contact .email-icon-container {
-  font-size: 25px;
+  font-size: 2rem;
+}
+
+
+/*MEDIA QUERY */
+/*///////////////////////*/
+
+@media (max-width:1320px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .hero-title {
+    height: 6rem;
+  }
+}
+
+
+@media (max-width:1024px) {
+
+  html {
+    font-size: 12px;
+  }
+
+  .titles-container {
+    height: 6rem;
+  }
+
+  .text-title-section {
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  html {
+    font-size: 12px;
+  }
+
+  .text-title-section {
+    font-size: 5rem;
+  }
+
+  .titles-container {
+
+    border-radius: 80px;
+    transition: all 0.3s ease-out;
+    height: 7rem;
+  }
+
+  .text-title-section {
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width:742px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .hero-title {
+    height: 5rem;
+  }
+}
+
+@media (max-width:425px) {
+
+  .login-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    --bs-btn-padding-y: .1rem;
+    --bs-btn-padding-x: 5rem;
+  }
+
+  .header-container {
+    height: 700px;
+  }
+
+  #decrative-star {
+    width: 40px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-title {
+    height: 3.8rem;
+  }
+
+  .text {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text span {
+    position: absolute;
+    left: 50%;
+    font-size: 0.9em;
+    transform-origin: 0 150px;
+  }
+
+  .circle {
+    height: 300px;
+  }
+
+  .decorative-star {
+    width: 55px;
+  }
+
+  .titles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    transition: all 0.3s ease-out;
+    height: 8rem;
+  }
+
+  .text-title-section {
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width:375px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    height: 3rem;
+  }
+
+  .titles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    transition: all 0.3s ease-out;
+    height: 8rem;
+  }
+
+  .text-title-section {
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width:320px) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-title {
+    height: 2.8rem;
+  }
+
+  .cardd-container {
+
+    height: 15vh;
+
+  }
+
+  .titles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    transition: all 0.3s ease-out;
+    height: 8rem;
+  }
+
+  .text-title-section {
+    font-size: 5rem;
+    letter-spacing: 1px;
+  }
 }

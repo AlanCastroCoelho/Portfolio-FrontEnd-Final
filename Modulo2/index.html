@@ -22,20 +22,19 @@
   <title>Portfolio FrontEnd</title>
 
 
-
+  <!--Icons-->
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/45c2248550.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <!--HEADER -->
 
-  <header class="container-fluid" style="height: 1145px;">
-    <div class="d-flex container-fluid justify-content-end align-items-center " id="home">
-      <button type="button" class="btn btn-outline m-3" style="
-            --bs-btn-padding-y: 0.13rem;
-            --bs-btn-padding-x: 1.5rem;
-            --bs-btn-font-size: 0.7rem;
+  <header class="container-fluid header-container">
+    <div class="container-fluid  login-section" id="home">
+      <button type="button" class="btn btn-outline m-3 " style="
+           
           ">
         Login
       </button>
@@ -44,12 +43,12 @@
     <div class="container-fluid">
       <div class="row m-5">
         <div class="column-12 d-flex align-items-center justify-content-center">
-          <img src="/Assets/Star 1.svg" alt="decrative-star" width="70px" height="auto" class="img-fluid" />
+          <img src="/Assets/Star 1.svg" alt="decrative-star" id="decrative-star" class="img-fluid decorative-star" />
         </div>
       </div>
       <!--CIRCLE TEXT-->
-      <div class="row p-5">
-        <div class="column-12 d-flex align-items-center justify-content-center">
+      <div class="row ">
+        <div class="circle-container column-12 d-flex align-items-center justify-content-center">
           <div class="circle">
             <div class="text">
               <p>
@@ -59,6 +58,7 @@
             </div>
           </div>
           <!--HERO TEXT: PORTFOLIO ALAN COELHO-->
+
           <h1>
             <span class="hero-title">PORTFOLIO</span>
             <span class="hero-title">ALAN COELHO</span>
@@ -78,7 +78,8 @@
 
         <div class="about-me">
           <a href="#about-me-section" class="link-to-section">
-            <div class="cardd-container ">
+
+            <div class="cardd-container">
 
               <div class="cardd">
                 <div class="cardd-title">about me.</div>
@@ -191,50 +192,77 @@
   </div>
   </div>
   <!--About Me Section START-->
+
   <div class="container-fluid pt-5" style="background-color: black;">
     <div class="container-fluid" id="about-me-section">
       <div class="row justify-content-center">
         <div class="column-12">
           <div class="titles-container">
-            <h2 class="titles-text">about me.</h2>
+            <h2 class="text-title-section">about me.</h2>
           </div>
         </div>
       </div>
 
       <div class="row d-flex align-items-center gx-5">
 
-        <div class="col-4">
-          <img src="Assets/PhotoPerfil.png" class="img-fluid" alt="">
+        <div class="col-4 gy-5 d-flex justify-content-center">
+          <div class="about-pic-div">
+            <img src="Assets/PhotoPerfil2.png" id="profile-photo" alt="">
+            <div class="change-profile-photo">
+              <div class="change-photo-button" onclick="">
+                <ion-icon name="cloud-upload" id="edit-cloud-icon"></ion-icon>
+                <p>Change Image</p>
+              </div>
+            </div>
+            <input type="file" id="file">
+          </div>
         </div>
         <div class="col-8">
-          <div class="row pt-5">
-            <h3>Alan Castro Coelho</h3>
-          </div>
-          <div class="row mt-5 pe-5">
 
-            <p class="paragraph">Lore"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-            </p>
+          <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center p-0">
+
+              <h3 id="about-me-name" class="text-headers">Alan Castro Coelho</h3>
+              <div class="edit-button-container" onclick="change_name(0,1)">
+                <i class="fa-solid fa-pen-to-square edit-button"></i>
+
+              </div>
+            </div>
+            <input type="text" class="editable-inputs" id="edit-name-about-me" oninput="myFunction2(this.value,1)">
+          </div>
+          <div class="row mt-3 d-flex flex-column">
+            <div class="col-12 d-flex align-items-center p-0">
+              <p class="text-paragraphs" id="about-me-paragraph">Lore"Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit,
+                sed do eiusmod
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
+              </p>
+              <div class="edit-button-container" onclick="change_name(2,3)"><i
+                  class="fa-solid fa-pen-to-square edit-button"></i>
+              </div>
+            </div>
+            <input type="text" class="editable-inputs" id="edit-paragraph-about-me" oninput="myFunction2(this.value,3)">
           </div>
         </div>
-
       </div>
+
+
       <div class="row mt-5">
         <div class="col">
           <div class="header-educacion d-flex justify-content-between align-items-center">
-            <h4>Educación</h4>
+            <h4 class="text-headers">Educación</h4>
           </div>
         </div>
         <div class="col">
           <div class="header-experiencia-laboral d-flex justify-content-between align-items-center">
-            <h4>Experiencia Laboral</h4>
+            <h4 class="text-headers">Experiencia Laboral</h4>
 
           </div>
         </div>
       </div>
-
     </div>
+  </div>
   </div>
   <!--About Me Section END-->
 
@@ -243,38 +271,42 @@
     <div class="row skills-section mt-5">
       <div class="col">
         <div class="titles-container" id="skills-title-container">
-          <h2 class="titles-text">skills.</h2>
+          <h2 class="text-title-section">skills.</h2>
         </div>
       </div>
       <div class="row mt-5">
-        <div class="subtitles-container col d-flex justify-content-center">
-          <p>
-            loremopasodasjp asdojaso pjaopsdjpasoj aopsdjpa ajsopd jopjdpas jopasdasdasasdasdasdasasdasda.
+        <div class="subtitles-container col d-flex justify-content-center align-items-center">
+          <p id="skills-subtitle" class="subtitles">
+            Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección.
           </p>
+          <div class="edit-button-container" onclick="change_name(4,5)">
+            <i class="fa-solid fa-pen-to-square edit-button"></i>
+
+          </div>
+
         </div>
+        <input type="text" class="editable-inputs" id="edit-subtitle-skills" oninput="myFunction2(this.value,5)">
       </div>
 
       <div class="row mt-5 mb-4">
         <div class="col">
 
-          <div class="header-front-end d-flex justify-content-start">
-            <h4>Front-End</h4>
+          <div class="header-front-end d-flex justify-content-center">
+            <h4 class="text-headers">Front-End</h4>
           </div>
 
         </div>
         <div class="col">
 
-          <div class="header-back-end">
-            <h4>Back-End</h4>
+          <div class="header-back-end d-flex justify-content-center">
+            <h4 class="text-headers">Back-End</h4>
           </div>
 
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-6">
-          <!-- <div class="circle-shape-1"></div>
-          <div class="circle-shape-2"></div>-->
+      <div class="row skills-front-back mb-5">
+        <div class="col-6 d-flex justify-content-center">
           <div class="glass-card p-5">
             <div class="skills-title-language">
               <h5>html</h5>
@@ -295,7 +327,6 @@
             <div class="skills-title-language">
               <h5>javascript</h5>
             </div>
-
             <div class="progress">
               <div class="progress-bar" role="progressbar" style="width:60%">60%</div>
             </div>
@@ -323,7 +354,7 @@
         </div>
 
 
-        <div class="col-6">
+        <div class="col-6 d-flex justify-content-center">
 
           <div class="glass-card p-5">
             <div class="skills-title-language">
@@ -364,12 +395,12 @@
 
       <div class="row mt-5 mb-4">
         <div class="col">
-          <div class="header-front-end d-flex justify-content-start">
-            <h4>Programs</h4>
+          <div class="header-front-end d-flex justify-content-center">
+            <h4 class="text-headers">Programs</h4>
           </div>
           <div class="row">
-            <div class="col">
-              <div class="glass-card p-5 mt-4">
+            <div class="col d-flex justify-content-center">
+              <div class="glass-card p-5 mt-4" id="glass-card-programs">
                 <div class="skills-title-language">
                   <h5>figma</h5>
                 </div>
@@ -404,12 +435,12 @@
       <div class="row mt-5 mb-5">
         <div class="col">
           <div class="header-soft-skills d-flex justify-content-center">
-            <h4>Soft-Skills</h4>
+            <h4 class="text-headers">Soft-Skills</h4>
           </div>
         </div>
       </div>
 
-      <div class="row pb-5">
+      <div class="row pb-5 mb-5">
         <div class="col">
           <h6 class="skills-titles">Comunication</h6>
           <div class="progress">
@@ -419,21 +450,21 @@
 
 
         <div class="col">
-          <h6>Empathy</h6>
+          <h6 class="skills-titles">Empathy</h6>
           <div class="progress horizontal-progress">
             <div class="progress-bar" role="progressbar" style="width:100%">100%</div>
           </div>
         </div>
 
         <div class="col">
-          <h6>Creative</h6>
+          <h6 class="skills-titles">Creative</h6>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width:100%">100%</div>
           </div>
         </div>
 
         <div class="col">
-          <h6>Collaborative</h6>
+          <h6 class="skills-titles">Collaborative</h6>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width:100%">100%</div>
           </div>
@@ -451,22 +482,28 @@
     <div class="row proyects-section mt-5">
       <div class="col">
         <div class="titles-container" id="proyects-title-container">
-          <h2 class="titles-text ">proyects.</h2>
+          <h2 class="text-title-section">proyects.</h2>
         </div>
       </div>
       <div class="row mt-5">
         <div class="subtitles-container col d-flex justify-content-center" id="subtitle-black">
-          <p>
-            loremopasodasjp asdojaso pjaopsdjpasoj aopsdjpa ajsopd jopjdpas jopasdasdasasdasdasdasasdasda.
+          <p id="proyects-subtitle" class="subtitles">
+            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
           </p>
+          <div class="edit-button-container" onclick="change_name(6,7)">
+            <i class="fa-solid fa-pen-to-square edit-button"></i>
+          </div>
+
         </div>
+        <input type="text" class="editable-inputs" id="edit-subtitle-proyects" oninput="myFunction2(this.value,7)">
       </div>
       <div class="row pt-5">
         <div class="gallery-container col d-flex justify-content-center mb-5">
           <div class="gallery">
             <div class="container-pryct pryct-one">
               <div class="container-desc-pryct color-one-desc-pryct">
-                <p> asdasdjasdkbaskjdbaskjdbaksjbdaksjbdkjasbdklasbdkajsblkjfbkljgbdfkljgndfkjgnkldjfgl
+                <p class="subtitles">
+                  asdasdjasdkbaskjdbaskjdbaksjbdaksjbdkjasbdklasbdkajsblkjfbkljgbdfkljgndfkjgnkldjfgl
                   asdasdjasdkbaskjdbaskjdbaksjbdaksjbdkjasbdklasbdkajsblkjfbkljgbdfkljgndfkjgnkldjfgl
                   asdasdjasdkbaskjdbaskjdbaksjbdaksjbdkjasbdklasbdkajsblkjfbkljgbdfkljgndfkjgnkldjfgl
                   asdasdjasdkbaskjdbaskjdbaksjbdaksjbdkjasbdklasbdkajsblkjfbkljgbdfkljgndfkjgnkldjfgl
@@ -605,8 +642,8 @@
 
       <div class="col-4">
         <div class="right-side-contact">
-          <h6 class="titles-text">Contact.</h6>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          <h6 class="text-title-section">Contact.</h6>
+          <p class="text-paragraphs">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
