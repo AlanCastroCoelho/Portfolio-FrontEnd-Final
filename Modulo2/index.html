@@ -33,27 +33,42 @@
 
   <header class="container-fluid header-container">
 
-    <nav>
-      <ul class="nav-links">
-        <li>
-          <a href="#about-me-section">About me</a>
-        </li>
-        <li>
-          <a href="#skills-container">Skills</a>
-        </li>
-        <li>
-          <a href="#skills-container">Proyect</a>
+    <nav class="menu">
 
-        </li>
-        <li>
-          <a href="#contact-container">Contact</a>
+      
 
-        </li>
+        <a href="#about-me-section" class="menu-item">
+        <div>
+           <span class="menu-item-text">About Me</span>
+        </div>
+      </a>
+      <a href="#skills-container" class="menu-item">
+        <div>          
+            <span class="menu-item-text">Skills</span>        
+        </div>
+      </a>
 
-        <li class="button"><a href="">
-            Login
-          </a></li>
-      </ul>
+      <a href="#proyects-container" class="menu-item">
+        <div>
+            <span class="menu-item-text">Proyect
+            </span>
+          </div>
+      </a>
+
+      <a href="#contact-container" class="menu-item">
+        <div> 
+            <span class="menu-item-text">Contact
+            </span>         
+          </div>
+      </a>
+
+      <a href="">
+        <div class="button menu">
+          <span class="menu-item-text">Login
+          </span>
+        </div>
+        </a>
+
 
 
       <div class="burguer">
@@ -106,7 +121,11 @@
             <div class="cardd-container">
 
               <div class="cardd">
-                <div class="cardd-title">about me.</div>
+                <a href="" class="menu-item">
+                <div class="cardd-title">
+                 <span class="menu-item-text"> about me.</span>
+                </div>
+              </a>
                 <div class="cardd-logo">
                   <ion-icon name="planet"></ion-icon>
                 </div>
@@ -231,7 +250,7 @@
 
         <div class="col-sm-4 gy-5 d-flex justify-content-center">
           <div class="about-pic-div">
-            <img src="Assets/PhotoPerfil2.png" id="profile-photo" alt="">
+            <img src="//Assets/PhotoPerfil2.png" id="profile-photo" alt="">
             <div class="change-profile-photo">
               <div class="change-photo-button" onclick="">
                 <ion-icon name="cloud-upload" id="edit-cloud-icon"></ion-icon>

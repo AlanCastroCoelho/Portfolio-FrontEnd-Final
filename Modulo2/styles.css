@@ -51,35 +51,72 @@ nav {
   align-items: center;
   background-color: #003cff;
   height: 80px;
+  counter-reset: menucounter;
 }
 
-.nav-links {
-  display: flex;
-  padding: 0 20px;
-  margin: 0;
+nav div{
+  margin-right: 50px;
+}
+
+nav a {
   color: white;
   font-family: "Syncopate", sans-serif;
 font-weight: bold;
-
+text-decoration: none;
 }
 
-.nav-links a {
-  text-decoration: none;
+.menu-item{
+  position: relative;
+  
+}
+
+.menu-item:before{
   color: white;
-
+  counter-increment: menucounter;
+  content:counters(menucounter, '.', decimal-leading-zero);
+  position: absolute;
+  left: -16px;
+  top: 0;
+  font-size: 8px;
 }
 
-.nav-links li {
-  list-style: none;
-  padding: 3px 30px;
-  font-size: 16px;
-  text-align: center;
+.menu-item-text{
+  
+  pointer-events: none;
+  display:block;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
-.nav-links a {
-
-  text-decoration: none;
+.menu-item > div:nth-child(1) span {
+will-change: tranform;
+transform-style: preserve-3d;
+transition: 0.5s;
+transition-delay: calc(0.05s * var(--index));
+transform-origin: bottom;
+display: inline-block;
 }
+
+.menu-item > div:nth-child(2) span {
+  will-change: tranform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: top;
+  display: inline-block;
+  transform: translate3d(0, 100%, 0)rotateX(90deg);
+  }
+
+  .menu-item:hover >div:nth-child(1) span {
+transform:translate3d(0, -100%, 0)rotateX(-90deg);
+
+  }
+
+  .menu-item:hover >div:nth-child(2) span {
+    transform:translate3d(0, 0%, 0)rotateX(0deg);
+      }
+  
 
 .button {
   border: 1px solid white;
