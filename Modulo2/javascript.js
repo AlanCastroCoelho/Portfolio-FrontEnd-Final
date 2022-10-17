@@ -1,4 +1,22 @@
-//////////// NAV ANIMATION /////////////
+//////////// NAV ANIMATION TEXT /////////////
+const menuItems = [...document.querySelectorAll('.menu-item')];
+menuItems.forEach(item => {
+
+  let word = item.children[0].children[0].innerText.split('');
+  item.children[0].innerHTML = '';
+  word.forEach((letter, idx) => {
+    item.children[0].innerHTML += `<span style="--index: ${idx};color:white">${letter}</span>`;
+  })
+
+let cloneDiv = item.children[0].cloneNode(true);
+
+cloneDiv.style.position = 'absolute';
+cloneDiv.style.top = '0';
+cloneDiv.style.width = '100%';
+item.appendChild(cloneDiv)
+})
+
+//////////// NAV ANIMATION HAMBURGUER FOR MOBILE /////////////
 
 const navSlide = () => {
   const burguer = document.querySelector('.burguer');
@@ -61,50 +79,23 @@ textarea.addEventListener('keyup', (e) => {
 
 function myFunction2(valor,numTwo){
   document.getElementById(listId[numTwo]).innerText=valor;
-}
+};
 
 /////// Funcion Para editar End ///////
 
-/////// Function para cambiar la foto de About Me ///////
 
-const imgDiv = document.querySelector('about-pic-div');
-const img = document.getElementById("profile-photo");
-const file = document.getElementById("file");
-const uploadBtn = document.querySelector('change-photo-button');
 
-//if user hover on profile div
+///////////////// SKILLS ANIMATION ///////////////
+//const caca = document.querySelectorAll("div.option");
 
-imgDiv.addEventListener('mouseenter', function()
+//
+//caca.forEach(function(parametro) {
+ // parametro.addEventListener(click, animationSkills}
+  
+// function animationSkills() { 
+ // document.querySelectorAll("div.option").classList.remove("active");
+  //document.querySelectorAll("div.option").classList.add("active");
+ //};
 
-{
-uploadBtn.style.display = "flex"
-});
-
-//if user hover out from img div
-
-imgDiv.addEventListener('mouseleave'), function()
-{
-  uploadBtn.style.display = "none";
-}
-
-// image showing funcionality
-
-//when user choose aphoto to upload+
-/*
-file.addEventListener('change',function{
-  //this refers to file
-  const choosedFile = this.files[0];
-
-  if(choosedFile){
-    const reader = new FileReader(); 
-    reader.addEventListener('load',function(){
-img.setAttribute('src', reader.result);
-    });
-reader.readAsDataURL(choosedFile);
-
-  }
-});
-
-*/
-
+///////// Texto SKILLS ARROUND CONTAINER /////////
 

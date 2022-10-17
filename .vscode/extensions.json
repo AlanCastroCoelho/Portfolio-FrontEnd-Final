@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "negokaz.live-server-preview"
+        "negokaz.live-server-preview",
+        "ritwickdey.LiveServer"
     ]
 }
