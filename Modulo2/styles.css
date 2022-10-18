@@ -57,11 +57,13 @@ height: 100vh;
   position: relative;
   top: 60px;
 border-radius: 60px 60px 0% 0%;
-height: 80%;
+height: 60%;
 width: 90px;
 display: flex;
 align-items: flex-end;
 justify-content: center;
+border: 2px solid white;
+backdrop-filter: blur(6px);
 }
 
 .social-media-logo{
@@ -93,7 +95,15 @@ top:-35px;
   color: #fff;
   font-size: 29px;
   margin-bottom: 40px;
+  transition: color .4s;
 }
+
+.social-links a:hover{
+  font-size: 29px;
+  margin-bottom: 40px;
+  color: rgb(153, 153, 153);
+}
+
 
 .all-page-container{
   position: relative;
@@ -126,15 +136,14 @@ top:-35px;
   }
 
   .logo-stayblesed{
-    width: 106px;   
+    width: 107px;   
     transform: rotate(90deg);
     position: absolute;
-    bottom: 70px;
-
+    bottom: 20px;
   }
 
   .logo-text-footr{
-    margin-bottom: 320px;
+    margin-bottom: 280px;
   font-size: 2.6rem;
   transform: rotate(90deg);
 }
