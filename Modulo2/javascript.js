@@ -99,3 +99,30 @@ function myFunction2(valor,numTwo){
 
 ///////// Texto SKILLS ARROUND CONTAINER /////////
 
+//////// ALL CONTAINER WIDTH SCROLL ANIMATION /////////
+
+let animationPoint = document.querySelectorAll(".about-me-right");
+let allContainer = document.querySelector(".all-page-container");
+let leftBodySection = document.getElementById('body-left');
+let rightBodySection = document.getElementById('body-right');
+let bodySection = document.getElementById('all-body');
+
+allContainer.addEventListener('scroll', function(){
+  let breakPoint = document.getElementById('break-point-anim');
+  let positionObj1 = breakPoint.getBoundingClientRect().top;
+  console.log(positionObj1);
+if(positionObj1 < 0){
+  allContainer.classList.add('all-page-full');
+  leftBodySection.classList.add('out-of-view-left');
+  rightBodySection.classList.add('out-of-view-right');
+  bodySection.classList.add('no-padding');
+}
+
+else {
+  allContainer.classList.remove('all-page-full');
+  leftBodySection.classList.remove('out-of-view-left');
+  rightBodySection.classList.remove('out-of-view-right');
+  bodySection.classList.remove('no-padding');
+}
+
+})
