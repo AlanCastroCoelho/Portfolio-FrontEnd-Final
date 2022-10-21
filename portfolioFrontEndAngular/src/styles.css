@@ -1,0 +1,251 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+*,
+::after,
+::before,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Scroll Personalizado*/
+/*Scroll Personalizado*/
+
+body::-webkit-scrollbar {
+    width: 18px;
+    background-color: rgb(12, 12, 12);
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background: #2500da;
+    border-radius: 10px;
+  }
+
+  
+/*/////////////*/
+.menu-item{
+    position: relative;
+  }
+  
+  .menu-item:before{
+    color: white;
+    counter-increment: menucounter;
+    content:counters(menucounter, '.', decimal-leading-zero);
+    position: absolute;
+    left: -16px;
+    top: 0;
+    font-size: 8px;
+  }
+  
+  .menu-item-text{ 
+    pointer-events: none;
+    display:block;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  
+  .menu-item > div:nth-child(1) span {
+  will-change: tranform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: bottom;
+  display: inline-block;
+  }
+  
+  .menu-item > div:nth-child(2) span {
+    will-change: tranform;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--index));
+    transform-origin: top;
+    display: inline-block;
+    transform: translate3d(0, 100%, 0)rotateX(90deg);
+    }
+  
+    .menu-item:hover >div:nth-child(1) span {
+  transform:translate3d(0, -100%, 0)rotateX(-90deg);
+    }
+  
+    .menu-item:hover >div:nth-child(2) span {
+      transform:translate3d(0, 0%, 0)rotateX(0deg);
+        }
+    
+  
+
+.white-rectangle-full{
+    background: #000;
+    width: 98.6%;
+    height: 71px;
+    margin:10px 0px;
+    border-radius: 60px 0;
+    display: flex;
+  justify-content: center;
+    align-items: center;
+  }
+
+  .insider-rectangle{
+    border-top: 7px solid black;
+    border-top-right-radius: 60px;
+    padding: 30px 30px;
+  }
+
+  .horizontal-line {
+    display: block;
+    background-color: white;
+    height: .5px;
+    width: 95%;
+    margin: auto;
+    border: 0 none;
+    padding: 0;
+    opacity: 100;
+  }
+  
+
+.titles-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color:#2a2a2a;
+    margin-bottom: 20px;
+    border-radius: 60px 60px 0px 0px;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    height:71px;
+    margin: 4.5rem 0 0 0;
+  }
+  
+  .for-subtitles{
+  margin:0;
+  border-radius: 0px 0px 60px 60px;
+  width: 100%;
+  }
+
+  .subtitles-container {
+    margin-bottom: 3rem;
+  }
+  
+  .subtitles {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .insider-black-backg{
+    width: 90%;
+    height: 80%;
+    border-radius: 60px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-image: url("/assets/images/white-background-noise_01.gif");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  
+  .text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transform: translate(0, -50%);
+    font-size: 3rem;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: 0.2s ease-out;
+    animation: float-text 30s linear infinite;
+    animation-delay: 0s;
+    opacity: 1;
+    padding: 20px 0;
+  }
+  .text-title-section {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    position: relative;
+    top: 8px;
+    right: 26px;
+    color: white;
+    transition: 0.2s ease-out;
+    letter-spacing: 3px;
+  }
+  
+  .title-numbers{
+    font-family: "Syncopate", sans-serif;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    right: 30px;
+    bottom: 7px;
+  }
+  
+
+  #work-text{
+    font-family: 'Dela Gothic One', cursive;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+
+  .white-rectangle-container{
+     width: 100%;
+   display: flex; 
+   }
+
+   h5 {
+    font-weight: 400;
+    font-size: 3.6rem;
+    margin: 0 0 0 10px;
+    padding: 0;
+  }
+  
+  .decorative-stars{
+    width: 20px;
+    position: relative;
+    top: -3px;
+  }
+  
+  .bigger-star{
+    width: 25px;
+    margin: 0 19px;
+    top: 0;
+  }
+  
+  #black-stars{
+    filter: invert(100%);
+    width: 30px;
+  }
+
+  #vector-figures-one{
+    position: absolute;
+  }
+
+  #vector-figures-two{
+    position: absolute;
+  }
+
+  .icons-edit-trash-container{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .edit-icon{
+    color: white;
+    font-size: 26px;
+    margin: 0px 10px 0px 0px;
+  }
+  
+  .trash-icon{
+    color: white;
+    font-size: 26px;
+    margin: 0px 10px 0px 0px;
+  }

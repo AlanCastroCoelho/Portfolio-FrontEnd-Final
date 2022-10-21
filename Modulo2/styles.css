@@ -576,16 +576,6 @@ h1 {
 
 /* about-me */
 
-.about-me-all{ 
-  background-image:url("/Assets/Untitled-3.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#file {
-  display: none;
-}
 
 .about-pic-div {
   border-top-left-radius: 20px;

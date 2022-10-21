@@ -1,0 +1,73 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75px;
+    counter-reset: menucounter;
+    background-image: url(../../../assets/images/nav-background-color.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: 900;
+  }
+  
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+   margin: 0;
+  }
+  
+  .nav-links li{
+    list-style: none;
+  }
+  
+  .nav-menus{
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav div{
+    margin-right: 50px;
+  }
+  
+  nav a {
+    color: white;
+    font-family: "Syncopate", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  }
+  
+  
+  
+  .button {
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 6px 40px;
+    transition: all .7s ease;
+    margin-left: 0;
+  }
+  
+  .button-link{
+  
+  }
+  
+  .button:hover{
+    color: black;
+    background-color: white;
+  }
+  
+  .burguer {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burguer div {
+    width: 32px;
+    height: 2.5px;
+    background-color: white;
+    font-size: 3rem;
+    margin: 6px;
+    transition: all 0.5s ease;
+  }
