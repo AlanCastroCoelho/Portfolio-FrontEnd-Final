@@ -1,0 +1,245 @@
+.artistic-nav {
+    background-image:url("../../../assets/images/Untitled-2.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  
+  
+  
+  /* card basic styling */
+  
+  .cardd-container {
+    position: relative;
+    height: 30vh;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    border-radius:  80px;
+    transform: scale(0.98);
+    font-family: 'Dongle', sans-serif;
+    font-weight: 800;
+  }
+  
+  .cardd {
+    overflow: hidden;
+  }
+  
+  .cardd-container:hover {
+    transform: scale(0.92);
+  }
+  
+  .cardd-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 50px;
+    font-size: 25px;
+    z-index: 2;
+  }
+  
+  .preview-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    font-size: 2.8rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+  }
+  
+
+  @keyframes float-text {
+    0% {
+      left: -20%;
+    }
+  
+    50% {
+      left: -100%;
+    }
+  
+    100% {
+      left: -20%;
+    }
+  }
+  
+  .cardd-container:hover .text-wrapper {
+    opacity: 0;
+  }
+  
+  /* custom styling for nav items */
+  
+  /* about-me */
+  
+  .about-me-all{ 
+    background-image:url("../../../assets/images/Untitled-3.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #file {
+    display: none;
+  }
+  
+  .about-pic-div {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    background:rgba(255, 255, 255, 0.033);
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    backdrop-filter: blur(9px);
+    font-family: "Syncopate", sans-serif;
+  font-weight: bold;
+  text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 370px;
+  
+  }
+  
+  
+  
+  .about-pic-div .links ion-icon{
+    color: white;
+    font-size: 27px;
+    border-radius: 10px;
+    margin: 16px 8px 9px 8px;
+    transition: color 0.6s ease;
+  }
+  
+  .about-pic-div .links ion-icon:hover{
+    color: rgb(153, 153, 153);
+  }
+
+  .link-to-section {
+    color: white;
+  }
+  
+  .link-to-section:hover {
+    color: white;
+  }
+  
+  
+  .about-me .cardd-container {
+    background-color: #003cff;
+    height: 60vh;
+  }
+  
+  .about-me .text-wrapper {
+    font-size: 60px;
+    opacity: 1;
+  }
+  
+  .about-me .cardd-container:hover .text-wrapper {
+    opacity: 0;
+  
+  }
+  
+  .cardd-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    font-size: 40px;
+    transition: all 0.2s ease;
+  
+  }
+  
+  .about-me .cardd-container:hover .cardd-title {
+    right: 10px;
+  
+  }
+  
+  .cardd-container:hover .preview-text {
+    left: 10px;
+    font-size: 4rem;
+  
+  }
+  
+  .cardd-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  
+  .skills .cardd-container {
+    background-image:url("../../../assets/images/cardd-skills-color.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  
+  .skills .preview-text,
+  .skills .cardd-icon {
+    color: white;
+  }
+  
+  .skills .cardd-container:hover .preview-text,
+  .skills .cardd-container:hover .cardd-icon {
+    transition: 0.2s;
+    color: #fff;
+  }
+  
+  .skills .cardd-container:hover .text-wrapper {
+    color: #000;
+  }
+  
+  /* proyects */
+  
+  .proyects .cardd-container {
+    background-image:url("../../../assets/images/cardd-proyects-color.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+  }
+  
+  
+  
+  /* contact */
+  
+  .contact .cardd-container {
+    background-color: rgb(23, 23, 23);
+    height: 60vh;
+  }
+  
+  .contact .cardd-container:hover {
+    transform: scale(0.96, 0.92);
+  }
+  
+  .contact .preview-text,
+  .contact .cardd-icon {
+    color: white;
+  }
+  
+  .contact .cardd-container:hover .preview-text,
+  .contact .cardd-container:hover .cardd-icon {
+    transition: 0.2s;
+    color: white;
+  }
+  
+  .contact .cardd-container:hover .text-wrapper {
+    color: #000;
+  }
+
+  .planet-icon{
+    width:50px;
+  }
+
+  .rocket-icon{
+    width:33px;
+  }
+ 
+  .color-palette{
+    width:33px;
+  }

@@ -1,0 +1,22 @@
+<form class="edit-Educationform">
+    <div class="formTitleContainer">
+    <span class="formTitle">Edit</span>
+</div>
+    <div class="mb-3">
+      <label for="educationName" class="form-label">Name</label>
+      <input type="text" [(ngModel)]="name" class="form-control" id="educationName">
+    </div>
+    <div class="mb-3">
+        <label for="imageUrl" class="form-label">Image Logo</label>
+        <input type="url" [(ngModel)]="img" class="form-control" id="imageUrl" placeholder="Url">
+      </div>
+      <div class="mb-3">
+        <label for="info" class="form-label">Description</label>
+        <textarea class="form-control info-input" [(ngModel)]="info" id="info"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <textarea class="form-control info-input" [(ngModel)]="status" id="status"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary" (onclick)="EducationEdit()">Confirm</button>
+  </form> 

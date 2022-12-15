@@ -1,0 +1,199 @@
+footer {
+    background-image:url("../../../assets/images/Untitled-1.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 100px 0 0px;
+    color: white;
+    font-family: "Syncopate", sans-serif;
+  }
+  
+  .footer-logo-container{
+    width: 100%;
+    height: 350px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px 80px 0 0;
+    position: relative;
+  }
+  
+  .logo-footer{
+  position: relative;
+  width: 150px;
+  margin-left: 30px;
+  }
+  
+  .logo-text-footer{
+  font-size: 3rem;
+  
+  }
+  
+  .sticker-back-top{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    width: 260px;
+    transform: rotate(8deg);
+  }
+  
+  .row-footer{
+    width:85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  
+  .col-footer{
+    flex-basis: 25%;
+    padding: 20px;
+  }
+  
+  .col-footer .text-title-section{
+    position: relative;
+    left: 0;
+  right:0;
+  }
+  
+  .col:nth-child(1){
+    flex-basis: 10%;
+  }
+  
+  .col:nth-child(2){
+    flex-basis: 30%;
+  }
+  
+  .temporary-image-before3D{
+    width: 80%;
+  }
+  
+  
+  .footer-center-side{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-right-side{
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  
+  
+  .contact-form {
+   width: 90%;
+   font-size: .85rem;
+   caret-color: #003cff;
+  }
+  
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    background: none;
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .contact-form form button,
+  .contact-form form input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  
+  .contact-form>label {}
+  
+  .contact-form form textarea {
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-form form button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 9px 0;
+  }
+  
+  .message {}
+  
+  p>label {
+    color: rgb(121, 121, 121);
+    margin: 20px 12px 8px 12px;
+  }
+  
+  /*LEFT SIDE*/
+  /*////////////////////*/
+  .email-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+    letter-spacing: 4px;
+  }
+  
+  .email-footer{
+    font-size: .8rem;
+    
+  }
+  
+  .email-icon-container ion-icon {
+    margin-right: 20px;
+  }
+  
+  .left-side-contact P,
+  .left-side-contact .email-icon-container {
+    font-size: 1rem;
+  }
+  
+  
+  
+  .logo-text{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+  
+  }
+  
+  
+  
+  
+  .copy-container{
+      position: relative;
+      overflow: hidden;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    background-color: #000;
+  }
+  
+  .copyright{
+    color: white;
+    font-weight: bold;
+  margin: auto;
+  letter-spacing: 9px;
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translate(0, -50%);
+  white-space: nowrap;
+  transition: 0.2s ease-out;
+  animation: float-text 30s linear infinite;
+  animation-delay: 0s;
+  padding: 20px 0;
+  opacity: .8;
+  }
+

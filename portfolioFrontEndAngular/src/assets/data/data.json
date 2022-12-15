@@ -1,0 +1,81 @@
+{
+	"fullName": "Alan Emanuel Castro Coelho",
+	"shortName": "Alan Coelho",
+	"profilePic": "../../../assets/images/PhotoPerfil2.png",
+	"ubication": "Buenos Aires (Argentina)",
+    "aboutMe":"Alan Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.",
+	"education": [{
+			"name": "Legacy Responsive Web Desing",
+            "img":"../../../assets/images/APLogo-20-20.png",
+			"info": "In this Responsive Web Design Certification, of freeCodeCamp,I been learn the basics languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for a responsive web design.",
+			"status": "Complete"
+		},
+		{
+			"name": "JavaScript Algorithms and Data Structures",
+            "img":"../../../assets/images/APLogo-20-20.png",
+			"info": "In the JavaScript Algorithm and Data Structures Certification, i been learn the fundamentals of JavaScript including variables, arrays, objects, loops, functions, Object Oriented Programming (OOP) and Functional Programming (FP).",
+			"status": "In progress"
+		},
+		{
+			"name": "Argentina Programa #SéProgramar",
+            "img":"../../../assets/images/APLogo-20-20.png",
+			"info": "Este curso es una introducción a los fundamentos de la programación. Temas como programación imperativa, estructura de datos y programación orientada a objetos son trabajados con lenguajes como Gobstones, Ruby y Javascript.",
+			"status": "Complete"
+		},
+		{
+			"name": "Argentina Programa #YoProgramo",
+            "img":"../../../assets/images/APLogo-20-20.png",
+			"info": "",
+			"status": "In progress"
+		}],
+	"workExperience": {
+		"404": {
+			"info": "I still don't have work experience"
+		}},
+	"skills": {
+		"frontEnd": [{
+			"name":"html",
+			"percentage": 100},
+			{
+			"name":"css",
+			"percentage": 100},
+			{"name":"javascript",
+			"percentage": 100},
+			{"name":"bootstrap",
+			"percentage": 100}],
+		"backEnd": [{
+			"name":"404(1)",
+			"status": 100},
+			{
+			"name":"404(2)",
+			"percentage": 100},
+			{"name":"404(3)",
+			"percentage": 100},
+			{"name":"404(4)",
+			"percentage": 100},
+			{"name":"404(5)",
+			"percentage": 100}],
+		"programs": [{
+			"name":"figma",
+			"percentage": 100},
+			{
+			"name":"photoshop",
+			"percentage": 100},
+			{"name":"illustrator",
+			"percentage": 100},
+			{"name":"blender",
+			"percentage": 100}
+		]
+		,
+		"softSkills": [{
+			"name":"comunication",
+			"percentage": 100},
+			{
+			"name":"emphaty",
+			"percentage": 100},
+			{"name":"creative",
+			"percentage": 100},
+			{"name":"collaborative",
+			"percentage": 100}]
+	}
+}

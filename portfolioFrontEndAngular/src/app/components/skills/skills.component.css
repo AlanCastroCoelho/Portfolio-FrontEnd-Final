@@ -1,0 +1,489 @@
+#skills-container {
+    background-image:url("../../../assets/images/Untitled-4.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+  }
+  
+  .skills-section {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  }
+  
+.front-background{
+    border-radius: 0 60px 0 60px;
+    padding: 50px;
+    background:linear-gradient(to bottom, #0e0e0e, black)
+  }
+  
+  .back-background{
+    border-radius: 0 60px 60px 0px;
+    padding: 50px;
+    background-color: #000;
+  }
+  
+  .front-left-side{
+    position: relative;
+  border-right: 6px solid black;
+  display: flex;
+  align-items: center;
+  background-image: url("../../../assets/images/FRONT-background-_Left.jpg");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .front-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.371);
+      width: 400px;
+      height: 160px;
+      border:7px solid black;
+      z-index: 60;
+      position: relative;
+  
+    }
+  
+    .holo-backgrnd{
+      background-image: url("../../../assets/images/holographic-saturated.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+     
+    }
+  
+  
+    .left-title-radius{
+      border-radius: 0 100px;
+    border-left: 0;
+    padding: 0px 40px 0 20px;
+    }
+
+    
+  .black-background-title{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 140;
+  }
+
+  .black-background-front{
+    border-radius: 0 100px;
+  }
+
+  .black-background-back{
+    border-radius: 80px 0px;
+  }
+  
+  
+  .front-title{
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+    font-size: 1.5rem;
+    z-index: 150;
+  }
+
+#vector-figures-one{
+    position: absolute;
+  }
+
+  #vector-figures-two{
+    position: absolute;
+  }
+
+
+.front-right-side{
+background-image: url("../../../assets/images/FRONT-background-right.gif");
+border-top-right-radius: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.subtitle-skill-backgr{
+  background-color:#2a2a2a;
+}
+
+
+
+
+
+
+
+.white-rectangle-half{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.back-left-side{
+  background-image: url("../../../assets/images/BACK-background-_LEFT.jpg");
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.back-right-side{
+  position: relative;
+  border-left: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-image: url("../../../assets/images/BACK-background-_RIGHT.jpg");
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0 60px 60px 0;
+  }
+  
+  .back-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.371);
+      width: 400px;
+      height: 160px;
+      border:10px solid black;
+      z-index: 110;
+    }
+
+.right-title-radius{
+  border-radius: 100px 0px;
+  border-right: 0;
+  padding: 0px 20px 0 40px;
+}
+
+#programs-title-cont{
+height: 100px;
+width: 500px;
+margin: auto;
+padding: 6px 0 0 16px;
+}
+
+#programs-title-blckCont{
+  height: 100%;
+}
+
+.programs-background{
+  border-radius: 0px 60px 60px;
+  overflow: hidden;
+  padding: 5px 50px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programs-background2{
+  padding: 20px 50px 50px 50px;
+  background-color: #000;
+  border-radius: 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs-white-backg{
+  background-image: url("../../../assets/images/white programs background.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+#ovni-vector{
+  position: absolute;
+  bottom: 5px;
+  right: 220px;
+  width: 175px;
+  height: auto;
+}
+
+#programs-adjusts{
+  border-radius: 100% 50% 100% 50%;  
+  width: 100%;
+  height: 80%;
+  border: 7px solid white;
+}
+
+#programs-text{
+  font-family: 'Dela Gothic One', cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  top: 50%;
+  z-index: 25;
+  animation: float-text 30s linear infinite;
+  background-image: url("../../../assets/images/white programs background.jpg");
+  color: black;
+  padding: 10px;
+}
+
+
+
+
+.circle-decoration{
+  position: absolute;
+  left: -10px;
+  top: 30px;
+  height: 380px;
+  width: 380px;
+  border-radius: 50%;
+  border: 5px solid black;
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  z-index: 25;
+}
+
+.circle2{
+  top: -20px;
+  left: -180px;
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  z-index: 32;
+  border-radius: 50% 50% 50% 0;
+}
+
+.circle6{
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  left:-350px;
+  width: 480px;
+  z-index: 30;
+  opacity: 1;
+  border-radius: 0% 50% 50% 0%;
+}
+
+.circle3{
+  top: 10px;
+  left: -70px;
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+opacity: 1;
+z-index: 30;
+  border-radius: 0% 50%;
+  
+}
+
+.circle33{
+  top: 0px;
+  left: -110px;
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+opacity: 1;
+z-index: 31;
+  border-radius: 0% 50%;
+  border-left: 0px;
+  
+}
+
+.circle4{
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  filter: brightness(70%);
+  background-position: top;
+  background-repeat: no-repeat;
+  left: 26px;
+  z-index: 20;
+  border-radius: 0% 50%;
+  top: 40px;
+}
+
+
+.circle5{
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  left: auto;
+  right: -260px;
+  top: -70px;
+  z-index: 14;
+  filter: brightness(70%);
+}
+
+.circle7{
+  background-image: url("../../../assets/images/white-background-noise_01.gif");
+  left: auto;
+  right: -290px;
+  z-index: 32;
+  opacity: 1;
+  top: -120px;
+  display: flex;
+  
+}
+
+.skills-background{
+  border-radius: 60px 0px;
+  overflow: hidden;
+  padding: 50px 50px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.soft-left-side{
+  background-image: url("../../../assets/images/FRONT-background-_Left.jpg");
+  border-top-left-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.soft-right-side{
+  position: relative;
+  border-left: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/images/FRONT-background-right.gif");
+  border-bottom-right-radius: 60px;
+  overflow: hidden;
+}
+
+#soft-skills-vector{
+  position: absolute;
+height: 1030px;
+width: 100%;
+}
+
+.soft-title-container{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 60px;
+}
+
+#soft-skills-title-cont{
+  height: 100px;
+width: 430px;
+padding: 0px 0 0 80px;
+overflow: hidden;
+}
+
+.skills-title-language {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    display: flex;
+  background-image: url("../../../assets/images/holographic-saturated.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 0 30px;
+  border:6px solid black;
+  padding: 10px;
+  }
+  
+  
+  
+  .black-title-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  border-radius: 0px 30px;
+  padding: 0 15px;
+  }
+  
+  .stars-titls-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .header-soft-skills {
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+    text-transform: uppercase;
+  }
+  
+  .skills-titles {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-size: 2.6rem;
+  }
+  
+  
+.progress {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.267);
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;;
+    border-right: 3px solid black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 90%;
+    height: 18px;
+    float: right;
+    border-bottom-left-radius:30px ;
+  }
+  
+  
+  .progress-bar {
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 5px 0px;
+  background-color: #003cff;
+  }
+  
+  .bar-blue{
+    background-color: #003cff;
+  }
+  
+  .skills-title-language {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    display: flex;
+  background-image: url("../../../assets/images/holographic-saturated.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 0 30px;
+  border:6px solid black;
+  padding: 10px;
+  }
+
+  .icons-edit-trash-container{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+
+.trash-icon{
+  margin-left:;
+  width: 25px;
+}
+
+.edit-icon{
+  width: 25px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+width: 100%;
+}
+
+li{
+  margin: 0;
+  list-style: none;
+}
