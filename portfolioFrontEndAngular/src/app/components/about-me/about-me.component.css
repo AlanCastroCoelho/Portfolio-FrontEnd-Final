@@ -146,8 +146,39 @@
     text-align: left;
   }
   
-  
-  
-  .header-experiencia-laboral {}
-  
-  .header-educacion {}
+.items-list{
+  color: white;
+}
+
+.data-container{
+  color: white;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-image{
+  width: 100px;
+  height: auto;
+}
+
+li{
+  list-style: none;
+}
+
+.list-info{
+  display: flex;
+
+}
+
+.left-info{
+  width: 80%;
+}
+
+.right-info{
+  width:20%;
+}
+
+.icons-edit-trash-container{
+  width: 38px;
+}

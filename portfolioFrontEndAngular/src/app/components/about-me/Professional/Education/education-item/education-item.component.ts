@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Education } from 'src/app/Models/education';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
-
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  selector: 'app-education-item',
+  templateUrl: './education-item.component.html',
+  styleUrls: ['./education-item.component.css']
 })
-export class AboutMeComponent implements OnInit {
+export class EducationItemComponent implements OnInit {
   myPortfolio:any;
   educationList:any;
   educationListTwo: Education[]=[];
@@ -22,5 +21,13 @@ export class AboutMeComponent implements OnInit {
     });
   }
 
-  
+deleteEducation(i:number){
+
+  }
+
+ editEducation(i:number){
+    this.isEditing=!this.isEditing;
+  }
+
+
 }

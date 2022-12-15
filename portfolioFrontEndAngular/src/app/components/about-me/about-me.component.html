@@ -27,7 +27,7 @@
           
           <div class="about-pic-div" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
             <div class="profile-photo-container">
-            <img src="../../../assets/images/PhotoPerfil2.png" id="profile-photo" alt="">
+            <img id="profile-photo" alt="" [src]="myPortfolio.profilePic">
           </div>
 
           <div class="links">
@@ -55,15 +55,7 @@
                 <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars">     
                 <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars">     
               </div>
-              <p class="text-paragraphs" id="about-me-paragraph">Lore"Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit,
-                sed do eiusmod
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod klasdk.
-              </p>    
+              <p class="text-paragraphs" id="about-me-paragraph">{{myPortfolio.aboutMe}}</p>    
               
               <div class="about-me-decor-lines dec-bottom">
                 <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars">     
@@ -77,17 +69,13 @@
 
       <div class="row mt-5">
         <div class="col-sm-6">
-          <div class="header-educacion d-flex align-items-center">
-            <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars">    
-            <h4 class="text-headers">Educación</h4>
-          
-          </div>
+          <app-education></app-education>
         </div>
+
         <div class="col-sm-6">
           <div class="header-experiencia-laboral d-flex align-items-center">
             <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars">   
             <h4 class="text-headers">Experiencia Laboral</h4>
-
           </div>
         </div>
       </div>

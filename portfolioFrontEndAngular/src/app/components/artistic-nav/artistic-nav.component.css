@@ -231,3 +231,15 @@
   .contact .cardd-container:hover .text-wrapper {
     color: #000;
   }
+
+  .planet-icon{
+    width:50px;
+  }
+
+  .rocket-icon{
+    width:33px;
+  }
+ 
+  .color-palette{
+    width:33px;
+  }
