@@ -9,7 +9,7 @@ import { Skill } from '../Models/skill';
 })
 export class SkillService {
 
-  URL = 'https://backendalancoelho.onrender.com/skill';
+  URL = 'https://backendalancc.onrender.com/skill';
 
   constructor(private httpClient: HttpClient) { }
 

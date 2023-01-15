@@ -9,7 +9,7 @@ import { Proyectos } from '../Models/proyectos';
 })
 export class ProyectosService {
   
-  URL = 'https://backendalancoelho.onrender.com/proyectos';
+  URL = 'https://backendalancc.onrender.com/proyectos';
 
 
   constructor(private httpClient : HttpClient) { }

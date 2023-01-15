@@ -11,7 +11,7 @@ import { Educacion } from '../Models/educacion';
 })
 export class EducacionService {
   
-  URL = 'https://backendalancoelho.onrender.com/educacion';
+  URL = 'https://backendalancc.onrender.com/educacion';
 
   constructor(private httpClient : HttpClient) { }
 

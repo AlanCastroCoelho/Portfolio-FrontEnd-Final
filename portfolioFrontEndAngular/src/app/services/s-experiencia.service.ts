@@ -9,7 +9,7 @@ import { Experiencia } from '../Models/experiencia';
 })
 export class SExperienciaService {
 
-  expURL = 'https://backendalancoelho.onrender.com/explab';
+  expURL = 'https://backendalancc.onrender.com/explab';
 
   constructor(private httpClient: HttpClient) { }
 
