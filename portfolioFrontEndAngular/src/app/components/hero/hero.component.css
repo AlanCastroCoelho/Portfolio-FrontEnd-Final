@@ -1,8 +1,7 @@
+
+
 .header-container {
-    background-image:url("../../../assets/images/Untitled-1.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color:#000;
     overflow: hidden;
     height: 1145px;
     padding: 0;
@@ -13,12 +12,7 @@
       height: auto;
       margin-top: 50px;
     }
-    
-    /* Circular Text*/
-    /* Circular Text*/
-    
-    
-    
+     
     .circle {
       position: relative;
       width: 520px;
@@ -29,39 +23,6 @@
       align-items: center;
     }
     
-    .text {
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      color: white;
-      font-family: "Share Tech", sans-serif;
-      text-transform: uppercase;
-      font-size: 1rem;
-      animation: rotateText 18s linear infinite;
-    }
-    
-    @keyframes rotateText {
-      0% {
-        transform: rotate(360deg);
-      }
-    
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-    
-    .text span {
-      position: absolute;
-      left: 50%;
-      font-size: 1.2em;
-      transform-origin: 0 260px;
-    
-    }
-    
-    /* Circular Text END */
-    /* Circular Text END */
-    
-    /*HERO TITLE*/
     /*HERO TITLE*/
     
     h1 {

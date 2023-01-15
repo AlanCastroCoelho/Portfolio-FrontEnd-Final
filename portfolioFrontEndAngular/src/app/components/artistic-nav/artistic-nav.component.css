@@ -1,11 +1,8 @@
+
 .artistic-nav {
-    background-image:url("../../../assets/images/Untitled-2.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+    background-color: var(--negro);
+    color: var(--blanco);
   }
-  
   
   
   /* card basic styling */
@@ -72,62 +69,20 @@
   /* about-me */
   
   .about-me-all{ 
-    background-image:url("../../../assets/images/Untitled-3.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--azul-francia);
   }
   
-  #file {
-    display: none;
-  }
-  
-  .about-pic-div {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: white;
-    background:rgba(255, 255, 255, 0.033);
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    backdrop-filter: blur(9px);
-    font-family: "Syncopate", sans-serif;
-  font-weight: bold;
-  text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 370px;
-  
-  }
-  
-  
-  
-  .about-pic-div .links ion-icon{
-    color: white;
-    font-size: 27px;
-    border-radius: 10px;
-    margin: 16px 8px 9px 8px;
-    transition: color 0.6s ease;
-  }
-  
-  .about-pic-div .links ion-icon:hover{
-    color: rgb(153, 153, 153);
+  .link-to-section {
+    color: var(--blanco);
   }
 
-  .link-to-section {
-    color: white;
-  }
-  
   .link-to-section:hover {
-    color: white;
+    color: var(--blanco);
   }
   
   
   .about-me .cardd-container {
-    background-color: #003cff;
+    background-color: var(--azul-francia);
     height: 60vh;
   }
   
@@ -172,10 +127,7 @@
   }
   
   .skills .cardd-container {
-    background-image:url("../../../assets/images/cardd-skills-color.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color:grey;
     color: white;
   }
   
@@ -187,21 +139,18 @@
   .skills .cardd-container:hover .preview-text,
   .skills .cardd-container:hover .cardd-icon {
     transition: 0.2s;
-    color: #fff;
+    color: var(--blanco);
   }
   
   .skills .cardd-container:hover .text-wrapper {
-    color: #000;
+    color: var(--negro);
   }
   
   /* proyects */
   
   .proyects .cardd-container {
-    background-image:url("../../../assets/images/cardd-proyects-color.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #000;
+    background-color:#fff;
+    color: var(--negro);
   }
   
   
@@ -219,17 +168,17 @@
   
   .contact .preview-text,
   .contact .cardd-icon {
-    color: white;
+    color: var(--blanco);
   }
   
   .contact .cardd-container:hover .preview-text,
   .contact .cardd-container:hover .cardd-icon {
     transition: 0.2s;
-    color: white;
+    color: var(--blanco);
   }
   
   .contact .cardd-container:hover .text-wrapper {
-    color: #000;
+    color: var(--blanco);
   }
 
   .planet-icon{

@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { Proyectos } from '../Models/proyectos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProyectosService {
+  
+  URL = 'https://backendalancoelho.onrender.com/';
 
-  URL = 'http://localhost:8080/proyectos/';
 
   constructor(private httpClient : HttpClient) { }
 

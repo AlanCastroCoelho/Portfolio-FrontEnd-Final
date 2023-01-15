@@ -1,6 +1,7 @@
+
 .educacion-container{
     border: 2px solid #fff;
-    color: #fff;
+    color: var(--blanco);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,7 +21,7 @@ td{
 h1{
     font-family: 'Dela Gothic One', cursive;
     text-transform: uppercase;
-    color: white;
+    color: var(--blanco);
     font-size: 1.8rem;
     margin: 30px;
 }
@@ -31,7 +32,7 @@ h2{
 
 .table{
 width: 90%;
-color: #fff;
+color: var(--blanco);
 }
 
 .button-container{
@@ -45,7 +46,7 @@ td button{
 }
 
 .modal{
-    color: #000;
+    color: var(--negro);
 }
 
 .container-add-button{

@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../Models/nuevo-usuario';
 })
 export class AuthService {
   
-  authURL = 'http://localhost:8080/auth/'
+  authURL = 'https://backendalancoelho.onrender.com/auth/'
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

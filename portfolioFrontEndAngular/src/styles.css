@@ -1,6 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --azul-francia:(#2900e8);
+  --negro:(#000);
+  --blanco:(#fff);
+  --gris:(#999);
+}
 
 *,
 ::after,
@@ -12,7 +15,6 @@ body {
 }
 
 /*Scroll Personalizado*/
-/*Scroll Personalizado*/
 
 body::-webkit-scrollbar {
     width: 18px;
@@ -20,18 +22,17 @@ body::-webkit-scrollbar {
   }
   
 body::-webkit-scrollbar-thumb {
-    background: #2500da;
+    background: var(--azul-francia);
     border-radius: 10px;
   }
 
-  
-/*/////////////*/
+
 .menu-item{
     position: relative;
   }
   
   .menu-item:before{
-    color: white;
+    color: var(--blanco);
     counter-increment: menucounter;
     content:counters(menucounter, '.', decimal-leading-zero);
     position: absolute;
@@ -78,7 +79,7 @@ body::-webkit-scrollbar-thumb {
   
 
 .white-rectangle-full{
-    background: #000;
+    background: var(--negro);
     width: 98.6%;
     height: 71px;
     margin:10px 0px;
@@ -90,7 +91,7 @@ body::-webkit-scrollbar-thumb {
 
   .horizontal-line {
     display: block;
-    background-color: white;
+    background-color: var(--blanco);
     height: .5px;
     width: 95%;
     margin: auto;
@@ -104,7 +105,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color:#2a2a2a;
+    background-color:var(--gris);
     margin-bottom: 20px;
     border-radius: 60px 60px 0px 0px;
     transition: all 0.3s ease-out;
@@ -124,7 +125,7 @@ body::-webkit-scrollbar-thumb {
   }
   
   .subtitles {
-    color: white;
+    color: var(--blanco);
     font-family: 'Dongle', sans-serif;
     font-weight: 400;
     font-size: 2.6rem;
@@ -140,10 +141,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
       align-items: center;
       overflow: hidden;
-      background-image: url("/assets/images/white-background-noise_01.gif");
-      background-size:cover;
-      background-repeat: no-repeat;
-      background-position: center;
   }
   
   .text-wrapper {
@@ -233,13 +230,13 @@ body::-webkit-scrollbar-thumb {
   }
   
   .edit-icon{
-    color: white;
+    color: var(--blanco);
     font-size: 26px;
     margin: 0px 10px 0px 0px;
   }
   
   .trash-icon{
-    color: white;
+    color: var(--blanco);
     font-size: 26px;
     margin: 0px 10px 0px 0px;
   }

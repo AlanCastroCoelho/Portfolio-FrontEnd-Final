@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { Persona } from '../Models/persona';
 
 
@@ -8,7 +9,7 @@ import { Persona } from '../Models/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://backendalancoelho.onrender.com/';
 
   constructor(private http: HttpClient) { }
 

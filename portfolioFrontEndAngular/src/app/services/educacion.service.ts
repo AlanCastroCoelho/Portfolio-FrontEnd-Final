@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { Educacion } from '../Models/educacion';
 
 
@@ -10,7 +11,7 @@ import { Educacion } from '../Models/educacion';
 })
 export class EducacionService {
   
-  URL = 'http://localhost:8080/educacion/';
+  URL = 'https://backendalancoelho.onrender.com/';
 
   constructor(private httpClient : HttpClient) { }
 

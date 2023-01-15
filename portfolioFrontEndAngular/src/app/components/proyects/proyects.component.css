@@ -1,5 +1,6 @@
+
 #proyects-subtitle {
-    color: #000;
+    color: var(--negro);
   }
 
   /*Title & Subtitles*/
@@ -14,7 +15,7 @@
   }
   
   #proyects-title-container {
-    background-color: black;
+    background-color: var(--negro);
   }
   
   /*GALLERY PROYECTS SECTION*/
@@ -60,7 +61,7 @@
     top: 40px;
     overflow: hidden;
     font-family: "Syncopate", sans-serif;
-    color: white;
+    color: var(--blanco);
     font-size: 28px;
     backdrop-filter: blur(15px);
 
@@ -110,7 +111,7 @@
   .pryct-buttons-container{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--blanco);
     font-size: 20px;
   
   }
@@ -126,7 +127,7 @@
   
   .pryct-buttons-container a{
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
   }
   
   .pryct-btns{
@@ -140,7 +141,7 @@
   
   
   .pryct-one {
-    background-image: url("../../../Assets/images/Page Preview ARGPROGRAM NOISE.jpg");
+    background-image: url("../../../Assets/images/Page Preview ARGPROGRAM.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

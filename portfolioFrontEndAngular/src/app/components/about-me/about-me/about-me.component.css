@@ -1,7 +1,10 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+:root{
+  --azul-francia:(#2900e8);
+  --negro:(#000);
+  --blanco:(#fff);
+}
 
 .about-me-all{ 
-   /* background-image:url("../../../Assets/images/Untitled-3.gif");*/
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +14,7 @@
 
   
   .subtitle-about-backgr{
-    background-color: #2900E8;
+    background-color: var(--azul-francia);
     margin-bottom: 90px;
   }
 
@@ -142,7 +145,7 @@
   }
   
   #about-me-title-container {
-    background: #2900e8;
+    background: var(--azul-francia);
   }
   
 

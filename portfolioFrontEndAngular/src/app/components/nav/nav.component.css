@@ -1,10 +1,12 @@
+
+
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 75px;
     counter-reset: menucounter;
-    background-color: #000;
+    background-color: var(--negro);
     width: 100%;
     z-index: 900;
   }
@@ -30,7 +32,7 @@ nav {
   }
   
   nav a {
-    color: white;
+    color: var(blanco);
     font-family: "Syncopate", sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -52,7 +54,7 @@ nav {
   
   .button:hover{
     color: black;
-    background-color: white;
+    background-color: var(--blanco);
   }
   
   .burguer {
@@ -63,7 +65,7 @@ nav {
   .burguer div {
     width: 32px;
     height: 2.5px;
-    background-color: white;
+    background-color: var(--blanco);
     font-size: 3rem;
     margin: 6px;
     transition: all 0.5s ease;
