@@ -35,14 +35,24 @@
           </a>
         </li>
     
-        <li>
-          <a href="/login" class="button-link">
+        <li (click)="login()" *ngIf="!isLogged">
+          <a class="button-link" >
             <div class="button menu">
               <span class="menu-item-text">Login
               </span>
             </div>
             </a>
             </li>
+
+            <li (click)="onLogOut()" *ngIf="isLogged">
+              <a class="button-link" >
+                <div class="button menu">
+                  <span class="menu-item-text">LogOut
+                  </span>
+                </div>
+                </a>
+                </li>
+
           </ul>
     
           <div class="burguer">

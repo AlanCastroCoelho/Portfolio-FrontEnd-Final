@@ -1,0 +1,72 @@
+<div class="row experiencia-container">
+    <h1>Experiencia Laboral</h1>
+    <div class="container-add-button">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addExperiencia" *ngIf="isLogged">
+        Agregar Experiencia
+      </button>
+    </div>
+
+    
+      <div class="modal fade" id="addExperiencia" tabindex="-1" aria-labelledby="addExperiencia" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Experiencia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+              <div class="container">
+                <div class="row">
+                    <div>
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Educaión</label>
+                                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcionE">Descripcion</label>
+                                <input type="string" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                            </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button class="btn btn-primary">
+                                Agregar Experiencia
+                            </button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>
+                        <h2>{{Experiencia.nombreE}}</h2>
+                    </td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <div class="button-container" *ngIf="isLogged">
+                    <td>
+                
+                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                            
+                    </td>
+                </div>
+                </tr>
+            </tbody>
+        </table>
+    
+
+</div>
+

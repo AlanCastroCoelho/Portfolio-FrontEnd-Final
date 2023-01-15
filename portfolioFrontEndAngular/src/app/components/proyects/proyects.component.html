@@ -23,20 +23,23 @@
       </div>
 
       <div class="row pt-5">
+
         <div class="gallery-container col d-flex justify-content-center mb-5">
           <div class="gallery">
             
-            <div class="container-pryct pryct-one">
+<ul>
+  <li *ngFor="let pryct of proyectos">
+            <div class="container-pryct pryct-one mb-5">
               
               <div class="container-desc-pryct color-one-desc-pryct">             
                 <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
+                  <span class="pryct-title">{{pryct.nombreP}}</span>
                 </div>
 
                   <div class="pryct-img" alt="Card image cap"></div>
                   
                   <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
+                    <p class="pryct-text">{{pryct.descripcionP}}</p>
                   </div>
 
                   <div class="pryct-buttons-container">
@@ -47,7 +50,8 @@
                   </div>
                 </a>
 
-                    <a href="https://github.com/AlanCastroCoelho?tab=repositories" class="menu-item" target="_blank">
+
+                    <a [href]="pryct.urlRepo" class="menu-item" target="_blank">
                     <div class="pryct-btns">
                    <span class="menu-tiem-text">Repositorio</span>                  
                   </div>
@@ -56,154 +60,9 @@
                 
               </div>
             </div>
-            <div class="container-pryct pryct-two">
-              
-              <div class="container-desc-pryct color-two-desc-pryct" >             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
-                </div>
+ </li>
+        </ul>
 
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-                </div>
-                
-              </div>
-
-            </div>
-            <div class="container-pryct pryct-three">
-               <div class="container-desc-pryct color-three-desc-pryct">             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
-                </div>
-
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="container-pryct pryct-four">
-              <div class="container-desc-pryct color-four-desc-pryct">             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
-                </div>
-
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-                </div>
-                
-              </div>
-            </div>
-            <div class="container-pryct pryct-five">
-              <div class="container-desc-pryct color-five-desc-pryct">             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
-                </div>
-
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-                </div>
-                
-              </div>
-            </div>
-            <div class="container-pryct pryct-six">
-              <div class="container-desc-pryct color-six-desc-pryct">             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">Portfolio - Argentina Programa #Yoprogramo</span>
-                </div>
-
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">Portfolio final realizado durante el desarrollo del curso de desarrollo web full stack Argentina Programa. Utiliza lenguajes como html, css, javascript(Angular) y bootstrap.</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-                </div>
-                
-              </div>
-            </div>
           </div>
         </div>
       </div>

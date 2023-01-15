@@ -1,9 +1,5 @@
 #skills-container {
-    background-image:url("../../../assets/images/Untitled-4.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
+    background-color: #000;
     
   }
   
@@ -51,14 +47,7 @@
   
     }
   
-    .holo-backgrnd{
-      background-image: url("../../../assets/images/holographic-saturated.jpg");
-      background-size:cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-     
-    }
+
   
   
     .left-title-radius{
@@ -86,15 +75,84 @@
     border-radius: 80px 0px;
   }
   
-  
+  #carouselExampleCaptions{
+    height: 800px;
+    width: 100%;
+  }
+
+  .carousel-inner{
+    height: 800px;
+  }
+.carousel-buttons{
+  width: 60px;
+}
   .front-title{
     color: white;
     font-family: 'Dela Gothic One', cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 4.2rem;
+    line-height: 35px;
     z-index: 150;
+    float: left;
   }
+
+  .front-container{
+    height: 800px;
+  }
+
+  .c-img{
+    position: absolute;
+    top: 0;
+    left: -190px;
+    width: 100%;
+    height: 100%;
+    }
+
+    
+    .crsl-caption{
+      display: flex;
+      width: 100%;
+      left: 0px;
+      margin-bottom: 20px;
+     }
+
+    .crls-btn{
+      width: 60px;
+    }
+
+   
+     
+     .carousel-enum{
+       position:absolute;
+       right: 60px;
+       top:270px;
+       font-size: 7rem;
+       font-family: 'Dela Gothic One', cursive;
+       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.698);
+       color: transparent;
+     }
+     
+
+    .skill-inf-container{
+      width: 400px;
+      position: relative;
+      float: right;
+      right: 150px;
+      bottom: -160px;
+
+      border-radius: 20px;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      }
+
+      .insider-rectangle{
+  
+        padding: 8px 0px;
+      }
+      
 
 #vector-figures-one{
     position: absolute;
@@ -106,12 +164,11 @@
 
 
 .front-right-side{
-background-image: url("../../../assets/images/FRONT-background-right.gif");
+  background-color: #fff;
 border-top-right-radius: 60px;
 display: flex;
 align-items: center;
 justify-content: center;
-
 }
 
 
@@ -378,30 +435,24 @@ overflow: hidden;
 }
 
 .skills-title-language {
-    color: white;
-    font-family: 'Dongle', sans-serif;
-    display: flex;
-  background-image: url("../../../assets/images/holographic-saturated.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  border-radius: 0 30px;
-  border:6px solid black;
-  padding: 10px;
-  }
-  
-  
-  
-  .black-title-container{
+  color: white;
+  font-family: 'Dongle', sans-serif;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background-color: black;
-  border-radius: 0px 30px;
-  padding: 0 15px;
+
+padding: 5px;
   }
   
+  
+  
+.black-title-container{
+display: flex;
+justify-content: space-between;
+width: 100%;
+background-color: #000;
+border-radius: 30px 0px;
+padding: 0 20px;
+}
+
   .stars-titls-container{
     display: flex;
     align-items: center;
@@ -422,6 +473,7 @@ overflow: hidden;
   
 .progress {
     margin: 0;
+    margin-top: -4px;
     background-color: rgba(0, 0, 0, 0.267);
     border-bottom: 3px solid black;
     border-left: 3px solid black;;
@@ -446,19 +498,7 @@ overflow: hidden;
     background-color: #003cff;
   }
   
-  .skills-title-language {
-    color: white;
-    font-family: 'Dongle', sans-serif;
-    display: flex;
-  background-image: url("../../../assets/images/holographic-saturated.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  border-radius: 0 30px;
-  border:6px solid black;
-  padding: 10px;
-  }
+
 
   .icons-edit-trash-container{
     display: flex;
@@ -469,7 +509,6 @@ overflow: hidden;
   }
 
 .trash-icon{
-  margin-left:;
   width: 25px;
 }
 

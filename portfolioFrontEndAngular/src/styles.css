@@ -88,12 +88,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
   }
 
-  .insider-rectangle{
-    border-top: 7px solid black;
-    border-top-right-radius: 60px;
-    padding: 30px 30px;
-  }
-
   .horizontal-line {
     display: block;
     background-color: white;

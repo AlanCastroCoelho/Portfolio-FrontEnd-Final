@@ -4,10 +4,7 @@ nav {
     align-items: center;
     height: 75px;
     counter-reset: menucounter;
-    background-image: url(../../../assets/images/nav-background-color2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #000;
     width: 100%;
     z-index: 900;
   }
