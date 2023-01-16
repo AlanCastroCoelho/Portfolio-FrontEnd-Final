@@ -13,6 +13,13 @@ export class ProyectsComponent implements OnInit {
 
 proyectos: Proyectos [] = [];
 
+
+nombreP: string;
+    descripcionP: string;
+    urlImg: string;
+    urlRepo: string;
+    urlLiveDemo: string;
+
   constructor(private proyectosS: ProyectosService,
     private tokenService: TokenService,
     private router: Router) { }
@@ -35,5 +42,28 @@ proyectos: Proyectos [] = [];
         this.isLogged = false;
       }
     }
-
+    delete(id?: number){
+      if( id != undefined){
+        this.proyectosS.delete(id).subscribe(
+          data => {
+            this.cargarProyectos();
+          }, err => {
+            alert("No se pudo eliminar");
+          }
+        )
+      }
+    }
+  
+    onCreate(): void{
+      const proyectos = new Proyectos(this.nombreP, this.descripcionP,this.urlImg,this.urlRepo,this.urlLiveDemo);
+      this.proyectosS.save(proyectos).subscribe(
+        data => {
+          alert("Proyecto creado correctamente");
+          this.router.navigate(['']);
+        }, err =>{
+          alert("Fallo al añadir el proyecto");
+          this.router.navigate(['']);
+        }
+      )
+    }
 }
