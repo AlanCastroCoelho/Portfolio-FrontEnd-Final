@@ -27,6 +27,7 @@ import { RecargaDirective } from './directives/recarga.directive';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia/experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/experiencia/edit-experiencia/edit-experiencia/edit-experiencia.component';
+import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-proyects.component';
 
 
 
@@ -51,6 +52,7 @@ import { EditExperienciaComponent } from './components/experiencia/experiencia/e
     EditSkillComponent,
     ExperienciaComponent,
     EditExperienciaComponent,
+    EditProyectsComponent,
   ],
   imports: [
     BrowserModule,

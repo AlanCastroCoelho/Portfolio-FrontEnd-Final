@@ -1,12 +1,6 @@
-:root{
-  --azul-francia:(#2900e8);
-  --negro:(#000);
-  --blanco:(#fff);
-  --gris:(#999);
-}
 
 .header-container {
-    background-color:var(--negro);
+    background-color:#000;
     overflow: hidden;
     height: 1145px;
     padding: 0;

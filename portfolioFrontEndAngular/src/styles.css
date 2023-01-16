@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
   }
   
   .menu-item:before{
-    color: var(--blanco);
+    color: #fff;
     counter-increment: menucounter;
     content:counters(menucounter, '.', decimal-leading-zero);
     position: absolute;
@@ -85,7 +85,7 @@ body::-webkit-scrollbar-thumb {
 
   .horizontal-line {
     display: block;
-    background-color: var(--blanco);
+    background-color: #fff;
     height: .5px;
     width: 95%;
     margin: auto;
@@ -119,7 +119,7 @@ body::-webkit-scrollbar-thumb {
   }
   
   .subtitles {
-    color: var(--blanco);
+    color: #fff;
     font-family: 'Dongle', sans-serif;
     font-weight: 400;
     font-size: 2.6rem;
@@ -135,6 +135,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
       align-items: center;
       overflow: hidden;
+      color: #fff;
   }
   
   .text-wrapper {
@@ -224,13 +225,13 @@ body::-webkit-scrollbar-thumb {
   }
   
   .edit-icon{
-    color: var(--blanco);
+    color: #fff;
     font-size: 26px;
     margin: 0px 10px 0px 0px;
   }
   
   .trash-icon{
-    color: var(--blanco);
+    color: #fff;
     font-size: 26px;
     margin: 0px 10px 0px 0px;
   }

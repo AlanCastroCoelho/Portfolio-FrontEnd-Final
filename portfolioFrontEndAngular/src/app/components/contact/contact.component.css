@@ -1,6 +1,6 @@
 
 footer {
-    background-color: var(--negro);
+    background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +13,7 @@ footer {
   .footer-logo-container{
     width: 100%;
     height: 350px;
-    background-color: var(--negro);
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,7 @@ footer {
   .message {}
   
   p>label {
-    color: var(--gris);
+    color: #999;
     margin: 20px 12px 8px 12px;
   }
   
@@ -139,7 +139,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: start;
-    color: var(--blanco);
+    color: #fff;
     letter-spacing: 4px;
   }
   
@@ -160,7 +160,7 @@ footer {
   .logo-text{
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    color: var(--blanco);
+    color: #fff;
   
   }
    
@@ -172,11 +172,11 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: .9rem;
-    background-color: var(--negro);
+    background-color: #000;
   }
   
   .copyright{
-    color: var(--blanco);
+    color: #fff;
     font-weight: bold;
   margin: auto;
   letter-spacing: 9px;

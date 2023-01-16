@@ -56,6 +56,11 @@
                    <span class="menu-tiem-text">Repositorio</span>                  
                   </div>
                 </a>
+
+                <div class="icons-edit-trash-container" *ngIf="isLogged" >
+                  <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editproyect/{{pryct.id}}"/>
+                   <img class="trash-icon" (click)="delete(pryct.id)"  src="../../../assets/images/trash.svg"/>
+                  </div>
                 </div>
                 
               </div>
