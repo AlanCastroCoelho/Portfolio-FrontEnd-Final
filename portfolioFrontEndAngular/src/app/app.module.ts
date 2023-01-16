@@ -28,6 +28,7 @@ import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.co
 import { ExperienciaComponent } from './components/experiencia/experiencia/experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/experiencia/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-proyects.component';
+import { EditAboutMeComponent } from './components/about-me/about-me/edit-about-me/edit-about-me.component';
 
 
 
@@ -53,6 +54,7 @@ import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-
     ExperienciaComponent,
     EditExperienciaComponent,
     EditProyectsComponent,
+    EditAboutMeComponent,
   ],
   imports: [
     BrowserModule,
