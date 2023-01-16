@@ -22,7 +22,7 @@
 
       </div>
 
-      <div class="row pt-5">
+      <div class="row pt-5 direccion-proyectos">
 
         <div class="container-add-button">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProyecto" *ngIf="isLogged">
@@ -53,15 +53,15 @@
                                       <input type="string" class="form-control" id="descripcionE" name="descripcionP" [(ngModel)]="descripcionP" required>
                                   </div>
                                   <div class="form-group">
-                                    <label for="urlImg">Descripcion Proyecto</label>
+                                    <label for="urlImg">Url imagen</label>
                                     <input type="string" class="form-control" id="urlImg" name="urlImg" [(ngModel)]="urlImg" required>
                                 </div>
                                 <div class="form-group">
-                                  <label for="urlRepo">Descripcion Proyecto</label>
+                                  <label for="urlRepo">Url Repositorio</label>
                                   <input type="string" class="form-control" id="urlRepo" name="urlRepo" [(ngModel)]="urlRepo" required>
                               </div>
                               <div class="form-group">
-                                <label for="urlLiveDemo">Descripcion Proyecto</label>
+                                <label for="urlLiveDemo">Url live demo</label>
                                 <input type="string" class="form-control" id="urlLiveDemo" name="urlLiveDemo" [(ngModel)]="urlLiveDemo" required>
                             </div>
 
