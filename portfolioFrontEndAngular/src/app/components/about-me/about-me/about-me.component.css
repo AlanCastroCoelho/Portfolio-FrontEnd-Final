@@ -14,7 +14,7 @@
 
   
   .subtitle-about-backgr{
-    background-color: var(--azul-francia);
+    background-color: #2900e8;
     margin-bottom: 90px;
   }
 
@@ -55,7 +55,7 @@
   padding: 0;
     margin: 0;
     display: flex;
-    border: 2px solid white;
+    border: 2px solid #fff;
     justify-content: space-between;
     overflow: hidden;
     width: 95%;
@@ -108,7 +108,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
+    background-color: #fff;
     margin: 15px 0;
   }
   
@@ -130,7 +130,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #fff;
     font-family: "Syncopate", sans-serif;
     font-weight: 600;
     font-size: 2rem;
@@ -145,7 +145,7 @@
   }
   
   #about-me-title-container {
-    background: var(--azul-francia);
+    background: #2900e8;
   }
   
 
@@ -157,7 +157,7 @@
   .text-headers {
     font-family: 'Dela Gothic One', cursive;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     font-size: 1.8rem;
   }
   
@@ -173,11 +173,11 @@
   }
   
 .items-list{
-  color: white;
+  color: #fff;
 }
 
 .data-container{
-  color: white;
+  color: #fff;
   font-size: 10px;
   display: flex;
   flex-direction: column;

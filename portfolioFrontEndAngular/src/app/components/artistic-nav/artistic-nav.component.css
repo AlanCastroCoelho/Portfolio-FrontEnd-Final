@@ -1,7 +1,7 @@
 
 .artistic-nav {
-    background-color: var(--negro);
-    color: var(--blanco);
+    background-color: #000;
+    color: #fff;
   }
   
   
@@ -69,20 +69,20 @@
   /* about-me */
   
   .about-me-all{ 
-    background-color: var(--azul-francia);
+    background-color: #2900e8;
   }
   
   .link-to-section {
-    color: var(--blanco);
+    color: #fff;
   }
 
   .link-to-section:hover {
-    color: var(--blanco);
+    color: #fff;
   }
   
   
   .about-me .cardd-container {
-    background-color: var(--azul-francia);
+    background-color: #2900e8;
     height: 60vh;
   }
   
@@ -139,18 +139,18 @@
   .skills .cardd-container:hover .preview-text,
   .skills .cardd-container:hover .cardd-icon {
     transition: 0.2s;
-    color: var(--blanco);
+    color: #fff;
   }
   
   .skills .cardd-container:hover .text-wrapper {
-    color: var(--negro);
+    color: #000;
   }
   
   /* proyects */
   
   .proyects .cardd-container {
     background-color:#fff;
-    color: var(--negro);
+    color: #000;
   }
   
   
@@ -168,17 +168,17 @@
   
   .contact .preview-text,
   .contact .cardd-icon {
-    color: var(--blanco);
+    color: #fff;
   }
   
   .contact .cardd-container:hover .preview-text,
   .contact .cardd-container:hover .cardd-icon {
     transition: 0.2s;
-    color: var(--blanco);
+    color: #fff;
   }
   
   .contact .cardd-container:hover .text-wrapper {
-    color: var(--blanco);
+    color: #fff;
   }
 
   .planet-icon{

@@ -1,6 +1,7 @@
 
+
 #proyects-subtitle {
-    color: var(--negro);
+    color: #000;
   }
 
   /*Title & Subtitles*/
@@ -15,7 +16,7 @@
   }
   
   #proyects-title-container {
-    background-color: var(--negro);
+    background-color: #000;
   }
   
   /*GALLERY PROYECTS SECTION*/
@@ -61,7 +62,7 @@
     top: 40px;
     overflow: hidden;
     font-family: "Syncopate", sans-serif;
-    color: var(--blanco);
+    color: #fff;
     font-size: 28px;
     backdrop-filter: blur(15px);
 
@@ -111,7 +112,7 @@
   .pryct-buttons-container{
     display: flex;
     flex-direction: column;
-    color: var(--blanco);
+    color: #fff;
     font-size: 20px;
   
   }
@@ -127,7 +128,7 @@
   
   .pryct-buttons-container a{
     text-decoration: none;
-    color: var(--blanco);
+    color: #fff;
   }
   
   .pryct-btns{

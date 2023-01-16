@@ -1,4 +1,9 @@
-
+:root{
+  --azul-francia:(#2900e8);
+  --negro:(#000);
+  --blanco:(#fff);
+  --gris:(#999);
+}
 
 nav {
     display: flex;
@@ -6,7 +11,7 @@ nav {
     align-items: center;
     height: 75px;
     counter-reset: menucounter;
-    background-color: var(--negro);
+    background-color: #000;
     width: 100%;
     z-index: 900;
   }
@@ -54,7 +59,7 @@ nav {
   
   .button:hover{
     color: black;
-    background-color: var(--blanco);
+    background-color: #fff;
   }
   
   .burguer {
@@ -65,7 +70,7 @@ nav {
   .burguer div {
     width: 32px;
     height: 2.5px;
-    background-color: var(--blanco);
+    background-color: #fff;
     font-size: 3rem;
     margin: 6px;
     transition: all 0.5s ease;

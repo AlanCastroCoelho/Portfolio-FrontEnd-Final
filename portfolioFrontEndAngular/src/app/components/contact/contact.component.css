@@ -89,7 +89,7 @@ footer {
   .contact-form {
    width: 90%;
    font-size: .85rem;
-   caret-color: var(--azul-francia);
+   caret-color: #2900e8;
   }
   
   .contact-form form input,
