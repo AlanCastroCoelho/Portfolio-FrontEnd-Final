@@ -57,10 +57,21 @@
                   </div>
                 </a>
 
-                <div class="icons-edit-trash-container" *ngIf="isLogged" >
-                  <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editproyect/{{pryct.id}}"/>
-                   <img class="trash-icon" (click)="delete(pryct.id)"  src="../../../assets/images/trash.svg"/>
-                  </div>
+                <div class="edit-delete-bttn"*ngIf="isLogged">
+                  
+                <a href="#" class="menu-item" routerLink="/editproyect/{{pryct.id}}">
+                  <div class="pryct-btns">
+                 <span class="menu-item-text">Editar</span>                  
+                </div>
+              </a>
+
+              <a href="#" class="menu-item" (click)="delete(pryct.id)">
+                <div class="pryct-btns">
+               <span class="menu-item-text">Borrar</span>                  
+              </div>
+            </a>
+          </div>
+
                 </div>
                 
               </div>
