@@ -1,0 +1,133 @@
+:host {
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  color: #fff;
+  margin: 0;
+  padding: 25px;
+  border-radius: 50px;
+  background-color: #000000;
+  border: 2px solid white;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+.decrative-star {
+  position: absolute;
+  width: 25px;
+}
+
+.left-top {
+  top: 18px;
+  left: 18px;
+}
+
+.right-top {
+  top: 18px;
+  right: 18px;
+}
+
+.left-bottm {
+  bottom: 18px;
+  left: 18px;
+}
+
+.right-bottm {
+  bottom: 18px;
+  right: 18px;
+}
+
+.modal-contentt {
+}
+
+#exampleModalLabel {
+  font-family: "Dela Gothic One", cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.modall-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.image-pryct-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 400px;
+  border: 2px solid white;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #000;
+}
+
+.proyect-img {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pryct-description {
+  margin-top: 30px;
+}
+
+.pryct-description p {
+  font-family: "Syncopate", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0px;
+}
+
+.pryct-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 15px;
+}
+
+.pryct-buttons-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.pryct-btns {
+  border: 1px solid #fff;
+  padding: 7px 20px;
+  border-radius: 10px;
+  margin: 5px 15px 5px 0;
+}
+
+.pryct-buttons-container .menu-item:before {
+  display: none;
+}
+
+.menu-item:hover .pryct-btns {
+  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.085);
+}
+
+@media screen and (min-width: 1291px) {
+  .image-pryct-container {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .proyect-img {
+    width: 120%;
+  }
+}

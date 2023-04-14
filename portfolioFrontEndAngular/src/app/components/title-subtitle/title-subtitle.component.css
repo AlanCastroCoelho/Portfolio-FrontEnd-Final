@@ -1,0 +1,37 @@
+.decorative-stars {
+    position: absolute;
+  left: 15px;
+   top: 28px;
+    width: 35px;
+  }
+
+  #about-me-title-container {
+    background: #2900e8;
+  }
+
+  #proyects-title-container {
+    background-color: #000000;
+  }
+
+  .subtitle-about-backgr {
+    background-color: #2900e8;
+    margin-bottom: 90px;
+  }
+
+  .subtitle-skill-backgr {
+    background-color: #999;
+  }
+
+  .subtitle-star {
+    position: absolute;
+    top: 10px;
+    width: 25px;
+  }
+  
+  .left {
+    left: 30px;
+  }
+  
+  .right {
+    right: 30px;
+  }

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Proyectos } from 'src/app/Models/proyectos';
 import { ProyectosService } from 'src/app/services/proyectos.service';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-proyects',
@@ -10,33 +12,45 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 })
 export class EditProyectsComponent implements OnInit {
 
-  proyectos: Proyectos = null;
+  selectedProyect: Proyectos = null;
+  editProyectForm: FormGroup;
 
   constructor( private proyectosS: ProyectosService,
     private activatedRouter : ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    public modal: NgbActiveModal,
+    public formbuilder:FormBuilder) { }
 
     ngOnInit(): void {
-      const id = this.activatedRouter.snapshot.params['id'];
-      this.proyectosS.detail(id).subscribe(
-        data =>{
-          this.proyectos = data;
-        }, err =>{
-           alert("Error al modificar");
-           this.router.navigate(['']);
+      console.log(this.selectedProyect);
+      const id = this.selectedProyect.id;
+      this.setForm(id);
+    }
+
+
+    onUpdate(){
+      this.selectedProyect = this.editProyectForm.value;
+      this.proyectosS.update(this.selectedProyect.id, this.selectedProyect).subscribe(
+        data => {
+          this.router.navigateByUrl('');
+        }, err => {
+         
         }
       )
     }
 
-onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.proyectosS.update(id, this.proyectos).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar el proyecto");
-        this.router.navigate(['']);
-      }
-    )
-  }
+  private setForm(id: number) {
+      
+    this.editProyectForm = this.formbuilder.group({
+      id: [this.selectedProyect.id],
+      nombreP: [this.selectedProyect.nombreP],
+      descripcionP: [this.selectedProyect.descripcionP],
+      urlImg: [this.selectedProyect.urlImg],
+      urlRepo: [this.selectedProyect.urlRepo],
+      urlLiveDemo: [this.selectedProyect.urlLiveDemo]
+    });
+
+
+}
+
 }

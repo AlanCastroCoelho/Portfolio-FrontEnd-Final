@@ -1,205 +1,598 @@
-
-.about-me-all{ 
-    background-color: #000;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-
-  
-  .subtitle-about-backgr{
-    background-color: #2900e8;
-    margin-bottom: 90px;
-  }
-
-.profile-container{
-    position: relative;
-  
-  }
-  
-  .about-pic-div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #fff;
-  }
-  
-  .profile-photo-container{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 500px;
-  overflow: hidden;
-  background: black;
-  border: 2px solid #fff;
-  }
-  
-  #profile-photo {
-    object-fit:cover;
-    width: 370px;
-    position: relative;
-    top: 15px;
-  }
-  
-  
-  .about-me-right{
-    border-radius: 30px;
-    background: rgba(0, 0,0,.98);
-  padding: 0;
-    margin: 0;
-    display: flex;
-    border: 2px solid #fff;
-    justify-content: space-between;
-    overflow: hidden;
-    width: 95%;
-    height: 100%;
-    position: relative;
-  }
-  .links{
-    border: 2px solid #fff;
-    width: 370px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .links svg{
-    color: #fff;
-    font-size: 25px;
-  }
-  
-  .about-me-name-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right:2px solid white;
-    width: 28%;
-  }
-  
-  .sticker-alan-coelho{
-    width: 620px;
-    height: auto;
-    position: absolute;
-    left: -137px;
-    transform: rotate(-90deg);
-    z-index: 600;
-  }
-  
-  .about-me-middle-decor-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .decoration-middle{
-    width: 2.4px;
-    height: 70%;
-    border-radius: 60px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #fff;
-    margin: 15px 0;
-  }
-  
-  .about-me-decor-lines{
-    width: 100%;
-    height: 57px;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-end;
-  }
-  
-  .dec-bottom{
-    align-items:flex-start;
-  }
-  
-  .about-me-paragraph-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    font-family: "Syncopate", sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
-  }
-  
-  
-#about-me-section {
-    overflow: hidden;
-  }
-  
-  #about-me-title-container {
-    background: #2900e8;
-  }
-  
-
-.about-me-header{
-  width: 100%;
-  text-align: center;
+:root {
+  --azul-francia: (#2900e8);
+  --negro: (#000);
+  --blanco: (#fff);
 }
+
+a{
+text-decoration: none;
+color: #fff;
+}
+
+.about-me-all {
+  background-color: #000;
+}
+
+
+
+.profile-container {
+  position: relative;
+}
+
+
+
+.profile-photo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  border-radius: 50px;
+  background: linear-gradient(240deg, rgba(47,47,47,1) 0%, rgba(0,0,0,1) 50%);
+  width: fit-content;
+  height: 555px;
+  border: 1px solid #fff;
+}
+
+#profile-photo {
+  object-fit: cover;
+  width: 400px;
+  position: relative;
+  top: 15px;
+}
+
+.edu-exp-container{
+  width: 92%;
+  margin: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  .text-headers {
-    font-family: 'Dela Gothic One', cursive;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.8rem;
-  }
+}
+.links ul{
+display: flex;
+margin: 0;
+padding: 0;
+}
+
+.links svg{
+  position: relative;
+  top: -2px;
+}
+
+.links img{
+  width: 32px;
+}
+
+.about-items{
+  padding: 15px 50px;
+  margin: -6px 0;
+  z-index: 300;
+}
+
+
+
+
+
+.bttn-container {
+  padding: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border:1px solid #fff;
+}
+
+
+.edit-cont:hover {
+  background-color: #484848;
+  transition: background-color 0.1s ease;
+}
+
+
+.trash-cont:hover {
+  background-color: #550202;
+  transition: background-color 0.1s ease;
+}
+
+.bttn-container span .new-bttn {
   
+}
+
+.bttn-container:hover {
+}
+
+.trash-icon {
+  width: 15px;
+  margin: 0;
+}
+
+.edit-icon {
+  width: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
+.position-container{
+
+}
+
+.edit-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2900e8;
+  border-radius: 35px;
+  transition: all 0.1s ease;
+  border: 1px solid #fff;
+  padding: 7px 25px;
+  font-family: "Syncopate", sans-serif;
+  cursor: pointer;
+  width: fit-content;
+  transition: all .5s ease-in-out;
+}
+
+.edit-container:hover{
+background-color: #121212;
+transform: translateY(-5px);
+}
+
+.edit-icon{
+  width: 28px;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
+.hover-effct{
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+
+
+.hover-effct:hover{
+  background-color: #2900e8;
+  padding-right: 61px;
+}
+
+
+
+.border-top{
+  border-radius: 50px;
+  border-top: 2px solid #fff;
+  padding:30px 20px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.border-bottom{
+  border-radius: 50px;
+  border-bottom: 2px solid #fff;
+  padding:30px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.border-bottom span{
+  font-family: "Syncopate", sans-serif;
+  font-size: 23px;
+}
+
+.border-right{
+  border-radius: 0 30px 30px 0;
+  border-right: 2px solid #fff;
+}
+
+
+.border-left{
+  border-radius: 50px 0 0 50px;
+  border-left: 2px solid #fff;
+  font-family: "Syncopate", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.about-me-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid white;
+  width: 28%;
+}
+
+.sticker-alan-coelho {
+  width: 620px;
+  height: auto;
+  position: absolute;
+  left: -137px;
+  transform: rotate(-90deg);
+  z-index: 600;
+}
+
+.about-me-middle-decor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.decoration-middle {
+  width: 2.4px;
+  height: 70%;
+  border-radius: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  margin: 15px 0;
+}
+
+.about-me-decor-lines {
+  width: 100%;
+  height: 57px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dec-bottom {
+  align-items: flex-start;
+}
+
+.about-me-paragraph-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border-radius: 60px;
+  padding: 20px 50px;
+  color: #fff;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 555px;
+  border: 1px solid #fff;
+}
+
+.white-line {
+  height: 1px;
+  width: 250px;
+  background: #ffffff;
+}
+
+.about-me-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+
+}
+
+.title{
+  display: flex;
+  align-items: center;
   
-  .text-paragraphs {
-    font-weight: 400;
-    font-size: .9rem;
-    margin: 0 40px;
-  }
+  width: 100%;
+background-color: #000;
+border-radius: 60px;
+border: 1px solid #fff;
+overflow: hidden;
+
+}
+
+.title span{
+  font-size: 20px;
+}
+
+.about-me-footer span {
+  font-family: "Syncopate", sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.star-8pts{
+  width: 33px;
+  animation: rotating 8s linear infinite;
+}
+
+.star-md{
+width: 38px;
+}
+
+.star-header{
+  width: 50px;
+}
+
+#about-me-section {
+  overflow: hidden;
+}
+
+
+
+.about-me-right{
+display: flex;
+flex-direction: column;
+align-items: end;
+justify-content: center;
+}
+
+.about-me-header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+
+.nombre-about{
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+font-size: 36px;
+margin: auto;
+}
+
+.about-me-header-two{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+width: 100%;
+
+}
+
+.about-me-header-two span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0;
+  position: relative;
+  top: -6px;
+  letter-spacing: 2px;
   
-  #about-me-paragraph {
-    text-align: left;
-  }
-  
-.items-list{
+}
+.about-me-header-two h2 {
+  font-family: "Syncopate", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0;
+}
+
+.photo-name-container{
+background-color: transparent;
+}
+
+.name-stack-container{
+background-color: #000;
+border-radius: 60px;
+
+padding: 20px;
+}
+
+.decorative-stars {
+  position: absolute;
+left: 15px;
+ top: 28px;
+  width: 35px;
+}
+
+.decrative-stars {
+  position: relative;
+  width: 35px;
+}
+
+.left-star{
+  left: 18px;
+}
+
+.right-star{
+right: 18px;
+}
+.name-stack-container h2 {
+  font-family: "Syncopate", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0;
+}
+
+.name-stack-container span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0;
+  position: relative;
+  top: -6px;
+  letter-spacing: 2px;
+}
+
+.text-headers {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.text-paragraphs {
+  font-weight: 400;
+}
+
+
+
+.items-list {
   color: #fff;
 }
 
-.data-container{
+.data-container {
   color: #fff;
   font-size: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.logo-image{
+.logo-image {
   width: 100px;
   height: auto;
+  z-index: 87;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.list-info{
+.list-info {
   display: flex;
-
 }
 
-.left-info{
+.left-info {
   width: 80%;
 }
 
-.right-info{
-  width:20%;
+.right-info {
+  width: 20%;
 }
 
-.icons-edit-trash-container{
-  width: 38px;
+.icons-edit-trash-container {
+
+}
+
+.about-me-container {
+ width: 98%;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 30px;
+  padding: 50px 30px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+
+.f-direction{
+  flex-direction: column;
+}
+
+.name-cont-rotate{
+  writing-mode: vertical-rl; /* Establece la dirección vertical */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+  border: 1px solid #fff;
+ 
+  display: flex;
+  height: 570px;
+background: #000;
+border-radius: 50px;
+width: 100px;
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
+
+.nombre-rotate{
+    font-family: "Dela Gothic One", cursive;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+  font-size: 28px;
+  margin: auto;
+
+}
+.row-resp-backgr{
+  background-color: none;
+}
+
+
+.logo-stayblessd{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 210px;
+}
+.modal-content {
+  font-family: "Syncopate", sans-serif;
+  color: #fff;
+  background-color: #44444460;
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px solid #ffffff06;
+}
+
+@media screen and (min-width:1200px){
+  
+}
+
+@media screen and (max-width:1200px){
+  .about-me-container{ 
+  }
+
+  .photo-name-container{
+
+  }
+  .row-resp-backgr{
+  background-color: #000;
+  border-radius: 50px;
+  }
+
+  
+
+  .profile-photo-container{
+    height: 570px;
+  }
+
+  #profile-photo{
+width: 400px;
+  }
+
+.about-me-paragraph-container{
+  width: 86%;
+  margin: auto;
+}
+
+.title{
+  width: 86%;
+  margin: auto;
+}
+.about-items{
+  padding: 15px 35px;
+  margin: -6px 0;
+}
+
+}
+
+@media screen and (max-width:810px){
+ 
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
 }

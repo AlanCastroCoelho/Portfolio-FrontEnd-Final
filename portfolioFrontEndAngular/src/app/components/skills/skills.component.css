@@ -1,192 +1,84 @@
 
-
 #skills-container {
-    background-color: #000;
-    
-  }
-  
-  .skills-section {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-  }
-  
-.front-background{
-    border-radius: 0 60px 0 60px;
-    padding: 50px;
-    background:linear-gradient(to bottom, #0e0e0e, black)
-  }
-  
-  .back-background{
-    border-radius: 0 60px 60px 0px;
-    padding: 50px;
-    background-color: #000;
-  }
-
-
-
-  .front-title-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.371);
-      width: 400px;
-      height: 160px;
-      border:7px solid black;
-      z-index: 60;
-      position: relative;
-  
-    }
-  
-
-
-  
-    .left-title-radius{
-      border-radius: 0 100px;
-    border-left: 0;
-    padding: 0px 40px 0 20px;
-    }
-
-    
-  .black-background-title{
-    background: #000;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 140;
-  }
-
-  .black-background-front{
-    border-radius: 0 100px;
-  }
-
-  .black-background-back{
-    border-radius: 80px 0px;
-  }
-  
-  #carouselExampleCaptions{
-    height: 800px;
-    width: 100%;
-  }
-
-  .carousel-inner{
-    height: 800px;
-  }
-.carousel-buttons{
-  width: 60px;
-}
-  .front-title{
-    color: #fff;
-    font-family: 'Dela Gothic One', cursive;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-    font-size: 4.2rem;
-    line-height: 35px;
-    z-index: 150;
-    float: left;
-  }
-
-  .front-container{
-    height: 800px;
-  }
-
-  .c-img{
-    position: absolute;
-    top: 0;
-    left: -190px;
-    width: 100%;
-    height: 100%;
-    }
-
-    
-    .crsl-caption{
-      display: flex;
-      width: 100%;
-      left: 0px;
-      margin-bottom: 20px;
-     }
-
-    .crls-btn{
-      width: 60px;
-    }
-
-   
-     
-     .carousel-enum{
-       position:absolute;
-       right: 60px;
-       top:270px;
-       font-size: 7rem;
-       font-family: 'Dela Gothic One', cursive;
-       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.698);
-       color: transparent;
-     }
-     
-
-    .skill-inf-container{
-      width: 400px;
-      position: relative;
-      float: right;
-      right: 150px;
-      bottom: -160px;
-
-      border-radius: 20px;
-      padding: 20px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      }
-
-      .insider-rectangle{
-  
-        padding: 8px 0px;
-      }
-      
-
-#vector-figures-one{
-    position: absolute;
-  }
-
-  #vector-figures-two{
-    position: absolute;
-  }
-
-
-
-.subtitle-skill-backgr{
-  background-color:#999;
+  background-color: #000;
+  overflow: hidden;
 }
 
-  .back-title-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.371);
-      width: 400px;
-      height: 160px;
-      border:10px solid #000;
-      z-index: 110;
-    }
+.skills-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.right-title-radius{
+.front-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.371);
+  width: 400px;
+  height: 160px;
+  border: 7px solid black;
+  z-index: 60;
+  position: relative;
+}
+
+.left-title-radius {
+  border-radius: 0 100px;
+  border-left: 0;
+  padding: 0px 40px 0 20px;
+}
+
+.black-background-title {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 140;
+}
+
+.black-background-front {
+  border-radius: 0 100px;
+}
+
+.black-background-back {
+  border-radius: 80px 0px;
+}
+
+
+.insider-rectangle {
+  padding: 8px 0px;
+}
+
+
+
+.back-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.371);
+  width: 400px;
+  height: 160px;
+  border: 10px solid #000;
+  z-index: 110;
+}
+
+.right-title-radius {
   border-radius: 100px 0px;
   border-right: 0;
   padding: 0px 20px 0 40px;
 }
 
-#programs-title-cont{
-height: 100px;
-width: 500px;
-margin: auto;
-padding: 6px 0 0 16px;
+#programs-title-cont {
+  height: 100px;
+  width: 500px;
+  margin: auto;
+  padding: 6px 0 0 16px;
 }
 
-
-
-
-.skills-background{
+.skills-background {
   border-radius: 60px 0px;
   overflow: hidden;
   padding: 50px 50px;
@@ -196,78 +88,101 @@ padding: 6px 0 0 16px;
 }
 
 
-#soft-skills-vector{
-  position: absolute;
-height: 1030px;
-width: 100%;
-}
-
-
-
-.skills-title-language {
-  color: #fff;
-  font-family: 'Dongle', sans-serif;
+.progress-container {
   display: flex;
-padding: 5px;
-  }
-  
-  
-  .stars-titls-container{
-    display: flex;
-    align-items: center;
-  }
-
-  
-.progress {
-    margin: 0;
-    margin-top: -4px;
-    background-color: rgba(0, 0, 0, 0.267);
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;;
-    border-right: 3px solid black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    width: 90%;
-    height: 18px;
-    float: right;
-    border-bottom-left-radius:30px ;
-  }
-  
-  
-  .progress-bar {
-  font-size: .8rem;
-  font-weight: bold;
-  padding: 5px 0px;
-  background-color: var(--azul-francia);
-  }
-  
-  .bar-blue{
-    background-color: var(--azul-francia);
-  }
-  
-  .icons-edit-trash-container{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-  }
-
-.trash-icon{
-  width: 25px;
+  align-items: center;
+  justify-content: center;
 }
 
-.edit-icon{
-  width: 25px;
+.skill-inf-container {
+  position: relative;
+  width: 400px;
+  border-radius: 20px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-ul{
-  margin: 0px;
-  padding: 0px;
-width: 100%;
+.add-skill-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: "Syncopate", sans-serif;
+  cursor: pointer;
+  justify-content: flex-end;
+  border: 2px solid red;
 }
 
-li{
+.add-skill-border {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #222222;
+  border-radius: 35px;
+  transition: all 0.1s ease;
+  border: 2px solid #fff;
+  padding: 0 15px;
+}
+.add-skill-border:hover {
+  background-color: #171717;
+}
+
+.add-skill-border span {
+  margin-left: 13px;
+}
+
+.add-skill-border img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   margin: 0;
-  list-style: none;
+}
+
+.modal-content {
+  font-family: "Syncopate", sans-serif;
+  color: #fff;
+  background-color: #44444460;
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px solid #ffffff06;
+}
+
+.modal-body {
+  padding: 0px 0 12px 0;
+}
+
+.modal-footer {
+  padding: 16px 0 0 0;
+}
+
+.bttn {
+  padding: 6px 15px;
+  transition: all 0.2s linear;
+}
+
+.bttn:hover {
+  box-shadow: 3px 7px 7px 1px rgba(0, 0, 0, 0.315);
+  background-color: #ababab6f;
+}
+
+.bttn {
+  background-color: #22222200;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-close {
+  background-color: rgba(255, 255, 255, 0.183);
+  border-radius: 50px;
+}
+
+.modal-body .form-group {
+  margin-top: 12px;
+}
+
+.modal-body .form-group label {
+  margin-bottom: 5px;
 }

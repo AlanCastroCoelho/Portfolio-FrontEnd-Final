@@ -7,20 +7,15 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-proyects.component';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 
-
 const routes: Routes = [
-{path:'',redirectTo:'portfolio',pathMatch:'full'},
-{path:'portfolio',component:PortfolioComponent},
-{path:'login',component:LogInComponent},
-{ path: 'editskill/:id', component: EditSkillComponent},
-{ path: 'editedu/:id', component:EditEducacionComponent},
-{ path: 'editexp/:id', component: EditExperienciaComponent},
-{path: 'editproyect/:id', component: EditProyectsComponent}
-
+  { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'login', component: LogInComponent },
+  { path: 'editexp/:id', component: EditExperienciaComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

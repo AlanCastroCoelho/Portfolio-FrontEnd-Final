@@ -1,37 +1,45 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject, tap } from 'rxjs';
 
 import { Proyectos } from '../Models/proyectos';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProyectosService {
-  
-  URL = 'https://backendalancc.onrender.com/proyectos';
+  /* URL = 'https://backendalancc.onrender.com/proyectos'; */
+  URL = 'http://localhost:8080/proyectos';
 
+  private _refres$ = new Subject<void>();
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
-  public lista(): Observable<Proyectos[]>{
+  get refresh$() {
+    return this._refres$;
+  }
+
+  public lista(): Observable<Proyectos[]> {
     return this.httpClient.get<Proyectos[]>(this.URL + '/lista');
   }
 
-  public detail(id: number): Observable<Proyectos>{
+  public detail(id: number): Observable<Proyectos> {
     return this.httpClient.get<Proyectos>(this.URL + `/detail/${id}`);
   }
 
-  public save(proyectos: Proyectos): Observable<any>{
+  public save(proyectos: Proyectos): Observable<any> {
     return this.httpClient.post<any>(this.URL + '/create', proyectos);
   }
 
-  public update(id: number, proyectos: Proyectos): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, proyectos);
+  public update(id: number, proyectos: Proyectos): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `/update/${id}`, proyectos).pipe(
+      tap(() => {
+        this._refres$.next();
+      })
+    );
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
   }
-
 }

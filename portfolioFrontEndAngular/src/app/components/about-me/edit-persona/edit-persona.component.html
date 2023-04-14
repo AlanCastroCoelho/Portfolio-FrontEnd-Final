@@ -1,0 +1,76 @@
+<div class="container" *ngIf="selectedPerson">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onUpdate()" [formGroup]="editPersonForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              formControlName="nombre"
+              [value]="selectedPerson.nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              name="apellido"
+              formControlName="apellido"
+              [value]="selectedPerson.apellido"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="img">Url Imagen Perfil</label>
+            <input
+              type="text"
+              class="form-control"
+              id="img"
+              name="img"
+              formControlName="img"
+              [value]="selectedPerson.img"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="sobreMi">Descripcion Sobre Mi</label>
+            <textarea
+              type="text"
+              class="form-control"
+              rows="10"
+              cols="50"
+              id="sobreMi"
+              name="sobreMi"
+              formControlName="sobreMi"
+              [value]="selectedPerson.sobreMi"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="titulo"
+              name="titulo"
+              formControlName="titulo"
+              [value]="selectedPerson.titulo"
+              required
+            >
+          </div>
+          
+          <button class="btn btn-primary">Editar Persona</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

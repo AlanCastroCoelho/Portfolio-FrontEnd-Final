@@ -1,0 +1,52 @@
+.icons-edit-trash-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    padding: 0px 0px;
+    margin: 0;
+    color: #fff;
+    z-index: 11;
+    background-color: #222222;
+    border-radius: 35px;
+    border: 2px solid #fff;
+    overflow: hidden;
+  }
+  
+  .bttn-container {
+    padding: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in-out;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-cont:hover {
+    background-color: #2900e8;
+    transition: background-color 0.1s ease;
+  }
+  
+  .trash-cont:hover {
+    background-color: #940000;
+    transition: background-color 0.1s ease;
+  }
+  
+  .bttn-container span .new-bttn {
+    font-size: 5px;
+  }
+  
+  .bttn-container:hover {
+  }
+  
+  .trash-icon {
+    width: 22px;
+    margin: 0;
+  }
+  
+  .edit-icon {
+    width: 22px;
+    margin: 0;
+    cursor: pointer;
+  }

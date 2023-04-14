@@ -1,385 +1,69 @@
-<section class="container-fluid d-flex justify-content-center" id="skills-container">
-    <div class="row skills-section mt-2">
-      <div class="col">
-        <div class="titles-container" id="skills-title-container">
-          <span class="title-numbers">02</span><h2 class="text-title-section">skills.</h2>
-        </div>
-       
-        <div class="white-rectangle-full for-subtitles subtitle-skill-backgr">
-        
-          <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars bigger-star">
-  
-          <div class="insider-black-backg">
-          <div class="text-wrapper" id="work-text">
-            Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección. Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección. Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección. Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección. Este es el subtitulo de Skills, el cual contendra una breve introducción a la sección.
-          </div>
-          </div>
-          <img src="../../../assets/images/Stars.svg" alt="" class="decorative-stars bigger-star">
+<section
+  class="container-fluid d-flex justify-content-center"
+  id="skills-container"
+>
+  <div class="row skills-section mt-2">
+    <div class="col">
+      <app-title-subtitle [section]="'skills'"></app-title-subtitle>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-xl-6 col-12 from-left">
+        <app-skill-image-cont [skillTpe]="'front-end'"></app-skill-image-cont>
+      </div>
+
+      <div class="col-xl-6 col-12 progress-container">
+        <div class="skill-inf-container">
+          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
+
+          <app-skill-list-items
+            [skillType]="'front-end'"
+          ></app-skill-list-items>
         </div>
       </div>
-      
-      <div class="row mt-5 px-0">
-        <div class="col">
+    </div>
 
-          <div id="carouselExampleCaptions" class="carousel slide w-100  m-0">
-            
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"  aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"  aria-label="Slide 3"></button>       
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"  aria-label="Slide 4"></button>
-          </div>
-            <div class="carousel-inner d-flex">
-        
-                
-             
-            
-              
-              <div class="carousel-item active c-item">
-                <img src="../../../assets/images/holo person front2.gif" class=" c-img" >
-                <div class="carousel-enum">01</div>
+    <div class="row m-0">
+      <div
+        class="col-xl-6 col-12 order-xl-first order-md-last progress-container"
+      >
+        <div class="skill-inf-container">
+          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
 
-             
-
-                <div class="skill-inf-container">
-
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSkillFront" *ngIf="isLogged">
-                    Agregar Skill
-                  </button>
-
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="addSkillFront" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          
-                          <div class="container">
-                            <div class="row">
-                                <div>
-                                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                                        <div class="form-group">
-                                            <label for="nombre">Nueva Skill</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="porcentaje">Porcentaje</label>
-                                            <input type="number" class="form-control" id="porcentaje" name="porcentaje" min="0" max="100" [(ngModel)]="porcentaje" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="tipoSkill">Tipo Skill</label>
-                                          <input type="text" class="form-control" id="tipoSkill" name="tipoSkill" [(ngModel)]="tipoSkill" required>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-primary">
-                                            Agregar skill
-                                        </button>
-                                      </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-<ul>
-  <li *ngFor="let skill of skill">
-
-    <div class="data-container insider-rectangle" *ngIf="skill.tipoSkill == 'front-end'">
-
-      <div class="list-info skills-title-language">
-                    <div class="black-title-container">
-                      <div class="stars-titls-container">
-                      <img src="/Assets/Stars.svg" alt="" class="decorative-stars">
-                    <h5>{{skill.nombre}}</h5>
-                  </div>
-                  <div class="icons-edit-trash-container" *ngIf="isLogged" >
-                    <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editskill/{{skill.id}}"/>
-                     <img class="trash-icon" (click)="delete(skill.id)"  src="../../../assets/images/trash.svg"/>
-                    </div>
-                  </div>
-                  </div>
-                  <p><ngb-progressbar [showValue]="true" type="info" [value]="(skill.porcentaje)"></ngb-progressbar></p>
-                
-                </div>
-
-
-              </li>
-              </ul>   
-              </div>
-
-                <div class="carousel-caption d-none d-md-block crsl-caption">
-                  <p class="front-title">front-end</p>
-                </div>
-
-
-
-              </div>
-
-              <div class="carousel-item  c-item">
-                <img src="../../../assets/images/holo person Back.gif" class=" c-img" >
-                <div class="carousel-enum">02</div>
-                <div class="skill-inf-container">
-
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSkillBack" *ngIf="isLogged">
-                    Agregar Skill
-                  </button>
-
-                  <div class="modal fade" id="addSkillBack" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          
-                          <div class="container">
-                            <div class="row">
-                                <div>
-                                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                                        <div class="form-group">
-                                            <label for="nombre">Nueva Skill</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="porcentaje">Porcentaje</label>
-                                            <input type="number" class="form-control" id="porcentaje" name="porcentaje" min="0" max="100" [(ngModel)]="porcentaje" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="tipoSkill">Tipo Skill</label>
-                                          <input type="text" class="form-control" id="tipoSkill" placeholder="back-end" name="tipoSkill" [(ngModel)]="tipoSkill" required>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-primary">
-                                            Agregar skill
-                                        </button>
-                                      </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-<ul>
-  <li *ngFor="let skill of skill">
-    <div class="data-container insider-rectangle" *ngIf="skill.tipoSkill == 'back-end'">
-
-      <div class="list-info skills-title-language">
-                    <div class="black-title-container">
-                      <div class="stars-titls-container">
-                      <img src="/Assets/Stars.svg" alt="" class="decorative-stars">
-                    <h5>{{skill.nombre}}</h5>
-                  </div>
-                  <div class="icons-edit-trash-container" *ngIf="isLogged" >
-                    <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editskill/{{skill.id}}"/>
-                     <img class="trash-icon" (click)="delete(skill.id)"  src="../../../assets/images/trash.svg"/>
-                    </div>
-                  </div>
-                  </div>
-                  <p class="progress"><ngb-progressbar  [showValue]="true" type="info" [value]="(skill.porcentaje)"></ngb-progressbar></p>
-                
-                </div>
-              </li>
-              </ul>   
-              </div>
-
-                <div class="carousel-caption d-none d-md-block crsl-caption">
-                  <p class="front-title">back-end</p>
-                </div>
-
-
-
-              </div>
-
-              <div class="carousel-item  c-item">
-                <img src="../../../assets/images/holo person Back.gif" class=" c-img" >
-                <div class="carousel-enum">03</div>
-                <div class="skill-inf-container">
-
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSkillPrograms" *ngIf="isLogged">
-                    Agregar Skill
-                  </button>
-
-                  <div class="modal fade" id="addSkillPrograms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          
-                          <div class="container">
-                            <div class="row">
-                                <div>
-                                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                                        <div class="form-group">
-                                            <label for="nombre">Nueva Skill</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="porcentaje">Porcentaje</label>
-                                            <input type="number" class="form-control" id="porcentaje" name="porcentaje" min="0" max="100" [(ngModel)]="porcentaje" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="tipoSkill">Tipo Skill</label>
-                                          <input type="text" class="form-control" id="tipoSkill" placeholder="programs" name="tipoSkill" [(ngModel)]="tipoSkill" required>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-primary">
-                                            Agregar skill
-                                        </button>
-                                      </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-<ul>
-  <li *ngFor="let skill of skill">
-    <div class="data-container insider-rectangle" *ngIf="skill.tipoSkill == 'programs'">
-
-      <div class="list-info skills-title-language">
-                    <div class="black-title-container">
-                      <div class="stars-titls-container">
-                      <img src="/Assets/Stars.svg" alt="" class="decorative-stars">
-                    <h5>{{skill.nombre}}</h5>
-                  </div>
-                  <div class="icons-edit-trash-container" *ngIf="isLogged" >
-                    <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editskill/{{skill.id}}"/>
-                     <img class="trash-icon" (click)="delete(skill.id)"  src="../../../assets/images/trash.svg"/>
-                    </div>
-                  </div>
-                  </div>
-                  <p><ngb-progressbar [showValue]="true" type="info" [value]="(skill.porcentaje)"></ngb-progressbar></p>
-                
-                </div>
-              </li>
-              </ul>   
-              </div>
-
-                <div class="carousel-caption d-none d-md-block crsl-caption">
-                  <p class="front-title">programs</p>
-                </div>
-
-
-
-              </div>
-
-              <div class="carousel-item  c-item">
-                <img src="../../../assets/images/holo person Back.gif" class=" c-img" >
-                <div class="carousel-enum">04</div>
-                <div class="skill-inf-container">
-
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSkillSoft" *ngIf="isLogged">
-                    Agregar Skill
-                  </button>
-
-                  <div class="modal fade" id="addSkillSoft" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Skill</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          
-                          <div class="container">
-                            <div class="row">
-                                <div>
-                                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                                        <div class="form-group">
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="porcentaje">Porcentaje</label>
-                                            <input type="number" class="form-control" id="porcentaje" name="porcentaje" min="0" max="100" [(ngModel)]="porcentaje" required>
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="tipoSkill">Tipo Skill</label>
-                                          <input type="text" class="form-control" id="tipoSkill" placeholder="soft" name="tipoSkill" [(ngModel)]="tipoSkill" required>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-primary">
-                                            Save
-                                        </button>
-                                      </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-<ul>
-  <li *ngFor="let skill of skill">
-  
-    <div class="data-container insider-rectangle" *ngIf="skill.tipoSkill == 'soft'">
-
-      <div class="list-info skills-title-language">
-                    <div class="black-title-container">
-                      <div class="stars-titls-container">
-                      <img src="/src/assets/images/Stars.svg" alt="" class="decorative-stars">
-                    <h5>{{skill.nombre}}</h5>
-                  </div>
-                  <div class="icons-edit-trash-container" *ngIf="isLogged" >
-                    <img class="edit-icon" src="../../../assets/images/create.svg" routerLink="/editskill/{{skill.id}}"/>
-                     <img class="trash-icon" (click)="delete(skill.id)"  src="../../../assets/images/trash.svg"/>
-                    </div>
-                  </div>
-                  </div>
-                  <p><ngb-progressbar [showValue]="true" type="info" [value]="(skill.porcentaje)"></ngb-progressbar></p>        
-                </div>
-              </li>
-              </ul>   
-              </div>
-
-                <div class="carousel-caption d-none d-md-block crsl-caption">
-                  <p class="front-title">soft-skills</p>
-                </div>
-
-
-
-              </div>
-
-            </div>
-            <button class="carousel-control-prev carousel-buttons" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next carousel-buttons" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-
-
-          
+          <app-skill-list-items [skillType]="'back-end'"></app-skill-list-items>
         </div>
       </div>
-</div>
 
+      <div class="col-xl-6 col-12 from-right">
+        <app-skill-image-cont [skillTpe]="'back-end'"></app-skill-image-cont>
+      </div>
+    </div>
 
-  </section>
+    <div class="row m-0">
+      <div class="col-xl-6 col-12 from-left">
+        <app-skill-image-cont [skillTpe]="'programs'"></app-skill-image-cont>
+      </div>
+      <div class="col-xl-6 col-12 progress-container">
+        <div class="skill-inf-container">
+          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
+          <app-skill-list-items [skillType]="'programs'"></app-skill-list-items>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0">
+      <div
+        class="col-6 col-xl-6 col-12 order-xl-first order-md-last progress-container"
+      >
+        <div class="skill-inf-container">
+          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
+          <app-skill-list-items [skillType]="'soft'"></app-skill-list-items>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-12 from-right">
+        <app-skill-image-cont [skillTpe]="'soft-skills'"></app-skill-image-cont>
+      </div>
+    </div>
+  </div>
+</section>

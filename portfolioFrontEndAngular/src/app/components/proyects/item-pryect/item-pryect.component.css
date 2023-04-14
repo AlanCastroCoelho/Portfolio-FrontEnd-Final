@@ -1,0 +1,256 @@
+:host {
+  border-bottom: 2px solid #fff;
+  position: relative;
+  width: 90%;
+  font-family: "Syncopate", sans-serif;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.link {
+  display: flex;
+  padding: 3.3rem 0;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.link span {
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+  mix-blend-mode: difference;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.icons-edit-trash-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+  padding: 0px 0px;
+  margin: 0;
+  color: #fff;
+  z-index: 11;
+  background-color: #222222;
+  border-radius: 35px;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.bttn-container {
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease-in-out;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-cont:hover {
+  background-color: #2900e8;
+  transition: background-color 0.1s ease;
+}
+
+.trash-cont:hover {
+  background-color: #940000;
+  transition: background-color 0.1s ease;
+}
+
+.bttn-container span .new-bttn {
+  font-size: 5px;
+}
+
+.bttn-container:hover {
+}
+
+.trash-icon {
+  width: 22px;
+  margin: 0;
+}
+
+.edit-icon {
+  width: 22px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/*///////// PROYECTS CONTAINER HOVER IAMGES/////////////*/
+.prycts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-proyect-container {
+  display: flex;
+  width: 100%;
+}
+
+.proyects-container {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.proyects-container ul {
+  width: 90%;
+}
+
+.proyects-container ul li {
+  border-bottom: 2px solid #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.link span {
+  display: block;
+  font-family: "Syncopate", sans-serif;
+  z-index: 10;
+  mix-blend-mode: difference;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.arrow {
+  mix-blend-mode: difference;
+  z-index: 10;
+  width: 120px;
+  height: 37px;
+  opacity: 1;
+  transform: rotate(180deg);
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.hover-reveal {
+  position: absolute;
+  width: 360px;
+  height: 190px;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease-out;
+  border-radius: 30px;
+  border: 4px solid #ffffff14;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.246);
+}
+
+.nonDisplay {
+  display: none;
+}
+
+.rotateArrow {
+  width: 110px;
+  transform: rotate(150deg);
+}
+
+.hover-reveal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: text-transform 0.5s ease-out;
+}
+
+/*/////////// Show Info //////////////*/
+.modal-contentt {
+  background-color: #000000;
+  width: 100%;
+  color: #fff;
+}
+
+#exampleModalLabel {
+  font-family: "Dela Gothic One", cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.modall-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.image-pryct-container {
+  margin-top: 40px;
+  width: 90%;
+  height: 550px;
+  overflow: hidden;
+  border: 2px solid #550202;
+  border-radius: 30px;
+}
+
+.proyect-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.pryct-description {
+  margin-top: 30px;
+}
+
+.pryct-description p {
+  font-family: "Syncopate", sans-serif;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0px;
+}
+
+.pryct-buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-size: 20px;
+  margin: auto;
+}
+
+.pryct-buttons-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.pryct-btns {
+  border: 1px solid #fff;
+  padding: 7px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.pryct-buttons-container .menu-item:before {
+  display: none;
+}
+
+.menu-item:hover .pryct-btns {
+  transition: background-color 0.7s ease;
+  background-color: rgba(255, 255, 255, 0.085);
+}
+
+#offcanvasExample {
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+}

@@ -1,72 +1,144 @@
 <div class="row experiencia-container">
+  <div class="title-container">
+    <img src="../../../../assets/images/exp-icon-01.png" alt="" class="icon">
+    <div class="line title-line"></div>
     <h1>Experiencia Laboral</h1>
-    <div class="container-add-button">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addExperiencia" *ngIf="isLogged">
-        Agregar Experiencia
-      </button>
-    </div>
+  </div>
+<app-bttn-add
+dataTarget="Experiencia"
+ *ngIf="isLogged"></app-bttn-add>
 
-    
-      <div class="modal fade" id="addExperiencia" tabindex="-1" aria-labelledby="addExperiencia" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Experiencia</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              
-              <div class="container">
-                <div class="row">
-                    <div>
-                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                            <div class="form-group">
-                                <label for="nombre">Nombre Experiencia</label>
-                                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="descripcionE">Descripcion</label>
-                                <input type="string" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-                            </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button class="btn btn-primary">
-                                Agregar Experiencia
-                            </button>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </div>
+
+
+  <div class="no-experience" *ngIf="expe.length === 0">
+    <div class="no-exp-header">
+      <img
+        src="../../../../assets/images/Star 10pts-01.png"
+        alt=""
+        class="star-ten-hd rotating"
+      />
+      <h3>error</h3>
+      <img
+        src="../../../../assets/images/Star 10pts-01.png"
+        alt=""
+        class="star-ten-hd rotating"
+      />
+      <h3>404</h3>
+      <img
+        src="../../../../assets/images/Star 10pts-01.png"
+        alt=""
+        class="star-ten-hd rotating"
+      />
+    </div>
+<div class="no-exp-cont">
+    <div class="no-exp-body">
+      <div class="text-container">
+        <img
+          src="../../../../assets/images/Star 10pts-01.png"
+          alt=""
+          class="star-ten-bdy"
+        />
+        <p>
+          <span>Experiencia</span>
+          <span>Laboral</span>
+        </p>
+        <div class="inside-text">
+          <span>Not</span>
+          <img
+            src="../../../../assets/images/Arrow-01.png"
+            alt=""
+            class="arrow-text"
+          />
+          <span>Found</span>
         </div>
       </div>
-  
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Experiencia of expe">
-                    <td>
-                        <h2>{{Experiencia.nombreE}}</h2>
-                    </td>
-                    <td>{{Experiencia.descripcionE}}</td>
-                    <div class="button-container" *ngIf="isLogged">
-                    <td>
-                
-                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                        
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                            
-                    </td>
-                </div>
-                </tr>
-            </tbody>
-        </table>
-    
+
+      <img src="../../../../assets/images/RING.png" alt="" class="ring" />
+    </div>
+
+    <div class="no-exp-bottom">
+      <img src="../../../../assets/images/Eye-01.png" alt="" class="eye" />
+      <div class="text-cont-bttm">
+        <div class="txt-left">
+          <span>en</span>
+        </div>
+
+        <div class="txt-right">
+          <span class="block">busqueda</span>
+          <div class="inside-txt-right">
+            <img
+              src="../../../../assets/images/Star 10pts-01.png"
+              alt=""
+              class="star-txt-inside rotating"
+            />
+            <span>de</span>
+            <img
+              src="../../../../assets/images/Crayon Wave.png"
+              alt=""
+              class="wave"
+            />
+            <span>una</span>
+          </div>
+        </div>
+        <div class="txt-bttm">
+          <div class="inside-txt-bttm">
+            <div class="bttn-simulate">
+              <span>oportunidad</span>
+            </div>
+            <img
+              src="../../../../assets/images/Star 4pts blue.png"
+              alt=""
+              class="starFour-txt-inside"
+            />
+            <img
+              src="../../../../assets/images/Star 4pts blue.png"
+              alt=""
+              class="starFour-txt-inside"
+            />
+          </div>
+
+          <img
+            src="../../../../assets/images/Hand Cursor.png"
+            alt=""
+            class="hand-cursor"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <ul class="list-group" *ngFor="let Exp of expe">
+    <li class="list-group-item">
+      <div class="circle"></div>
+      <div class="line"></div>
+      
+      <div class="name-cont">
+         
+      <h2>{{ Exp.nombreE }}</h2>
+    </div>
+
+    <div class="exp-descrp-cont">
+      
+      <div class="icons-edit-trash-container" *ngIf="isLogged">
+        <div class="bttn-container edit-cont">
+          <img
+            class="edit-icon"
+            src="../../../assets/images/create.svg"
+            (click)="editarItem(Exp)"
+          />
+        </div>
+        
+        <div class="bttn-container trash-cont">
+          <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete(Exp.id)"/>
+          
+        </div>
+      </div>
+      <p>{{ Exp.descripcionE }}</p>
+    </div>
+
+    </li>
+  </ul>
+
 
 </div>
-

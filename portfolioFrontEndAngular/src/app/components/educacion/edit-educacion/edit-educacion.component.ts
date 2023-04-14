@@ -2,41 +2,57 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/Models/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-edit-educacion',
   templateUrl: './edit-educacion.component.html',
-  styleUrls: ['./edit-educacion.component.css']
+  styleUrls: ['./edit-educacion.component.css'],
 })
 export class EditEducacionComponent implements OnInit {
+  public selectedEducation: Educacion = null;
+  editEducationForm: FormGroup;
 
-  educacion: Educacion = null;
-  
-  constructor(private educacionS: EducacionService,
-    private activatedRouter : ActivatedRoute,
-    private router: Router) { }
+  constructor(
+    private educacionS: EducacionService,
+    private router: Router,
+    public modal: NgbActiveModal,
+    public formbuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.detail(id).subscribe(
-      data =>{
-        this.educacion = data;
-      }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
-      }
-    )
+    console.log(this.selectedEducation);
+    const id = this.selectedEducation.id;
+    this.setForm(id);
   }
-  onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.update(id, this.educacion).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar la educacion");
-        this.router.navigate(['']);
-      }
-    )
+
+  onUpdate() {
+    this.selectedEducation = this.editEducationForm.value;
+    this.educacionS
+      .update(this.selectedEducation.id, this.selectedEducation)
+      .subscribe(
+        (data) => {
+          this.router.navigateByUrl('');
+        },
+        (err) => {}
+      );
+  }
+
+  get editFormData() {
+    return this.editEducationForm.controls;
+  }
+
+  private setForm(id: number) {
+    this.editEducationForm = this.formbuilder.group({
+      id: [this.selectedEducation.id],
+      nombreE: [this.selectedEducation.nombreE],
+      descripcionE: [this.selectedEducation.descripcionE],
+    });
   }
 }
-

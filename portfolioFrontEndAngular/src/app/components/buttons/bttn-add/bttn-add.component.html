@@ -1,0 +1,319 @@
+<div class="container-add-button">
+    <div
+        class="add-bttn"
+        data-bs-toggle="modal"
+        [attr.data-bs-target]="'#add' + dataTarget"
+      >
+        <span>Añadir {{dataTarget}}</span>
+        <img src="../../../assets/images/plus-solid.svg" alt="" />
+      </div>
+  </div>
+
+<!--Modal Para Educacion-->
+<div
+class="modal fade"
+id="addEducacion"
+tabindex="-1"
+aria-labelledby="addEducacion"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">
+        Nueva Educacion
+      </h1>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+          <div>
+            <form (ngSubmit)="onCreateEdu()"  novalidate #f="ngForm">
+              <div class="form-group">
+                <label for="nombreE">Nombre Educaión</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreE"
+                  name="nombreE"
+                  [(ngModel)]="nombreE"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="descripcionE">Descripcion</label>
+                <textarea type="string"
+                class="form-control"
+                id="descripcionE"
+                name="descripcionE"
+                [(ngModel)]="descripcionE"
+                 cols="30" 
+                 rows="10" required>
+                </textarea>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  dataa-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button class="bttn">Agregar Educacion</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--Modal Para Skills-->
+  <div
+            class="modal fade"
+            id="addSkill"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Skill
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="nombre">Nueva Skill</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre"
+                        name="nombre"
+                        [(ngModel)]="nombre"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="porcentaje">Porcentaje</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="porcentaje"
+                        name="porcentaje"
+                        min="0"
+                        max="100"
+                        [(ngModel)]="porcentaje"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="tipoSkill">Tipo Skill</label>
+                      <select name="tipoSkill" class="form-control" id="tipoSkill" [(ngModel)]="tipoSkill">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="front-end">Front-End</option>
+                        <option value="back-end">Back-End</option>
+                        <option value="programs">Programs</option>
+                        <option value="soft">Soft-Skills</option>
+                      </select>
+                     
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button class="bttn">Add skill</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+<!--Modal Para Experiencia-->
+          <div
+          class="modal fade"
+          id="addExperiencia"
+          tabindex="-1"
+          aria-labelledby="addExperiencia"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Nueva Experiencia
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div>
+                      <form (ngSubmit)="onCreateExp()" novalidate #f="ngForm">
+                        <div class="form-group">
+                          <label for="nombre">Nombre Experiencia</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nombreExp"
+                            name="nombreExp"
+                            [(ngModel)]="nombreExp"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="descripcionExp">Descripcion</label>
+                          <textarea
+                            type="string"
+                            class="form-control"
+                            id="descripcionExp"
+                            name="descripcionExp"
+                            rows="10"
+                            cols="50"
+                            [(ngModel)]="descripcionExp"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button class="btn btn-primary">Agregar Experiencia</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!--Modal Para Proyectos-->
+<div
+class="modal fade"
+id="addProyect"
+tabindex="-1"
+aria-labelledby="addProyect"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">
+        Nuevo Proyecto
+      </h1>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+          <div>
+            <form (ngSubmit)="onCreatePryct()" novalidate #f="ngForm">
+              <div class="form-group">
+                <label for="nombreP">Nombre del Proyecto</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreP"
+                  name="nombreP"
+                  [(ngModel)]="nombreP"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="descripcionP">Descripcion</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="descripcionP"
+                  name="descripcionP"
+                  [(ngModel)]="descripcionP"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="urlImg">Url Imagen Preview</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="urlImg"
+                  name="urlImg"
+                  [(ngModel)]="urlImg"
+                />
+              </div>
+              <div class="form-group">
+                <label for="urlRepo">Url Repo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="urlRepo"
+                  name="urlRepo"
+                  [(ngModel)]="urlRepo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="urlLiveDemo">Url Live Demo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="urlLiveDemo"
+                  name="urlLiveDemo"
+                  [(ngModel)]="urlLiveDemo"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button class="btn btn-primary">
+                  Agregar Proyecto
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

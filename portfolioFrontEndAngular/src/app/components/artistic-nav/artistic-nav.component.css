@@ -1,194 +1,206 @@
-
 .artistic-nav {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  
-  /* card basic styling */
-  
-  .cardd-container {
-    position: relative;
-    height: 30vh;
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-    border-radius:  80px;
-    transform: scale(0.98);
-    font-family: 'Dongle', sans-serif;
-    font-weight: 800;
-  }
-  
-  .cardd {
-    overflow: hidden;
-  }
-  
-  .cardd-container:hover {
-    transform: scale(0.92);
-  }
-  
-  .cardd-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 50px;
-    font-size: 25px;
-    z-index: 2;
-  }
-  
-  .preview-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 50px;
-    font-size: 2.8rem;
-    font-weight: 400;
-    transition: all 0.2s ease;
-  }
-  
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
 
-  @keyframes float-text {
-    0% {
-      left: -20%;
-    }
-  
-    50% {
-      left: -100%;
-    }
-  
-    100% {
-      left: -20%;
-    }
-  }
-  
-  .cardd-container:hover .text-wrapper {
-    opacity: 0;
-  }
-  
-  /* custom styling for nav items */
-  
-  /* about-me */
-  
-  .about-me-all{ 
-    background-color: #2900e8;
-  }
-  
-  .link-to-section {
-    color: #fff;
+/* card basic styling */
+
+.cardd-container {
+  position: relative;
+  height: 30vh;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 80px;
+  transform: scale(0.98);
+  font-family: "Dongle", sans-serif;
+  font-weight: 800;
+}
+
+.cardd {
+  overflow: hidden;
+}
+
+.cardd-container:hover {
+  transform: scale(0.92);
+}
+
+.cardd-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 50px;
+  font-size: 25px;
+  z-index: 2;
+}
+.text-wrapper{
+  font-size: 52px;
+  font-weight: 400;
+}
+.preview-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  font-size: 2.8rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+
+
+@keyframes float-text {
+  0% {
+    left: -20%;
   }
 
-  .link-to-section:hover {
-    color: #fff;
-  }
-  
-  
-  .about-me .cardd-container {
-    background-color: #2900e8;
-    height: 60vh;
-  }
-  
-  .about-me .text-wrapper {
-    font-size: 60px;
-    opacity: 1;
-  }
-  
-  .about-me .cardd-container:hover .text-wrapper {
-    opacity: 0;
-  
-  }
-  
-  .cardd-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 50px;
-    font-size: 40px;
-    transition: all 0.2s ease;
-  
-  }
-  
-  .about-me .cardd-container:hover .cardd-title {
-    right: 10px;
-  
-  }
-  
-  .cardd-container:hover .preview-text {
-    left: 10px;
-    font-size: 4rem;
-  
-  }
-  
-  .cardd-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 50px;
-    font-size: 40px;
-    text-transform: uppercase;
-  }
-  
-  .skills .cardd-container {
-    background-color:grey;
-    color: white;
-  }
-  
-  .skills .preview-text,
-  .skills .cardd-icon {
-    color: white;
-  }
-  
-  .skills .cardd-container:hover .preview-text,
-  .skills .cardd-container:hover .cardd-icon {
-    transition: 0.2s;
-    color: #fff;
-  }
-  
-  .skills .cardd-container:hover .text-wrapper {
-    color: #000;
-  }
-  
-  /* proyects */
-  
-  .proyects .cardd-container {
-    background-color:#fff;
-    color: #000;
-  }
-  
-  
-  
-  /* contact */
-  
-  .contact .cardd-container {
-    background-color: rgb(23, 23, 23);
-    height: 60vh;
-  }
-  
-  .contact .cardd-container:hover {
-    transform: scale(0.96, 0.92);
-  }
-  
-  .contact .preview-text,
-  .contact .cardd-icon {
-    color: #fff;
-  }
-  
-  .contact .cardd-container:hover .preview-text,
-  .contact .cardd-container:hover .cardd-icon {
-    transition: 0.2s;
-    color: #fff;
-  }
-  
-  .contact .cardd-container:hover .text-wrapper {
-    color: #fff;
+  50% {
+    left: -100%;
   }
 
-  .planet-icon{
-    width:50px;
+  100% {
+    left: -20%;
   }
+}
 
-  .rocket-icon{
-    width:33px;
-  }
- 
-  .color-palette{
-    width:33px;
-  }
+.cardd-container:hover .text-wrapper {
+  opacity: 0;
+}
+
+/* custom styling for nav items */
+
+/* about-me */
+
+.about-me-all {
+  background-color: #2900e8;
+}
+
+.link-to-section {
+  color: #fff;
+}
+
+.link-to-section:hover {
+  color: #fff;
+}
+
+.about-me .cardd-container {
+  background-color: #2900e8;
+  height: 60vh;
+  position: relative;
+  transform: translateX(-100%);
+}
+
+.about-me .text-wrapper {
+  
+  opacity: 1;
+}
+
+.about-me .cardd-container:hover .text-wrapper {
+  opacity: 0;
+}
+
+.cardd-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  font-size: 40px;
+  transition: all 0.2s ease;
+}
+
+.about-me .cardd-container:hover .cardd-title {
+  right: 10px;
+  font-size: 60px;
+}
+
+.cardd-container:hover .preview-text {
+  left: 10px;
+  font-size: 4rem;
+}
+
+.cardd-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.skills .cardd-container {
+  background-color: grey;
+  color: white;
+}
+
+.skills .preview-text,
+.skills .cardd-icon {
+  color: white;
+}
+
+.skills .cardd-container:hover .preview-text,
+.skills .cardd-container:hover .cardd-icon {
+  transition: 0.2s;
+  color: #fff;
+}
+
+.skills .cardd-container:hover .text-wrapper {
+  color: #000;
+}
+
+/* proyects */
+
+.proyects .cardd-container {
+  background-color: #fff;
+  color: #000;
+}
+
+/* contact */
+
+.contact .cardd-container {
+  background-color: rgb(23, 23, 23);
+  height: 60vh;
+  position: relative;
+  transform: translateX(100%);
+}
+
+.contact .cardd-container:hover {
+  transform: scale(0.96, 0.92);
+}
+
+.contact .preview-text,
+.contact .cardd-icon {
+  color: #fff;
+}
+
+.contact .cardd-container:hover .preview-text,
+.contact .cardd-container:hover .cardd-icon {
+  transition: 0.2s;
+  color: #fff;
+}
+
+.contact .cardd-container:hover .text-wrapper {
+  color: #fff;
+}
+
+.planet-icon {
+  width: 50px;
+}
+
+.rocket-icon {
+  width: 33px;
+}
+
+.color-palette {
+  width: 33px;
+}
+
+@media (max-width: 992px) {
+.cardd-container{
+margin-bottom: 20px;
+height: 180px !important;
+}
+.text-wrapper {
+ display: none;
+}
+
+}

@@ -1,0 +1,47 @@
+<div class="container" [@fadeInOut]>
+  <img
+    src="../../../assets/images/Stars.svg"
+    alt=""
+    class="decrative-star left-top"
+  />
+  <img
+    src="../../../assets/images/Stars.svg"
+    alt=""
+    class="decrative-star right-top"
+  />
+  <img
+    src="../../../assets/images/Stars.svg"
+    alt=""
+    class="decrative-star left-bottm"
+  />
+  <img
+    src="../../../assets/images/Stars.svg"
+    alt=""
+    class="decrative-star right-bottm"
+  />
+  <div class="modal-contentt">
+    <div class="modall-body">
+      <div class="image-pryct-container">
+        <img [src]="proyectToShow.urlImg" alt="" class="proyect-img"/>
+      </div>
+
+      <div class="pryct-description">
+        <p>{{ proyectToShow.descripcionP }}</p>
+      </div>
+    </div>
+
+    <div class="pryct-buttons-container">
+      <a [href]="proyectToShow.urlLiveDemo" class="menu-item">
+        <div class="pryct-btns">
+          <span class="menu-item-text">Live demo</span>
+        </div>
+      </a>
+
+      <a [href]="proyectToShow.urlRepo" class="menu-item" target="_blank">
+        <div class="pryct-btns">
+          <span class="menu-item-text">Repositorio</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

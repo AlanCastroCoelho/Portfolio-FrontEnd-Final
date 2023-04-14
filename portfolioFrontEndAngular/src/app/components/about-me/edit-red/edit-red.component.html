@@ -1,0 +1,45 @@
+<div class="container" *ngIf="selectedRed">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onUpdate()" [formGroup]="editRedForm">
+          <div class="form-group">
+            <label for="nombreR">Nombre de Red Social</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreR"
+              name="nombreR"
+              formControlName="nombreR"
+              [value]="selectedRed.nombreR"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="urlRed">Url</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="urlRed"
+              name="urlRed"
+              formControlName="urlRed"
+              [value]="selectedRed.urlRed"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="urlIcon">Url del Icono</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="urlIcon"
+              name="urlIcon"
+              formControlName="urlIcon"
+              [value]="selectedRed.urlIcon"
+              required
+            ></textarea>
+          </div>
+          <button class="btn btn-primary">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,35 +1,64 @@
-<div class="container" *ngIf="proyectos">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreP">Nombre deL proyecto</label>
-                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyectos.nombreP" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcionP">Descripcion</label>
-                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyectos.descripcionP" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="urlImg">Url de la imagen</label>
-                    <input type="text" class="form-control" id="urlImg" name="urlImg" [(ngModel)]="proyectos.urlImg" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="urlRepo">URL al Repo</label>
-                    <input type="text" class="form-control" id="urlRepo" name="urlRepo" [(ngModel)]="proyectos.urlRepo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="urlLiveDemo">Url live demo</label>
-                    <input type="text" class="form-control" id="urlLiveDemo" name="urlLiveDemo" [(ngModel)]="proyectos.urlLiveDemo" required>
-                </div>
-
-                <button class="btn btn-primary">
-                    Editar proyecto
-                </button>
-            </form>
-        </div>
+<div class="container" *ngIf="selectedProyect">
+  <form (ngSubmit)="onUpdate()" [formGroup]="editProyectForm">
+    <div class="form-group">
+      <label for="nombreP">Nombre deL proyecto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombreP"
+        formControlName="nombreP"
+        [value]="selectedProyect.nombreP"
+        required
+      />
     </div>
+    <div class="form-group">
+      <label for="descripcionP">Descripcion deL proyecto</label>
+      <textarea
+        rows="15"
+        cols="50"
+        class="form-control"
+        id="descripcionP"
+        name="descripcionP"
+        formControlName="descripcionP"
+        [value]="selectedProyect.descripcionP"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="urlImg">Url de la imagen</label>
+      <input
+        type="text"
+        class="form-control"
+        id="urlImg"
+        formControlName="urlImg"
+        [value]="selectedProyect.urlImg"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="urlRepo">URL al Repo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="urlRepo"
+        formControlName="urlRepo"
+        [value]="selectedProyect.urlRepo"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="urlLiveDemo">Url live demo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="urlLiveDemo"
+        formControlName="urlLiveDemo"
+        [value]="selectedProyect.urlLiveDemo"
+        required
+      />
+    </div>
+
+    <button class="bttn">Actualizar</button>
+  </form>
 </div>

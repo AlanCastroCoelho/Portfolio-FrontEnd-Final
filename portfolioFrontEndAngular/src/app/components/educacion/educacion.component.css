@@ -1,62 +1,232 @@
-
-
-.educacion-container{
-    border: 2px solid #fff;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px;
+.educacion-container {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px;
+}
+.title-container {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 15px;
 }
 
-tr{
-    border-bottom: 2px solid #fff;
-    
+tr {
+
+  border-bottom: 2px solid #5f5f5f;
 }
 
-td{
-    font-family:"Syncopate", sans-serif;
-    font-size: 15px;
+td {
+  font-family: "Syncopate", sans-serif;
+  font-size: 15px;
 }
 
-h1{
-    font-family: 'Dela Gothic One', cursive;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.8rem;
-    margin: 30px;
+h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.2rem;
+margin-left: 30px;
+}
+
+
+
+.table {
+  width: 100%;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+td button {
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+.container-add-button {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 50px;
+ padding-left: 0;
+}
+
+.add-bttn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #222222;
+  border-radius: 35px;
+  transition: all 0.1s ease;
+  border: 1px solid #fff;
+  padding: 0 15px;
+  font-family: "Syncopate", sans-serif;
+  cursor: pointer;
+}
+.add-bttn:hover {
+  background-color: #171717;
+}
+
+.add-bttn span {
+  margin-left: 13px;
+}
+
+.add-bttn img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.modal-content {
+  font-family: "Syncopate", sans-serif;
+  color: #fff;
+  background-color: #44444460;
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px solid #ffffff06;
+}
+
+.list-group {
+  margin: 0;
+  border: none;
+}
+
+.list-group-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+
+.circle {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.title-circle{
+  top: 39px;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #fff;
+}
+.line {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  height: 70%;
+  border-left: 2px solid #fff;
+}
+
+.title-line{
+  position: absolute;
+  left: 0;
+  top: 80px;
+  height: 47%;
+  border-left: 4px solid #fff;
+}
+
+.icon{
+  position: absolute;
+  left: 3px;
+  top: 38px;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  padding: 10px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+ul{
+
+}
+
+li{
+  display: flex;
+padding: 5px;
+background: none;
+color: #fff;
+font-family: "Syncopate", sans-serif;
+font-size: 15px;
+padding-bottom: 20px;
+}
+
+.name-cont{
+  width: 30%;
+  word-wrap: break-word;
 }
 
 h2{
-    font-size: 20px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
-.table{
-width: 90%;
-color: #fff;;
+.edu-descrp-cont{
+  width: 70%;
+  padding-left: 20px;
+  word-wrap: break-word;
 }
 
-.button-container{
-    display: flex;
-    flex-direction: column;
+
+.icons-edit-trash-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+  padding: 0px 0px;
+  margin: 0;
+  color: #fff;
+  z-index: 11;
+  background-color: #222222;
+  border-radius: 35px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
-td button{
-    width: 110px;
-    margin-bottom: 10px;
+.bttn-container {
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease-in-out;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal{
-    color: #000;
+.edit-cont:hover {
+  background-color: #2900e8;
+  transition: background-color 0.1s ease;
 }
 
-.container-add-button{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 100%;
+.trash-cont:hover {
+  background-color: #940000;
+  transition: background-color 0.1s ease;
 }
 
-.container-add-button button{
-    width: 180px;
+.bttn-container span .new-bttn {
+  font-size: 5px;
+}
+
+.bttn-container:hover {
+}
+
+.trash-icon {
+  width: 22px;
+  margin: 0;
+}
+
+.edit-icon {
+  width: 22px;
+  margin: 0;
+  cursor: pointer;
 }

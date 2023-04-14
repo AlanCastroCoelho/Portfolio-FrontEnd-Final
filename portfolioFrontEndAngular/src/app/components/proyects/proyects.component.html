@@ -1,142 +1,30 @@
-<div class="container-fluid d-flex justify-content-center" id="proyects-container">
-    <div class="row proyects-section mt-5">
-      <div class="col">
-        <div class="titles-container" id="proyects-title-container">
-          <span class="title-numbers">03</span><h2 class="text-title-section">proyects.</h2>
-        </div>
-        <div class="white-rectangle-full for-subtitles">
-        
-          <img src="/Assets/Stars.svg" alt="" class="decorative-stars bigger-star">
-  
-          <div class="insider-black-backg">
-          <div class="text-wrapper" id="work-text">
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.
-            Este es el subtitulo de Proyects, el cual contendra una breve introducción a la sección.</div>
-          </div>
-          <img src="/Assets/Stars.svg" alt="" class="decorative-stars bigger-star">
-        </div>
+<div
+  class="container-fluid d-flex justify-content-center"
+  id="proyects-container"
+>
+  <div class="row proyects-section mt-5">
+    <div class="col">
+      <app-title-subtitle
+      [section]="'proyects'"></app-title-subtitle>
+    </div>
 
+    <div class="row pt-5 proy-cont-fth">
+      <app-bttn-add
+      dataTarget="Proyect"
+       *ngIf="isLogged"></app-bttn-add>
+
+
+
+      <div class="col proyects-container">
+        <app-item-pryect
+          *ngFor="let pryct of proyectos"
+          [proyects]="pryct"
+          [index]="pryct.id"
+          (showProyectEvent)="selectedProyect($event)"
+          (eliminarProyecto)="delete($event)"
+        >
+        </app-item-pryect>
       </div>
-
-      <div class="row pt-5 direccion-proyectos">
-
-        <div class="container-add-button">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProyecto" *ngIf="isLogged">
-              Agregar Proyecto
-            </button>
-          </div>
-      
-          
-            <div class="modal fade" id="addProyecto" tabindex="-1" aria-labelledby="addProyecto" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Proyecto</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    
-                    <div class="container">
-                      <div class="row">
-                          <div>
-                              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                                  <div class="form-group">
-                                      <label for="nombre">Nombre Proyecto</label>
-                                      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombreP" required>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="descripcionP">Descripcion Proyecto</label>
-                                      <input type="string" class="form-control" id="descripcionE" name="descripcionP" [(ngModel)]="descripcionP" required>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="urlImg">Url imagen</label>
-                                    <input type="string" class="form-control" id="urlImg" name="urlImg" [(ngModel)]="urlImg" required>
-                                </div>
-                                <div class="form-group">
-                                  <label for="urlRepo">Url Repositorio</label>
-                                  <input type="string" class="form-control" id="urlRepo" name="urlRepo" [(ngModel)]="urlRepo" required>
-                              </div>
-                              <div class="form-group">
-                                <label for="urlLiveDemo">Url live demo</label>
-                                <input type="string" class="form-control" id="urlLiveDemo" name="urlLiveDemo" [(ngModel)]="urlLiveDemo" required>
-                            </div>
-
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button class="btn btn-primary">
-                                      Agregar skill
-                                  </button>
-                                </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-        <div class="gallery-container col d-flex justify-content-center mb-5">
-          <div class="gallery">
-            
-<ul>
-  <li *ngFor="let pryct of proyectos">
-            <div class="container-pryct pryct-one mb-5">
-              
-              <div class="container-desc-pryct color-one-desc-pryct">             
-                <div class="pryct-title-container">
-                  <span class="pryct-title">{{pryct.nombreP}}</span>
-                </div>
-
-                  <div class="pryct-img" alt="Card image cap"></div>
-                  
-                  <div class="pryct-body">           
-                    <p class="pryct-text">{{pryct.descripcionP}}</p>
-                  </div>
-
-                  <div class="pryct-buttons-container">
-                    
-                    <a href="#" class="menu-item">
-                    <div class="pryct-btns">
-                   <span class="menu-item-text">Live demo</span>                  
-                  </div>
-                </a>
-
-
-                    <a [href]="pryct.urlRepo" class="menu-item" target="_blank">
-                    <div class="pryct-btns">
-                   <span class="menu-tiem-text">Repositorio</span>                  
-                  </div>
-                </a>
-
-                <div class="edit-delete-bttn"*ngIf="isLogged">
-                  
-                <a href="#" class="menu-item" routerLink="/editproyect/{{pryct.id}}">
-                  <div class="pryct-btns">
-                 <span class="menu-item-text">Editar</span>                  
-                </div>
-              </a>
-
-              <a href="#" class="menu-item" (click)="delete(pryct.id)">
-                <div class="pryct-btns">
-               <span class="menu-item-text">Borrar</span>                  
-              </div>
-            </a>
-          </div>
-
-                </div>
-                
-              </div>
-            </div>
- </li>
-        </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>  
+    </div>
   </div>
+</div>
