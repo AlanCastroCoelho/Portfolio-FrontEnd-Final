@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Persona } from 'src/app/Models/persona';
 import { PersonaService } from 'src/app/services/persona.service';
-import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-edit-persona',
@@ -18,8 +18,7 @@ export class EditPersonaComponent implements OnInit {
   constructor(private router: Router,
     public modal: NgbActiveModal,
     public formbuilder: FormBuilder,
-    private sPersona: PersonaService,
-    private toastr: ToastrService) { }
+    private sPersona: PersonaService) { }
 
   ngOnInit(): void {
     console.log(this.selectedPerson);

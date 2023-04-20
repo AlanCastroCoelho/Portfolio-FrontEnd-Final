@@ -4,7 +4,7 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion/ed
 import { EditExperienciaComponent } from './components/experiencia/experiencia/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-proyects.component';
+import { EditProjectsComponent } from './components/projects/edit-projects/edit-projects.component';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 
 const routes: Routes = [

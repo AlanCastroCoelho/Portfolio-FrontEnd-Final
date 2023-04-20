@@ -9,7 +9,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ArtisticNavComponent } from './components/artistic-nav/artistic-nav.component';
 import { AboutMeComponent } from './components/about-me/about-me/about-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProyectsComponent } from './components/proyects/proyects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,12 +28,12 @@ import { RecargaDirective } from './directives/recarga.directive';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia/experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/experiencia/edit-experiencia/edit-experiencia/edit-experiencia.component';
-import { EditProyectsComponent } from './components/proyects/edit-proyects/edit-proyects.component';
+import { EditProjectsComponent } from './components/projects/edit-projects/edit-projects.component';
 
 // INICIO Servicios
 import { CargarScriptsService } from './services/cargar-scripts.service';
-import { ShowProyectComponent } from './components/proyects/show-proyect/show-proyect.component';
-import { ItemPryectComponent } from './components/proyects/item-pryect/item-pryect.component';
+import { ShowProjectComponent } from './components/projects/show-project/show-project.component';
+import { ItemPrjectComponent } from './components/projects/item-prject/item-prject.component';
 import { EditRedComponent } from './components/about-me/edit-red/edit-red.component';
 import { EditPersonaComponent } from './components/about-me/edit-persona/edit-persona.component';
 import { BttnAddComponent } from './components/buttons/bttn-add/bttn-add.component';
@@ -41,6 +41,7 @@ import { BttnEditDelComponent } from './components/buttons/bttn-edit-del/bttn-ed
 import { SkillListItemsComponent } from './components/skills/skill-list-items/skill-list-items.component';
 import { SkillImageContComponent } from './components/skills/skill-image-cont/skill-image-cont.component';
 import { TitleSubtitleComponent } from './components/title-subtitle/title-subtitle.component';
+import { LineBreakPipe } from './pipes/line-break.pipe';
 //FIN Servicios
 
 @NgModule({
@@ -51,7 +52,7 @@ import { TitleSubtitleComponent } from './components/title-subtitle/title-subtit
     ArtisticNavComponent,
     AboutMeComponent,
     SkillsComponent,
-    ProyectsComponent,
+    ProjectsComponent,
     ContactComponent,
     LogInComponent,
     PortfolioComponent,
@@ -61,9 +62,9 @@ import { TitleSubtitleComponent } from './components/title-subtitle/title-subtit
     EditSkillComponent,
     ExperienciaComponent,
     EditExperienciaComponent,
-    EditProyectsComponent,
-    ShowProyectComponent,
-    ItemPryectComponent,
+    EditProjectsComponent,
+    ShowProjectComponent,
+    ItemPrjectComponent,
     EditRedComponent,
     EditPersonaComponent,
     BttnAddComponent,
@@ -71,6 +72,7 @@ import { TitleSubtitleComponent } from './components/title-subtitle/title-subtit
     SkillListItemsComponent,
     SkillImageContComponent,
     TitleSubtitleComponent,
+    LineBreakPipe,
 
   ],
   imports: [

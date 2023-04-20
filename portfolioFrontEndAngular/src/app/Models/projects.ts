@@ -1,4 +1,4 @@
-export class Proyectos {
+export class Projects {
 
     id?: number;
     nombreP: string;

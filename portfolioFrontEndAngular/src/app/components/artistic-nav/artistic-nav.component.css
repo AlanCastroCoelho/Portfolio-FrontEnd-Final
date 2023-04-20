@@ -33,10 +33,22 @@
   font-size: 25px;
   z-index: 2;
 }
-.text-wrapper{
+
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translate(0, -50%);
+  white-space: nowrap;
+  transition: 0.2s ease-out;
+  animation: float-text 30s linear infinite;
+  animation-delay: 0s;
+  opacity: 1;
+  padding: 20px 0;
   font-size: 52px;
   font-weight: 400;
 }
+
 .preview-text {
   position: absolute;
   bottom: 0;
@@ -203,4 +215,46 @@ height: 180px !important;
  display: none;
 }
 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .cardd-container{
+    margin-bottom: 20px;
+    height: 100px !important;
+    }
+
+  .about-me .cardd-container:hover .cardd-title {
+      top: 20px;
+    right: 0px;
+      font-size: 60px;
+    }
+
+    .cardd-container:hover .preview-text {
+      left: 50px;
+      font-size: 60px;
+    }
+
+    .cardd-icon {
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      padding: 50px;
+      font-size: 25px;
+      z-index: 2;
+    }
+
+.cardd-title{
+  top: 42px;
+  bottom: 0;
+  left: 30px; 
+  padding: 0;
+}
+
+.preview-text{
+  padding: 0;
+  left: 30px;
+}
+    .planet-icon{
+      display: none;
+    }
 }

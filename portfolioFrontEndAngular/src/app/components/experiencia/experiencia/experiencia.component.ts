@@ -19,6 +19,8 @@ export class ExperienciaComponent implements OnInit {
   // Variables para Crear Nueva Experiencia
   nombreE: string;
   descripcionE: string;
+  fechaInicio:Date;
+  fechaFin:Date;
 
   constructor(
     private sExperiencia: SExperienciaService,
@@ -74,7 +76,7 @@ export class ExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const experiencia = new Experiencia(this.nombreE, this.descripcionE);
+    const experiencia = new Experiencia(this.nombreE, this.descripcionE, this.fechaInicio, this.fechaFin);
     this.sExperiencia.save(experiencia).subscribe(
       (data) => {
         alert('Skill creada correctamente');

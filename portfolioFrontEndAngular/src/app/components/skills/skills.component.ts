@@ -6,7 +6,7 @@ import { TokenService } from 'src/app/services/token.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditSkillComponent } from './edit-skill/edit-skill.component';
-import { Proyectos } from 'src/app/Models/proyectos';
+import { Projects } from 'src/app/Models/projects';
 import { Educacion } from 'src/app/Models/educacion';
 import { Experiencia } from 'src/app/Models/experiencia';
 

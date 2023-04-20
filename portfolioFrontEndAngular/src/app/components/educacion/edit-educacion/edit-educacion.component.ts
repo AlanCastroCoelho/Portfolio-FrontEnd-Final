@@ -53,6 +53,8 @@ export class EditEducacionComponent implements OnInit {
       id: [this.selectedEducation.id],
       nombreE: [this.selectedEducation.nombreE],
       descripcionE: [this.selectedEducation.descripcionE],
+      fechaInicio: [this.selectedEducation.fechaInicio],
+      fechaFin: [this.selectedEducation.fechaFin]
     });
   }
 }

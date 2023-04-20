@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Proyectos } from 'src/app/Models/proyectos';
+import { Projects } from 'src/app/Models/projects';
 import { TokenService } from 'src/app/services/token.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { EditProyectsComponent } from '../edit-proyects/edit-proyects.component';
+import { EditProjectsComponent } from '../edit-projects/edit-projects.component';
 import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
 import {
   trigger,
@@ -13,9 +13,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-item-pryect',
-  templateUrl: './item-pryect.component.html',
-  styleUrls: ['./item-pryect.component.css'],
+  selector: 'app-item-prject',
+  templateUrl: './item-prject.component.html',
+  styleUrls: ['./item-prject.component.css'],
   animations: [
     trigger('expandAnimation', [
       state('true', style({ height: '*' })),
@@ -34,19 +34,19 @@ import {
     ]),
   ],
 })
-export class ItemPryectComponent implements OnInit {
+export class ItemPrjectComponent implements OnInit {
   @Input() index: number = 0;
-  @Input() proyects?: Proyectos;
+  @Input() projects?: Projects;
 
-  @Output() showProyectEvent = new EventEmitter<number>();
-  @Output() eliminarProyecto = new EventEmitter<number>();
+  @Output() showProjectEvent = new EventEmitter<number>();
+  @Output() deleteProject = new EventEmitter<number>();
 
   constructor(
     private tokenService: TokenService,
     private modalService: NgbModal
   ) {}
   isLogged = false;
-  showProyect = false;
+  showProject = false;
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -56,13 +56,13 @@ export class ItemPryectComponent implements OnInit {
     }
   }
  
-  eliminar() {
-   this.eliminarProyecto.emit(this.index);
+  delete() {
+   this.deleteProject.emit(this.index);
   }
 
-  editarItem(proyectos: Proyectos) {
-    const ref = this.modalService.open(EditProyectsComponent);
-    ref.componentInstance.selectedProyect = proyectos;
+  editarItem(projects: Projects) {
+    const ref = this.modalService.open(EditProjectsComponent);
+    ref.componentInstance.selectedProject = projects;
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -73,7 +73,7 @@ export class ItemPryectComponent implements OnInit {
     );
   }
 
-  showwProyect(): void {
-    this.showProyect = !this.showProyect;
+  showwProject(): void {
+    this.showProject = !this.showProject;
   }
 }

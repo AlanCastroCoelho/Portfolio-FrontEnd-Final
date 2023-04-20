@@ -2,6 +2,7 @@
 #skills-container {
   background-color: #000;
   overflow: hidden;
+  
 }
 
 .skills-section {
@@ -154,6 +155,8 @@
   padding: 0px 0 12px 0;
 }
 
+
+
 .modal-footer {
   padding: 16px 0 0 0;
 }
@@ -185,4 +188,22 @@
 
 .modal-body .form-group label {
   margin-bottom: 5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px){
+
+  .change-order{
+    flex-direction: column-reverse;
+  }
+
+  
+#skills-container {
+  padding: 0;
+  
+}
+
+app-skill-image-cont{
+  margin: auto;
+}
+
 }

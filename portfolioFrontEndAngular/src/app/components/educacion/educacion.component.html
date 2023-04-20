@@ -3,6 +3,7 @@
     <img src="../../../assets/images/Educacion-Icon.png" alt="" class="icon">
     <div class="line title-line"></div>
     <h1>Educacion</h1>
+ 
   </div>
   <app-bttn-add
   dataTarget="Educacion"
@@ -14,11 +15,14 @@
     <div class="circle"></div>
     <div class="line"></div>
     <div class="name-cont">
+       <h2>{{ Educacion.nombreE }}</h2>
        
-    <h2>{{ Educacion.nombreE }}</h2>
+       <div class="fecha">
+       <p> <span>Inicio: </span>{{Educacion.fechaInicio | date:'dd/MM/yyyy' }} </p>
+       <p> <span>Fin: </span>{{Educacion.fechaFin | date:'dd/MM/yyyy' }}</p>
+       </div>
   </div>
   <div class="edu-descrp-cont">
-    
     <div class="icons-edit-trash-container" *ngIf="isLogged">
       <div class="bttn-container edit-cont">
         <img
@@ -33,6 +37,7 @@
         
       </div>
     </div>
+
     <p>{{ Educacion.descripcionE }}</p>
   </div>
   

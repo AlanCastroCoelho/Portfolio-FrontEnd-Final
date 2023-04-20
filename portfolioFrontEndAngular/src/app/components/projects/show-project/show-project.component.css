@@ -1,6 +1,5 @@
 :host {
   margin: auto;
-  margin-bottom: 30px;
 }
 
 .container {
@@ -57,7 +56,7 @@
   width: 100%;
 }
 
-.image-pryct-container {
+.image-prjct-container {
   margin-top: 30px;
   width: 100%;
   height: 400px;
@@ -67,19 +66,17 @@
   background-color: #000;
 }
 
-.proyect-img {
+.project-img {
+  object-fit: cover;
   width: 100%;
-  position: relative;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
 }
 
-.pryct-description {
+.prjct-description {
   margin-top: 30px;
 }
 
-.pryct-description p {
+.prjct-description p {
   font-family: "Syncopate", sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -91,7 +88,7 @@
   right: 0px;
 }
 
-.pryct-buttons-container {
+.prjct-buttons-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,35 +96,51 @@
   font-size: 15px;
 }
 
-.pryct-buttons-container a {
+.prjct-buttons-container a {
   text-decoration: none;
   color: #fff;
 }
 
-.pryct-btns {
+.prjct-btns {
   border: 1px solid #fff;
   padding: 7px 20px;
   border-radius: 10px;
   margin: 5px 15px 5px 0;
+  transition: all .4s ease;
 }
 
-.pryct-buttons-container .menu-item:before {
-  display: none;
+.prjct-btns:hover{
+  transform: translateY(-4px);
+  background-color: #2900e8;
 }
 
-.menu-item:hover .pryct-btns {
-  transition: background-color 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.085);
-}
 
-@media screen and (min-width: 1291px) {
-  .image-pryct-container {
-    height: 500px;
+@media screen and (max-width: 768px){
+  .host{
+    margin-top: 20px;
+  }
+  
+  .image-prjct-container{
+    height: 250px;
+  }
+
+  .prjct-description p {
+    font-size: 10px;
+  }
+
+  .decrative-star {
+    width: 20px;
+  }
+
+  .prjct-btns {
+    border: 1px solid #fff;
+    padding: 7px 12px;
+    border-radius: 10px;
+    margin: 2px 10px 2px 0;
+  }
+
+  .btn-item-text{
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .proyect-img {
-    width: 120%;
-  }
-}

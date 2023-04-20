@@ -1,0 +1,30 @@
+<div
+  class="container-fluid d-flex justify-content-center"
+  id="projects-container"
+>
+  <div class="row projects-section mt-5">
+    <div class="col">
+      <app-title-subtitle
+      [section]="'projects'"></app-title-subtitle>
+    </div>
+
+    <div class="row pt-5 proj-cont-fth px-0">
+      <app-bttn-add
+      dataTarget="project"
+       *ngIf="isLogged"></app-bttn-add>
+
+
+
+      <div class="col projects-container">
+        <app-item-prject
+          *ngFor="let prjct of projects"
+          [projects]="prjct"
+          [index]="prjct.id"
+          (showProjectEvent)="selectedProject($event)"
+          (deleteProject)="delete($event)"
+        >
+        </app-item-prject>
+      </div>
+    </div>
+  </div>
+</div>

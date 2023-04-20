@@ -1,13 +1,13 @@
 :host {
 }
 
-#proyects-subtitle {
+#projects-subtitle {
   color: #000;
 }
 
 /*Title & Subtitles*/
 
-#proyects-container {
+#projects-container {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 37%,
@@ -18,7 +18,7 @@
   top: 0;
 }
 
-.proyects-section {
+.projects-section {
   width: 95%;
   position: relative;
   top: 0;
@@ -26,10 +26,10 @@
 
 
 
-/*GALLERY PROYECTS SECTION*/
+/*GALLERY projectS SECTION*/
 /*///////////////////////*/
 
-.container-pryct {
+.container-proj {
   width: 100%;
   filter: grayscale(80%);
   transition: 0.9s ease-in-out;
@@ -38,7 +38,7 @@
   overflow: hidden;
 }
 
-.container-desc-pryct {
+.container-desc-proj {
   width: 70%;
   height: 90%;
   padding: 15px 40px;
@@ -53,7 +53,7 @@
   backdrop-filter: blur(15px);
 }
 
-.pryct-title-container {
+.proj-title-container {
   padding: 15px 0;
   display: flex;
   align-items: center;
@@ -61,10 +61,10 @@
   font-weight: bold;
 }
 
-.pryct-title {
+.proj-title {
 }
 
-.pryct-img {
+.proj-img {
   width: 100%;
   height: 380px;
   background-image: url("../../../Assets/images/Page Preview ARGPROGRAM.jpg");
@@ -74,7 +74,7 @@
   border-radius: 20px;
 }
 
-.pryct-body {
+.proj-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,39 +82,39 @@
   margin: 14px 0;
 }
 
-.pryct-text {
+.proj-text {
   font-size: 20px;
   font-weight: regular;
 }
 
-.color-one-desc-pryct {
+.color-one-desc-proj {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 20px rgba(255, 255, 255, 0.1);
 }
 
-.pryct-buttons-container {
+.proj-buttons-container {
   display: flex;
   flex-direction: column;
   color: #fff;
   font-size: 20px;
 }
 
-.pryct-buttons-container .menu-item:before {
+.proj-buttons-container .menu-item:before {
   display: none;
 }
 
-.menu-item:hover .pryct-btns {
+.menu-item:hover .proj-btns {
   transition: background-color 0.7s ease;
   background-color: rgba(255, 255, 255, 0.085);
 }
 
-.pryct-buttons-container a {
+.proj-buttons-container a {
   text-decoration: none;
   color: #fff;
 }
 
-.pryct-btns {
+.proj-btns {
   border: 1px solid white;
   padding: 7px;
   border-radius: 10px;
@@ -123,38 +123,39 @@
   margin: 5px 0;
 }
 
-.pryct-one {
+.proj-one {
   background-image: url("../../../Assets/images/Page Preview ARGPROGRAM.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.container-desc-pryct:hover {
+.container-desc-proj:hover {
   opacity: 1;
 }
 
-/*///////// PROYECTS CONTAINER HOVER IAMGES/////////////*/
+/*///////// projectS CONTAINER HOVER IAMGES/////////////*/
 
-.proyects-container {
+.projects-container {
   display: grid;
   place-items: center;
+  padding: 0px;
 }
 
-.proyects-container ul {
+.projects-container ul {
   width: 90%;
 }
 
 @media (max-width: 768px) {
-  .proyects-container ul {
+  .projects-container ul {
     width: 93%;
   }
 
-  .proyects-container ul li .link span {
+  .projects-container ul li .link span {
     font-size: 2.5rem;
   }
 
-  .proyects-container ul li .link > img {
+  .projects-container ul li .link > img {
     height: 18px;
   }
 
@@ -216,13 +217,14 @@
   cursor: pointer;
 }
 
-.proy-cont-fth {
+.proj-cont-fth {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 
-.add-proyect-container {
+.add-project-container {
   width: 87%;
   display: flex;
   align-items: center;
@@ -232,7 +234,7 @@
   cursor: pointer;
 }
 
-.add-pryct-border {
+.add-proj-border {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -241,15 +243,15 @@
   transition: all 0.1s ease;
   border: 2px solid #fff;
 }
-.add-pryct-border:hover {
+.add-proj-border:hover {
   background-color: #171717;
 }
 
-.add-pryct-border span {
+.add-proj-border span {
   margin-left: 13px;
 }
 
-.add-pryct-border img {
+.add-proj-border img {
   width: 40px;
   height: 40px;
   padding: 10px;

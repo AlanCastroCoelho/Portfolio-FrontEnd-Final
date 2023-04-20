@@ -37,3 +37,23 @@
     color: transparent;
     margin: 0;
   }
+
+  @media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .image-container {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 410px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+      padding: 0;
+      width: 100%;
+    }
+
+    .front-title {
+      font-size: 25px;
+    }
+  }

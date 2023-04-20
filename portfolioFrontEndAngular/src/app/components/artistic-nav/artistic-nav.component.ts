@@ -78,13 +78,10 @@ export class ArtisticNavComponent implements AfterViewInit {
       });
     };
 
-    const windowWidth = window.innerWidth;
-    if (windowWidth > 1200) {
-      animateElements();
+    animateElements();
 
-      window.addEventListener('scroll', () => {
-        animateElements();
-      });
-    }
+    window.addEventListener('scroll', () => {
+      animateElements();
+    });
   }
 } 

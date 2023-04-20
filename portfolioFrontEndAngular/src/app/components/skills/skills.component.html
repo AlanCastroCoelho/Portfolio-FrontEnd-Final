@@ -2,13 +2,15 @@
   class="container-fluid d-flex justify-content-center"
   id="skills-container"
 >
-  <div class="row skills-section mt-2">
+  <div class="row skills-section mt-2 p-0">
+    <div class="row mb-5">
     <div class="col">
       <app-title-subtitle [section]="'skills'"></app-title-subtitle>
     </div>
+    </div>
 
-    <div class="row mt-5">
-      <div class="col-xl-6 col-12 from-left">
+    <div class="row m-0 p-0">
+      <div class="col-xl-6 col-12 from-left p-0">
         <app-skill-image-cont [skillTpe]="'front-end'"></app-skill-image-cont>
       </div>
 
@@ -23,9 +25,9 @@
       </div>
     </div>
 
-    <div class="row m-0">
+    <div class="row m-0 change-order p-0">
       <div
-        class="col-xl-6 col-12 order-xl-first order-md-last progress-container"
+        class="col-xl-6 col-12 order-xl-first progress-container"
       >
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
@@ -39,7 +41,7 @@
       </div>
     </div>
 
-    <div class="row m-0">
+    <div class="row m-0 p-0">
       <div class="col-xl-6 col-12 from-left">
         <app-skill-image-cont [skillTpe]="'programs'"></app-skill-image-cont>
       </div>
@@ -51,9 +53,9 @@
       </div>
     </div>
 
-    <div class="row m-0">
+    <div class="row m-0 p-0 change-order">
       <div
-        class="col-6 col-xl-6 col-12 order-xl-first order-md-last progress-container"
+        class="col-xl-6 col-12 progress-container"
       >
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>

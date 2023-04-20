@@ -10,6 +10,7 @@ import { CargarScriptsService } from './../../services/cargar-scripts.service';
 })
 export class NavComponent implements OnInit {
   isLogged = false;
+  openMenu = false;
 
   constructor(
     private router: Router,
@@ -34,5 +35,9 @@ export class NavComponent implements OnInit {
 
   login() {
     this.router.navigate(['/login']);
+  }
+
+  toggleMenu() {
+    this.openMenu = !this.openMenu;
   }
 }

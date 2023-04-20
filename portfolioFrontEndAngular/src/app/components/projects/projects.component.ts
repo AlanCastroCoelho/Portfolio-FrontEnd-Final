@@ -1,24 +1,24 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Proyectos } from 'src/app/Models/proyectos';
-import { ProyectosService } from 'src/app/services/proyectos.service';
+import { Projects } from 'src/app/Models/projects';
+import { ProjectsService } from 'src/app/services/projects.service';
 import { TokenService } from 'src/app/services/token.service';
-import { CargarScriptsService } from './../../services/cargar-scripts.service';
-import { ShowProyectComponent } from './show-proyect/show-proyect.component';
-import { EditProyectsComponent } from './edit-proyects/edit-proyects.component';
+import { CargarScriptsService } from '../../services/cargar-scripts.service';
+import { ShowProjectComponent } from './show-project/show-project.component';
+import { EditProjectsComponent } from './edit-projects/edit-projects.component';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-proyects',
-  templateUrl: './proyects.component.html',
-  styleUrls: ['./proyects.component.css'],
+  selector: 'app-projecs',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css'],
 })
-export class ProyectsComponent implements OnInit, OnDestroy {
-  proyectos: Proyectos[] = [];
+export class ProjectsComponent implements OnInit, OnDestroy {
+  projects: Projects[] = [];
   subscription: Subscription;
-  indxShowProyect: number;
-  showProyect = false;
+  indxShowProject: number;
+  showProject = false;
 
   nombreP: string;
   descripcionP: string;
@@ -27,27 +27,28 @@ export class ProyectsComponent implements OnInit, OnDestroy {
   urlLiveDemo: string;
 
   constructor(
-    private proyectosS: ProyectosService,
+    private projectsS: ProjectsService,
     private tokenService: TokenService,
     private router: Router,
     private _CargarScripts: CargarScriptsService,
     private modalService: NgbModal
   ) {
-    _CargarScripts.Carga(['Proyect Hover Effect/proyectHover']);
+    _CargarScripts.Carga(['Project Hover Effect/projectHover']);
+    
   }
 
   isLogged = false;
 
   cargarProyectos(): void {
-    this.proyectosS.lista().subscribe((data) => {
-      this.proyectos = data;
+    this.projectsS.lista().subscribe((data) => {
+      this.projects = data;
     });
   }
 
   ngOnInit(): void {
     this.cargarProyectos();
 
-    this.subscription = this.proyectosS.refresh$.subscribe(() => {
+    this.subscription = this.projectsS.refresh$.subscribe(() => {
       this.cargarProyectos();
     });
 
@@ -60,7 +61,7 @@ export class ProyectsComponent implements OnInit, OnDestroy {
 
   delete(id?: number) {
     if (id != undefined) {
-      this.proyectosS.delete(id).subscribe(
+      this.projectsS.delete(id).subscribe(
         (data) => {
           this.cargarProyectos();
         },
@@ -71,13 +72,13 @@ export class ProyectsComponent implements OnInit, OnDestroy {
     }
   }
 
-  selectedProyect(index: number) {
-    this.showProyect = !this.showProyect;
+  selectedProject(index: number) {
+    this.showProject = !this.showProject;
   }
 
-  editarItem(proyectos: Proyectos) {
-    const ref = this.modalService.open(EditProyectsComponent);
-    ref.componentInstance.selectedProyect = proyectos;
+  editarItem(projects: Projects) {
+    const ref = this.modalService.open(EditProjectsComponent);
+    ref.componentInstance.selectedProject = projects;
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -89,14 +90,14 @@ export class ProyectsComponent implements OnInit, OnDestroy {
   }
 
   onCreate(): void {
-    const proyecto = new Proyectos(
+    const project = new Projects(
       this.nombreP,
       this.descripcionP,
       this.urlImg,
       this.urlRepo,
       this.urlLiveDemo
     );
-    this.proyectosS.save(proyecto).subscribe(
+    this.projectsS.save(project).subscribe(
       (data) => {
         alert('Proyecto creado correctamente');
         this.router.navigate(['']);

@@ -42,6 +42,8 @@ export class EditExperienciaComponent implements OnInit {
       id: [this.selectedExp.id],
       nombreE: [this.selectedExp.nombreE],
       descripcionE: [this.selectedExp.descripcionE],
+      fechaInicio: [this.selectedExp.fechaInicio],
+      fechaFin: [this.selectedExp.fechaFin],
     });
   }
 }

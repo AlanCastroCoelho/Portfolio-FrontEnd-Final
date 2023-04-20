@@ -33,7 +33,7 @@ export class HeroComponent implements AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit() {/*
     // Animación del elemento 1
     gsap.from('.in-right', {
       duration: 1,
@@ -65,7 +65,7 @@ export class HeroComponent implements AfterViewInit {
       delay: 1.1,
       ease: 'power2.inOut'
     });
-
+*/
   }
 
 

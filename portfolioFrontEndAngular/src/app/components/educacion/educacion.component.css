@@ -93,15 +93,26 @@ td button {
   border: 3px solid #ffffff06;
 }
 
-.list-group {
+.list-group-item {
   margin: 0;
   border: none;
-}
-
-.list-group-item {
+  height: 90px;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: all 0.6s ease;
   position: relative;
   padding-left: 30px;
 }
+
+.list-group-item:hover{
+  height: 350px;
+}
+
+.list-group-item:hover .edu-descrp-cont{
+filter: blur(0);
+opacity: 1;
+}
+
 
 
 .circle {
@@ -163,18 +174,48 @@ padding-bottom: 20px;
 .name-cont{
   width: 30%;
   word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.fecha{
+display: flex;
+flex-direction: column;
+position: relative;
+top: 17%;
+opacity: 0;
+transition: all .5s ease;
+
+
+}
+
+.fecha p{
+  display: block;
+}
+
+.fecha p span{
+  font-weight: 600;
+}
+
+.list-group-item:hover .fecha{
+opacity: 1;
 }
 
 h2{
   font-size: 17px;
   font-weight: 700;
+  height: fit-content;
 }
 
 .edu-descrp-cont{
   width: 70%;
   padding-left: 20px;
   word-wrap: break-word;
+  filter: blur(2px);
+  opacity: .5;
+  transition: all .4s ease;
 }
+
 
 
 .icons-edit-trash-container {
@@ -229,4 +270,59 @@ h2{
   width: 22px;
   margin: 0;
   cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  
+  .list-group-item{
+display: flex;
+flex-direction: column;
+  }
+
+  .title-container {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .title-line{
+    display: none;
+  }
+
+  h1{
+font-size: 17px;
+margin-left: 23px;
+  }
+
+  h2{
+    font-size: 12px;
+  }
+
+  .name-cont{
+    display: flex;
+    width: 100%;
+  }
+.fecha {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+  .edu-descrp-cont{
+    display: flex;
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .circle{
+width: 15px;
+height: 15px;
+
+  }
+
+  .icon{
+    width: 40px;
+    padding: 7px;
+    border: 2px solid #fff;
+    left: 0px;
+    top: 26px;
+  }
 }

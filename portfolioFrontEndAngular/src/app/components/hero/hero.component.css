@@ -98,6 +98,9 @@
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
 }
+.mobile-text{
+  display: none;
+}
 
 .bottom-content {
   font-family: "Syncopate", sans-serif;
@@ -134,29 +137,34 @@
   animation: rotating 8s linear infinite;
 }
 
+.pers-title-mobile{
+  display: none;
+}
 
+.star-mobile{
+  display: none;
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .content {
-    position: relative;
-    top: -100px;
+  
+    width: 100%;
   }
   .img-wrapper {
-    left: 50%;
+    left: 0;
   }
 
   .text {
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
   }
+
   .text h1 {
     white-space: nowrap;
     text-align: center;
     -webkit-text-stroke: 0px #fff;
     color: #fff;
   }
-  .text p {
+  .pers-title {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -165,8 +173,8 @@
     margin-top: 5px;
   }
 
-  .text p::before,
-  .text p::after {
+.pers-title::before,
+.pers-title::after {
     content: "";
     display: inline-block;
     width: 140px;
@@ -177,17 +185,17 @@
     transform: translateY(-50%);
   }
 
-  .text p::before {
+  .text .pers-title::before {
     left: -170px;
   }
 
-  .text p::after {
+  .text .pers-title::after {
     right: -170px;
   }
 
   .bottom-content {
     width: 100%;
-    top: 130px;
+    top: 560px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -203,10 +211,12 @@
 }
 
 @media screen and (max-width: 928px) {
+  
   .text h1 {
     font-size: 70px;
   }
-  .text p {
+
+  .pers-title {
     font-size: 20px;
     top: 50%;
     left: 50%;
@@ -215,8 +225,8 @@
     display: inline-block;
   }
 
-  .text p::before,
-  .text p::after {
+  .text .pers-title::before,
+  .text .pers-title::after {
     content: "";
     display: inline-block;
     width: 95px;
@@ -227,11 +237,11 @@
     transform: translateY(-50%);
   }
 
-  .text p::before {
+  .text .pers-title::before {
     left: -120px;
   }
 
-  .text p::after {
+  .text .pers-title::after {
     right: -120px;
   }
 
@@ -247,4 +257,202 @@
   .name {
     display: none;
   }
+}
+
+
+ 
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .mobile-text{
+    display: inline-block;
+  }
+
+  .text img{
+    width: 20px;
+  }
+  .star-mobile{
+    display: inline;
+  }
+
+  .text {
+    top: 180px;
+    right: 0;
+    left: 0;
+    width: 200px;
+    margin: auto;
+    z-index: 70;
+    text-align: end;
+    
+  }
+  
+  .text h1 {
+    font-size: 20px; 
+  }
+ 
+  .text p{
+
+  font-size: 13px;
+  
+ }
+
+
+  .text p:first-of-type {
+    display: none;
+  }
+
+
+.mobile-text::before {
+    content: "";
+    display: inline-block;
+    width: 65px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+.mobile-text::before {
+    left: -76px;
+  }
+
+
+.bottom-content p{
+font-size: 8px;
+}
+.bottom-content p:first-of-type{
+  display: none;
+}
+
+.bottom-content img{
+  display: none;
+}
+
+.pers-title-mobile{
+  display: inline;
+}
+
+.star-8pts {
+  width: 30px;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+  animation: rotating 8s linear infinite;
+}
+  .img-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: fit-content; 
+    margin-left: 0px;
+  }
+  
+  .img-wrapper .polaroid-color {
+    background-image: url(../../../assets/images/AlanCoelhoPolaroidColor.png);
+    background-size: cover;
+    background-position: center;
+    height: 308px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+    z-index: 50;
+  }
+  
+  .img-wrapper .polaroid-bw {
+    background-image: url(../../../assets/images/AlanCoelhoPolaroidB&W2.png);
+    background-size: cover;
+    background-position: center;
+    height: 308px;
+    width: 200px;
+    z-index: 30;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px){
+  
+  
+  .text {
+    width: fit-content;
+    margin: auto;
+    z-index: 70;
+    text-align: end; 
+    top:140px;
+  }
+
+  .text h1 {
+    font-size: 37px; 
+  }
+ 
+  .text p{
+
+  font-size: 20px;
+  
+ }
+ .bottom-content {
+  top: 700px;
+  margin: auto;
+}
+
+.bottom-content p{
+  font-size: 12px;
+}
+ .img-wrapper {
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: fit-content; 
+  margin-left: 0px;
+}
+
+.img-wrapper .polaroid-color {
+  background-image: url(../../../assets/images/AlanCoelhoPolaroidColor.png);
+  background-size: cover;
+  background-position: center;
+  height: 408px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  z-index: 50;
+}
+
+.img-wrapper .polaroid-bw {
+  background-image: url(../../../assets/images/AlanCoelhoPolaroidB&W2.png);
+  background-size: cover;
+  background-position: center;
+  height: 408px;
+  width: 300px;
+  z-index: 30;
+}
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .text{
+    width: 100%;
+    margin: auto;
+    left: 50%;
+    top: 650px;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .bottom-content {
+    top: 1050px;
+    margin: auto;
+  }
+
+  .img-wrapper {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  margin: auto;}
 }

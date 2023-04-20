@@ -6,8 +6,8 @@ import { SkillService } from 'src/app/services/skill.service';
 import { EducacionService } from 'src/app/services/educacion.service';
 import { Experiencia } from 'src/app/Models/experiencia';
 import { SExperienciaService } from 'src/app/services/s-experiencia.service';
-import { Proyectos } from 'src/app/Models/proyectos';
-import { ProyectosService } from 'src/app/services/proyectos.service';
+import { Projects } from 'src/app/Models/projects';
+import { ProjectsService } from 'src/app/services/projects.service';
 import { TokenService } from 'src/app/services/token.service';
 import { Educacion } from 'src/app/Models/educacion';
 
@@ -23,6 +23,8 @@ export class BttnAddComponent implements OnInit {
     // Variables para Crear Nueva Educacion
     nombreE: string;
     descripcionE: string;
+    fechaInicio: Date;
+    fechaFin:Date;
 
     // Variables para Crear Nueva Skill
   nombre: string;
@@ -44,7 +46,7 @@ export class BttnAddComponent implements OnInit {
     private sExperiencia: SExperienciaService,
     private skillS: SkillService,
     private educacionS: EducacionService,
-    private proyectosS: ProyectosService,
+    private projectsS: ProjectsService,
     private tokenService: TokenService,
     private router: Router,) { }
 
@@ -66,7 +68,7 @@ export class BttnAddComponent implements OnInit {
   }
 
   onCreateEdu(): void {
-    const educacion = new Educacion(this.nombreE, this.descripcionE);
+    const educacion = new Educacion(this.nombreE, this.descripcionE, this.fechaInicio,this.fechaFin);
     this.educacionS.save(educacion).subscribe(
       (data) => {
         alert('Educacion creada correctamente');
@@ -80,7 +82,7 @@ export class BttnAddComponent implements OnInit {
   }
 
   onCreateExp(): void {
-    const experiencia = new Experiencia(this.nombreExp, this.descripcionExp);
+    const experiencia = new Experiencia(this.nombreExp, this.descripcionExp,this.fechaInicio,this.fechaFin);
     this.sExperiencia.save(experiencia).subscribe(
       (data) => {
         alert('Experiencia creada correctamente');
@@ -93,14 +95,14 @@ export class BttnAddComponent implements OnInit {
     );
   }
   onCreatePryct(): void {
-    const proyecto = new Proyectos(
+    const proyecto = new Projects(
       this.nombreP,
       this.descripcionP,
       this.urlImg,
       this.urlRepo,
       this.urlLiveDemo
     );
-    this.proyectosS.save(proyecto).subscribe(
+    this.projectsS.save(proyecto).subscribe(
       (data) => {
         alert('Proyecto creado correctamente');
         this.router.navigate(['']);

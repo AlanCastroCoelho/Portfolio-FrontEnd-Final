@@ -5,7 +5,8 @@
   <div class="subtitle-cont-full for-subtitles" 
      [ngClass]="{
     'subtitle-about-backgr': section == 'about-me',
-    'subtitle-skill-backgr': section == 'skills'
+    'subtitle-skill-backgr': section == 'skills',
+    'subtitle-project-backgr': section == 'projects'
 }">
     <img
       src="../../../assets/images/Stars.svg"
@@ -14,7 +15,9 @@
     />
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'about-me'">
-      <div class="text-wrapper subtitle" >
+      
+      
+      <div class="text-wrapper subtitle">
         Descubre quién soy, mi historia personal y profesional. Descubre
         quién soy, mi historia personal y profesional. Descubre quién soy,
         mi historia personal y profesional. Descubre quién soy, mi
@@ -24,9 +27,16 @@
         profesional. Descubre quién soy, mi historia personal y
         profesional.
       </div>  
+
+      <div class="subtitle-mobile">
+        Descubre quién soy, mi historia personal y profesional.
+      </div>  
+
+
     </div>
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'skills'">
+
         <div class="text-wrapper subtitle">
           Explora mis habilidades en diferentes áreas y cómo puedo aportar
           valor en proyectos y equipos de trabajo. Explora mis habilidades en
@@ -43,10 +53,16 @@
           diferentes áreas y cómo puedo aportar valor en proyectos y equipos
           de trabajo.
         </div>
+
+        <div class="subtitle-mobile">
+          Explora mis skills en diferentes areas.
+        </div>  
+
       </div>
 
-    <div class="subtitle-text-wrapper" *ngIf="section === 'proyects'">
-        <div class="text-wrapper subtitle">
+    <div class="subtitle-text-wrapper" *ngIf="section === 'projects'">
+       
+      <div class="text-wrapper subtitle">
           Descubre cómo he aplicado mis habilidades técnicas y mi conocimiento
           en diferentes proyectos y campos. Descubre cómo he aplicado mis
           habilidades técnicas y mi conocimiento en diferentes proyectos y
@@ -58,6 +74,11 @@
           Descubre cómo he aplicado mis habilidades técnicas y mi conocimiento
           en diferentes proyectos y campos.
         </div>
+
+        <div class="subtitle-mobile">
+          Explora mis skills en diferentes areas.
+        </div>  
+
       </div>
 
 

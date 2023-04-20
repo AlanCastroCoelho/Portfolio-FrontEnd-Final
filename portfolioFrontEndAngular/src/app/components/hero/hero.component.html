@@ -9,26 +9,36 @@
     <div class="row" >
       <div class="col m-0">
         <div class="content" >
+          
           <div class="img-wrapper upward">
             <div class="polaroid-color"></div>
             <div class="polaroid-bw"></div>
           </div>
-          <div class="text in-right" >
-            <h1>{{persona?.nombre}} Coelho</h1>
-            <p>{{persona?.titulo}}</p>
-          </div>
 
+          <div class="text in-right">
+            <h1>{{persona?.nombre}} Coelho</h1>
+            <p class="pers-title">{{persona?.titulo}}</p>
+            <p class="mobile-text">portfolio</p>
+            <img
+              src="../../../assets/images/Star 1.png"
+              alt=""
+              class="star-8pts star-mobile"
+            />
+          </div>
+          
           <div class="name d-md-none d-xl-flex in-left">Alan Coelho</div>
 
           <div class="bottom-content fade-in">
             <div class="line"></div>
             <p>portfolio</p>
+            <p class="pers-title-mobile">{{persona?.titulo}}</p>
             <img
               src="../../../assets/images/Star 1.png"
               alt=""
               class="star-8pts"
             />
           </div>
+
         </div>
       </div>
     </div>

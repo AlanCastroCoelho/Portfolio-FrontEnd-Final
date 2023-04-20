@@ -1,3 +1,5 @@
+
+
 *,
 ::after,
 ::before,
@@ -71,119 +73,9 @@ body::-webkit-scrollbar-thumb {
   transform: translate3d(0, 0%, 0) rotateX(0deg);
 }
 
-.subtitle-cont-full {
-  background: #000;
-  width: 98.6%;
-  height: 71px;
-  margin: 10px 0px;
-  border-radius: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 0;
-}
-
-.horizontal-line {
-  display: block;
-  background-color: #fff;
-  height: 0.5px;
-  width: 95%;
-  margin: auto;
-  border: 0 none;
-  padding: 0;
-  opacity: 100;
-}
 
 
-.titles-container {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  background-color: #999;
-  margin-bottom: 20px;
-  border-radius: 60px 60px 0px 0px;
-  transition: all 0.3s ease-out;
-  overflow: hidden;
-  height: 71px;
-  margin: 4.5rem 0 0 0;
-}
 
-.for-subtitles {
-  margin: 0;
-  border-radius: 0px 0px 60px 60px;
-  width: 100%;
-  position: relative;
-  top: 0;
-}
-
-.subtitles-container {
-  margin-bottom: 3rem;
-}
-
-.subtitles {
-  color: #fff;
-  font-family: "Dongle", sans-serif;
-  font-weight: 400;
-  font-size: 2.6rem;
-  text-align: center;
-}
-
-.subtitle-text-wrapper {
-  width: 90%;
-  height: 80%;
-  border-radius: 60px 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  color: #fff;
-}
-
-.text-wrapper {
-  position: absolute;
-  top: 50%;
-  left: -20%;
-  transform: translate(0, -50%);
-  white-space: nowrap;
-  transition: 0.2s ease-out;
-  animation: float-text 30s linear infinite;
-  animation-delay: 0s;
-  opacity: 1;
-  padding: 20px 0;
-}
-.text-title-section {
-  font-family: "Syncopate", sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
-  position: relative;
-  top: 8px;
-  right: 26px;
-  color: white;
-  transition: 0.2s ease-out;
-  letter-spacing: 3px;
-}
-
-.title-numbers {
-  font-family: "Syncopate", sans-serif;
-  color: white;
-  font-size: 12px;
-  position: relative;
-  right: 30px;
-  bottom: 7px;
-}
-
-.subtitle{
-  font-family: "Dela Gothic One", cursive;
-  text-transform: uppercase;
-  font-size: 22px;
-}
-
-.white-rectangle-container {
-  width: 100%;
-  display: flex;
-}
 
 h5 {
   font-weight: 400;

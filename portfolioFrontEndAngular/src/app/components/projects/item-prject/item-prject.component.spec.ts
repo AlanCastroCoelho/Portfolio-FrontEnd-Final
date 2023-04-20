@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemPryectComponent } from './item-pryect.component';
+import { ItemPrjectComponent } from './item-prject.component';
 
-describe('ItemPryectComponent', () => {
-  let component: ItemPryectComponent;
-  let fixture: ComponentFixture<ItemPryectComponent>;
+describe('ItemPrjectComponent', () => {
+  let component: ItemPrjectComponent;
+  let fixture: ComponentFixture<ItemPrjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemPryectComponent ]
+      declarations: [ ItemPrjectComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ItemPryectComponent);
+    fixture = TestBed.createComponent(ItemPrjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

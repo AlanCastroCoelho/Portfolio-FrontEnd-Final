@@ -57,6 +57,28 @@ aria-hidden="true"
                  rows="10" required>
                 </textarea>
               </div>
+              <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaInicio"
+                  name="fechaInicio"
+                  [(ngModel)]="fechaInicio"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="fechaFin">Fecha Finalziacion</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaFin"
+                  name="fechaFin"
+                  [(ngModel)]="fechaFin"
+                  required
+                />
+              </div>
               <div class="modal-footer">
                 <button
                   type="button"
@@ -199,6 +221,28 @@ aria-hidden="true"
                             required
                           ></textarea>
                         </div>
+                                      <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaInicio"
+                  name="fechaInicio"
+                  [(ngModel)]="fechaInicio"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="fechaFin">Fecha de Finalziacion</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fechaFin"
+                  name="fechaFin"
+                  [(ngModel)]="fechaFin"
+                  required
+                />
+              </div>
                         <div class="modal-footer">
                           <button
                             type="button"
@@ -221,9 +265,9 @@ aria-hidden="true"
 <!--Modal Para Proyectos-->
 <div
 class="modal fade"
-id="addProyect"
+id="addProject"
 tabindex="-1"
-aria-labelledby="addProyect"
+aria-labelledby="addProject"
 aria-hidden="true"
 >
 <div class="modal-dialog">

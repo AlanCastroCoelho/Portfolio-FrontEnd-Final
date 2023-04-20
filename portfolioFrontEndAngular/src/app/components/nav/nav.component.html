@@ -1,5 +1,13 @@
+
 <nav class="menu" id="navigator">
-  <ul class="nav-links">
+  <label class="burger" for="burger" >
+    <input type="checkbox" id="burger"(click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  
+  <ul class="nav-links" [ngClass]="{'open-menu': openMenu}">
     <li>
       <a href="#about-me-section" class="menu-item">
         <div>
@@ -19,7 +27,7 @@
     <li>
       <a href="#proyects-container" class="menu-item">
         <div>
-          <span class="menu-item-text">Proyects </span>
+          <span class="menu-item-text">Projects </span>
         </div>
       </a>
     </li>
@@ -32,7 +40,7 @@
       </a>
     </li>
 
-    <li (click)="login()" *ngIf="!isLogged">
+    <li (click)="login()" *ngIf="!isLogged" class="li-bttn">
       <a class="button-link" >
         <div class="button menu">
           <span class="menu-item-text">Login
@@ -50,9 +58,4 @@
     </li>
   </ul>
 
-  <div class="burguer">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-  </div>
 </nav>

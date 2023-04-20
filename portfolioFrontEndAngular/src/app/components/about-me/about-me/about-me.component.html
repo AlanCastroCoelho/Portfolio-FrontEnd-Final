@@ -1,7 +1,7 @@
 <div class="container-fluid about-me-all" *ngIf="persona">
   <div class="container-fluid" id="about-me-section">
     <div class="row justify-content-center">
-      <div class="column-12">
+      <div class="column-12 p-0">
 
 
         <app-title-subtitle
@@ -23,33 +23,33 @@
          
         </div>
       </div>
-       <div class="row d-xl-flex d-md-none" >
+
+
+       <div class="row d-xl-flex d-md-none p-0" >
 
     <div class="col about-me-header"> 
+
       
-        <h2 class="nombre-about">
-       {{ persona.nombre }} {{ persona.apellido }}
-        </h2>
-        
+        <img
+        src="../../../assets/images/Star 1.png"
+        alt=""
+        class="star-8pts star-header"
+      />
+
+
         <div class="position-container border-left about-items">
-        <span class="">{{ persona.titulo }}</span>
+        <span class="pers-title">{{ persona.titulo }}</span>
       </div>
       
-        <div class="border-left about-items">
-      <img
-      src="../../../assets/images/Star 1.png"
-      alt=""
-      class="star-8pts star-header"
-    />
-  </div>
-
           </div>   
        </div>
 
-       <div class="row mt-4   d-flex align-items-center justify-content-center ">
 
-<!--Seccion Left para Responsive-->
-<div class="col-3 d-xl-none d-md-flex justify-content-center">
+
+       <div class="row mt-4 d-flex align-items-center justify-content-center p-0">
+
+<!--Seccion Left para Responsive Tablet-->
+<div class="col-3 d-xl-none d-md-flex justify-content-center r-tablet">
  
   <div class="name-cont-rotate rotate d-flex align-items-center">
     
@@ -68,9 +68,9 @@
   </div>
 
 </div>
-<!-- END Seccion Left para Responsive-->
+<!-- END Seccion Left para Responsive Tablet-->
 
-        <div class="col-xxl-4 col-xl-5 col-md-6  d-flex justify-content-md-center">
+        <div class="col-5 col-xxl-4 col-xl-5 col-md-6  d-flex justify-content-md-center col-photo-cont">
          
           <div class="photo-name-container from-left">
         
@@ -80,10 +80,136 @@
 
           </div>
 
+          <div class="title r-movil mt-3">
+
+          <div class="links">
+            <ul>
+              <li *ngFor="let red of redes">
+  
+               <a [href]="red.urlRed" target="_blank">
+               <div class="about-items hover-effct">
+               <img [src]="red.urlIcon" alt="">
+           </div>
+        
+  
+          </a>
+          <div class="icons-edit-trash-container" *ngIf="isLogged">
+            <div class="bttn-container edit-cont">
+              <img
+                class="edit-icon"
+                src="../../../../assets/images/create.svg"
+                (click)="editarItemRed(red)"
+              />
+            </div>
+            <div class="bttn-container trash-cont">
+              <img class="trash-icon" src="../../../../assets/images/trash.svg" (click)="deleteRed(red.id)"/>
+              
+            </div>
+          </div>
+  
+        </li>
+        </ul>
+          <div class="border-right about-items hover-effct hover-blue"
+          data-bs-toggle="modal"
+          data-bs-target="#addRedSocial" *ngIf="isLogged">
+            <img src="../../../assets/images/plus-solid.svg" alt="" />
+          </div>
+          <div
+          class="modal fade"
+          id="addRedSocial"
+          tabindex="-1"
+          aria-labelledby="addRedSocial"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Nueva Red Social
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div>
+                      <form (ngSubmit)="onCreateRed()" novalidate #f="ngForm">
+                        <div class="form-group">
+                          <label for="nombreR">Nombre Red</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nombreR"
+                            name="nombreR"
+                            [(ngModel)]="nombreR"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="urlRed">Link Red</label>
+                          <input
+                            type="string"
+                            class="form-control"
+                            id="urlRed"
+                            name="urlRed"
+                            [(ngModel)]="urlRed"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="urlIcon">Link Icon</label>
+                          <input
+                            type="string"
+                            class="form-control"
+                            id="urlIcon"
+                            name="urlIcon"
+                            [(ngModel)]="urlIcon"
+                            required
+                          />
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button class="btn btn-primary">Agregar Red</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!--Añadir Redes End-->
+  
+           </div>
+  
+         </div>
+
+         <div class="cont-logo-m">
+          <img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-stayblessd">
+         </div>
+
         </div>
 
-<!--Seccion Right para Responsive-->
-<div class="col-3 d-xl-none d-md-flex justify-content-center">
+        <div class="col-7 d-md-none">
+          <div class="about-me-paragraph-container">
+            <p class="text-paragraphs" id="about-me-paragraph" [innerHTML]="persona.sobreMi|lineBreak"></p>
+          </div>
+        </div>
+        
+<!--Seccion Right para Responsive Tablet-->
+<div class="col-3 d-xl-none d-md-flex justify-content-center r-tablet">
   
   <div class="name-cont-rotate d-flex align-items-center">
     
@@ -101,31 +227,27 @@
    </div>
 
 </div>
-<!--END Seccion Right para Responsive-->
-<div class="col-xxl-8 col-xl-7 d-md-none d-xl-flex">
+<!--END Seccion Right para Responsive Tablet-->
+<div class="col-xxl-8 col-xl-7 d-md-none d-xl-flex r-tablet">
 
         <div class="about-me-paragraph-container from-right">
-          <p class="text-paragraphs" id="about-me-paragraph">
-            {{ persona.sobreMi }}
-          </p>
+          <p class="text-paragraphs" id="about-me-paragraph" [innerHTML]="persona.sobreMi|lineBreak"></p>
         </div>
       </div>
 
 
        </div>
 
-       <div class="row d-xl-none d-md-flex justify-content-center mt-4">
+       <div class="row d-xl-none d-md-flex justify-content-center mt-4 r-tablet">
         <div class="col">
           <div class="about-me-paragraph-container">
-            <p class="text-paragraphs" id="about-me-paragraph">
-              {{ persona.sobreMi }}
-            </p>
+            <p class="text-paragraphs" id="about-me-paragraph" [innerHTML]="persona.sobreMi|lineBreak"></p>
           </div>
     
         </div>
        </div>
 
-   <div class="row mt-4">
+   <div class="row mt-4 r-tablet">
     <div class="col about-me-footer p-0">
             
         <div class="title">

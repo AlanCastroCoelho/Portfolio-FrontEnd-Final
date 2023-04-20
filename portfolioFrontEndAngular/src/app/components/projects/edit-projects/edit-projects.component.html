@@ -1,5 +1,5 @@
-<div class="container" *ngIf="selectedProyect">
-  <form (ngSubmit)="onUpdate()" [formGroup]="editProyectForm">
+<div class="container" *ngIf="selectedProject">
+  <form (ngSubmit)="onUpdate()" [formGroup]="editProjectForm">
     <div class="form-group">
       <label for="nombreP">Nombre deL proyecto</label>
       <input
@@ -7,7 +7,7 @@
         class="form-control"
         id="nombreP"
         formControlName="nombreP"
-        [value]="selectedProyect.nombreP"
+        [value]="selectedProject.nombreP"
         required
       />
     </div>
@@ -20,7 +20,7 @@
         id="descripcionP"
         name="descripcionP"
         formControlName="descripcionP"
-        [value]="selectedProyect.descripcionP"
+        [value]="selectedProject.descripcionP"
       ></textarea>
     </div>
     <div class="form-group">
@@ -30,7 +30,7 @@
         class="form-control"
         id="urlImg"
         formControlName="urlImg"
-        [value]="selectedProyect.urlImg"
+        [value]="selectedProject.urlImg"
         required
       />
     </div>
@@ -42,7 +42,7 @@
         class="form-control"
         id="urlRepo"
         formControlName="urlRepo"
-        [value]="selectedProyect.urlRepo"
+        [value]="selectedProject.urlRepo"
         required
       />
     </div>
@@ -54,7 +54,7 @@
         class="form-control"
         id="urlLiveDemo"
         formControlName="urlLiveDemo"
-        [value]="selectedProyect.urlLiveDemo"
+        [value]="selectedProject.urlLiveDemo"
         required
       />
     </div>
