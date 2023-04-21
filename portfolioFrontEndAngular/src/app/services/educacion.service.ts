@@ -9,8 +9,8 @@ import { Educacion } from '../Models/educacion';
   providedIn: 'root',
 })
 export class EducacionService {
-  /* URL = 'https://backendalancc.onrender.com/educacion'; */
-  URL = 'http://localhost:8080/educacion';
+ URL = 'https://portfolio-backend-final-fq0t.onrender.com/educacion';
+ /* URL = 'http://localhost:8080/educacion';*/
 
   private _refres$ = new Subject<void>();
 

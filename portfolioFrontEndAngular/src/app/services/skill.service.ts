@@ -9,8 +9,8 @@ import { Skill } from '../Models/skill';
   providedIn: 'root',
 })
 export class SkillService {
-  /*  URL = 'https://backendalancc.onrender.com/skill'; */
-  URL = 'http://localhost:8080/skill';
+    URL = 'https://portfolio-backend-final-fq0t.onrender.com/skill'; 
+  /*URL = 'http://localhost:8080/skill';*/
 
   private _refres$ = new Subject<void>();
 

@@ -8,8 +8,8 @@ import { Persona } from '../Models/persona';
   providedIn: 'root',
 })
 export class PersonaService {
-  /* URL = 'https://backendalancc.onrender.com/persona'; */
-  URL = 'http://localhost:8080/persona';
+  URL = 'https://portfolio-backend-final-fq0t.onrender.com/persona'; 
+ /* URL = 'http://localhost:8080/persona';*/
 
  private _refres$ = new Subject<void>();
 

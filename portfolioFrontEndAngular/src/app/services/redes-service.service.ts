@@ -10,8 +10,8 @@ import { Redes } from '../Models/redes';
 })
 export class RedesServiceService {
 
-  /* URL = 'https://backendalancc.onrender.com/redes'; */
-  URL = 'http://localhost:8080/redes';
+   URL = 'https://portfolio-backend-final-fq0t.onrender.com/redes'; 
+ /* URL = 'http://localhost:8080/redes';*/
 
   private _refres$ = new Subject<void>();
 

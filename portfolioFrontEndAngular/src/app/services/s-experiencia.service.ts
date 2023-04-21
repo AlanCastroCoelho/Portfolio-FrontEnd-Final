@@ -9,8 +9,8 @@ import { Experiencia } from '../Models/experiencia';
   providedIn: 'root',
 })
 export class SExperienciaService {
-  /* expURL = 'https://backendalancc.onrender.com/explab'; */
-  expURL = 'http://localhost:8080/explab';
+  expURL = 'https://portfolio-backend-final-fq0t.onrender.com/explab'; 
+  /*expURL = 'http://localhost:8080/explab';*/
 
   private _refres$ = new Subject<void>();
 

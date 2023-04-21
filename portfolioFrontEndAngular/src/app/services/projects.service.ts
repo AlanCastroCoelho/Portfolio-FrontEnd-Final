@@ -8,8 +8,8 @@ import { Projects } from '../Models/projects';
   providedIn: 'root',
 })
 export class ProjectsService {
-  /* URL = 'https://backendalancc.onrender.com/proyectos'; */
-  URL = 'http://localhost:8080/proyectos';
+   URL = 'https://portfolio-backend-final-fq0t.onrender.com/proyectos'; 
+ /* URL = 'http://localhost:8080/proyectos';*/
 
   private _refres$ = new Subject<void>();
 
