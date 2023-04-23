@@ -22,8 +22,8 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion/ed
 // ngBootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { RecargaDirective } from './directives/recarga.directive';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia/experiencia.component';
