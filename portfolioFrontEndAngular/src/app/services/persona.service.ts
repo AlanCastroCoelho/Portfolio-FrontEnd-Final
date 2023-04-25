@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Persona } from '../Models/persona';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PersonaService {
-  URL = 'https://portfolio-backend-final-fq0t.onrender.com/persona'; 
- /* URL = 'http://localhost:8080/persona';*/
+  baseUrl = environment.apiUrl + 'persona';
+ /*URL = 'http://localhost:8080/persona';*/
 
  private _refres$ = new Subject<void>();
 
@@ -21,19 +22,19 @@ export class PersonaService {
   }
 
   public lista(): Observable<Persona[]> {
-    return this.httpClient.get<Persona[]>(this.URL + '/lista');
+    return this.httpClient.get<Persona[]>(this.baseUrl + '/lista');
   }
 
   public detail(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.URL + `/detail/${id}`);
+    return this.httpClient.get<Persona>(this.baseUrl + `/detail/${id}`);
   }
 
   public save(persona: Persona): Observable<any> {
-    return this.httpClient.post<any>(this.URL + '/create', persona);
+    return this.httpClient.post<any>(this.baseUrl + '/create', persona);
   }
 
   public update(id: number, persona: Persona): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, persona).pipe(
+    return this.httpClient.put<any>(this.baseUrl + `/update/${id}`, persona).pipe(
       tap(() => {
         this._refres$.next();
       })

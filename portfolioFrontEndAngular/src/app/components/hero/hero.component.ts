@@ -11,15 +11,21 @@ import { Persona } from 'src/app/Models/persona';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
 })
-export class HeroComponent implements AfterViewInit {
+export class HeroComponent implements OnInit,AfterViewInit {
   persona: Persona;
+  loading: boolean = false;
+
+  tiempoEspera: number = 16000; // tiempo de espera máximo permitido en milisegundos
   subscription: Subscription;
+
   constructor(public personaS: PersonaService,
     private tokenService: TokenService) {}
 
  
 
    ngOnInit(): void {
+
+    this.loading = true; // iniciar pantalla de carga
     this.cargarPersona();
     this.subscription = this.personaS.refresh$.subscribe(() => {
       this.cargarPersona();
@@ -28,8 +34,14 @@ export class HeroComponent implements AfterViewInit {
   
   cargarPersona(): void {
     const personaId = 1;
+    this.loading = true;
+    let timeoutId = setTimeout(() => {
+      window.alert("¿Demora demasiado? Presiona F5 para Recargar la Web.");
+    }, this.tiempoEspera); // muestra el mensaje después de 'tiempoEspera' milisegundos
     this.personaS.detail(personaId).subscribe((data) => {
+      clearTimeout(timeoutId); // cancela el timeout si la respuesta de la base de datos llega antes de 'tiempoEspera'
       this.persona = data;
+      this.loading = false; // oculta la pantalla de carga después de que se asignan los datos
     });
   }
 

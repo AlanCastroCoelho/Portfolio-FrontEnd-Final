@@ -10,17 +10,26 @@
     </div>
 
     <div class="row m-0 p-0">
-      <div class="col-xl-6 col-12 from-left p-0">
+      <div class="col-xl-6 col-12 from-left p-0 ">
         <app-skill-image-cont [skillTpe]="'front-end'"></app-skill-image-cont>
       </div>
 
       <div class="col-xl-6 col-12 progress-container">
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-
+        
           <app-skill-list-items
             [skillType]="'front-end'"
-          ></app-skill-list-items>
+            *ngIf="!loading"></app-skill-list-items>
+
+            <div *ngIf="loading">
+              <div class="text-loader">
+                <span>loading...</span>
+              </div>
+              <div class="cont-loader-bar " *ngIf="loading">
+                <div class="loader-bar front-bar"></div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -32,7 +41,15 @@
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
 
-          <app-skill-list-items [skillType]="'back-end'"></app-skill-list-items>
+          <app-skill-list-items [skillType]="'back-end'" *ngIf="!loading"></app-skill-list-items>
+          <div *ngIf="loading">
+            <div class="text-loader">
+              <span>loading...</span>
+            </div>
+            <div class="cont-loader-bar " *ngIf="loading">
+              <div class="loader-bar back-bar"></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +65,15 @@
       <div class="col-xl-6 col-12 progress-container">
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-          <app-skill-list-items [skillType]="'programs'"></app-skill-list-items>
+          <app-skill-list-items [skillType]="'programs'" *ngIf="!loading"></app-skill-list-items>
+          <div *ngIf="loading">
+            <div class="text-loader">
+              <span>loading...</span>
+            </div>
+            <div class="cont-loader-bar" *ngIf="loading">
+              <div class="loader-bar  program-bar"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -59,7 +84,21 @@
       >
         <div class="skill-inf-container">
           <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-          <app-skill-list-items [skillType]="'soft'"></app-skill-list-items>
+          <app-skill-list-items [skillType]="'soft'" *ngIf="!loading"></app-skill-list-items>
+          
+          
+
+          <div *ngIf="loading">
+            <div class="text-loader">
+              <span>loading...</span>
+            </div>
+            <div class="cont-loader-bar" *ngIf="loading">
+              
+              <div class="loader-bar soft-bar"></div>
+            </div>
+          </div>
+
+
         </div>
       </div>
 

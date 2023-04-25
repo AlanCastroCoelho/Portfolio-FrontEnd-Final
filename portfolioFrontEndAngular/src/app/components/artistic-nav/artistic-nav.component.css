@@ -61,19 +61,7 @@
 
 
 
-@keyframes float-text {
-  0% {
-    left: -20%;
-  }
 
-  50% {
-    left: -100%;
-  }
-
-  100% {
-    left: -20%;
-  }
-}
 
 .cardd-container:hover .text-wrapper {
   opacity: 0;
@@ -99,7 +87,7 @@
   background-color: #2900e8;
   height: 60vh;
   position: relative;
-  transform: translateX(-100%);
+
 }
 
 .about-me .text-wrapper {
@@ -172,7 +160,7 @@
   background-color: rgb(23, 23, 23);
   height: 60vh;
   position: relative;
-  transform: translateX(100%);
+
 }
 
 .contact .cardd-container:hover {
@@ -217,7 +205,7 @@ height: 180px !important;
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media screen and (max-width: 768px){
   .cardd-container{
     margin-bottom: 20px;
     height: 100px !important;
@@ -257,4 +245,6 @@ height: 180px !important;
     .planet-icon{
       display: none;
     }
+
+
 }

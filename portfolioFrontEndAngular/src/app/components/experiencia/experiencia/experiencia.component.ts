@@ -15,6 +15,7 @@ import { EditExperienciaComponent } from './edit-experiencia/edit-experiencia/ed
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
   subscription: Subscription;
+  loading: boolean = false;
 
   // Variables para Crear Nueva Experiencia
   nombreE: string;
@@ -32,6 +33,7 @@ export class ExperienciaComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
+    this.loading = true; // iniciar pantalla de carga
     this.cargarExperiencia();
     this.subscription = this.sExperiencia.refresh$.subscribe(() => {
       this.cargarExperiencia();
@@ -45,6 +47,9 @@ export class ExperienciaComponent implements OnInit {
 
   cargarExperiencia(): void {
     this.sExperiencia.lista().subscribe((data) => {
+      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
+        this.loading = false;
+      }, 3000);
       this.expe = data;
     });
   }

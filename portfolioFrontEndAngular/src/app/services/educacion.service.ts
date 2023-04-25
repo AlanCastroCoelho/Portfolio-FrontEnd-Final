@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject,Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 import { Educacion } from '../Models/educacion';
 
@@ -9,8 +10,7 @@ import { Educacion } from '../Models/educacion';
   providedIn: 'root',
 })
 export class EducacionService {
- URL = 'https://portfolio-backend-final-fq0t.onrender.com/educacion';
- /* URL = 'http://localhost:8080/educacion';*/
+baseUrl = environment.apiUrl + 'educacion';
 
   private _refres$ = new Subject<void>();
 
@@ -21,19 +21,19 @@ export class EducacionService {
   }
 
   public lista(): Observable<Educacion[]> {
-    return this.httpClient.get<Educacion[]>(this.URL + '/lista');
+    return this.httpClient.get<Educacion[]>(this.baseUrl + '/lista');
   }
 
   public detail(id: number): Observable<Educacion> {
-    return this.httpClient.get<Educacion>(this.URL + `/detail/${id}`);
+    return this.httpClient.get<Educacion>(this.baseUrl + `/detail/${id}`);
   }
 
   public save(educacion: Educacion): Observable<any> {
-    return this.httpClient.post<any>(this.URL + '/create', educacion);
+    return this.httpClient.post<any>(this.baseUrl + '/create', educacion);
   }
 
   public update(id: number, educacion: Educacion): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, educacion).pipe(
+    return this.httpClient.put<any>(this.baseUrl + `/update/${id}`, educacion).pipe(
       tap(() => {
         this._refres$.next();
       })
@@ -41,6 +41,6 @@ export class EducacionService {
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
+    return this.httpClient.delete<any>(this.baseUrl + `/delete/${id}`);
   }
 }

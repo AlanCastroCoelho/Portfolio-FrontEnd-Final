@@ -14,6 +14,7 @@ import { EditEducacionComponent } from './edit-educacion/edit-educacion.componen
 })
 export class EducacionComponent implements OnInit, OnDestroy {
   educacion: Educacion[] = [];
+  loading: boolean = false;
   subscription: Subscription;
 
 
@@ -28,8 +29,8 @@ export class EducacionComponent implements OnInit, OnDestroy {
   isLogged = false;
 
   ngOnInit(): void {
+    this.loading = true; // iniciar pantalla de carga
     this.cargarEducacion();
-
     this.subscription = this.educacionS.refresh$.subscribe(() => {
       this.cargarEducacion();
     });
@@ -43,6 +44,9 @@ export class EducacionComponent implements OnInit, OnDestroy {
 
   cargarEducacion(): void {
     this.educacionS.lista().subscribe((data) => {
+      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
+        this.loading = false;
+      }, 3000);
       this.educacion = data;
     });
   }

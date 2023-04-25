@@ -21,7 +21,7 @@ import { Experiencia } from 'src/app/Models/experiencia';
 export class SkillsComponent implements OnInit, OnDestroy {
   skill: Skill[] = [];
   subscription: Subscription;
-
+  loading: boolean = false;
   // Variables para Crear Nuevo Skill
   nombre: string;
   porcentaje: number = 50;
@@ -37,6 +37,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
   isLogged = false;
 
   ngOnInit(): void {
+    this.loading = true; // iniciar pantalla de carga
     this.cargarSkills();
 
     this.subscription = this.skillS.refresh$.subscribe(() => {
@@ -52,6 +53,9 @@ export class SkillsComponent implements OnInit, OnDestroy {
 
   cargarSkills(): void {
     this.skillS.lista().subscribe((data) => {
+      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
+        this.loading = false;
+      }, 3000);
       this.skill = data;
     });
   }

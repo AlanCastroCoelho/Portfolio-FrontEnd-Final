@@ -1,4 +1,4 @@
-<div class="container-fluid about-me-all" *ngIf="persona">
+<div class="container-fluid about-me-all">
   <div class="container-fluid" id="about-me-section">
     <div class="row justify-content-center">
       <div class="column-12 p-0">
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-      <div class="row about-me-container">
+      <div class="row about-me-container" *ngIf="!loading">
         <div class="row" *ngIf="isLogged" class="d-flex justify-content-end
         align-items-center mb-4">
        
@@ -387,6 +387,20 @@
  
     </div>
 
+<!--Mientras se estan Cargando los Datos Comienzo-->
+<div class="row about-me-container about-loading-cont" *ngIf="loading">
+  <div class="col container-fluid about-loading">
+
+     <div class="border-container">
+    </div>
+<div class="content">
+    <img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-loading">
+
+</div>
+  </div>
+</div>
+   <!--Mientras se estan Cargando los Datos Fin--> 
+   
     <div class="row mt-5 edu-exp-container">
       <div class="col-xl-6 col-12">
         <app-educacion></app-educacion>

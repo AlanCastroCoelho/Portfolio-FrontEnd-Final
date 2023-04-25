@@ -19,6 +19,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   indxShowProject: number;
   showProject = false;
+  loading: boolean = false;
 
   nombreP: string;
   descripcionP: string;
@@ -39,13 +40,9 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   isLogged = false;
 
-  cargarProyectos(): void {
-    this.projectsS.lista().subscribe((data) => {
-      this.projects = data;
-    });
-  }
 
   ngOnInit(): void {
+    this.loading = true; // iniciar pantalla de carga
     this.cargarProyectos();
 
     this.subscription = this.projectsS.refresh$.subscribe(() => {
@@ -72,6 +69,16 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     }
   }
 
+  cargarProyectos(): void {
+    this.projectsS.lista().subscribe((data) => {
+      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
+        this.loading = false;
+      }, 3000);
+      this.projects = data;
+    });
+  }
+
+  
   selectedProject(index: number) {
     this.showProject = !this.showProject;
   }

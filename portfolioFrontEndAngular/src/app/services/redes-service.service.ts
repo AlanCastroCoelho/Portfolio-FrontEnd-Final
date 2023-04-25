@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
+import { environment } from 'src/environments/environment';
 import { Redes } from '../Models/redes';
 
 @Injectable({
@@ -10,8 +10,8 @@ import { Redes } from '../Models/redes';
 })
 export class RedesServiceService {
 
-   URL = 'https://portfolio-backend-final-fq0t.onrender.com/redes'; 
- /* URL = 'http://localhost:8080/redes';*/
+  baseUrl = environment.apiUrl + 'redes';
+ /*URL = 'http://localhost:8080/redes';*/
 
   private _refres$ = new Subject<void>();
 
@@ -22,19 +22,19 @@ export class RedesServiceService {
   }
 
   public lista(): Observable<Redes[]> {
-    return this.httpClient.get<Redes[]>(this.URL + '/lista');
+    return this.httpClient.get<Redes[]>(this.baseUrl + '/lista');
   }
 
   public detail(id: number): Observable<Redes> {
-    return this.httpClient.get<Redes>(this.URL + `/detail/${id}`);
+    return this.httpClient.get<Redes>(this.baseUrl + `/detail/${id}`);
   }
 
   public save(redes: Redes): Observable<any> {
-    return this.httpClient.post<any>(this.URL + '/create', redes);
+    return this.httpClient.post<any>(this.baseUrl + '/create', redes);
   }
 
   public update(id: number, redes: Redes): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, redes).pipe(
+    return this.httpClient.put<any>(this.baseUrl + `/update/${id}`, redes).pipe(
       tap(() => {
         this._refres$.next();
       })
@@ -42,6 +42,6 @@ export class RedesServiceService {
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
+    return this.httpClient.delete<any>(this.baseUrl + `/delete/${id}`);
   }
 }

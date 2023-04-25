@@ -20,7 +20,7 @@
     margin: 0;
     border-radius:30px;
     height: 16px;
-    background-color: #292929;
+    background-color: #171717;
     font-family: "Dongle", sans-serif;
     font-size: 20px;
     width: 100%;
@@ -33,17 +33,21 @@
 
   .front-end-bar{
     background: #06FBFA;
+    box-shadow: #06FBFA 0px 2px 30px 0px;
   }
   .back-end-bar{
     background: #2A00E8;
+    box-shadow: #2A00E8 0px 2px 30px 0px;
   }
   
   .programs-bar{
-    background: #1B4CF6;
+    background: #FF30D6;
+    box-shadow: #FF30D6 0px 2px 30px 0px;
   }
   
   .soft-bar{
     background: #FFD22F;
+    box-shadow: #FFD22F 0px 2px 30px 0px;
   }
 
   ul {
@@ -57,6 +61,9 @@
     margin: 0;
     list-style: none;
   }
+
+
+
   @media screen and (min-width: 320px) and (max-width: 768px){
 
 

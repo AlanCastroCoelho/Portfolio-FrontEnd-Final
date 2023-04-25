@@ -9,9 +9,30 @@ dataTarget="Experiencia"
  *ngIf="isLogged"></app-bttn-add>
 
 
-
+ <div *ngIf="loading" class="loader-cont">
+  <div class="loader-text">
+    <p>loading</p>
+    <div class="words">
+        <span class="word">Experience.</span>
+        <span class="word">Experiencia.</span>
+        <span class="word">Esperienza.</span>
+        <span class="word">Erfahrung.</span>
+        <span class="word">Experience.</span>
+    </div>
+</div>
   
- 
+<div class="spin-logo-cont">
+  <div class="border-container">
+  </div>
+  <div class="content">
+  <img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-loading">
+  
+  </div>
+  </div>
+
+</div>
+  
+ <div *ngIf="!loading">
  <div class="no-experience" *ngIf="expe.length === 0">
   <div class="circle-anim"></div>
     <div class="circle-anim"></div>
@@ -42,9 +63,13 @@ dataTarget="Experiencia"
     <div class="no-exp-body">
       <div class="text-container">
      
-        <p>
-          <span>Experiencia</span>
+        <p class="r-tablet">
+          <span>Experiencia </span>
           <span>Laboral</span>
+        </p>
+
+        <p class="r-mobile">
+          <span>Experiencia</span>
         </p>
       
         <div class="inside-text">
@@ -115,6 +140,7 @@ dataTarget="Experiencia"
 />
 
 </div>
+
   <ul class="list-group" *ngFor="let Exp of expe">
     <li class="list-group-item">
       <div class="circle"></div>
@@ -150,6 +176,6 @@ dataTarget="Experiencia"
 
     </li>
   </ul>
-
+</div>
 
 </div>

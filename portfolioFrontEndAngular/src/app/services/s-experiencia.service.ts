@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../Models/experiencia';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SExperienciaService {
-  expURL = 'https://portfolio-backend-final-fq0t.onrender.com/explab'; 
+  baseUrl = environment.apiUrl + 'explab';
   /*expURL = 'http://localhost:8080/explab';*/
 
   private _refres$ = new Subject<void>();
@@ -21,20 +21,20 @@ export class SExperienciaService {
   }
 
   public lista(): Observable<Experiencia[]> {
-    return this.httpClient.get<Experiencia[]>(this.expURL + '/lista');
+    return this.httpClient.get<Experiencia[]>(this.baseUrl + '/lista');
   }
 
   public detail(id: number): Observable<Experiencia> {
-    return this.httpClient.get<Experiencia>(this.expURL + `/detail/${id}`);
+    return this.httpClient.get<Experiencia>(this.baseUrl + `/detail/${id}`);
   }
 
   public save(experiencia: Experiencia): Observable<any> {
-    return this.httpClient.post<any>(this.expURL + '/create', experiencia);
+    return this.httpClient.post<any>(this.baseUrl + '/create', experiencia);
   }
 
   public update(id: number, experiencia: Experiencia): Observable<any> {
     return this.httpClient
-      .put<any>(this.expURL + `/update/${id}`, experiencia)
+      .put<any>(this.baseUrl + `/update/${id}`, experiencia)
       .pipe(
         tap(() => {
           this._refres$.next();
@@ -43,6 +43,6 @@ export class SExperienciaService {
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.expURL + `/delete/${id}`);
+    return this.httpClient.delete<any>(this.baseUrl + `/delete/${id}`);
   }
 }

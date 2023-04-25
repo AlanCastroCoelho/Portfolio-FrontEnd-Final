@@ -1,3 +1,5 @@
+
+
 <header class="container-fluid header-container" >
   <div class="container-fluid">
     <div class="row m-5">
@@ -8,7 +10,26 @@
 
     <div class="row" >
       <div class="col m-0">
-        <div class="content" >
+        
+ 
+        <div *ngIf="loading" class="loader-cont">
+          <div class="loader">
+            <p>loading</p>
+            <div class="words">
+                <span class="word">About Me.</span>
+                <span class="word">Skills.</span>
+                <span class="word">Projects.</span>
+                <span class="word">Contact.</span>
+                <span class="word">About Me.</span>
+            </div>
+     </div>
+        </div> 
+
+        <div class="cont-loader-bar" *ngIf="loading">
+          <div class="loader-bar"></div>
+        </div>
+
+        <div class="content" *ngIf="!loading">
           
           <div class="img-wrapper upward">
             <div class="polaroid-color"></div>

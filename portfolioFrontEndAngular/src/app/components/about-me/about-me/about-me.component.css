@@ -90,7 +90,7 @@ padding: 0;
 
 
 .edit-cont:hover {
-  background-color: #484848;
+  background-color: #2900e8;
   transition: background-color 0.1s ease;
 }
 
@@ -271,7 +271,8 @@ transform: translateY(-5px);
   font-family: "Syncopate", sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  height: 555px;
+  min-height: 555px;
+  height: fit-content;
   border: 1px solid #fff;
 }
 
@@ -558,6 +559,56 @@ width: 100px;
 display: none;
 }
 
+/*About Loading*/
+
+.about-loading-cont{
+
+}
+
+.about-loading{
+  background: #000;
+  height: 500px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-loading{
+  width: 180px;
+  padding: 10px;
+
+}
+
+.border-container{
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  margin: auto;
+  border-radius: 50%;
+  overflow: visible;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 67%, rgba(35,0,195,1) 83%, rgba(83,46,250,1) 100%);
+  animation: border-anim 8s linear infinite;
+}
+
+@keyframes border-anim {
+  0%{transform: rotate(0deg);}
+  25%{ transform: rotate(90deg);}
+  50%{transform: rotate(180deg);}
+  75%{ transform: rotate(270deg);}
+  100%{transform: rotate(360deg);}
+}
+.content{
+  background-color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 898;
+}
+/**/
+
+
+
 @media screen and (min-width:1200px){
   
 }
@@ -612,6 +663,49 @@ width: 400px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){
+  
+  .about-loading{
+    background: #000;
+    height: 360px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-loading{
+    width: 145px;
+    padding: 10px;
+  
+  }
+  
+  .border-container{
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    overflow: visible;
+    padding: 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 67%, rgba(34,0,193,1) 83%, rgba(45,0,255,1) 100%);
+    animation: border-anim 8s linear infinite;
+  }
+  
+  @keyframes border-anim {
+    0%{transform: rotate(0deg);}
+    25%{ transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    75%{ transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+  }
+  .content{
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 898;
+  }
+
+  
   .r-movil{
     display: flex;
   }
@@ -702,9 +796,10 @@ border-radius: 10px;
   }
 
   .about-me-paragraph-container{
-    padding: 0px 15px;
+    padding: 7px 10px;
     font-size: 8px;
-  height: 355px;
+  min-height: 355px;
+  height: fit-content;
   border-radius: 10px;
   width: 100%;
   }
@@ -719,4 +814,10 @@ bottom: 0;
   width: 67px;
 }
   
+}
+
+@media screen and (max-width:425px){
+  .about-me-paragraph-container{
+    font-size: 7px;
+  }
 }

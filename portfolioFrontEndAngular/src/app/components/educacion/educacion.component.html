@@ -9,8 +9,32 @@
   dataTarget="Educacion"
    *ngIf="isLogged"></app-bttn-add>
 
+<div *ngIf="loading" class="loader-cont">
 
-<ul class="list-group" *ngFor="let Educacion of educacion">
+  <div class="loader-text">
+    <p>loading</p>
+    <div class="words">
+        <span class="word">Education.</span>
+        <span class="word">Educación.</span>
+        <span class="word">formazione.</span>
+        <span class="word">Ausbildung.</span>
+        <span class="word">Education.</span>
+    </div>
+</div>
+
+<div class="spin-logo-cont">
+<div class="border-container">
+</div>
+<div class="content">
+<img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-loading">
+
+</div>
+</div>
+
+</div>
+
+<div *ngIf="!loading">
+<ul class="list-group" *ngFor="let Educacion of educacion"  >
   <li class="list-group-item">
     <div class="circle"></div>
     <div class="line"></div>
@@ -43,5 +67,6 @@
   
   </li>
 </ul>
+</div>
 
 </div>

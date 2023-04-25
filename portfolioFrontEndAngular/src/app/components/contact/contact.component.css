@@ -385,3 +385,9 @@ a {
     top: 160px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .email-linkd-cont {
+    font-size: 6px;
+  }
+}

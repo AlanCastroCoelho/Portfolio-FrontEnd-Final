@@ -73,7 +73,6 @@ import { LineBreakPipe } from './pipes/line-break.pipe';
     SkillImageContComponent,
     TitleSubtitleComponent,
     LineBreakPipe,
-
   ],
   imports: [
     BrowserModule,

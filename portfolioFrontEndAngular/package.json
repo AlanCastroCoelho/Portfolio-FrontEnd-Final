@@ -27,25 +27,29 @@
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
+    "debug": "^4.3.1",
     "gsap": "^3.11.5",
-    "rxjs": "~7.5.0",
+    "rxjs": "~7.8.0",
     "three": "^0.151.3",
     "tslib": "^2.5.0",
     "uuid": "^9.0.0",
-    "zone.js": "^0.11.8"
+    "watchpack": "^2.4.0",
+    "zone.js": "^0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.6",
     "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "^15.2.8",
-    "@types/jasmine": "~4.0.0",
-    "@types/three": "^0.150.1",
-    "jasmine-core": "~4.3.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
+    "@types/jasmine": "~4.3.1",
+    "@types/three": "^0.150.2",
+    "ajv": "^8.12.0",
+    "graceful-fs": "^4.2.11",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.2",
+    "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": ">=4.6.2 <4.9"
+    "typescript": "~4.8.2"
   }
 }
