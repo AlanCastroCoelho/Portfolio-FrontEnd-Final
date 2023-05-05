@@ -1,11 +1,4 @@
-.experiencia-container {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-align-items: center;
-padding-bottom: 40px;
-}
+
 
 .no-experience {
   font-family: "Dela Gothic One", cursive;
@@ -104,7 +97,9 @@ h3 {
 .star-ten-hd {
   width: 45px;
 }
-
+.star-fill{
+  z-index: 684;
+}
 .rotating {
   animation-name: rotatingStar;
   animation-duration: 4s;
@@ -362,179 +357,26 @@ padding: 15px 0;
   }
 }
 
-
-.title-container {
-  margin-bottom: 50px;
-  padding: 15px;
-  position: relative;
+.title-cont{
+  transform: rotate(5deg);
+}
+.inner{
+  background: #4C28ED;
 }
 
-
-h1 {
-  font-family: "Dela Gothic One", cursive;
-  text-transform: uppercase;
-  color: white;
-  font-size: 2.2rem;
-  margin-left: 30px;
+.sel-back{
+  transform: translateX(-10px);
+  box-shadow: 1px 8px 17px #0000007a;
+    background: #532efa;
 }
 
-.circle {
-  position: absolute;
-  left: 0;
-  top: 23px;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-.title-circle{
-  top: 39px;
-  width: 30px;
-  height: 30px;
-  border: 4px solid #fff;
-}
-.line {
-  position: absolute;
-  left: 0;
-  top: 40px;
-  height: 70%;
-  border-left: 2px solid #fff;
-}
-
-.title-line{
-  position: absolute;
-  left: 0;
-  top: 60px;
-  height: 70%;
-  border-left: 4px solid #fff;
-}
-
-
-.name-cont{
-  width: 30%;
-  word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-}
-
-.fecha{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 17%;
-  opacity: 0;
-  transition: all .5s ease;
-  }
-  
-  .fecha p{
-    display: block;
-  }
-  
-  .fecha p span{
-    font-weight: 600;
-  }
-
-  .list-group-item:hover .fecha{
-    opacity: 1;
-    }
 
 .icon{
-  position: absolute;
-  left: 3px;
-  top: 38px;
-  transform: translate(-50%, -50%);
-  width: 55px;
-  padding: 10px;
-  border: 4px solid #fff;
-  border-radius: 50%;
-}
-h2 {
-  font-size: 20px;
-  flex-wrap: wrap;
+position: relative;
+top:-10px;
+width: 60px;
 }
 
-.list-group-item {
-  margin: 0;
-  border: none;
-  height: 90px;
-  overflow-y: hidden;
-  cursor: pointer;
-  transition: all 0.6s ease;
-  position: relative;
-  padding-left: 30px;
-}
-
-.list-group-item:hover{
-  height: 350px;
-}
-
-.list-group-item:hover .exp-descrp-cont{
-filter: blur(0);
-opacity: 1;
-}
-
-.circle {
-  position: absolute;
-  left: 0;
-  top: 16px;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-.title-circle{
-  top: 39px;
-  width: 30px;
-  height: 30px;
-  border: 4px solid #fff;
-}
-.line {
-  position: absolute;
-  left: 0;
-  top: 40px;
-  height: 70%;
-  border-left: 2px solid #fff;
-}
-
-.title-line{
-  position: absolute;
-  left: 0;
-  top: 80px;
-  height: 47%;
-  border-left: 4px solid #fff;
-}
-
-.icon{
-  position: absolute;
-  left: 3px;
-  top: 38px;
-  transform: translate(-50%, -50%);
-  width: 55px;
-  padding: 10px;
-  border: 4px solid #fff;
-  border-radius: 50%; }
-
-
-
-li{
-  display: flex;
-padding: 5px;
-background: none;
-color: #fff;
-font-family: "Syncopate", sans-serif;
-font-size: 15px;
-padding-bottom: 20px;
-}
-
-.exp-descrp-cont{
-  width: 70%;
-  word-wrap: break-word;
-  filter: blur(2px);
-  opacity: .5;
-  transition: all .4s ease;
-}
 
 .button-container {
   display: flex;
@@ -552,7 +394,7 @@ padding-bottom: 20px;
   border: 3px solid #ffffff06;
 }
 
-.icons-edit-trash-container {
+.edit-trash-cont {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -568,106 +410,15 @@ padding-bottom: 20px;
   margin-bottom: 10px;
 }
 
-.bttn-container {
-  padding: 8px;
-  cursor: pointer;
-  transition: box-shadow 0.1s ease-in-out;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit-cont:hover {
-  background-color: #2900e8;
-  transition: background-color 0.1s ease;
-}
-
-.trash-cont:hover {
-  background-color: #940000;
-  transition: background-color 0.1s ease;
-}
-
-.bttn-container span .new-bttn {
-  font-size: 5px;
-}
-
-
-.trash-icon {
-  width: 22px;
-  margin: 0;
-}
-
-.edit-icon {
-  width: 22px;
-  margin: 0;
-  cursor: pointer;
-}
 
 .r-mobile{
   display: none;
 }
 
-.spin-logo-cont{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  margin-left: 5px;
-  }
-  
-  .loader-cont{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .logo-loading{
-    width: 80px;
-    padding: 10px;
-  }
-  
-  .border-container{
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    margin: auto;
-    border-radius: 50%;
-    overflow: visible;
-    padding: 10px;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 67%, rgba(35,0,195,1) 83%, rgba(83,46,250,1) 100%);
-    animation: border-anim 6s linear infinite;
-    opacity: .5;
-  }
-  
-  @keyframes border-anim {
-    0%{transform: rotate(0deg);}
-    25%{ transform: rotate(90deg);}
-    50%{transform: rotate(180deg);}
-    75%{ transform: rotate(270deg);}
-    100%{transform: rotate(360deg);}
-  }
-  .content{
-    background-color: #000;
-    border-radius: 50%;
-    padding: 10px;
-  }
 
-
-/*Loader Spinn*/
-
-.loader-cont{
-  position: relative;
-  top: 0px;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 50px;
-}
-
+app-spin-load{
+  transform: scale(.4);
+  }
 
 /*Loader Text*/
 
@@ -741,6 +492,16 @@ padding-bottom: 20px;
   }
 }
 
+.number{
+  background: #795cfd;
+}
+
+.number-2{
+  position: absolute!important;
+  bottom: -7px;
+  left: -7px;
+}
+
 @media screen and (max-width: 1200px){
 
 .no-exp-cont{
@@ -775,9 +536,7 @@ align-items: center;
 .loader-cont{
   flex-direction: column;
 }
-.spin-logo-cont{
-  margin-left: 0px;
-}
+
     .loader-text{
       font-size: 20px!important;
     }
@@ -804,21 +563,13 @@ align-items: center;
     animation-name: move-down1;
   }
 
-  .list-group-item{
-    display: flex;
-    flex-direction: column;
-      }
 
       .border{
         width: 400px;
         padding: 0 0px;
       }
 
-      .title-container {
-        position: relative;
-        margin-bottom: 20px;
-        padding: 15px;
-      }
+  
     
       .title-line{
         display: none;
@@ -907,8 +658,6 @@ align-items: center;
 
       .icon{
         width: 40px;
-        padding: 7px;
-        border: 2px solid #fff;
         left: 0px;
         top: 26px;
       }

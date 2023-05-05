@@ -1,0 +1,14 @@
+app-nav{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 3000;
+    transition: transform .3s ease-in-out;
+    background: #00000083;
+    backdrop-filter: blur(5px);
+}
+
+.hide-nav {
+    transform: translateY(-100%);
+  }

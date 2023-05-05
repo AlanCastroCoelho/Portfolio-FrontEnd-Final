@@ -10,6 +10,7 @@ import { Projects } from 'src/app/Models/projects';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { TokenService } from 'src/app/services/token.service';
 import { Educacion } from 'src/app/Models/educacion';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-bttn-add',

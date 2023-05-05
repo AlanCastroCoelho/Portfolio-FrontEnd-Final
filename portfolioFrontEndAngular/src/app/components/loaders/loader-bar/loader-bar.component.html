@@ -1,0 +1,10 @@
+<div class="text-loader" *ngIf="tipo === 'skill'">
+  <span>loading...</span>
+</div>
+
+<div class="cont-loader-bar">
+  <div class="loader-bar"  [ngClass]="{ 'front-bar': tipoSkl == 'front',
+  'back-bar': tipoSkl == 'back',
+  'prog-bar': tipoSkl == 'prog',
+  'soft-bar': tipoSkl == 'soft',}"></div>
+</div>

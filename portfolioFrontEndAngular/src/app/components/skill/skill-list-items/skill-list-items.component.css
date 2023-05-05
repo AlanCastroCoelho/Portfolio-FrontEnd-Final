@@ -1,0 +1,84 @@
+.insider-rectangle {
+    padding: 8px 0px;
+ 
+  }
+
+  .skills-title-language {
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-family: "Dela Gothic One", cursive;
+  }
+
+  .progress {
+    margin: 0;
+    border-radius:30px;
+    height: 40px;
+    background-color: #171717;
+    font-family: "Dongle", sans-serif;
+    font-size: 22px;
+    width: 100%;
+    border: 6px solid #fff;
+    padding: 6px;
+  }
+  
+  .progress-bar{
+    color: #fff;
+    border-radius: 30px;
+    font-family: "Dela Gothic One", cursive;
+    font-size: 15px;
+  }
+
+  .front-end-bar{
+    background: #06fbfb92;
+  
+  }
+  .back-end-bar{
+    background: #2800d981;
+ 
+  }
+  
+  .programs-bar{
+    background: #ff30d68a;
+    
+  }
+  
+  .soft-bar{
+    background: #edd3118a;
+  
+  }
+
+  ul {
+    margin: 0px;
+    width: 100%;
+  padding: 0;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  }
+
+  
+  li {
+    margin: 0;
+    list-style: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 768px){
+
+
+ .insider-rectangle {
+padding: 0 55px;
+ margin: auto;
+}
+  .skills-title-language {
+padding: 0px;
+  }
+  }

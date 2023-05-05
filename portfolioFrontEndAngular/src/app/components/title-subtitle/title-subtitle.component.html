@@ -1,91 +1,43 @@
-<div class="titles-container" [id]="section +'-title-container'">
-    <span class="title-numbers">01</span>
-    <h2 class="text-title-section">{{section}}</h2>
+<div class="titl-subt-cont" [id]="section +'-title-container'">
+<div class="titles-cont">
+    <h2 class="text-title-section text-wrapper">{{(' / ' + section + ' / ').repeat(13)}}</h2>
   </div>
-  <div class="subtitle-cont-full for-subtitles" 
-     [ngClass]="{
-    'subtitle-about-backgr': section == 'about-me',
-    'subtitle-skill-backgr': section == 'skills',
-    'subtitle-project-backgr': section == 'projects'
-}">
-    <img
-      src="../../../assets/images/Stars.svg"
-      alt=""
-      class="subtitle-star left"
-    />
+
+  <div class="subtitle-cont-full for-subtitles" >
+
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'about-me'">
-      
-      
-      <div class="text-wrapper subtitle">
-        Descubre quién soy, mi historia personal y profesional. Descubre
-        quién soy, mi historia personal y profesional. Descubre quién soy,
-        mi historia personal y profesional. Descubre quién soy, mi
-        historia personal y profesional. Descubre quién soy, mi historia
-        personal y profesional. Descubre quién soy, mi historia personal y
-        profesional. Descubre quién soy, mi historia personal y
-        profesional. Descubre quién soy, mi historia personal y
-        profesional.
-      </div>  
-
-      <div class="subtitle-mobile">
-        Descubre quién soy, mi historia personal y profesional.
+      <div class="num-cont">
+        <span>1</span>
+      </div>
+      <div class="subtitle">
+        <p>Descubre quién soy, mi historia personal y
+        profesional. </p>
       </div>  
 
 
     </div>
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'skills'">
-
-        <div class="text-wrapper subtitle">
-          Explora mis habilidades en diferentes áreas y cómo puedo aportar
-          valor en proyectos y equipos de trabajo. Explora mis habilidades en
-          diferentes áreas y cómo puedo aportar valor en proyectos y equipos
-          de trabajo. Explora mis habilidades en diferentes áreas y cómo puedo
-          aportar valor en proyectos y equipos de trabajo. Explora mis
-          habilidades en diferentes áreas y cómo puedo aportar valor en
-          proyectos y equipos de trabajo. Explora mis habilidades en
-          diferentes áreas y cómo puedo aportar valor en proyectos y equipos
-          de trabajo. Explora mis habilidades en diferentes áreas y cómo puedo
-          aportar valor en proyectos y equipos de trabajo. Explora mis
-          habilidades en diferentes áreas y cómo puedo aportar valor en
-          proyectos y equipos de trabajo. Explora mis habilidades en
-          diferentes áreas y cómo puedo aportar valor en proyectos y equipos
-          de trabajo.
-        </div>
-
-        <div class="subtitle-mobile">
+      <div class="num-cont">
+        <span>2</span>
+      </div>
+        <div class="subtitle">
           Explora mis skills en diferentes areas.
-        </div>  
-
+        </div>
       </div>
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'projects'">
-       
-      <div class="text-wrapper subtitle">
-          Descubre cómo he aplicado mis habilidades técnicas y mi conocimiento
-          en diferentes proyectos y campos. Descubre cómo he aplicado mis
-          habilidades técnicas y mi conocimiento en diferentes proyectos y
-          campos. Descubre cómo he aplicado mis habilidades técnicas y mi
-          conocimiento en diferentes proyectos y campos. Descubre cómo he
-          aplicado mis habilidades técnicas y mi conocimiento en diferentes
-          proyectos y campos. Descubre cómo he aplicado mis habilidades
-          técnicas y mi conocimiento en diferentes proyectos y campos.
-          Descubre cómo he aplicado mis habilidades técnicas y mi conocimiento
-          en diferentes proyectos y campos.
+      <div class="num-cont">
+        <span>3</span>
+      </div>
+      <div class=" subtitle">
+        Explora mis skills en diferentes areas.
         </div>
-
-        <div class="subtitle-mobile">
-          Explora mis skills en diferentes areas.
-        </div>  
-
       </div>
 
 
 
-    <img
-      src="../../../assets/images/Stars.svg"
-      alt=""
-      class="subtitle-star right"
-    />
   </div>
+  <div class="img-title"></div>
+</div>

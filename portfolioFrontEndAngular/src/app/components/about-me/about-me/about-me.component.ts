@@ -9,8 +9,7 @@ import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditRedComponent } from '../edit-red/edit-red.component';
 import { EditPersonaComponent } from '../edit-persona/edit-persona.component';
-
-
+import { ExperienciaComponent } from '../../experiencia/experiencia/experiencia.component';
 
 @Component({
   selector: 'app-about-me',
@@ -69,7 +68,7 @@ export class AboutMeComponent implements OnInit {
     this.personaS.detail(personaId).subscribe((data) => {
       setTimeout(() => { // Agregar una demora de  segundos antes de asignar false
         this.loading = false;
-      }, 3000);
+      });
       this.persona = data;
     });
   }
@@ -95,7 +94,7 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
-  editarItemRed(redes: Redes) {
+  editItemRed(redes: Redes) {
     const ref = this.modalService.open(EditRedComponent);
     ref.componentInstance.selectedRed = redes;
     ref.result.then(

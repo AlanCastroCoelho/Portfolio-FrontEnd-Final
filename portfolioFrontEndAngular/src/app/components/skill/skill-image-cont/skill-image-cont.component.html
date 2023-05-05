@@ -1,0 +1,11 @@
+<div class="image-container" [ngClass]="{
+    'front-backgr': skillTpe == 'front-end',
+    'back-backgr': skillTpe == 'back-end',
+    'programs-backgr': skillTpe == 'programs',
+    'soft-backgr': skillTpe == 'soft-skills'
+}">
+<div class="type-cont">
+    <p class="front-title">{{skillTpe}}</p>
+    <img src="../../../../assets/images/star-skill.png" class="star">
+</div>
+  </div>

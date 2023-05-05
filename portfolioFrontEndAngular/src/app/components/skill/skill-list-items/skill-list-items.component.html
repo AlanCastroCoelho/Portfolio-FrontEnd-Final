@@ -1,0 +1,33 @@
+
+<ul>
+
+    <li *ngFor="let skill of skill">      
+      <div
+        class="data-container insider-rectangle"
+        *ngIf="skill.tipoSkill === skillType"
+      >
+        <div class="list-info skills-title-language">
+          
+            <div class="stars-titls-container">
+              <h5>{{ skill.nombre }}</h5>
+            </div>
+<app-bttn-edit-del  *ngIf="isLogged"
+[skill]="skill"
+[skillId]="skill.id"
+(bttnEditClicked)="editarItem($event)"
+(bttnDeleteClciked)="delete($event)">
+</app-bttn-edit-del>
+          
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" [ngClass]="{
+          'front-end-bar': skill.tipoSkill === 'front-end',
+          'back-end-bar': skill.tipoSkill === 'back-end',
+          'programs-bar': skill.tipoSkill === 'programs',
+          'soft-bar': skill.tipoSkill === 'soft'}" [style.width.%]="skill.porcentaje">
+            {{ skill.porcentaje }}%
+          </div>
+        </div>
+      </div> 
+    </li>
+  </ul>

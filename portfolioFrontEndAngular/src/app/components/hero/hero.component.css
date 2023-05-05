@@ -1,9 +1,12 @@
 
-.header-container {
+.header-cont {
   background-color: #000;
   overflow-x: hidden;
-  height: 1200px;
+  height: 1160px;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #decrative-star {
@@ -28,47 +31,84 @@
   top: 300px;
 }
 
-.img-wrapper {
+.text-content {
+  position: relative;
+margin: auto;
+  width: 1028px;
+  height: 226px;
+ cursor: pointer;
+ border: 20px solid #fff;
+ padding: 30px 0px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ font-family: "Dela Gothic One", cursive;
+ font-size: 120px;
+ line-height: 120px;
+ color: #fff;
+}
+
+.txt-1{
+  margin: 0;
+  color: #fff;
+  z-index: 21;
+  transition: all .5s ease;
+}
+
+.text-content:after {
+  content: "Alan Coelho.";
   position: absolute;
-  left: 33%;
-  top: 200px;
-  margin: auto;
-  width: 480px;
-  margin-left: -240px;
-  cursor: pointer;
+  bottom: -50px;
+  left: 60px;
+  right: 0;
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
 }
 
-.img-wrapper .polaroid-color {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroidColor.png);
-  background-size: cover;
-  background-position: center;
-  height: 760px;
-  width: 480px;
+.text-content:hover:after {
+  transform: translateY(-69%);
+  opacity: 1;
+}
+
+.img-wrapper{
   position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 1s;
-  z-index: 50;
-}
-
-.img-wrapper .polaroid-bw {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroidB&W2.png);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-image: url(../../../assets/images/AlanCoelhoph.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 760px;
-  width: 480px;
-  z-index: 30;
+  background-position: 0% 30%;
+ z-index: 4;
+ opacity: 0;
+ transition: width 5s ease, left 5s ease, opacity .5s ease-in-out;
 }
 
-.polaroid-color:hover {
+.text-content:hover .img-wrapper{
+  opacity: .4;
+ width: 110%;
+ height: 100%;
+ left: -90px;
+}
+
+.text-content:hover .txt-1{
+  transform: translateY(-90%) rotateX(50deg);
   opacity: 0;
 }
 
-.content {
-  color: #fff;
-  width: 100%;
-  overflow: hidden;
+.txt-2{
+
 }
+
+.content {
+  width: 100%;
+  position: relative;
+top: -80px;
+}
+
 .text {
   position: absolute;
   top: 540px;
@@ -145,7 +185,8 @@
 .star-mobile{
   display: none;
 }
-/*Loader Words*/
+
+
 .loader-cont{
   width: 100%;
   display: flex;
@@ -153,75 +194,6 @@
   align-items: center;
   position: relative;
   top: 230px;
-}
-.loader {
-  color: rgb(124, 124, 124);
-  font-family: "Syncopate", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  font-size: 25px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 40px;
-  padding: 10px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 8px;
-}
-
-.words {
-  overflow: hidden;
-}
-
-.word {
-  display: block;
-  height: 100%;
-  padding-left: 6px;
-  color: #532efa;
-  animation: spin_4991 4s infinite;
-}
-
-@keyframes spin_4991 {
-  10% {
-    -webkit-transform: translateY(-105%);
-    transform: translateY(-105%);
-  }
-
-  25% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-
-  35% {
-    -webkit-transform: translateY(-205%);
-    transform: translateY(-205%);
-  }
-
-  50% {
-    -webkit-transform: translateY(-200%);
-    transform: translateY(-200%);
-  }
-
-  60% {
-    -webkit-transform: translateY(-305%);
-    transform: translateY(-305%);
-  }
-
-  75% {
-    -webkit-transform: translateY(-300%);
-    transform: translateY(-300%);
-  }
-
-  85% {
-    -webkit-transform: translateY(-405%);
-    transform: translateY(-405%);
-  }
-
-  100% {
-    -webkit-transform: translateY(-400%);
-    transform: translateY(-400%);
-  }
 }
 
 /*Loader Bars*/
@@ -382,6 +354,8 @@
  
 
 @media screen and (max-width: 768px){
+  
+  
   .loader-cont{
     position: relative;
     top: 100px;
@@ -389,10 +363,7 @@
   .loader-bar{
     top: 120px;
   }
-  .loader{
-    font-size: 20px;
-    
-  }
+
   
   .mobile-text{
     display: inline-block;
@@ -480,8 +451,8 @@ font-size: 8px;
     margin-left: 0px;
   }
   
-  .img-wrapper .polaroid-color {
-    background-image: url(../../../assets/images/AlanCoelhoPolaroidColor.png);
+  .img-wrapper .polaroid {
+    background-image: url(../../../assets/images/AlanCoelhoPolaroid.jpg);
     background-size: cover;
     background-position: center;
     height: 308px;
@@ -493,8 +464,8 @@ font-size: 8px;
     z-index: 50;
   }
   
-  .img-wrapper .polaroid-bw {
-    background-image: url(../../../assets/images/AlanCoelhoPolaroidB&W2.png);
+  .img-wrapper .polaroid-color {
+    background-image: url(../../../assets/images/AlanCoelhoPolaroidColr.jpg);
     background-size: cover;
     background-position: center;
     height: 308px;
@@ -504,7 +475,9 @@ font-size: 8px;
 }
 
 @media screen and (min-width: 425px) and (max-width: 768px){
-  
+  .header-cont{
+    height: 1100px!important;
+  }
 
   
   .text {
@@ -542,8 +515,8 @@ font-size: 8px;
   margin-left: 0px;
 }
 
-.img-wrapper .polaroid-color {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroidColor.png);
+.img-wrapper .polaroid {
+  background-image: url(../../../assets/images/AlanCoelhoPolaroid.jpg);
   background-size: cover;
   background-position: center;
   height: 408px;
@@ -555,8 +528,8 @@ font-size: 8px;
   z-index: 50;
 }
 
-.img-wrapper .polaroid-bw {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroidB&W2.png);
+.img-wrapper .polaroid-color {
+  background-image: url(../../../assets/images/AlanCoelhoPolaroidColr.jpg);
   background-size: cover;
   background-position: center;
   height: 408px;
@@ -589,3 +562,21 @@ font-size: 8px;
   margin: auto;}
 }
 
+@media screen and (max-width: 425px) {
+  .header-cont{
+    height: 800px;
+  }
+
+  .img-wrapper {
+    top: 390px;
+  }
+
+  .img-wrapper .polaroid {
+    height: 285px;
+    width: 205px;
+  }
+  .img-wrapper .polaroid-color {
+    height: 285px;
+    width: 205px;
+  }
+}

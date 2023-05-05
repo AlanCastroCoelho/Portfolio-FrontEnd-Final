@@ -1,16 +1,12 @@
-:root {
-  --azul-francia: (#2900e8);
-  --negro: (#000);
-  --blanco: (#fff);
-}
 
 a{
 text-decoration: none;
-color: #fff;
+color: var(--c-white);
 }
 
 .about-me-all {
-  background-color: #000;
+  background: #000;
+
 }
 
 
@@ -21,29 +17,29 @@ color: #fff;
 
 
 
-.profile-photo-container {
+.photo-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   overflow: hidden;
-  border-radius: 50px;
   background: linear-gradient(240deg, rgba(47,47,47,1) 0%, rgba(0,0,0,1) 50%);
-  width: fit-content;
-  height: 555px;
-  border: 1px solid #fff;
+  width: 425px;
+  height: 500px;
+  border: 20px solid var(--c-white);
 }
 
 #profile-photo {
-  object-fit: cover;
-  width: 400px;
-  position: relative;
-  top: 15px;
+  
+  width: 1000px;
+  position: absolute;
+  left: -300px;
+  bottom: -370px;
 }
 
-.edu-exp-container{
+.edu-exp-cont{
   width: 92%;
   margin: auto;
+  margin: 60px;
+  padding: 30px;
+  
 }
 
 .links {
@@ -64,11 +60,11 @@ padding: 0;
 }
 
 .links img{
-  width: 32px;
+  width: 35px;
 }
 
 .about-items{
-  padding: 15px 50px;
+  padding: 13px 50px;
   margin: -6px 0;
   z-index: 300;
 }
@@ -77,7 +73,7 @@ padding: 0;
 
 
 
-.bttn-container {
+.bttn-cont {
   padding: 5px;
   cursor: pointer;
   transition: box-shadow 0.1s ease-in-out;
@@ -85,7 +81,7 @@ padding: 0;
   align-items: center;
   justify-content: center;
   width: 50%;
-  border:1px solid #fff;
+  border:1px solid var( --c-white);
 }
 
 
@@ -100,12 +96,7 @@ padding: 0;
   transition: background-color 0.1s ease;
 }
 
-.bttn-container span .new-bttn {
-  
-}
 
-.bttn-container:hover {
-}
 
 .trash-icon {
   width: 15px;
@@ -125,6 +116,8 @@ width:95%;
 display: flex;
 align-items: center;
 justify-content: center;
+font-family: "Dela Gothic One", cursive;
+font-size: 40px;
 }
 
 .edit-container{
@@ -134,7 +127,7 @@ justify-content: center;
   background-color: #2900e8;
   border-radius: 35px;
   transition: all 0.1s ease;
-  border: 1px solid #fff;
+  border: 1px solid var(--c-white);
   padding: 7px 25px;
   font-family: "Syncopate", sans-serif;
   cursor: pointer;
@@ -169,7 +162,7 @@ transform: translateY(-5px);
 
 .border-top{
   border-radius: 50px;
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--c-white);
   padding:30px 20px;
   margin-top: 20px;
   width: 100%;
@@ -179,7 +172,7 @@ transform: translateY(-5px);
 
 .border-bottom{
   border-radius: 50px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--c-white);
   padding:30px 20px;
   margin-bottom: 20px;
   width: 100%;
@@ -196,18 +189,13 @@ transform: translateY(-5px);
 }
 
 .border-right{
-  border-radius: 0 30px 30px 0;
-  border-right: 2px solid #fff;
+  border-right: 15px solid var(--c-white);
 }
 
 
 .border-left{
-  border-radius: 50px 0 0 50px;
-  border-left: 2px solid #fff;
-  font-family: "Syncopate", sans-serif;
-  font-size: 19px;
-  line-height: 28px;
-  letter-spacing: 20px;
+  border-left: 20px solid var(--c-white);
+
 }
 
 
@@ -216,7 +204,7 @@ transform: translateY(-5px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 2px solid white;
+  border-right: 2px solid var(--c-white);
   width: 28%;
 }
 
@@ -236,50 +224,21 @@ transform: translateY(-5px);
   align-items: center;
 }
 
-.decoration-middle {
-  width: 2.4px;
-  height: 70%;
-  border-radius: 60px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #fff;
-  margin: 15px 0;
-}
 
-.about-me-decor-lines {
-  width: 100%;
-  height: 57px;
-  padding: 0px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.dec-bottom {
-  align-items: flex-start;
-}
-
-.about-me-paragraph-container {
+.p-cont {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #000;
   border-radius: 60px;
   padding: 20px 50px;
-  color: #fff;
+  color: var(--c-white);
   font-family: "Syncopate", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   min-height: 555px;
   height: fit-content;
-  border: 1px solid #fff;
-}
 
-.white-line {
-  height: 1px;
-  width: 250px;
-  background: #ffffff;
 }
 
 .about-me-footer {
@@ -294,11 +253,9 @@ transform: translateY(-5px);
 .title{
   display: flex;
   align-items: center;
-  
   width: 100%;
 background-color: #000;
-border-radius: 60px;
-border: 1px solid #fff;
+border: 20px solid var(--c-white);
 overflow: hidden;
 
 }
@@ -308,14 +265,13 @@ overflow: hidden;
 }
 
 .about-me-footer span {
-  font-family: "Syncopate", sans-serif;
-  font-size: 20px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 26px;
 }
 
 .star-8pts{
   width: 33px;
+  height: 33px;
   animation: rotating 8s linear infinite;
 }
 
@@ -323,13 +279,14 @@ overflow: hidden;
 width: 38px;
 }
 
-.star-header{
+.star-head{
   width: 40px;
   margin: auto;
 }
 
 #about-me-section {
   overflow: hidden;
+position: relative;
 }
 
 
@@ -341,22 +298,21 @@ align-items: end;
 justify-content: center;
 }
 
-.about-me-header {
+.about-me-head {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #000;
-  border-radius: 50px;
-  border: 1px solid #fff;
+  border: 20px solid var(--c-white);
   overflow: hidden;
 }
 
 .nombre-about{
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px var(--c-white);
   color: transparent;
 font-size: 36px;
 margin: auto;
@@ -389,9 +345,6 @@ width: 100%;
   padding: 0;
 }
 
-.photo-name-container{
-background-color: transparent;
-}
 
 .name-stack-container{
 background-color: #000;
@@ -440,7 +393,7 @@ right: 18px;
 .text-headers {
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--c-white);
   font-size: 1.8rem;
 }
 
@@ -452,11 +405,11 @@ right: 18px;
 
 
 .items-list {
-  color: #fff;
+  color: var(--c-white);
 }
 
 .data-container {
-  color: #fff;
+  color: var(--c-white);
   font-size: 10px;
   display: flex;
   flex-direction: column;
@@ -484,38 +437,70 @@ li {
   width: 20%;
 }
 
-.icons-edit-trash-container {
-
-}
-
-.about-me-container {
+.about-me-cont {
  width: 98%;
   background-color: #212121;
-  color: #fff;
-  border-radius: 30px;
-  padding: 50px 30px;
+  color: var(--c-white); 
+  padding: 50px 20px;
 margin: auto;
+position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
+background-image: url(../../../../assets/images/18.png);
+background-size: 600px 400px;
+background-position: left;
+background-repeat: repeat;
+
+}
+.blck-back{
+  background: #000;
+  padding: 40px;
+  border: 30px solid var(--c-white);
+  box-shadow: -5px 10px 20px #000;
+}
+.cinta{
+  position: absolute;
+  width: 190px;
+  height: 70px;
+  z-index: 5000;
 }
 
+.c-lft{
+  top: 0px;
+  transform: rotate(-25deg);
+  left: -30px;
+}
 
+.c-rght{
+  bottom: 0px;
+  transform: rotate(155deg);
+  right: -50px;
+}
+
+.load-cont{
+  height: 705px;
+  background: #000;
+  display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 90px 0px;
+box-shadow: -5px 10px 20px #000;
+}
 
 .f-direction{
   flex-direction: column;
 }
 
 .name-cont-rotate{
-  writing-mode: vertical-rl; /* Establece la dirección vertical */
-  white-space: nowrap; /* Evita que el texto se envuelva */
-  border: 1px solid #fff;
- 
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  border: 1px solid var(--c-white);
   display: flex;
   height: 570px;
-background: #000;
-border-radius: 50px;
-width: 100px;
+  background: #000;
+  border-radius: 50px;
+  width: 100px;
 }
 
 .rotate{
@@ -525,7 +510,7 @@ width: 100px;
 .nombre-rotate{
     font-family: "Dela Gothic One", cursive;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--c-white);
     color: transparent;
   font-size: 28px;
   margin: auto;
@@ -544,7 +529,7 @@ width: 100px;
 }
 .modal-content {
   font-family: "Syncopate", sans-serif;
-  color: #fff;
+  color: var(--c-white);
   background-color: #44444460;
   backdrop-filter: blur(8px);
   padding: 25px;
@@ -559,67 +544,8 @@ width: 100px;
 display: none;
 }
 
-/*About Loading*/
-
-.about-loading-cont{
-
-}
-
-.about-loading{
-  background: #000;
-  height: 500px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-loading{
-  width: 180px;
-  padding: 10px;
-
-}
-
-.border-container{
-  width: 220px;
-  height: 220px;
-  position: absolute;
-  margin: auto;
-  border-radius: 50%;
-  overflow: visible;
-  padding: 10px;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 67%, rgba(35,0,195,1) 83%, rgba(83,46,250,1) 100%);
-  animation: border-anim 8s linear infinite;
-}
-
-@keyframes border-anim {
-  0%{transform: rotate(0deg);}
-  25%{ transform: rotate(90deg);}
-  50%{transform: rotate(180deg);}
-  75%{ transform: rotate(270deg);}
-  100%{transform: rotate(360deg);}
-}
-.content{
-  background-color: #000;
-  border-radius: 50%;
-  padding: 10px;
-  z-index: 898;
-}
-/**/
-
-
-
-@media screen and (min-width:1200px){
-  
-}
-
 @media screen and (max-width:1200px){
-  .about-me-container{ 
-  }
 
-  .photo-name-container{
-
-  }
   .row-resp-backgr{
   background-color: #000;
   border-radius: 50px;
@@ -627,7 +553,7 @@ display: none;
 
   
 
-  .profile-photo-container{
+  .photo-container{
     height: 570px;
   }
 
@@ -635,7 +561,7 @@ display: none;
 width: 400px;
   }
 
-.about-me-paragraph-container{
+.p-cont{
   width: 86%;
   margin: auto;
 }
@@ -664,48 +590,6 @@ width: 400px;
 
 @media screen and (min-width: 320px) and (max-width: 768px){
   
-  .about-loading{
-    background: #000;
-    height: 360px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo-loading{
-    width: 145px;
-    padding: 10px;
-  
-  }
-  
-  .border-container{
-    width: 190px;
-    height: 190px;
-    position: absolute;
-    margin: auto;
-    border-radius: 50%;
-    overflow: visible;
-    padding: 10px;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 67%, rgba(34,0,193,1) 83%, rgba(45,0,255,1) 100%);
-    animation: border-anim 8s linear infinite;
-  }
-  
-  @keyframes border-anim {
-    0%{transform: rotate(0deg);}
-    25%{ transform: rotate(90deg);}
-    50%{transform: rotate(180deg);}
-    75%{ transform: rotate(270deg);}
-    100%{transform: rotate(360deg);}
-  }
-  .content{
-    background-color: #000;
-    border-radius: 50%;
-    padding: 10px;
-    z-index: 898;
-  }
-
-  
   .r-movil{
     display: flex;
   }
@@ -718,10 +602,10 @@ width: 400px;
   display: none;
 }
 
-  .about-me-container {
+  .about-me-cont {
     width: 99%;
      background-color: #000;
-     color: #fff;
+     color: var(--c-white);
      border-radius: 30px;
      padding: 0px 0px;
    margin: auto;
@@ -752,7 +636,7 @@ width: 400px;
   font-weight: bold;
 }
 
-  .star-header{
+  .star-head{
     width: 18px;
   }
 
@@ -763,7 +647,7 @@ width: 400px;
   }
 
 
-  .profile-photo-container {
+  .photo-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -771,7 +655,7 @@ width: 400px;
     overflow: hidden;
     width: fit-content;
     height: 230px;
-    border: 1px solid #fff;
+    border: 1px solid var(--c-white);
     border-radius: 10px;
   }
   
@@ -795,7 +679,7 @@ border-radius: 10px;
     width: 18px;
   }
 
-  .about-me-paragraph-container{
+  .p-cont{
     padding: 7px 10px;
     font-size: 8px;
   min-height: 355px;
@@ -817,7 +701,7 @@ bottom: 0;
 }
 
 @media screen and (max-width:425px){
-  .about-me-paragraph-container{
+  .p-cont{
     font-size: 7px;
   }
 }

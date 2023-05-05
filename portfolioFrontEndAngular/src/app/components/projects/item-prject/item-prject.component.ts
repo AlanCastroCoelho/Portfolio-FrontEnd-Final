@@ -3,7 +3,6 @@ import { Projects } from 'src/app/Models/projects';
 import { TokenService } from 'src/app/services/token.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditProjectsComponent } from '../edit-projects/edit-projects.component';
-import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
 import {
   trigger,
   state,

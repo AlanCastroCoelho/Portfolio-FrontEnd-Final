@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/Models/experiencia';
 import { SExperienciaService } from 'src/app/services/s-experiencia.service';
@@ -6,16 +6,19 @@ import { TokenService } from 'src/app/services/token.service';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditExperienciaComponent } from './edit-experiencia/edit-experiencia/edit-experiencia.component';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.css'],
+  styleUrls: ['./experiencia.component.css','../../../../assets/css/edu-exp.css']
 })
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
+  selectedE: any;
   subscription: Subscription;
   loading: boolean = false;
+  seleccionado: number = -1;
 
   // Variables para Crear Nueva Experiencia
   nombreE: string;
@@ -49,7 +52,7 @@ export class ExperienciaComponent implements OnInit {
     this.sExperiencia.lista().subscribe((data) => {
       setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
         this.loading = false;
-      }, 3000);
+      });
       this.expe = data;
     });
   }
@@ -92,6 +95,11 @@ export class ExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }
     );
+  }
+
+  selectExp(exp: Experiencia, i: number) {
+    this.selectedE = exp;
+    this.seleccionado = i;
   }
 
   ngOnDestroy(): void {

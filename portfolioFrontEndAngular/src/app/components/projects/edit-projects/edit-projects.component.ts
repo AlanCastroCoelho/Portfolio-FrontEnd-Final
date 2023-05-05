@@ -3,7 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Projects } from 'src/app/Models/projects';
 import { ProjectsService } from 'src/app/services/projects.service';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder} from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit-projects',

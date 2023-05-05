@@ -7,15 +7,18 @@ import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditEducacionComponent } from './edit-educacion/edit-educacion.component';
 
+
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
-  styleUrls: ['./educacion.component.css'],
+  styleUrls: ['./educacion.component.css','../../../assets/css/edu-exp.css'],
 })
 export class EducacionComponent implements OnInit, OnDestroy {
   educacion: Educacion[] = [];
+  selectedE: any;
   loading: boolean = false;
   subscription: Subscription;
+  seleccionado: number = -1;
 
 
 
@@ -46,7 +49,7 @@ export class EducacionComponent implements OnInit, OnDestroy {
     this.educacionS.lista().subscribe((data) => {
       setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
         this.loading = false;
-      }, 3000);
+      });
       this.educacion = data;
     });
   }
@@ -77,6 +80,11 @@ export class EducacionComponent implements OnInit, OnDestroy {
     );
   }
 
+
+  selectEducacion(educacion: Educacion, i: number) {
+    this.selectedE = educacion;
+    this.seleccionado = i;
+  }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

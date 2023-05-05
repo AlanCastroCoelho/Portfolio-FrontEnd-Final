@@ -5,9 +5,9 @@ import { Projects } from 'src/app/Models/projects';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { TokenService } from 'src/app/services/token.service';
 import { CargarScriptsService } from '../../services/cargar-scripts.service';
-import { ShowProjectComponent } from './show-project/show-project.component';
 import { EditProjectsComponent } from './edit-projects/edit-projects.component';
 import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-projecs',

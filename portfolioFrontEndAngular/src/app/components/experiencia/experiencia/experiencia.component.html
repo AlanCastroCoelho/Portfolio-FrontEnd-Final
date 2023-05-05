@@ -1,8 +1,12 @@
-<div class="row experiencia-container">
-  <div class="title-container">
-    <img src="../../../../assets/images/exp-icon-01.png" alt="" class="icon">
-    <div class="line title-line"></div>
-    <h1>Experiencia Laboral</h1>
+<div class="row e-cont">
+  <div class="title-cont">
+    <div class="text-wrapper inner">
+    / Experiencia / Experiencia / Experiencia 
+    / Experiencia / Experiencia / Experiencia 
+    / Experiencia / Experiencia / Experiencia 
+    / Experiencia / Experiencia / Experiencia 
+    / Experiencia / Experiencia / Experiencia
+  </div>
   </div>
 <app-bttn-add
 dataTarget="Experiencia"
@@ -10,35 +14,20 @@ dataTarget="Experiencia"
 
 
  <div *ngIf="loading" class="loader-cont">
-  <div class="loader-text">
-    <p>loading</p>
-    <div class="words">
-        <span class="word">Experience.</span>
-        <span class="word">Experiencia.</span>
-        <span class="word">Esperienza.</span>
-        <span class="word">Erfahrung.</span>
-        <span class="word">Experience.</span>
-    </div>
-</div>
+  <app-loader-text [tipo]="'exp'"></app-loader-text>
   
-<div class="spin-logo-cont">
-  <div class="border-container">
-  </div>
-  <div class="content">
-  <img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-loading">
-  
-  </div>
-  </div>
+<app-spin-load></app-spin-load>
 
 </div>
   
  <div *ngIf="!loading">
- <div class="no-experience" *ngIf="expe.length === 0">
+ 
+ 
+  <div class="no-experience" *ngIf="expe.length === 0">
   <div class="circle-anim"></div>
     <div class="circle-anim"></div>
-   
     <div class="border">
-<img src="../../../../assets/images/Compact Disc.png" alt="" class="plastic-wrap">
+<img src="../../../../assets/images/Compact Disc.jpg" alt="" class="plastic-wrap">
 
     <div class="no-exp-header">
       <img
@@ -141,41 +130,69 @@ dataTarget="Experiencia"
 
 </div>
 
-  <ul class="list-group" *ngFor="let Exp of expe">
-    <li class="list-group-item">
-      <div class="circle"></div>
-      <div class="line"></div>
-      
-      <div class="name-cont">
-         
-      <h2>{{ Exp.nombreE }}</h2>
-      <div class="fecha">
-        <p> <span>Inicio: </span>{{Exp.fechaInicio | date:'dd/MM/yyyy' }} </p>
-        <p> <span>Fin: </span>{{Exp.fechaFin | date:'dd/MM/yyyy' }}</p>
-        </div>
-    </div>
+<div *ngIf="expe.length > 0">
+<div *ngIf="!loading" class="full-cont">
 
-    <div class="exp-descrp-cont">
+
+  
+  <div class="descripcion">
+    <img src="../../../assets/images/Star Fill.png" alt="" class="star-fill">
+    <p *ngIf="!selectedE" class="desc-txt">Selecciona una opcion</p>
+    <p *ngIf="selectedE" class="desc-txt">{{ selectedE.descripcionE }}</p>
+    <div class="desc-footer" *ngIf="selectedE">
       
-      <div class="icons-edit-trash-container" *ngIf="isLogged">
-        <div class="bttn-container edit-cont">
-          <img
-            class="edit-icon"
-            src="../../../assets/images/create.svg"
-            (click)="editarItem(Exp)"
-          />
-        </div>
-        
-        <div class="bttn-container trash-cont">
-          <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete(Exp.id)"/>
-          
-        </div>
+      <div class="fecha-cnt">
+      
+        <span>Inicio:</span>
+      <div class="number">
+       {{selectedE.fechaInicio | date:'dd/MM/yyyy'}}
       </div>
-      <p>{{ Exp.descripcionE }}</p>
+    <div class="number number-2"></div>
     </div>
-
+  
+    <div class="fecha-cnt">
+      
+      <span>Fin:</span>
+      <div class="number">
+        {{selectedE.fechaFin | date:'dd/MM/yyyy'}}
+      </div>
+      <div class="number number-2"></div>
+    </div>
+    </div>
+  
+    <div class="circle c-uno"></div>
+    <div class="circle c-dos"></div>
+    <div class="circle c-tres"></div>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let Exp of expe; let i = index" (click)="selectExp(Exp,i)"
+    [ngClass]="{'sel-back': i === seleccionado}">
+      <div class="name-cont">
+         <h2>{{ Exp.nombreE }}</h2>
+         
+         <div class="icons-edit-trash-container" *ngIf="isLogged">
+          <div class="bttn-container edit-cont">
+            <img
+              class="edit-icon"
+              src="../../../assets/images/create.svg"
+              (click)="editarItem(Exp)"
+            />
+          </div>
+          
+          <div class="bttn-container trash-cont">
+            <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete(Exp.id)"/>
+            
+          </div>
+        </div>
+  
+    </div> 
     </li>
   </ul>
+  
+  </div>
+</div>
+
 </div>
 
 </div>

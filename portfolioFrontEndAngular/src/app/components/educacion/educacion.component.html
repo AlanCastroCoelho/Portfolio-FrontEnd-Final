@@ -1,9 +1,11 @@
-<div class="row educacion-container">
-  <div class="title-container">
-    <img src="../../../assets/images/Educacion-Icon.png" alt="" class="icon">
-    <div class="line title-line"></div>
-    <h1>Educacion</h1>
- 
+<div class="row e-cont">
+  <div class="title-cont">
+    <div class="plst-wrp"></div>
+    <div class="text-wrapper inner">
+    / educacion / educacion / educacion 
+    / educacion / educacion / educacion 
+    / educacion / educacion / educacion 
+  </div>
   </div>
   <app-bttn-add
   dataTarget="Educacion"
@@ -11,62 +13,72 @@
 
 <div *ngIf="loading" class="loader-cont">
 
-  <div class="loader-text">
-    <p>loading</p>
-    <div class="words">
-        <span class="word">Education.</span>
-        <span class="word">Educación.</span>
-        <span class="word">formazione.</span>
-        <span class="word">Ausbildung.</span>
-        <span class="word">Education.</span>
-    </div>
-</div>
+  <app-loader-text [tipo]="'edu'"></app-loader-text>
 
-<div class="spin-logo-cont">
-<div class="border-container">
-</div>
-<div class="content">
-<img src="../../../../assets/images/logo stayblessed-01.png" alt="" class="logo-loading">
-
-</div>
-</div>
+<app-spin-load></app-spin-load>
 
 </div>
 
-<div *ngIf="!loading">
-<ul class="list-group" *ngFor="let Educacion of educacion"  >
-  <li class="list-group-item">
-    <div class="circle"></div>
-    <div class="line"></div>
+<div *ngIf="!loading" class="full-cont">
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let Educacion of educacion; let i = index" (click)="selectEducacion(Educacion,i)"
+  [ngClass]="{'sel-back': i === seleccionado}">
     <div class="name-cont">
        <h2>{{ Educacion.nombreE }}</h2>
        
-       <div class="fecha">
-       <p> <span>Inicio: </span>{{Educacion.fechaInicio | date:'dd/MM/yyyy' }} </p>
-       <p> <span>Fin: </span>{{Educacion.fechaFin | date:'dd/MM/yyyy' }}</p>
-       </div>
-  </div>
-  <div class="edu-descrp-cont">
-    <div class="icons-edit-trash-container" *ngIf="isLogged">
-      <div class="bttn-container edit-cont">
-        <img
-          class="edit-icon"
-          src="../../../assets/images/create.svg"
-          (click)="editarItem(Educacion)"
-        />
-      </div>
-      
-      <div class="bttn-container trash-cont">
-        <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete(Educacion.id)"/>
+       <div class="icons-edit-trash-container" *ngIf="isLogged">
+        <div class="bttn-container edit-cont">
+          <img
+            class="edit-icon"
+            src="../../../assets/images/create.svg"
+            (click)="editarItem(Educacion)"
+          />
+        </div>
         
+        <div class="bttn-container trash-cont">
+          <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete(Educacion.id)"/>
+          
+        </div>
       </div>
-    </div>
 
-    <p>{{ Educacion.descripcionE }}</p>
-  </div>
-  
+  </div> 
   </li>
 </ul>
+
+<div class="descripcion">
+  <img src="../../../assets/images/Star Fill.png" alt="" class="star-fill">
+  <p *ngIf="!selectedE" class="desc-txt">Selecciona una opcion</p>
+  <p *ngIf="selectedE" class="desc-txt">{{ selectedE.descripcionE }}</p>
+  <div class="desc-footer" *ngIf="selectedE">
+    
+    <div class="fecha-cnt">
+    
+      <span>Inicio:</span>
+    <div class="number">
+     {{selectedE.fechaInicio | date:'dd/MM/yyyy'}}
+    </div>
+<div class="number number-2">
+
+</div>
+  </div>
+
+  <div class="fecha-cnt">
+    
+    <span>Fin:</span>
+    <div class="number">
+      {{selectedE.fechaFin | date:'dd/MM/yyyy'}}
+    </div>
+    <div class="number number-2"></div>
+  </div>
+  </div>
+
+  <div class="circle c-uno"></div>
+  <div class="circle c-dos"></div>
+  <div class="circle c-tres"></div>
+</div>
+
+
 </div>
 
 </div>

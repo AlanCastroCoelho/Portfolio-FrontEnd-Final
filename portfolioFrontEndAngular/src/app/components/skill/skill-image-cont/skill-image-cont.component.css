@@ -1,0 +1,78 @@
+.image-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 730px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    background-size: 570px ;
+  }
+
+  .front-backgr {
+    background-image: url(../../../../assets/images/holoPFront.gif);
+    
+  }
+  
+  .back-backgr {
+    background-image: url(../../../../assets/images/holoPBack.gif);
+  }
+  
+  .programs-backgr {
+    background-image: url(../../../../assets/images/holoPPrograms.gif);
+  }
+  
+  .soft-backgr {
+    background-image: url(../../../../assets/images/holoPSoft2.gif);
+    background-size: 530px 530px;
+  }
+
+  .type-cont{
+    border: 3px solid #fff;
+    padding: 55px 102px;
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .star{
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    width: 45px;
+  }
+  
+  .front-title {
+    font-family: "Dela Gothic One", cursive;
+    font-size: 78px;
+    line-height: 35px;
+    z-index: 150;
+    -webkit-text-stroke: 3px #fff;
+    color: transparent;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .image-container {
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 410px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+      padding: 0;
+      width: 100%;
+      background-size: 360px 460px;
+    }
+    .soft-backgr {
+
+      background-size: 360px 360px;
+    }
+    .front-title {
+      font-size: 25px;
+    }
+  }
