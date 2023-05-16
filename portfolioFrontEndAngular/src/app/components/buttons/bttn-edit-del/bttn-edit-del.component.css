@@ -11,6 +11,7 @@
     border-radius: 35px;
     border: 2px solid #fff;
     overflow: hidden;
+    position: relative;
   }
   
   .bttn-container {
@@ -35,9 +36,6 @@
   
   .bttn-container span .new-bttn {
     font-size: 5px;
-  }
-  
-  .bttn-container:hover {
   }
   
   .trash-icon {

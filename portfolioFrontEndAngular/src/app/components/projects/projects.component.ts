@@ -4,7 +4,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Projects } from 'src/app/Models/projects';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { TokenService } from 'src/app/services/token.service';
-import { CargarScriptsService } from '../../services/cargar-scripts.service';
 import { EditProjectsComponent } from './edit-projects/edit-projects.component';
 import { Subscription } from 'rxjs';
 
@@ -31,11 +30,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     private projectsS: ProjectsService,
     private tokenService: TokenService,
     private router: Router,
-    private _CargarScripts: CargarScriptsService,
+
     private modalService: NgbModal
   ) {
-    _CargarScripts.Carga(['Project Hover Effect/projectHover']);
-    
+
   }
 
   isLogged = false;
@@ -73,7 +71,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.projectsS.lista().subscribe((data) => {
       setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
         this.loading = false;
-      }, 3000);
+      });
       this.projects = data;
     });
   }

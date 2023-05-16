@@ -3,106 +3,126 @@
   id="skills-container"
 >
   <div class="row skills-section mt-2 p-0">
-    <div class="row mb-5">
-    <div class="col">
-      <app-title-subtitle [section]="'skills'"></app-title-subtitle>
-    </div>
+    <div class="row p-0 m-title">
+      <div class="col p-0">
+        <app-title-subtitle [section]="'skills'"></app-title-subtitle>
+      </div>
     </div>
 
+<div class="row" *ngIf="isLogged">
+  <div class="col">
+    <app-bttn-add dataTarget="Skill"></app-bttn-add>
+  </div>
+</div>
+
     <div class="row m-0 p-0">
-      <div class="col-xl-6 col-12 from-left p-0 ">
+      <div class="col-xl-6 col-12 from-left p-0 image-cont">
         <app-skill-image-cont [skillTpe]="'front-end'"></app-skill-image-cont>
       </div>
 
       <div class="col-xl-6 col-12 progress-container">
+        <div class="texture"></div>
         <div class="skill-inf-container">
-          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-        
-          <app-skill-list-items
-            [skillType]="'front-end'"
-            *ngIf="!loading">
-          
+
+          <app-skill-list-items [skillType]="'front-end'" *ngIf="!loading">
           </app-skill-list-items>
-          
-          <div class="circle c-r"  *ngIf="!loading">
-          </div>
-          <img src="../../../../assets/images/star-skill-fill.png" class="star">
 
+          <img
+            src="../../../../assets/images/star-skill-fill.png"
+            class="star"
+          />
 
-            <app-loader-bar *ngIf="loading"
+          <app-loader-bar
+            *ngIf="loading"
             [tipo]="'skill'"
-            [tipoSkl]="'front'"></app-loader-bar> 
+            [tipoSkl]="'front'"
+          ></app-loader-bar>
         </div>
       </div>
     </div>
 
     <div class="row m-0 change-order p-0">
-      <div
-        class="col-xl-6 col-12 order-xl-first progress-container"
-      >
+      <div class="col-xl-6 col-12 order-xl-first progress-container">
+        <div class="texture"></div>
         <div class="skill-inf-container">
-          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
+          <!--   <div class="circle c-l"  *ngIf="!loading">
 
-          <app-skill-list-items [skillType]="'back-end'" *ngIf="!loading"></app-skill-list-items>
+          </div> -->
+          <app-skill-list-items
+            [skillType]="'back-end'"
+            *ngIf="!loading"
+          ></app-skill-list-items>
 
-          <div class="circle c-l"  *ngIf="!loading">
-
-          </div>
-          <img src="../../../../assets/images/star-skill-fill.png" class="star">
-         <app-loader-bar *ngIf="loading"
-         [tipo]="'skill'"
-         [tipoSkl]="'back'"></app-loader-bar> 
-
+          <img
+            src="../../../../assets/images/star-skill-fill.png"
+            class="star"
+          />
+          <app-loader-bar
+            *ngIf="loading"
+            [tipo]="'skill'"
+            [tipoSkl]="'back'"
+          ></app-loader-bar>
         </div>
       </div>
 
-      <div class="col-xl-6 col-12 from-right">
+      <div class="col-xl-6 col-12 from-right image-cont">
         <app-skill-image-cont [skillTpe]="'back-end'"></app-skill-image-cont>
       </div>
     </div>
 
     <div class="row m-0 p-0">
-      <div class="col-xl-6 col-12 from-left">
+      <div class="col-xl-6 col-12 from-left image-cont">
         <app-skill-image-cont [skillTpe]="'programs'"></app-skill-image-cont>
       </div>
       <div class="col-xl-6 col-12 progress-container">
+        <div class="texture"></div>
         <div class="skill-inf-container">
-          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-          <app-skill-list-items [skillType]="'programs'" *ngIf="!loading"></app-skill-list-items>
-          <div class="circle c-r"  *ngIf="!loading">
-          </div>
-          <img src="../../../../assets/images/star-skill-fill.png" class="star"> 
-          
-          <app-loader-bar *ngIf="loading"
-          [tipo]="'skill'"
-          [tipoSkl]="'prog'"></app-loader-bar>
+          <!--   <div class="circle c-r"  *ngIf="!loading">
+          </div>-->
+          <app-skill-list-items
+            [skillType]="'programs'"
+            *ngIf="!loading"
+          ></app-skill-list-items>
 
-          
+          <img
+            src="../../../../assets/images/star-skill-fill.png"
+            class="star"
+          />
+
+          <app-loader-bar
+            *ngIf="loading"
+            [tipo]="'skill'"
+            [tipoSkl]="'prog'"
+          ></app-loader-bar>
         </div>
       </div>
     </div>
 
     <div class="row m-0 p-0 change-order">
-      <div
-        class="col-xl-6 col-12 progress-container"
-      >
+      <div class="col-xl-6 col-12 progress-container">
+        <div class="texture"></div>
         <div class="skill-inf-container">
-          <app-bttn-add dataTarget="Skill" *ngIf="isLogged"></app-bttn-add>
-          <app-skill-list-items [skillType]="'soft'" *ngIf="!loading"></app-skill-list-items>
-          
-            <div class="circle c-r"  *ngIf="!loading">
-          </div>
-          <img src="../../../../assets/images/star-skill-fill.png" class="star">
+          <!--<div class="circle c-l"  *ngIf="!loading">
+          </div>-->
+          <app-skill-list-items
+            [skillType]="'soft'"
+            *ngIf="!loading"
+          ></app-skill-list-items>
 
-          <app-loader-bar *ngIf="loading"
-          [tipo]="'skill'"
-          [tipoSkl]="'soft'"></app-loader-bar> 
+          <img
+            src="../../../../assets/images/star-skill-fill.png"
+            class="star"
+          />
 
-
+          <app-loader-bar
+            *ngIf="loading"
+            [tipo]="'skill'"
+            [tipoSkl]="'soft'"
+          ></app-loader-bar>
         </div>
       </div>
 
-      <div class="col-xl-6 col-12 from-right">
+      <div class="col-xl-6 col-12 from-right image-cont">
         <app-skill-image-cont [skillTpe]="'soft-skills'"></app-skill-image-cont>
       </div>
     </div>

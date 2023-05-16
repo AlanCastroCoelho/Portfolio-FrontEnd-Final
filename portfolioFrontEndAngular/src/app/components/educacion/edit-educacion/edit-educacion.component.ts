@@ -13,7 +13,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-edit-educacion',
   templateUrl: './edit-educacion.component.html',
-  styleUrls: ['./edit-educacion.component.css'],
+  styleUrls: ['./edit-educacion.component.css','../../../../assets/css/forms.css'],
 })
 export class EditEducacionComponent implements OnInit {
   public selectedEducation: Educacion = null;

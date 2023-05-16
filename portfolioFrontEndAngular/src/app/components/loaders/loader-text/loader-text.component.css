@@ -3,7 +3,7 @@
     font-family: "Syncopate", sans-serif;
     font-weight: 500;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     height: 40px;
@@ -16,6 +16,7 @@
   
   .words {
     overflow: hidden;
+    font-family: "Dela Gothic One", cursive;
   }
   
   .word {

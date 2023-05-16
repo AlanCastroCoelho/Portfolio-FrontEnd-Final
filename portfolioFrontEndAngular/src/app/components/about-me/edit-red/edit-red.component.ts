@@ -8,7 +8,7 @@ import { Redes } from 'src/app/Models/redes';
 @Component({
   selector: 'app-edit-red',
   templateUrl: './edit-red.component.html',
-  styleUrls: ['./edit-red.component.css']
+  styleUrls: ['./edit-red.component.css','../../../../assets/css/forms.css']
 })
 export class EditRedComponent implements OnInit {
 

@@ -18,17 +18,20 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.m-title{
+  margin-bottom: 250px;
+}
 
 /*Scroll*/
 
 body::-webkit-scrollbar {
   width: 20px;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(33, 33, 33);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: none;
-  border: 4px solid #fff;
+  background: #000;
+  border: 3px solid #fff;
 }
 
 .menu-item {
@@ -104,43 +107,15 @@ h5 {
   width: 30px;
 }
 
+app-edit-skill{
+  background: #000;
+}
 #vector-figures-one {
   position: absolute;
 }
 
 #vector-figures-two {
   position: absolute;
-}
-
-.edit-trash-cont {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.edit-icon {
-  color: #fff;
-  font-size: 26px;
-  margin: 0px 10px 0px 0px;
-}
-
-.trash-icon {
-  color: #fff;
-  font-size: 26px;
-  margin: 0px 10px 0px 0px;
-}
-
-.edit-cont {
-  background-color: #4444443e;
-  backdrop-filter: blur(8px);
-  position: absolute;
-  top: 200px;
-  color: #fff;
-  padding: 25px;
-  border-radius: 20px;
-  border: 3px solid #ffffff06;
-  box-shadow: 10px 5px 30px rgba(121, 121, 121, 0.246);
 }
 
 @keyframes rotating {

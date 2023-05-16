@@ -10,6 +10,7 @@ import {
   style,
   animate,
 } from '@angular/animations';
+import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
 
 @Component({
   selector: 'app-item-prject',
@@ -42,8 +43,13 @@ export class ItemPrjectComponent implements OnInit {
 
   constructor(
     private tokenService: TokenService,
-    private modalService: NgbModal
-  ) {}
+    private modalService: NgbModal,
+    private _CargarScripts: CargarScriptsService,
+  )  {
+    _CargarScripts.Carga(['Project Hover Effect/projectHover']);
+    
+  }
+  
   isLogged = false;
   showProject = false;
 

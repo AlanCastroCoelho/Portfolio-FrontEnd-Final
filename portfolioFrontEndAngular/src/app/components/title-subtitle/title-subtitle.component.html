@@ -1,18 +1,18 @@
 <div class="titl-subt-cont" [id]="section +'-title-container'">
-<div class="titles-cont">
-    <h2 class="text-title-section text-wrapper">{{(' / ' + section + ' / ').repeat(13)}}</h2>
+<div class="titles-cont" [ngClass]="{'backg-wht': section === 'contact'}">
+    <h2 class="text-title-section text-wrapper" [ngClass]="{'wht': section === 'contact'}">{{(' / ' + section + ' / ').repeat(13)}}</h2>
   </div>
-
+  <div class="img-title"></div>
   <div class="subtitle-cont-full for-subtitles" >
-
 
     <div class="subtitle-text-wrapper" *ngIf="section === 'about-me'">
       <div class="num-cont">
         <span>1</span>
       </div>
       <div class="subtitle">
-        <p>Descubre quién soy, mi historia personal y
+        <p class="desktop">Descubre quién soy, mi historia personal y
         profesional. </p>
+        <p class="tablet">Descubre quién soy y mi historia personal. </p>
       </div>  
 
 
@@ -31,13 +31,19 @@
       <div class="num-cont">
         <span>3</span>
       </div>
-      <div class=" subtitle">
+      <div class="subtitle">
         Explora mis skills en diferentes areas.
         </div>
       </div>
 
 
-
+      <div class="subtitle-text-wrapper cont-subt" *ngIf="section === 'contact'">
+        <div class="num-cont">
+          <span>4</span>
+        </div>
   </div>
-  <div class="img-title"></div>
+
+
+</div>
+
 </div>

@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder} from '@angular/forms';
 @Component({
   selector: 'app-edit-projects',
   templateUrl: './edit-projects.component.html',
-  styleUrls: ['./edit-projects.component.css']
+  styleUrls: ['./edit-projects.component.css','../../../../assets/css/forms.css']
 })
 export class EditProjectsComponent implements OnInit {
 

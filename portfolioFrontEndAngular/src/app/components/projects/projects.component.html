@@ -2,16 +2,17 @@
   class="container-fluid d-flex justify-content-center"
   id="projects-container"
 >
-  <div class="row projects-section mt-5">
-    <div class="col">
+  <div class="row projects-section mt-5 p-0">
+    <div class="col p-0">
       <app-title-subtitle
       [section]="'projects'"></app-title-subtitle>
     </div>
 
     <div class="row pt-5 proj-cont-fth px-0">
       <app-bttn-add
-      dataTarget="project"
-       *ngIf="isLogged"></app-bttn-add>
+      *ngIf="isLogged"
+      dataTarget="Project"
+       ></app-bttn-add>
 
 
 

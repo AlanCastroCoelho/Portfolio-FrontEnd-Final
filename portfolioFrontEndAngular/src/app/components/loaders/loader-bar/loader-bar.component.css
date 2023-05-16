@@ -64,8 +64,8 @@
 
 .text-loader {
   color: #fff;
-  font-family: "Syncopate", sans-serif;
-  letter-spacing: 2px;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 23px;
 }
 
 @keyframes load {

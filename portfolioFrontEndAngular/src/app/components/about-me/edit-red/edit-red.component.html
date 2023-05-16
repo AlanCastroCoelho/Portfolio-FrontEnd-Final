@@ -1,6 +1,10 @@
-<div class="container" *ngIf="selectedRed">
-    <div class="row">
-      <div>
+<div class="cont" *ngIf="selectedRed">
+  <div class="modal-content">
+  <div class="modal-header">
+    <span>
+      Editar Red
+    </span>
+  </div>
         <form (ngSubmit)="onUpdate()" [formGroup]="editRedForm">
           <div class="form-group">
             <label for="nombreR">Nombre de Red Social</label>
@@ -38,8 +42,7 @@
               required
             ></textarea>
           </div>
-          <button class="btn btn-primary">Actualizar</button>
+          <button class="bttn">Actualizar</button>
         </form>
       </div>
-    </div>
   </div>

@@ -13,7 +13,7 @@ import {
 @Component({
   selector: 'app-edit-skill',
   templateUrl: './edit-skill.component.html',
-  styleUrls: ['./edit-skill.component.css'],
+  styleUrls: ['./edit-skill.component.css','../../../../assets/css/forms.css'],
 })
 export class EditSkillComponent implements OnInit {
   public selectedSkill: Skill = null;

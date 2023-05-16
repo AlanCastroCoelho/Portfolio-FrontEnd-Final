@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-bttn-add',
   templateUrl: './bttn-add.component.html',
-  styleUrls: ['./bttn-add.component.css']
+  styleUrls: ['./bttn-add.component.css','../../../../assets/css/forms.css']
 })
 export class BttnAddComponent implements OnInit {
 

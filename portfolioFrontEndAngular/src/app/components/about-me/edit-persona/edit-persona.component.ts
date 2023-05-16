@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 @Component({
   selector: 'app-edit-persona',
   templateUrl: './edit-persona.component.html',
-  styleUrls: ['./edit-persona.component.css']
+  styleUrls: ['./edit-persona.component.css','../../../../assets/css/forms.css']
 })
 export class EditPersonaComponent implements OnInit {
   public selectedPerson: Persona = null;

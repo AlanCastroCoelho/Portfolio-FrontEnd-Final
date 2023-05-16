@@ -7,7 +7,7 @@
   color: #fff;
   margin: 0;
   padding: 25px;
-  border-radius: 50px;
+
   background-color: #000000;
   border: 2px solid white;
   position: relative;
@@ -17,16 +17,16 @@
 
 .decrative-star {
   position: absolute;
-  width: 25px;
+  width: 22px;
 }
 
 .left-top {
-  top: 18px;
+  top: 11px;
   left: 18px;
 }
 
 .right-top {
-  top: 18px;
+  top: 11px;
   right: 18px;
 }
 
@@ -60,7 +60,6 @@
   height: 400px;
   border: 2px solid white;
   overflow: hidden;
-  border-radius: 50px;
   background-color: #000;
 }
 
@@ -77,7 +76,6 @@
 .prjct-description p {
   font-family: "Syncopate", sans-serif;
   font-size: 15px;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -100,9 +98,8 @@
 }
 
 .prjct-btns {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 7px 20px;
-  border-radius: 10px;
   margin: 5px 15px 5px 0;
   transition: all .4s ease;
 }
@@ -117,17 +114,17 @@
   .host{
     margin-top: 20px;
   }
-  
+
+  .decrative-star {
+    width: 14px;
+  }
+
   .image-prjct-container{
     height: 250px;
   }
 
   .prjct-description p {
     font-size: 10px;
-  }
-
-  .decrative-star {
-    width: 20px;
   }
 
   .prjct-btns {
@@ -138,7 +135,8 @@
   }
 
   .btn-item-text{
-    font-size: 12px;
+    white-space: nowrap;
+    font-size: 11px;
   }
 }
 

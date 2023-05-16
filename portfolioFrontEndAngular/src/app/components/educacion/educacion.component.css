@@ -1,20 +1,13 @@
-
 .e-cont {
   margin-top: 120px;
 }
 
-.title-cont{
+.title-cont {
   transform: rotate(-5deg);
 }
 
-.inner{
-  background: #1CED93;
-  
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
+.inner {
+  background: #054529;
 }
 
 td button {
@@ -28,226 +21,70 @@ td button {
   justify-content: end;
   width: 100%;
   margin-bottom: 50px;
- padding-left: 0;
+  padding-left: 0;
 }
 
-.add-bttn {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #222222;
-  border-radius: 35px;
-  transition: all 0.1s ease;
-  border: 1px solid #fff;
-  padding: 0 15px;
-  font-family: "Syncopate", sans-serif;
-  cursor: pointer;
-}
-.add-bttn:hover {
-  background-color: #171717;
+.sel-back {
+  transform: translateX(10px);
+  background: #0c623d;
+  border-right: 4px solid #fff;
+  border-left: 4px solid #fff;
 }
 
-.add-bttn span {
-  margin-left: 13px;
+.star-fill {
+  z-index: 684;
 }
 
-.add-bttn img {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  margin: 0;
-}
-
-
-.modal-content {
-  font-family: "Syncopate", sans-serif;
-  color: #fff;
-  background-color: #44444460;
-  backdrop-filter: blur(8px);
-  padding: 25px;
-  border-radius: 20px;
-  border: 3px solid #ffffff06;
-}
-
-.sel-back{
-    transform: translateX(10px);
-    box-shadow: 1px 8px 17px #0000007a;
-    background: #1CED93;
-}
-
-
-.desc-txt{
-  position: relative;
-  top: 60px;
-  z-index: 350;
-}
-
-  .star-fill{
-    z-index: 684;
-  }
-
-
-.desc-footer{
-display: flex;
-width: 100%;
-justify-content: space-between;
-position: absolute;
-bottom: 0px;
-padding: 15px;
-}
-
-.fecha-cnt{
+.fecha-cnt {
   display: flex;
   flex-direction: column;
-align-items: start;
+  align-items: start;
 }
 
-.number{
-  background: #1CED93;
+.number {
+  background: #0c623d;
 }
 
-.number-2{
-  position: absolute!important;
+.number-2 {
+  position: absolute !important;
   bottom: -7px;
   left: 7px;
 }
 
-h2{
-  font-size: 17px;
-  font-weight: 700;
-  height: fit-content;
-}
-
-
-.edit-trash-cont {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 110px;
-  padding: 0px 0px;
-  margin: 0;
-  color: #fff;
-  z-index: 11;
-  background-color: #222222;
-  border-radius: 35px;
-  border: 2px solid #fff;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.bttn-cont {
-  padding: 8px;
-  cursor: pointer;
-  transition: box-shadow 0.1s ease-in-out;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edit-cont:hover {
-  background-color: #2900e8;
-  transition: background-color 0.1s ease;
-}
-
-.trash-cont:hover {
-  background-color: #940000;
-  transition: background-color 0.1s ease;
-}
-
-.bttn-cont span .new-bttn {
-  font-size: 5px;
-}
-
-
-.trash-icon {
-  width: 22px;
-  margin: 0;
-}
-
-.edit-icon {
-  width: 22px;
-  margin: 0;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 320px) and (max-width: 768px){
-
-
-  .loader-cont{
-  top: 0px!important;
-  flex-direction: column;
-}
-  .loader-text{
-    font-size: 20px!important;
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .loader-cont {
+    top: 0px !important;
+    flex-direction: column;
+  }
+  .loader-text {
+    font-size: 20px !important;
   }
 
   .loader {
-    width: 34px!important;
-    height: 34px!important;
+    width: 34px !important;
+    height: 34px !important;
   }
 
-
-
-
-  h1{
-font-size: 17px;
-margin-left: 23px;
+  .e-cont {
+    margin-top: 30px;
   }
 
-  h2{
-    font-size: 12px;
+  h1 {
+    font-size: 17px;
+    margin-left: 23px;
   }
 
-  .name-cont{
+  .name-cont {
     display: flex;
     width: 100%;
   }
-.fecha {
-  font-size: 11px;
-  margin-bottom: 20px;
-}
-  .edu-descrp-cont{
+  .fecha {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .edu-descrp-cont {
     display: flex;
     font-size: 10px;
     width: 100%;
   }
-
-
-}
-
-app-spin-load{
-transform: scale(.4);
-}
-
-
-
-/*Loader Text*/
-
-.loader-text {
-  color: rgb(124, 124, 124);
-  
-  font-weight: 500;
-  text-align: center;
-  font-size: 25px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 40px;
-  padding: 10px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 8px;
-}
-
-.words {
-  overflow: hidden;
-}
-
-.word {
-  display: block;
-  height: 100%;
-  padding-left: 6px;
-  color: #532efa;
-  animation: spin_4991 4s infinite;
 }

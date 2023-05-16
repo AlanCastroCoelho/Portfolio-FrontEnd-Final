@@ -1,4 +1,3 @@
-
 .header-cont {
   background-color: #000;
   overflow-x: hidden;
@@ -33,80 +32,79 @@
 
 .text-content {
   position: relative;
-margin: auto;
+  margin: auto;
   width: 1028px;
-  height: 226px;
- cursor: pointer;
- border: 20px solid #fff;
- padding: 30px 0px;
- display: flex;
- align-items: center;
- justify-content: center;
- overflow: hidden;
- font-family: "Dela Gothic One", cursive;
- font-size: 120px;
- line-height: 120px;
- color: #fff;
+  height: 250px;
+  cursor: pointer;
+  border: 20px solid #fff;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 110px;
+  line-height: 120px;
+  color: #fff;
 }
 
-.txt-1{
+.txt-1 {
   margin: 0;
   color: #fff;
-  z-index: 21;
-  transition: all .5s ease;
+  z-index: 374;
+  transition: all 0.5s ease;
 }
 
 .text-content:after {
+  white-space: nowrap;
   content: "Alan Coelho.";
+  font-size: 90px;
   position: absolute;
   bottom: -50px;
-  left: 60px;
+  left: 10px;
   right: 0;
   opacity: 0;
-  transition: transform .5s ease, opacity .5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .text-content:hover:after {
-  transform: translateY(-69%);
+  transform: translateY(-35%);
   opacity: 1;
 }
 
-.img-wrapper{
+.img-wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  right: 0px;
+  right: 300px;
   background-image: url(../../../assets/images/AlanCoelhoph.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-size: cover;
+  background-position: 0% 35%;
+  opacity: 0;
+  transition: width 5s ease, right 5s ease, background-position 5s ease,
+    opacity 0.5s ease-in-out;
+}
+
+.text-content:hover .img-wrapper {
+  opacity: 0.4;
+  width: 110%;
+  height: 110%;
+  right: -600px;
   background-position: 0% 30%;
- z-index: 4;
- opacity: 0;
- transition: width 5s ease, left 5s ease, opacity .5s ease-in-out;
 }
 
-.text-content:hover .img-wrapper{
-  opacity: .4;
- width: 110%;
- height: 100%;
- left: -90px;
-}
-
-.text-content:hover .txt-1{
+.text-content:hover .txt-1 {
   transform: translateY(-90%) rotateX(50deg);
   opacity: 0;
-}
-
-.txt-2{
-
 }
 
 .content {
   width: 100%;
   position: relative;
-top: -80px;
+  top: -80px;
 }
 
 .text {
@@ -139,7 +137,7 @@ top: -80px;
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
 }
-.mobile-text{
+.mobile-text {
   display: none;
 }
 
@@ -178,34 +176,43 @@ top: -80px;
   animation: rotating 8s linear infinite;
 }
 
-.pers-title-mobile{
+.pers-title-mobile {
   display: none;
 }
 
-.star-mobile{
+.star-mobile {
   display: none;
 }
 
+.loader-full-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  width: 1028px;
+  height: 226px;
+  cursor: pointer;
+  border: 20px solid #fff;
+  display: flex;
+  flex-direction: column;
+}
 
-.loader-cont{
+.loader-cont {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 230px;
 }
 
 /*Loader Bars*/
 
 .loader-bar {
-  width: 130px;
+  width: 200px;
   height: 7px;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.2);
   position: relative;
-  top: 250px;
-  
 }
 
 .loader-bar::before {
@@ -238,11 +245,7 @@ top: -80px;
 
 @media screen and (max-width: 1024px) {
   .content {
-  
     width: 100%;
-  }
-  .img-wrapper {
-    left: 0;
   }
 
   .text {
@@ -264,8 +267,8 @@ top: -80px;
     margin-top: 5px;
   }
 
-.pers-title::before,
-.pers-title::after {
+  .pers-title::before,
+  .pers-title::after {
     content: "";
     display: inline-block;
     width: 140px;
@@ -302,7 +305,6 @@ top: -80px;
 }
 
 @media screen and (max-width: 928px) {
-  
   .text h1 {
     font-size: 70px;
   }
@@ -350,29 +352,23 @@ top: -80px;
   }
 }
 
-
- 
-
-@media screen and (max-width: 768px){
-  
-  
-  .loader-cont{
+@media screen and (max-width: 768px) {
+  .loader-cont {
     position: relative;
     top: 100px;
   }
-  .loader-bar{
+  .loader-bar {
     top: 120px;
   }
 
-  
-  .mobile-text{
+  .mobile-text {
     display: inline-block;
   }
 
-  .text img{
+  .text img {
     width: 20px;
   }
-  .star-mobile{
+  .star-mobile {
     display: inline;
   }
 
@@ -384,26 +380,21 @@ top: -80px;
     margin: auto;
     z-index: 70;
     text-align: end;
-    
   }
-  
+
   .text h1 {
-    font-size: 20px; 
+    font-size: 20px;
   }
- 
-  .text p{
 
-  font-size: 13px;
-  
- }
-
+  .text p {
+    font-size: 13px;
+  }
 
   .text p:first-of-type {
     display: none;
   }
 
-
-.mobile-text::before {
+  .mobile-text::before {
     content: "";
     display: inline-block;
     width: 65px;
@@ -414,169 +405,141 @@ top: -80px;
     transform: translateY(-50%);
   }
 
-.mobile-text::before {
+  .mobile-text::before {
     left: -76px;
   }
 
-
-.bottom-content p{
-font-size: 8px;
-}
-.bottom-content p:first-of-type{
-  display: none;
-}
-
-.bottom-content img{
-  display: none;
-}
-
-.pers-title-mobile{
-  display: inline;
-}
-
-.star-8pts {
-  width: 30px;
-  position: relative;
-  top: -2px;
-  margin-left: 10px;
-  animation: rotating 8s linear infinite;
-}
-  .img-wrapper {
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-    width: fit-content; 
-    margin-left: 0px;
+  .bottom-content p {
+    font-size: 8px;
   }
-  
-  .img-wrapper .polaroid {
-    background-image: url(../../../assets/images/AlanCoelhoPolaroid.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 308px;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s;
-    z-index: 50;
+  .bottom-content p:first-of-type {
+    display: none;
   }
-  
-  .img-wrapper .polaroid-color {
-    background-image: url(../../../assets/images/AlanCoelhoPolaroidColr.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 308px;
-    width: 200px;
-    z-index: 30;
+
+  .bottom-content img {
+    display: none;
+  }
+
+  .pers-title-mobile {
+    display: inline;
+  }
+
+  .star-8pts {
+    width: 30px;
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+    animation: rotating 8s linear infinite;
   }
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px){
-  .header-cont{
-    height: 1100px!important;
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .header-cont {
+    height: 900px !important;
   }
 
-  
   .text {
     width: fit-content;
     margin: auto;
     z-index: 70;
-    text-align: end; 
-    top:140px;
+    text-align: end;
+    top: 140px;
   }
 
   .text h1 {
-    font-size: 37px; 
+    font-size: 37px;
   }
- 
-  .text p{
 
-  font-size: 20px;
-  
- }
- .bottom-content {
-  top: 700px;
-  margin: auto;
-}
-
-.bottom-content p{
-  font-size: 12px;
-}
- .img-wrapper {
-  position: absolute;
-  top: 230px;
-  left: 50%;
-  transform: translate(-50%);
-  margin: auto;
-  width: fit-content; 
-  margin-left: 0px;
-}
-
-.img-wrapper .polaroid {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroid.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 408px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 1s;
-  z-index: 50;
-}
-
-.img-wrapper .polaroid-color {
-  background-image: url(../../../assets/images/AlanCoelhoPolaroidColr.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 408px;
-  width: 300px;
-  z-index: 30;
-}
-
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px){
-  .text{
-    width: 100%;
+  .text p {
+    font-size: 20px;
+  }
+  .bottom-content {
+    top: 700px;
     margin: auto;
-    left: 50%;
-    top: 650px;
-    transform: translate(-50%, -50%); 
   }
-  
+
+  .bottom-content p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-content {
+    font-size: 80px;
+    width: 70%;
+    height: 226px;
+    border: 14px solid #fff;
+    padding: 20px 0;
+    top: -100px;
+  }
+
+  .text-content:after {
+    font-size: 70px;
+  }
+
   .bottom-content {
     top: 1050px;
     margin: auto;
   }
-
-  .img-wrapper {
-    position: absolute;
-    top: 600px;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-  margin: auto;}
 }
 
-@media screen and (max-width: 425px) {
-  .header-cont{
+@media screen and (max-width: 768px) {
+  .text-content {
+    font-size: 60px;
+    width: 75%;
+    height: 226px;
+    border: 14px solid #fff;
+    padding: 16px 0;
+    top: -10px;
+  }
+
+  .text-content:after {
+    font-size: 40px;
+    left: 5%;
+  }
+  .text-content:hover:after {
+    transform: translateY(-30%);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .header-cont {
     height: 800px;
   }
 
-  .img-wrapper {
-    top: 390px;
+  .text-content {
+    font-size: 37px;
+    width: 75%;
+    height: 218px;
+    border: 10px solid #fff;
+    padding: 10px 0;
+    top: 0px;
   }
 
-  .img-wrapper .polaroid {
-    height: 285px;
-    width: 205px;
+  .text-content:after {
+    font-size: 27px;
+    left: 5%;
   }
-  .img-wrapper .polaroid-color {
-    height: 285px;
-    width: 205px;
+
+  @media screen and (max-width: 375px) {
+    .text-content {
+      font-size: 25px;
+      width: 75%;
+      height: 170px;
+      border: 10px solid #fff;
+      padding: 10px 0;
+      top: 0px;
+    }
+
+    .text-content:after {
+      font-size: 20px;
+      left: 5%;
+    }
+
+    .text-content:hover:after {
+      transform: translateY(-10%);
+      opacity: 1;
+    }
   }
 }

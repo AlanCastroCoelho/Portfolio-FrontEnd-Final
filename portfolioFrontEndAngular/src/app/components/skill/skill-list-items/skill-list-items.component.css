@@ -1,84 +1,126 @@
 .insider-rectangle {
-    padding: 8px 0px;
- 
+  padding: 8px 0px;
+}
+
+.skills-title-language {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+}
+
+h5 {
+  font-size: 19px;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.progress {
+  margin: 0;
+  border-radius: 30px;
+  height: 33px;
+  background-color: #171717;
+  font-family: "Dongle", sans-serif;
+
+  width: 100%;
+  border: 4px solid #fff;
+  padding: 4px;
+}
+
+.progress-bar {
+  color: #fff;
+  border-radius: 30px;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 15px;
+}
+
+.front-end-bar {
+  background: #06fbfb92;
+}
+.back-end-bar {
+  background: #3b11f581;
+}
+
+.programs-bar {
+  background: #ff30d68a;
+}
+
+.soft-bar {
+  background: #edd3118a;
+}
+
+ul {
+  margin: 0px;
+  width: 100%;
+  padding: 0;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  position: relative;
+  backdrop-filter: blur(8px);
+  min-height: 500px;
+}
+
+li {
+  margin: 0;
+  list-style: none;
+}
+
+
+@media screen and (max-width: 1350px) {
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    padding: 15px 20px;
+  }
+
+  .insider-rectangle {
+    padding: 5px 0px;
+    margin: auto;
   }
 
   .skills-title-language {
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    width: 100%;
+    padding: 0px;
   }
 
   h5 {
-    font-size: 20px;
-    font-family: "Dela Gothic One", cursive;
-  }
-
-  .progress {
-    margin: 0;
-    border-radius:30px;
-    height: 40px;
-    background-color: #171717;
-    font-family: "Dongle", sans-serif;
-    font-size: 22px;
-    width: 100%;
-    border: 6px solid #fff;
-    padding: 6px;
-  }
-  
-  .progress-bar{
-    color: #fff;
-    border-radius: 30px;
-    font-family: "Dela Gothic One", cursive;
     font-size: 15px;
   }
-
-  .front-end-bar{
-    background: #06fbfb92;
-  
-  }
-  .back-end-bar{
-    background: #2800d981;
- 
-  }
-  
-  .programs-bar{
-    background: #ff30d68a;
-    
-  }
-  
-  .soft-bar{
-    background: #edd3118a;
-  
-  }
-
-  ul {
-    margin: 0px;
-    width: 100%;
-  padding: 0;
-  border-radius: 20px;
-  padding: 10px;
-  position: relative;
-  }
-
-  
-  li {
+  .progress {
     margin: 0;
-    list-style: none;
+    height: 30px;
+    border: 2px solid #fff;
+    padding: 2px;
   }
 
-  @media screen and (min-width: 320px) and (max-width: 768px){
-
-
- .insider-rectangle {
-padding: 0 55px;
- margin: auto;
+  .progress-bar {
+    font-size: 13px;
+  }
 }
-  .skills-title-language {
-padding: 0px;
+
+@media screen and (max-width: 458px) {
+  ul {
+    padding: 15px 15px;
   }
+
+  .insider-rectangle {
+    padding: 5px 0px;
+    margin: auto;
   }
+
+  h5 {
+    font-size: 12px;
+  }
+  .progress {
+    margin: 0;
+    height: 25px;
+    border: 2px solid #fff;
+    padding: 2px;
+  }
+
+  .progress-bar {
+    font-size: 10px;
+  }
+}

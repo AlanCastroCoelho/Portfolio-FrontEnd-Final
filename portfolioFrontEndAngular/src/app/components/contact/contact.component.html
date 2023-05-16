@@ -1,13 +1,32 @@
 <footer id="contact-container">
+  <div class="row">
+    <div class="col pt-4">
+      <app-title-subtitle [section]="'contact'"></app-title-subtitle>
+    </div>
+  </div>
+
   <div class="row row-footer">
     <div class="col col-footer">
       <div class="text-foot-container">
-        <h6 class="text-title-section mb-5">Interesado en <br>
-        trabajar juntos?</h6>
-        <p>Contactame :</p>
-        <p>alancasstrocoelho@gmail.com</p>
+        <div class="backg-title">
+          <h6 class="text-title-section">
+            ¿ Interesado en <br />
+            trabajar juntos ?
+          </h6>
+          <div class="texture"></div>
+          <img
+            src=".././../../assets/images/C1.png"
+            alt=""
+            class="cinta c-left"
+          />
+          <img
+            src=".././../../assets/images/C2.png"
+            alt=""
+            class="cinta c-right"
+          />
+        </div>
       </div>
-      
+
       <img
         src="../../../assets/images/HandOneH2.png"
         alt=""
@@ -20,28 +39,47 @@
       />
     </div>
   </div>
-  <div class="row email-linkd-cont">
-    <div class="col bttn-col d-flex align-items-center justify-content-center">
-      
-      <div class="bttn-cont">
-        <span class="text-bttn"> LinkedIn </span>
-      
-      </div>
 
-      <div class="bttn-cont mx-3">
-        <span class="text-bttn">Instagram</span>
-       
-      </div>
+  <div class="row mt-5 pt-0">
+    <div class="col mail-cont"></div>
+  </div>
+  <div class="row email-linkd-cont">
+    <div class="col bttn-col d-flex justify-content-start p-0">
+      <ul>
+        <li *ngFor="let red of redes">
+<a [href]="red.urlRed" target="_blank">
+          <div class="bttn-cont">
+            <span class="text-bttn">{{red.nombreR}}</span>
+            <img [src]="red.urlIcon" class="icon-bttn" />
+          </div>
+        </a>
+        </li>
+      </ul>
       
+<!--
+      <div class="bttn-cont my-2">
+        <span class="text-bttn">Instagram</span>
+        <img src="../../../assets/images/WhiteIg-01.png" class="icon-bttn" />
+      </div>
 
       <div class="bttn-cont">
         <span class="text-bttn">Github</span>
-       
-      </div>
+        <img
+          src="../../../assets/images/GitHubWhite-01.png"
+          class="icon-bttn"
+        />
+      </div>-->
 
+    </div>
+    <div class="col mail-cont">
+      <p>Contactame :</p>
+      <p>alancasstrocoelho@gmail.com</p>
+    </div>
+
+    <div class="col back-col">
       <a href="#navigator">
-        <div class="bttn-cont">
-          <span class="text-bttn"> Back to Top </span>
+        <div class="bttn-cont bttn-back">
+          <span class="text-bttn back"> Back to Top </span>
           <img
             src="../../../assets/images/flecha-hacia-arriba-white2.png"
             alt=""
@@ -58,7 +96,8 @@
       All Rights Reserved stayblessed. &copy; 2023 - All Rights Reserved
       stayblessed. &copy; 2023 - All Rights Reserved stayblessed. &copy; 2023 -
       All Rights Reserved stayblessed. &copy; 2023 - All Rights Reserved
-      stayblessed. &copy; 2023 - All Rights Reserved
+      stayblessed. &copy; 2023 - All Rights Reserved All Rights Reserved
+      stayblessed. &copy; 2023 -
     </div>
   </div>
 </footer>

@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TitleSubtitleModule } from '../title-subtitle/title-subtitle.module';
+import { ContactComponent } from './contact.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ContactComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    TitleSubtitleModule,
+  ],
+  exports:[
+ContactComponent
   ]
 })
 export class ContactModule { }

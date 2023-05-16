@@ -1,0 +1,110 @@
+.cont{
+  background: #000;
+color: #fff;
+}
+
+form {
+    width: 100%;
+    font-family: "Syncopate", sans-serif;
+    font-size: 15px;
+  }
+  .form-group {
+    margin-top: 10px;
+  }
+  
+  .form-group label {
+    margin-bottom: 3px;
+  }
+
+  
+  button:hover {
+    box-shadow: 3px 7px 7px 1px rgba(0, 0, 0, 0.315);
+    background-color: #7070706f;
+  }
+  .bttn {
+    background-color: #22222200;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 0;
+    margin-top: 27px;
+    width: 100%;
+  }
+  
+
+.modal-content {
+  font-family: "Syncopate", sans-serif;
+  color: #fff;
+  background-color: #44444460;
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px solid #ffffff06;
+}
+
+.modal-body {
+  padding: 0px 0 12px 0;
+}
+
+.modal-footer {
+  padding: 16px 0 0 0;
+}
+
+.bttn {
+  padding: 6px 15px;
+  transition: all 0.2s linear;
+}
+
+.bttn:hover {
+  box-shadow: 3px 7px 7px 1px rgba(0, 0, 0, 0.315);
+  background-color: #ababab6f;
+}
+
+.bttn {
+  background-color: #22222200;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-close {
+  background-color: rgba(255, 255, 255, 0.183);
+  border-radius: 50px;
+}
+
+.modal-body .form-group {
+  margin-top: 12px;
+}
+
+.modal-body .form-group label {
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: #222222;
+  color: #fff;
+}
+
+input:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+select {
+  background-color: #222222;
+  color: #fff;
+}
+
+select:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+textarea {
+  background-color: #222222;
+  color: #fff;
+}
+
+textarea:focus {
+  background-color: #000;
+  color: #fff;
+}

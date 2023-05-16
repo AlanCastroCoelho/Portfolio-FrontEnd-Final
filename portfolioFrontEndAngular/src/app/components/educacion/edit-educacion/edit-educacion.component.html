@@ -1,6 +1,10 @@
-<div class="edit-cont" *ngIf="selectedEducation">
-  <div class="row">
-    <div>
+<div class="cont" *ngIf="selectedEducation">
+  <div class="modal-content">
+  <div class="modal-header">
+    <span>
+      Editar Educacion
+    </span>
+  </div>
       <form (ngSubmit)="onUpdate()" [formGroup]="editEducationForm">
         <div class="form-group">
           <label for="nombreE">Nombre de la institucion</label>
@@ -23,8 +27,8 @@
             name="descripcionE"
             formControlName="descripcionE"
             [value]="selectedEducation.descripcionE"
-            cols="30" 
-                 rows="10"
+            cols="30"
+            rows="10"
             required
           ></textarea>
         </div>
@@ -52,8 +56,7 @@
             required
           />
         </div>
-        <button class="btn btn-primary">Editar educacion</button>
+        <button class="bttn">Actualizar</button>
       </form>
     </div>
-  </div>
 </div>

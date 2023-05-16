@@ -8,7 +8,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-edit-experiencia',
   templateUrl: './edit-experiencia.component.html',
-  styleUrls: ['./edit-experiencia.component.css'],
+  styleUrls: ['./edit-experiencia.component.css','../../../../../../assets/css/forms.css']
 })
 export class EditExperienciaComponent implements OnInit {
   selectedExp: Experiencia = null;
