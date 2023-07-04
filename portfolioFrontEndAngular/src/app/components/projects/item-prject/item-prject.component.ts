@@ -43,15 +43,12 @@ export class ItemPrjectComponent implements OnInit {
 
   constructor(
     private tokenService: TokenService,
-    private modalService: NgbModal,
-    private _CargarScripts: CargarScriptsService,
-  )  {
-    _CargarScripts.Carga(['Project Hover Effect/projectHover']);
-    
-  }
+    private modalService: NgbModal
+  )  {}
   
   isLogged = false;
   showProject = false;
+  hoverRevealTransform: string = '';
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -78,6 +75,22 @@ export class ItemPrjectComponent implements OnInit {
     );
   }
 
+  onMouseMove(event: MouseEvent): void {
+    const link = event.currentTarget as HTMLElement;
+    const linkRect = link.getBoundingClientRect();
+    const mouseX = event.clientX - linkRect.left;
+
+    const translateY = -50;
+
+    const translateX = (mouseX / linkRect.width) * 100 - 50;
+
+    this.hoverRevealTransform = `translate(${translateX}%, ${translateY}%)`;
+  }
+
+
+  onMouseLeave(): void {
+    this.hoverRevealTransform = '';
+  }
   showwProject(): void {
     this.showProject = !this.showProject;
   }

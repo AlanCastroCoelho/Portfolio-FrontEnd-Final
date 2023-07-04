@@ -1,6 +1,6 @@
+<section id="projects">
 <div
   class="container-fluid d-flex justify-content-center"
-  id="projects-container"
 >
   <div class="row projects-section mt-5 p-0">
     <div class="col p-0">
@@ -13,9 +13,6 @@
       *ngIf="isLogged"
       dataTarget="Project"
        ></app-bttn-add>
-
-
-
       <div class="col projects-container" *ngIf="!loading">
         <app-item-prject
           *ngFor="let prjct of projects"
@@ -26,13 +23,11 @@
         >
         </app-item-prject>
       </div>
-
       <div *ngIf="loading" class="loader-cont">
      <app-loader-text
      [tipo]="'proj'"></app-loader-text>
-
-      </div> 
-      
+      </div>    
     </div>
   </div>
 </div>
+</section>

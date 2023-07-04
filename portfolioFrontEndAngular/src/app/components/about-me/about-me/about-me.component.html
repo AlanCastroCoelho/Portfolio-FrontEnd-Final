@@ -7,8 +7,8 @@
     </div>
   
     <div class="row about-me-cont" *ngIf="!loading">
-      <img src="../../../../assets/images/C1.png" alt="" class="cinta c-lft">
-      <img src="../../../../assets/images/C1.png" alt="" class="cinta c-rght">
+      <img src="/assets/images/C1.png" alt="" class="cinta c-lft">
+      <img src="/assets/images/C1.png" alt="" class="cinta c-rght">
       <div class="blck-back">
       <div
         class="row"
@@ -16,7 +16,7 @@
         class="d-flex justify-content-end align-items-center mb-4"
       >
         <div class="edit-container" (click)="editarPersona(persona)">
-          <img class="edit-icon" src="../../../assets/images/create.svg" />
+          <img class="edit-icon" src="/assets/images/create.svg" />
           <span>Editar Datos</span>
         </div>
       </div>
@@ -24,7 +24,7 @@
       <div class="row d-xl-flex d-md-none p-0 w-cien">
         <div class="col about-me-head">
           <img
-            src="../../../../assets/images/Star 1.png"
+            src="/assets/images/Star 1.png"
             alt="" 
             class="star-8pts star-head"
           />
@@ -42,7 +42,7 @@
         <div class="col-3 d-xl-none d-md-flex justify-content-center r-tablet ">
           <div class="name-cont-rotate rotate d-flex align-items-center justify-content-center">
             <img
-              src="../../../assets/images/Star 1.png"
+              src="/assets/images/Star 1.png"
               alt=""
               class="star-8pts star-md mb-3"
             />
@@ -59,7 +59,8 @@
           class="col-5 col-xxl-4 col-xl-5 col-md-6 d-flex justify-content-md-center col-photo-cont"
         >
           <div class="photo-container">
-            <img src="../../../../assets/images/img-profile.png" id="profile-photo" alt="..." />
+            <img src="/assets/images/img-profile.png" id="profile-photo" 
+            [alt]="'Fotografia de ' +  persona.nombre + ' ' + persona.apellido"/>
           </div>
 
           <div class="title r-movil mt-3">
@@ -68,7 +69,15 @@
                 <li *ngFor="let red of redes">
                   <a [href]="red.urlRed" target="_blank">
                     <div class="about-items hover-effct">
-                      <img [src]="red.urlIcon">
+                      <img
+                            [src]="red.urlIcon"
+                            [alt]="
+                              'icono de ' +
+                              red.nombreR +
+                              '. Sigueme en ' +
+                              red.nombreR
+                            "
+                          />
                     </div>
                   </a>
                   

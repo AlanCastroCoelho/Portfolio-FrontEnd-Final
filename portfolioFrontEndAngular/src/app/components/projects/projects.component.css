@@ -6,7 +6,7 @@
 
 /*Title & Subtitles*/
 
-#projects-container {
+#projects {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 37%,
@@ -58,15 +58,6 @@
   font-weight: bold;
 }
 
-.proj-img {
-  width: 100%;
-  height: 380px;
-  background-image: url("../../../Assets/images/Page Preview ARGPROGRAM.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px;
-}
 
 .proj-body {
   display: flex;
@@ -75,16 +66,9 @@
   text-align: center;
   margin: 14px 0;
 }
-
 .proj-text {
   font-size: 20px;
   font-weight: regular;
-}
-
-.color-one-desc-proj {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 20px rgba(255, 255, 255, 0.1);
 }
 
 .proj-buttons-container {
@@ -117,12 +101,6 @@
   margin: 5px 0;
 }
 
-.proj-one {
-  background-image: url("../../../Assets/images/Page Preview ARGPROGRAM.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
 .container-desc-proj:hover {
   opacity: 1;

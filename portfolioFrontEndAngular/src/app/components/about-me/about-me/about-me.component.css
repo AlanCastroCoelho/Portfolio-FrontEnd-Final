@@ -386,7 +386,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../../../assets/images/188.jpg);
+  background-image: url('/assets/images/188.jpg');
   background-size: 600px 400px;
   background-position: left;
   background-repeat: repeat;

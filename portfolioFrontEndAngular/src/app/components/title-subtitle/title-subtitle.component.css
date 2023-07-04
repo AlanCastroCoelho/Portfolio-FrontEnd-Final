@@ -158,30 +158,30 @@ p{
 #about-me-title-container .img-title{
   width: 300px;
   height: 300px;
-  background-image: url(../../../assets/images/img-2.jpg);
+  background-image: url('/assets/images/img-2.jpg');
   background-size: 400px;
 }
 
 #skills-title-container .img-title{
-  width: 350px;
-  height: 350px;
+   width: 280px;
+  height: 280px;
   background-size: cover;
-  background-image: url(../../../assets/images/stck-111.png);
+  background-image: url('/assets/images/Skills sticker.png');
   top: -13px;
 }
 
 #projects-title-container  .img-title{
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 310px;
   background-size: cover;
-  background-image: url(../../../assets/images/stck-222.png);
+  background-image: url('/assets/images/Proyects sticker.png');
 }
 
 #contact-title-container  .img-title{
   width: 230px;
   height: 270px;
   background-size: 230px;
-  background-image: url(../../../assets/images/stck-33.png);
+  background-image: url('/assets/images/stck-33.png');
   top: -50px;
 }
 

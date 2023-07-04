@@ -1,8 +1,7 @@
 <div class="cont" [@expandAnimation]="showProject">
   <div class="prjcts-cont">
-    <div class="link">
+    <div class="link" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
       <span (click)="showwProject()">{{ projects.nombreP }}</span>
-
       <div class="edit-trash-cont" *ngIf="isLogged">
         <div class="bttn-cont edit-cont">
           <img
@@ -16,25 +15,25 @@
           
         </div>
       </div>
-
       <img
         *ngIf="!isLogged"
-        src="../../../assets/images/arrow.png"
+        src="/assets/images/arrow.png"
         alt=""
         class="arrow"
         [ngClass]="showProject ? 'rotateArrow' : ''"
         (click)="showwProject()"
       />
       <div
-        class="hover-reveal image01"
-        [ngClass]="showProject ? 'nonDisplay' : ''"
-      >
-        <img [src]="projects.urlImg" alt="" class="hidden-img" />
-      </div>
+      class="hover-reveal"
+      [ngClass]="showProject ? 'nonDisplay' : ''"
+        [style.transform]="hoverRevealTransform"
+    >
+      <img [src]="projects.urlImg" alt="" class="hidden-img" />
     </div>
+  </div>
 
     <div *ngIf="showProject" class="show-project-cont" [@fadeInOut]>
       <app-show-project [indx]="index"> </app-show-project>
     </div>
-  </div>
+
 </div>
