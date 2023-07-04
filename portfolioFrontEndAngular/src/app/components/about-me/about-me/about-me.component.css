@@ -1,3 +1,8 @@
+#about-me-section {
+  overflow: hidden;
+  position: relative;
+}
+
 a {
   text-decoration: none;
   color: var(--c-white);

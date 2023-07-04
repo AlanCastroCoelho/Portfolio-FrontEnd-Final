@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 import { CargarScriptsService } from './../../services/cargar-scripts.service';
@@ -44,5 +44,12 @@ export class NavComponent implements OnInit {
     } else {
       document.body.classList.remove('no-scroll');
     }
+  }
+
+  scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } 
   }
 }

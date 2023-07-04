@@ -9,7 +9,7 @@
 
   <ul class="nav-links" [ngClass]="{ 'open-menu': openMenu }">
     <li>
-      <a href="#about-me" class="menu-item">
+      <a (click)="scrollToSection('about-me')" class="menu-item">
         <div>
           <span class="menu-item-text">About Me.</span>
         </div>
@@ -17,7 +17,7 @@
     </li>
 
     <li>
-      <a href="#skills" class="menu-item">
+      <a (click)="scrollToSection('skills')" class="menu-item">
         <div>
           <span class="menu-item-text">Skills.</span>
         </div>
@@ -25,7 +25,7 @@
     </li>
 
     <li>
-      <a href="#projects" class="menu-item">
+      <a (click)="scrollToSection('projects')" class="menu-item">
         <div>
           <span class="menu-item-text">Projects.</span>
         </div>
@@ -33,7 +33,7 @@
     </li>
 
     <li>
-      <a href="#contact" class="menu-item">
+      <a (click)="scrollToSection('contact')" class="menu-item">
         <div>
           <span class="menu-item-text">Contact.</span>
         </div>
