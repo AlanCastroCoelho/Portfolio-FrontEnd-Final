@@ -11,8 +11,6 @@ Para dirigirte al repositorio del ***Backend*** haz [clic aquí](https://github.
 
 ✦ Tiene un sistema un login para administradores, el cual da acceso a las funciones CRUD (Crear, Leer, Actualizar, Borrar) para editar los componentes desde la misma web. 
 
-✦ En cuanto al Login y su seguridad, se utilizo JWT (Jason Web Token) para la codificación de las contraseñas de usuario.
-
 ## 📩 Contacto
 
 ✦ Si estás interesado en comunicarte conmigo, te invito a que me contactes a través de [LinkedIn](https://www.linkedin.com/in/alan-castro-coelho-6bb6441a2/) o [Gmail](mailto:alancasstrocoelho@gmail.com)
