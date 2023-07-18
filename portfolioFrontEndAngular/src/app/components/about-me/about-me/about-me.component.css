@@ -494,14 +494,6 @@ li {
     opacity: 1;
     transform: translateY(0%) rotateX(0deg);
   }
-  10% {
-    opacity: 1;
-    transform: translateY(0%) rotateX(0deg);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(0%) rotateX(0deg);
-  }
   30% {
     opacity: 1;
     transform: translateY(0%) rotateX(0deg);
@@ -510,24 +502,12 @@ li {
     opacity: 0;
     transform: translateY(-90%) rotateX(50deg);
   }
-  50% {
-    opacity: 0;
-    transform: translateY(-90%) rotateX(50deg);
-  }
-  60% {
-    opacity: 0;
-    transform: translateY(-90%) rotateX(50deg);
-  }
-  70% {
-    opacity: 0;
-    transform: translateY(-90%) rotateX(50deg);
-  }
+
   80% {
     opacity: 0;
     transform: translateY(-90%) rotateX(50deg);
   }
-  90% {
-  }
+
   100% {
     opacity: 1;
     transform: translateY(0%) rotateX(0deg);
