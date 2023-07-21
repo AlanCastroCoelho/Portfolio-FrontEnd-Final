@@ -5,19 +5,16 @@ import { tap } from 'rxjs/operators';
 import { Persona } from '../Models/persona';
 import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class PersonaService {
   baseUrl = environment.apiUrl + 'persona';
- /*URL = 'http://localhost:8080/persona';*/
+  /*URL = 'http://localhost:8080/persona';*/
 
- private _refres$ = new Subject<void>();
-
+  private _refres$ = new Subject<void>();
 
   constructor(private httpClient: HttpClient) {}
 
- get refresh$() {
+  get refresh$() {
     return this._refres$;
   }
 
@@ -34,13 +31,15 @@ export class PersonaService {
   }
 
   public update(id: number, persona: Persona): Observable<any> {
-    return this.httpClient.put<any>(this.baseUrl + `/update/${id}`, persona).pipe(
-      tap(() => {
-        this._refres$.next();
-      })
-    );
+    return this.httpClient
+      .put<any>(this.baseUrl + `/update/${id}`, persona)
+      .pipe(
+        tap(() => {
+          this._refres$.next();
+        })
+      );
   }
-/*
+  /*
   public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
   }*/

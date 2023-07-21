@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Projects } from 'src/app/Models/projects';
@@ -13,12 +13,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent implements AfterViewInit, OnDestroy {
   projects: Projects[] = [];
   subscription: Subscription;
   indxShowProject: number;
   showProject = false;
-  loading: boolean = false;
+
 
   nombreP: string;
   descripcionP: string;
@@ -30,7 +30,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     private projectsS: ProjectsService,
     private tokenService: TokenService,
     private router: Router,
-
     private modalService: NgbModal
   ) {
 
@@ -39,10 +38,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   isLogged = false;
 
 
-  ngOnInit(): void {
-    this.loading = true; // iniciar pantalla de carga
+  ngAfterViewInit(): void {
     this.cargarProyectos();
-
     this.subscription = this.projectsS.refresh$.subscribe(() => {
       this.cargarProyectos();
     });
@@ -69,9 +66,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   cargarProyectos(): void {
     this.projectsS.lista().subscribe((data) => {
-      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
-        this.loading = false;
-      });
       this.projects = data;
     });
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/Models/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
@@ -13,14 +13,11 @@ import { EditEducacionComponent } from './edit-educacion/edit-educacion.componen
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css','../../../assets/css/edu-exp.css'],
 })
-export class EducacionComponent implements OnInit, OnDestroy {
+export class EducacionComponent implements AfterViewInit, OnDestroy {
   educacion: Educacion[] = [];
   selectedE: any;
-  loading: boolean = false;
   subscription: Subscription;
   seleccionado: number = -1;
-
-
 
   constructor(
     private educacionS: EducacionService,
@@ -31,13 +28,11 @@ export class EducacionComponent implements OnInit, OnDestroy {
 
   isLogged = false;
 
-  ngOnInit(): void {
-    this.loading = true; // iniciar pantalla de carga
+  ngAfterViewInit(): void {
     this.cargarEducacion();
     this.subscription = this.educacionS.refresh$.subscribe(() => {
       this.cargarEducacion();
     });
-
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -47,9 +42,6 @@ export class EducacionComponent implements OnInit, OnDestroy {
 
   cargarEducacion(): void {
     this.educacionS.lista().subscribe((data) => {
-      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
-        this.loading = false;
-      });
       this.educacion = data;
     });
   }

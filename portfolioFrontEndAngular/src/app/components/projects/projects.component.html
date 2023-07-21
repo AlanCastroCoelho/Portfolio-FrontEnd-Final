@@ -13,7 +13,7 @@
       *ngIf="isLogged"
       dataTarget="Project"
        ></app-bttn-add>
-      <div class="col projects-container" *ngIf="!loading">
+      <div class="col projects-container">
         <app-item-prject
           *ngFor="let prjct of projects"
           [projects]="prjct"
@@ -23,10 +23,6 @@
         >
         </app-item-prject>
       </div>
-      <div *ngIf="loading" class="loader-cont">
-     <app-loader-text
-     [tipo]="'proj'"></app-loader-text>
-      </div>    
     </div>
   </div>
 </div>

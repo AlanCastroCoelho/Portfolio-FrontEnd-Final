@@ -1,7 +1,5 @@
 .image-container {
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 730px;
   display: flex;
   align-items: center;
@@ -9,36 +7,19 @@
   overflow: visible;
   padding: 0;
   width: 100%;
-  background-size: 570px;
+  overflow: hidden;
 }
 
-.texture {
+.image-container .skill-vid {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/images/CompactDiscFull.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  mix-blend-mode: difference;
-  opacity: 0.8;
-}
-
-.front-backgr {
-  background-image: url('/assets/images/holoPFront.gif');
-}
-
-.back-backgr {
-  background-image: url('/assets/images/holoPBack.gif');
-}
-
-.programs-backgr {
-  background-image: url('/assets/images/holoPPrograms.gif');
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 570px;
 }
 
 .soft-backgr {
-  background-image: url('/assets/images/holoPSoft2.gif');
-  background-size: 530px 530px;
+  width: 650px !important;
 }
 
 .type-cont {
@@ -110,8 +91,6 @@
 
 @media screen and (max-width: 458px) {
   .image-container {
-    background-position: center;
-    background-repeat: no-repeat;
     height: 500px;
     display: flex;
     align-items: center;
@@ -119,7 +98,6 @@
     overflow: visible;
     padding: 0;
     width: 100%;
-    background-size: 450px;
   }
 
   .type-cont {
@@ -150,10 +128,5 @@
   .star {
     right: 15px;
     width: 20px;
-  }
-
-  .soft-backgr {
-    background-image: url('/assets/images/holoPSoft2.gif');
-    background-size: 390px;
   }
 }

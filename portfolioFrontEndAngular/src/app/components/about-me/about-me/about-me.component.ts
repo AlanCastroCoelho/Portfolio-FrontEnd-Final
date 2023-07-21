@@ -9,17 +9,15 @@ import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditRedComponent } from '../edit-red/edit-red.component';
 import { EditPersonaComponent } from '../edit-persona/edit-persona.component';
-import { ExperienciaComponent } from '../../experiencia/experiencia/experiencia.component';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  styleUrls: ['./about-me.component.min.css']
 })
 export class AboutMeComponent implements OnInit {
   persona: Persona;
   redes: Redes[] = [];
-  loading: boolean = false;
   subscription: Subscription;
 
     // Variables para Crear Nueva Red
@@ -36,7 +34,6 @@ export class AboutMeComponent implements OnInit {
     isLogged = false;
 
   ngOnInit(): void {
-    this.loading = true; // iniciar pantalla de carga
     this.cargarPersona();
     this.subscription = this.personaS.refresh$.subscribe(() => {
       this.cargarPersona();
@@ -66,9 +63,6 @@ export class AboutMeComponent implements OnInit {
   cargarPersona(): void {
     const personaId = 1;
     this.personaS.detail(personaId).subscribe((data) => {
-      setTimeout(() => { // Agregar una demora de  segundos antes de asignar false
-        this.loading = false;
-      });
       this.persona = data;
     });
   }

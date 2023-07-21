@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Skill } from 'src/app/Models/skill';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ import { EditSkillComponent } from '../edit-skill/edit-skill.component';
   templateUrl: './skill-list-items.component.html',
   styleUrls: ['./skill-list-items.component.css']
 })
-export class SkillListItemsComponent implements OnInit {
+export class SkillListItemsComponent implements AfterViewInit {
   skill: Skill[] = [];
   subscription: Subscription;
 
@@ -25,7 +25,7 @@ export class SkillListItemsComponent implements OnInit {
     
     isLogged = false;
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.cargarSkills();
 
     this.subscription = this.skillS.refresh$.subscribe(() => {

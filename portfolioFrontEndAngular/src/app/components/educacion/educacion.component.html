@@ -10,13 +10,7 @@
   </div>
   <app-bttn-add dataTarget="Educacion" *ngIf="isLogged"></app-bttn-add>
 
-  <div *ngIf="loading" class="loader-cont">
-    <app-loader-text [tipo]="'edu'"></app-loader-text>
-
-    <app-spin-load></app-spin-load>
-  </div>
-
-  <div *ngIf="!loading" class="full-cont">
+  <div class="full-cont">
     <ul class="list-group">
       <li
         class="list-group-item"
@@ -28,7 +22,7 @@
           <h2>{{ Educacion.nombreE }}</h2>
           <img
           *ngIf="!isLogged"
-            src="../../../../assets/images/Star 1.png"
+            src="/assets/images/Star 1.png"
             alt=""
             class="star-8pts"
             [ngClass]="{ 'str-view': i === seleccionado }"
@@ -47,7 +41,7 @@
     <div class="descripcion">
       <div class="papper-txt"></div>
       <img
-        src="../../../assets/images/Star FillW.png"
+        src="/assets/images/Star FillW.png"
         alt=""
         class="star-fill"
       />

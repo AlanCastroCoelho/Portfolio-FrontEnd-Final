@@ -4,9 +4,7 @@ import { Observable, Subject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Projects } from '../Models/projects';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class ProjectsService {
   baseUrl = environment.apiUrl + 'proyectos';
  /* URL = 'http://localhost:8080/proyectos';*/

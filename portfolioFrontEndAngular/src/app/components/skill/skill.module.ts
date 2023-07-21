@@ -6,7 +6,6 @@ import { SkillImageContComponent } from './skill-image-cont/skill-image-cont.com
 import { EditSkillComponent } from './edit-skill/edit-skill.component';
 import { SkillService } from 'src/app/services/skill.service';
 import { ButtonsModule } from '../buttons/buttons.module';
-import { LoadersModule } from '../loaders/loaders.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TitleSubtitleModule } from '../title-subtitle/title-subtitle.module';
 
@@ -16,13 +15,11 @@ import { TitleSubtitleModule } from '../title-subtitle/title-subtitle.module';
     SkillListItemsComponent,
     SkillImageContComponent,
     EditSkillComponent,
-
   ],
   imports: [
     CommonModule,
     TitleSubtitleModule,
     ButtonsModule,
-    LoadersModule,
     ReactiveFormsModule
   ],
   exports:[

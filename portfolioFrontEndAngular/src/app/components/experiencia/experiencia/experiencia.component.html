@@ -12,92 +12,87 @@
   </div>
   <app-bttn-add dataTarget="Experiencia" *ngIf="isLogged"></app-bttn-add>
 
-  <div *ngIf="loading" class="loader-cont">
-    <app-loader-text [tipo]="'exp'"></app-loader-text>
-
-    <app-spin-load></app-spin-load>
-  </div>
-
-  <div *ngIf="!loading">
+  <div>
     <div class="no-experience" *ngIf="expe.length === 0">
-      <img src="../../../../assets/images/poster11cut.png" class="" />
-      <img src="../../../../assets/images/poster22Cut.png" class="" />
+      <img src="/assets/images/poster11cut.webp" class="" />
+      <img src="/assets/images/poster22Cut.webp" class="" />
 
-      <div *ngIf="expe.length > 0">
-        <div *ngIf="!loading" class="full-cont">
-          <div class="descripcion">
-            <div class="papper-txt"></div>
-            <img
-              src="../../../assets/images/Star FillW.png"
-              alt=""
-              class="star-fill"
-            />
-            <p *ngIf="!selectedE" class="desc-txt">
-              Selecciona una opción<br />
-              para + información
-            </p>
-            <p *ngIf="selectedE" class="desc-txt">
-              {{ selectedE.descripcionE }}
-            </p>
-            <div class="desc-footer" *ngIf="selectedE">
-              <div class="fecha-cnt">
-                <span>Inicio:</span>
-                <div class="number">
-                  {{ selectedE.fechaInicio | date : "dd/MM/yyyy" }}
-                </div>
-                <div class="number number-2"></div>
-              </div>
 
-              <div class="fecha-cnt">
-                <span>Fin:</span>
-                <div class="number">
-                  {{ selectedE.fechaFin | date : "dd/MM/yyyy" }}
-                </div>
-                <div class="number number-2"></div>
+    </div>
+    <div *ngIf="expe.length > 0">
+      <div class="full-cont">
+        <div class="descripcion">
+          <div class="papper-txt"></div>
+          <img
+            src="/assets/images/Star FillW.png"
+            alt=""
+            class="star-fill"
+          />
+          <p *ngIf="!selectedE" class="desc-txt">
+            Selecciona una opción<br />
+            para + información
+          </p>
+          <p *ngIf="selectedE" class="desc-txt">
+            {{ selectedE.descripcionE }}
+          </p>
+          <div class="desc-footer" *ngIf="selectedE">
+            <div class="fecha-cnt">
+              <span>Inicio:</span>
+              <div class="number">
+                {{ selectedE.fechaInicio | date : "dd/MM/yyyy" }}
               </div>
+              <div class="number number-2"></div>
             </div>
 
-            <div class="circle c-uno"></div>
-            <div class="circle c-dos"></div>
-            <div class="circle c-tres"></div>
+            <div class="fecha-cnt">
+              <span>Fin:</span>
+              <div class="number">
+                {{ selectedE.fechaFin | date : "dd/MM/yyyy" }}
+              </div>
+              <div class="number number-2"></div>
+            </div>
           </div>
 
-          <ul class="list-group">
-            <li
-              class="list-group-item"
-              *ngFor="let Exp of expe; let i = index"
-              (click)="selectExp(Exp, i)"
-              [ngClass]="{ 'sel-back': i === seleccionado }"
-            >
-              <div class="name-cont">
-                <h2>{{ Exp.nombreE }}</h2>
-                <img
-                  src="../../../../assets/images/Star 1.png"
-                  alt=""
-                  class="star-8pts"
-                  [ngClass]="{ 'str-view': i === seleccionado }"
-                />
-                <div class="icons-edit-trash-container" *ngIf="isLogged">
-                  <div class="bttn-container edit-cont">
-                    <img
-                      class="edit-icon"
-                      src="../../../assets/images/create.svg"
-                      (click)="editarItem(Exp)"
-                    />
-                  </div>
+          <div class="circle c-uno"></div>
+          <div class="circle c-dos"></div>
+          <div class="circle c-tres"></div>
+        </div>
 
-                  <div class="bttn-container trash-cont">
-                    <img
-                      class="trash-icon"
-                      src="../../../assets/images/trash.svg"
-                      (click)="delete(Exp.id)"
-                    />
-                  </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let Exp of expe; let i = index"
+            (click)="selectExp(Exp, i)"
+            [ngClass]="{ 'sel-back': i === seleccionado }"
+          >
+            <div class="name-cont">
+              <h2>{{ Exp.nombreE }}</h2>
+              <img
+                src="/assets/images/Star 1.png"
+                alt=""
+                class="star-8pts"
+                [ngClass]="{ 'str-view': i === seleccionado }"
+              />
+              <div class="icons-edit-trash-container" *ngIf="isLogged">
+                <div class="bttn-container edit-cont">
+                  <img
+                    class="edit-icon"
+                    src="/assets/images/create.svg"
+                    (click)="editarItem(Exp)"
+                  />
+                </div>
+
+                <div class="bttn-container trash-cont">
+                  <img
+                    class="trash-icon"
+                    src="/assets/images/trash.svg"
+                    (click)="delete(Exp.id)"
+                  />
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -6,9 +6,7 @@ import { environment } from 'src/environments/environment';
 
 import { Educacion } from '../Models/educacion';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class EducacionService {
 baseUrl = environment.apiUrl + 'educacion';
 

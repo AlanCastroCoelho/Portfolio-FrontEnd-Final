@@ -17,7 +17,6 @@ export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
   selectedE: any;
   subscription: Subscription;
-  loading: boolean = false;
   seleccionado: number = -1;
 
   // Variables para Crear Nueva Experiencia
@@ -36,7 +35,6 @@ export class ExperienciaComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    this.loading = true; // iniciar pantalla de carga
     this.cargarExperiencia();
     this.subscription = this.sExperiencia.refresh$.subscribe(() => {
       this.cargarExperiencia();
@@ -50,9 +48,6 @@ export class ExperienciaComponent implements OnInit {
 
   cargarExperiencia(): void {
     this.sExperiencia.lista().subscribe((data) => {
-      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
-        this.loading = false;
-      });
       this.expe = data;
     });
   }

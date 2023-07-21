@@ -1,15 +1,15 @@
 <nav class="menu" id="navigator">
   <div class="plstc-bckg"></div>
   <label class="burger" for="burger">
-    <input type="checkbox" id="burger" (click)="toggleMenu()" />
+    <input type="checkbox" id="burger" (click)="toggleMenu()" [checked]="openMenu"/>
     <span></span>
     <span></span>
     <span></span>
   </label>
 
   <ul class="nav-links" [ngClass]="{ 'open-menu': openMenu }">
-    <li>
-      <a (click)="scrollToSection('about-me')" class="menu-item" #menuItems>
+    <li >
+      <a (click)="scrollToSection('about-me'); closeMenu()" class="menu-item" #menuItems>
         <div>
           <span class="menu-item-text">About Me.</span>
         </div>
@@ -17,7 +17,7 @@
     </li>
 
     <li>
-      <a (click)="scrollToSection('skills')" class="menu-item" #menuItems>
+      <a (click)="scrollToSection('skills'); closeMenu()" class="menu-item" #menuItems>
         <div>
           <span class="menu-item-text">Skills.</span>
         </div>
@@ -25,7 +25,7 @@
     </li>
 
     <li>
-      <a (click)="scrollToSection('projects')" class="menu-item" #menuItems>
+      <a (click)="scrollToSection('projects'); closeMenu()" class="menu-item" #menuItems>
         <div>
           <span class="menu-item-text">Projects.</span>
         </div>
@@ -33,7 +33,7 @@
     </li>
 
     <li>
-      <a (click)="scrollToSection('contact')" class="menu-item" #menuItems>
+      <a (click)="scrollToSection('contact'); closeMenu()" class="menu-item" #menuItems>
         <div>
           <span class="menu-item-text">Contact.</span>
         </div>

@@ -1,40 +1,38 @@
 .container-add-button {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
-    margin-bottom: 50px;
-   padding-left: 0;
-   color:#fff;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 0;
+  color: #fff;
+}
 
-  .add-bttn {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #100059;
-    border-radius: 35px;
-    transition: all 0.1s ease;
-    border: 1px solid #fff;
-    padding: 0 15px;
-    font-family: "Syncopate", sans-serif;
-    cursor: pointer;
-    transition: all .4s ease;
-  }
-  .add-bttn:hover {
-    background-color: #2900e8;
-    transform: translateY(-3px);
-  }
-  
-  .add-bttn span {
-    margin-left: 13px;
-  }
+.add-bttn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #100059;
+  border-radius: 35px;
+  transition: all 0.1s ease;
+  border: 1px solid #fff;
+  padding: 0 15px;
+  font-family: "Syncopate", sans-serif;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.add-bttn:hover {
+  background-color: #2900e8;
+  transform: translateY(-3px);
+}
 
-  .add-bttn img {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    margin: 0;
-  }
+.add-bttn span {
+  margin-left: 13px;
+}
 
-
+.add-bttn img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 0;
+}

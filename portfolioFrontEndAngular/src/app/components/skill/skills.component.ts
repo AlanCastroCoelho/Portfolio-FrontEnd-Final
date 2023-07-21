@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { map, Subscription } from 'rxjs';
 import { Skill } from 'src/app/Models/skill';
 import { SkillService } from 'src/app/services/skill.service';
@@ -6,22 +6,17 @@ import { TokenService } from 'src/app/services/token.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditSkillComponent } from './edit-skill/edit-skill.component';
-import { Projects } from 'src/app/Models/projects';
-import { Educacion } from 'src/app/Models/educacion';
-import { Experiencia } from 'src/app/Models/experiencia';
-
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'],
+  styleUrls: ['./skills.component.min.css'],
 })
 
 
-export class SkillsComponent implements OnInit, OnDestroy {
+export class SkillsComponent implements AfterViewInit, OnDestroy {
   skill: Skill[] = [];
   subscription: Subscription;
-  loading: boolean = false;
   // Variables para Crear Nuevo Skill
   nombre: string;
   porcentaje: number = 50;
@@ -36,10 +31,8 @@ export class SkillsComponent implements OnInit, OnDestroy {
 
   isLogged = false;
 
-  ngOnInit(): void {
-    this.loading = true; // iniciar pantalla de carga
+  ngAfterViewInit(): void {
     this.cargarSkills();
-
     this.subscription = this.skillS.refresh$.subscribe(() => {
       this.cargarSkills();
     });
@@ -53,9 +46,6 @@ export class SkillsComponent implements OnInit, OnDestroy {
 
   cargarSkills(): void {
     this.skillS.lista().subscribe((data) => {
-      setTimeout(() => { // Agregar una demora de 1 segundo antes de asignar false
-        this.loading = false;
-      });
       this.skill = data;
     });
   }

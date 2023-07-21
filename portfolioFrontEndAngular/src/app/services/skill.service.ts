@@ -5,9 +5,7 @@ import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Skill } from '../Models/skill';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class SkillService {
   baseUrl = environment.apiUrl + 'skill';
  /* URL = 'http://localhost:8080/skill';*/

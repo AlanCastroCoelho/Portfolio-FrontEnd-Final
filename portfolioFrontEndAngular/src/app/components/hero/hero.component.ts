@@ -7,7 +7,7 @@ import { Persona } from 'src/app/Models/persona';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
+  styleUrls: ['./hero.component.min.css'],
 })
 export class HeroComponent implements OnInit {
   persona: Persona;
@@ -22,28 +22,35 @@ export class HeroComponent implements OnInit {
  
 
    ngOnInit(): void {
-
-    this.loading = true; // iniciar pantalla de carga
     this.cargarPersona();
     this.subscription = this.personaS.refresh$.subscribe(() => {
       this.cargarPersona();
     });
   }
   
+  
   cargarPersona(): void {
     const personaId = 1;
     this.loading = true;
+    this.toggleBodyScroll();
     let timeoutId = setTimeout(() => {
       window.alert("¿Demora demasiado? Recarga la Web.");
     }, this.tiempoEspera); 
     this.personaS.detail(personaId).subscribe((data) => {
       clearTimeout(timeoutId); 
       this.persona = data;
-      this.loading = false; 
+      this.loading = false;
+      this.toggleBodyScroll();
     });
   }
 
-
-
+  toggleBodyScroll(): void {
+    if (this.loading) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  
 
 }

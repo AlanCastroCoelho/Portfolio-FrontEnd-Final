@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Projects } from 'src/app/Models/projects';
 import { TokenService } from 'src/app/services/token.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +10,6 @@ import {
   style,
   animate,
 } from '@angular/animations';
-import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
 
 @Component({
   selector: 'app-item-prject',
@@ -34,7 +33,7 @@ import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
     ]),
   ],
 })
-export class ItemPrjectComponent implements OnInit {
+export class ItemPrjectComponent implements AfterViewInit {
   @Input() index: number = 0;
   @Input() projects?: Projects;
 
@@ -50,7 +49,7 @@ export class ItemPrjectComponent implements OnInit {
   showProject = false;
   hoverRevealTransform: string = '';
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -79,11 +78,8 @@ export class ItemPrjectComponent implements OnInit {
     const link = event.currentTarget as HTMLElement;
     const linkRect = link.getBoundingClientRect();
     const mouseX = event.clientX - linkRect.left;
-
     const translateY = -50;
-
     const translateX = (mouseX / linkRect.width) * 100 - 50;
-
     this.hoverRevealTransform = `translate(${translateX}%, ${translateY}%)`;
   }
 

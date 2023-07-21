@@ -52,18 +52,6 @@ td button {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .loader-cont {
-    top: 0px !important;
-    flex-direction: column;
-  }
-  .loader-text {
-    font-size: 20px !important;
-  }
-
-  .loader {
-    width: 34px !important;
-    height: 34px !important;
-  }
 
   .e-cont {
     margin-top: 30px;

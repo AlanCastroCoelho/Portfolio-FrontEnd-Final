@@ -1,10 +1,8 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroComponent } from './components/hero/hero.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { interceptorProvider } from './services/interceptor-service';
@@ -17,7 +15,6 @@ import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/lega
 import { RecargaDirective } from './directives/recarga.directive';
 
 // INICIO Servicios
-import { CargarScriptsService } from './services/cargar-scripts.service';
 import { SkillModule } from './components/skill/skill.module';
 import { ProjectsModule } from './components/projects/projects.module';
 import { AboutMeModule } from './components/about-me/about-me.module';
@@ -26,6 +23,7 @@ import { ExperienciaModule } from './components/experiencia/experiencia.module';
 import { LogInModule } from './components/log-in/log-in.module';
 import { NavModule } from './components/nav/nav.module';
 import { ContactModule } from './components/contact/contact.module';
+import { HeroModule } from './components/hero/hero.module';
 
 //FIN Servicios
 
@@ -33,7 +31,6 @@ import { ContactModule } from './components/contact/contact.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroComponent,
     PortfolioComponent,
     RecargaDirective,
   ],
@@ -45,6 +42,7 @@ import { ContactModule } from './components/contact/contact.module';
     NgbModule,
     MatDialogModule,
     MatButtonModule,
+    HeroModule,
     LoadersModule,
     SkillModule,
     ProjectsModule,
@@ -55,7 +53,7 @@ import { ContactModule } from './components/contact/contact.module';
     NavModule,
     ContactModule
   ],
-  providers: [interceptorProvider, CargarScriptsService],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

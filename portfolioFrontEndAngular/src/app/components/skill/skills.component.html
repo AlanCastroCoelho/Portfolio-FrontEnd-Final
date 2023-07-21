@@ -1,5 +1,5 @@
 <section
-  class="container-fluid d-flex justify-content-center"
+  class="container-fluid d-flex justify-content-center bg-black"
   id="skills"
 >
   <div class="row skills-section mt-2 p-0">
@@ -21,47 +21,31 @@
       </div>
 
       <div class="col-xl-6 col-12 progress-container">
-        <div class="texture"></div>
+
         <div class="skill-inf-container">
 
-          <app-skill-list-items [skillType]="'front-end'" *ngIf="!loading">
+          <app-skill-list-items [skillType]="'front-end'">
           </app-skill-list-items>
 
           <img
-            src="../../../../assets/images/star-skill-fill.png"
+            src="/assets/images/star-skill-fill.png"
             class="star"
           />
-
-          <app-loader-bar
-            *ngIf="loading"
-            [tipo]="'skill'"
-            [tipoSkl]="'front'"
-          ></app-loader-bar>
         </div>
       </div>
     </div>
 
     <div class="row m-0 change-order p-0">
       <div class="col-xl-6 col-12 order-xl-first progress-container">
-        <div class="texture"></div>
         <div class="skill-inf-container">
-          <!--   <div class="circle c-l"  *ngIf="!loading">
-
-          </div> -->
           <app-skill-list-items
             [skillType]="'back-end'"
-            *ngIf="!loading"
           ></app-skill-list-items>
 
           <img
-            src="../../../../assets/images/star-skill-fill.png"
+            src="/assets/images/star-skill-fill.png"
             class="star"
           />
-          <app-loader-bar
-            *ngIf="loading"
-            [tipo]="'skill'"
-            [tipoSkl]="'back'"
-          ></app-loader-bar>
         </div>
       </div>
 
@@ -75,50 +59,28 @@
         <app-skill-image-cont [skillTpe]="'programs'"></app-skill-image-cont>
       </div>
       <div class="col-xl-6 col-12 progress-container">
-        <div class="texture"></div>
         <div class="skill-inf-container">
-          <!--   <div class="circle c-r"  *ngIf="!loading">
-          </div>-->
           <app-skill-list-items
             [skillType]="'programs'"
-            *ngIf="!loading"
           ></app-skill-list-items>
 
           <img
-            src="../../../../assets/images/star-skill-fill.png"
-            class="star"
-          />
-
-          <app-loader-bar
-            *ngIf="loading"
-            [tipo]="'skill'"
-            [tipoSkl]="'prog'"
-          ></app-loader-bar>
+            src="/assets/images/star-skill-fill.png"
+            class="star"/>
         </div>
       </div>
     </div>
 
     <div class="row m-0 p-0 change-order">
       <div class="col-xl-6 col-12 progress-container">
-        <div class="texture"></div>
         <div class="skill-inf-container">
-          <!--<div class="circle c-l"  *ngIf="!loading">
-          </div>-->
           <app-skill-list-items
-            [skillType]="'soft'"
-            *ngIf="!loading"
-          ></app-skill-list-items>
+            [skillType]="'soft'"></app-skill-list-items>
 
           <img
-            src="../../../../assets/images/star-skill-fill.png"
-            class="star"
-          />
+            src="/assets/images/star-skill-fill.png"
+            class="star"/>
 
-          <app-loader-bar
-            *ngIf="loading"
-            [tipo]="'skill'"
-            [tipoSkl]="'soft'"
-          ></app-loader-bar>
         </div>
       </div>
 

@@ -5,9 +5,9 @@ import { ShowProjectComponent } from './show-project/show-project.component';
 import { ItemPrjectComponent } from './item-prject/item-prject.component';
 import { EditProjectsComponent } from './edit-projects/edit-projects.component';
 import { ButtonsModule } from '../buttons/buttons.module';
-import { LoadersModule } from '../loaders/loaders.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TitleSubtitleModule } from '../title-subtitle/title-subtitle.module';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ EditProjectsComponent],
     CommonModule,
     TitleSubtitleModule,
     ButtonsModule,
-    LoadersModule,
     ReactiveFormsModule,
   ],
   exports:[
@@ -28,6 +27,8 @@ EditProjectsComponent],
 ItemPrjectComponent,
 EditProjectsComponent
   ],
-  providers:[]
+  providers:[
+    ProjectsService
+  ]
 })
 export class ProjectsModule { }

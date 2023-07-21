@@ -4,7 +4,7 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EditExperienciaComponent } from './experiencia/edit-experiencia/edit-experiencia/edit-experiencia.component';
 import { ButtonsModule } from '../buttons/buttons.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoadersModule } from '../loaders/loaders.module';
+import { SExperienciaService } from 'src/app/services/s-experiencia.service';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,13 @@ import { LoadersModule } from '../loaders/loaders.module';
     CommonModule,
     ButtonsModule,
     ReactiveFormsModule,
-    LoadersModule
   ],
   exports:[
     ExperienciaComponent,
     EditExperienciaComponent
+  ],
+  providers:[
+    SExperienciaService
   ]
 })
 export class ExperienciaModule { }

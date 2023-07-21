@@ -4,9 +4,7 @@ import { ButtonsModule } from '../buttons/buttons.module';
 import { EducacionComponent } from './educacion.component';
 import { EditEducacionComponent } from './edit-educacion/edit-educacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoadersModule } from '../loaders/loaders.module';
-
-
+import { EducacionService } from 'src/app/services/educacion.service';
 
 @NgModule({
   declarations: [
@@ -17,11 +15,13 @@ import { LoadersModule } from '../loaders/loaders.module';
     CommonModule,
     ButtonsModule,
     ReactiveFormsModule,
-    LoadersModule,
   ],
   exports:[
     EducacionComponent,
     EditEducacionComponent
+  ],
+  providers:[
+    EducacionService
   ]
 })
 export class EducacionModule { }

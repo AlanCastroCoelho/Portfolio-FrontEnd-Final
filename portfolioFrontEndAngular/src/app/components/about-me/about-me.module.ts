@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '../buttons/buttons.module';
 import { LineBreakPipe } from 'src/app/pipes/line-break.pipe';
 import { TitleSubtitleModule } from '../title-subtitle/title-subtitle.module';
-import { LoadersModule } from '../loaders/loaders.module';
 import { EducacionModule } from '../educacion/educacion.module';
 import { ExperienciaModule } from '../experiencia/experiencia.module';
 
@@ -25,7 +24,6 @@ import { ExperienciaModule } from '../experiencia/experiencia.module';
     FormsModule,
     ButtonsModule,
     TitleSubtitleModule,
-    LoadersModule,
     EducacionModule,
     ExperienciaModule
   ],providers:[

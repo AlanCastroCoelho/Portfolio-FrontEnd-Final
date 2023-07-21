@@ -1,22 +1,12 @@
-<header class="container-fluid header-cont">
-  <div class="loader-full-cont" *ngIf="loading">
-    <div class="loader-cont">
-      <app-loader-text [tipo]="'hero'"></app-loader-text>
-    </div>
-
-    <div class="cont-loader-bar">
-      <div class="loader-bar"></div>
-    </div>
+<header class="container-fluid header-cont df-center bg-black" id="hero">
+  <div class="loader-cont" *ngIf="loading">
+<app-spin-load></app-spin-load>
+      <app-loader-text></app-loader-text>
   </div>
-
   <div class="content" *ngIf="!loading">
-    <div class="text-content">
+    <div class="text-content df-center">
       <div class="img-wrapper"></div>
       <p class="txt-1">Portfolio.</p>
     </div>
-
-    <!-- <div class="bottom-content fade-in"> 
-            <p class="pers-title-mobile">{{persona?.titulo}}</p>
-          </div>  -->
   </div>
 </header>

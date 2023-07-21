@@ -1,12 +1,11 @@
 import { Component, OnInit, ElementRef, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
-import { CargarScriptsService } from './../../services/cargar-scripts.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css'],
+  styleUrls: ['./nav.component.min.css'],
 })
 export class NavComponent implements OnInit , AfterViewInit{
   @ViewChildren('menuItems') menuItems!: QueryList<ElementRef>;
@@ -43,6 +42,11 @@ export class NavComponent implements OnInit , AfterViewInit{
     } else {
       document.body.classList.remove('no-scroll');
     }
+  }
+
+  closeMenu() {
+    this.openMenu = false;
+    document.body.classList.remove('no-scroll');
   }
 
   scrollToSection(id: string) {

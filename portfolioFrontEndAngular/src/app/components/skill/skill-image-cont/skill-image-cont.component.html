@@ -1,15 +1,23 @@
 <div
   class="image-container"
-  [ngClass]="{
-    'front-backgr': skillTpe == 'front-end',
-    'back-backgr': skillTpe == 'back-end',
-    'programs-backgr': skillTpe == 'programs',
-    'soft-backgr': skillTpe == 'soft-skills'
-  }"
 >
+
+<video autoplay loop loading="lazy" class="skill-vid" *ngIf="skillTpe == 'front-end'">
+  <source src="/assets/images/front22.mp4">
+</video>
+<video  autoplay loop loading="lazy" class="skill-vid" *ngIf="skillTpe == 'back-end'">
+<source src="/assets/images/holoPBack2.mp4">
+</video>
+<video autoplay loop loading="lazy" class="skill-vid" *ngIf="skillTpe == 'programs'">
+<source src="/assets/images/holoPPrograms2.mp4">
+</video>
+<video  autoplay loop loading="lazy" class="skill-vid soft-backgr" *ngIf="skillTpe == 'soft-skills'">
+<source src="/assets/images/holoPSoft3.mp4">
+</video>
+
+
   <div class="type-cont">
     <p class="front-title">{{ skillTpe }}</p>
-    <img src="../../../../assets/images/star-skill.png" class="star" />
+    <img src="/assets/images/star-skill.png" class="star" />
   </div>
-  <div class="texture"></div>
 </div>

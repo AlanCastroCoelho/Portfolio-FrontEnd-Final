@@ -5,9 +5,7 @@ import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Experiencia } from '../Models/experiencia';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class SExperienciaService {
   baseUrl = environment.apiUrl + 'explab';
   /*expURL = 'http://localhost:8080/explab';*/
