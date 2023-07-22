@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { Projects } from 'src/app/Models/projects';
-import { ProjectsService } from 'src/app/services/projects.service';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -18,19 +16,10 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ]),
   ],
 })
-export class ShowProjectComponent implements OnInit {
+export class ShowProjectComponent{
   @Input() projectToShow?: Projects;
   @Input() indx: number;
 
   constructor(
-    private route: ActivatedRoute,
-    private projectS: ProjectsService
   ) {}
-
-  ngOnInit(): void {
-    const projectId = this.indx;
-    this.projectS.detail(projectId).subscribe((data) => {
-      this.projectToShow = data;
-    });
-  }
 }

@@ -32,6 +32,26 @@ a:active {
   font-size: 1.5rem;
 }
 
+.edit-trash-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+  padding: 0px 0px;
+  margin: 0;
+  color: #fff;
+  z-index: 11;
+  background-color: #222222;
+  border-radius: 35px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  position: relative;
+}
+.edit-trash-cont  img{
+  width: 22px;
+  margin: 0;
+  cursor: pointer;
+}
 
 .bttn-cont {
   padding: 8px;
@@ -47,7 +67,15 @@ a:active {
 .bttn-cont span .new-bttn {
   font-size: 5px;
 }
+.edit-cont:hover {
+  background-color: #2900e8;
+  transition: background-color 0.1s ease;
+}
 
+.trash-cont:hover {
+  background-color: #940000;
+  transition: background-color 0.1s ease;
+}
 .cont{
 padding: 0px;
 }

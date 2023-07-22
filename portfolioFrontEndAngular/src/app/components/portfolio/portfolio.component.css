@@ -4,10 +4,19 @@ app-nav {
   left: 0;
   top: 0;
   z-index: 4500;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 1s ease;
   background: #00000083;
   backdrop-filter: blur(5px);
 }
 .hide-nav {
   transform: translateY(-100%);
+}
+
+.loader-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
 }

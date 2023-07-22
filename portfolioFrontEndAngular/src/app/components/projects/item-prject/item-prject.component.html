@@ -2,16 +2,17 @@
   <div class="prjcts-cont">
     <div class="link" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
       <span (click)="showwProject()">{{ projects.nombreP }}</span>
+     
       <div class="edit-trash-cont" *ngIf="isLogged">
         <div class="bttn-cont edit-cont">
           <img
             class="edit-icon"
-            src="/assets/images/create.svg"
+            src="../../../assets/images/create.svg"
             (click)="editarItem(projects)"
           />
         </div>
         <div class="bttn-cont trash-cont">
-          <img class="trash-icon" src="/assets/images/trash.svg" (click)="delete()"/>
+          <img class="trash-icon" src="../../../assets/images/trash.svg" (click)="delete()"/>
           
         </div>
       </div>
@@ -33,7 +34,8 @@
   </div>
 
     <div *ngIf="showProject" class="show-project-cont" [@fadeInOut]>
-      <app-show-project [indx]="index"> </app-show-project>
+      <app-show-project [indx]="index"
+      [projectToShow]="projects"> </app-show-project>
     </div>
 
 </div>

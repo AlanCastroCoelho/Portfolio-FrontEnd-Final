@@ -13,9 +13,9 @@ import { EditSkillComponent } from '../edit-skill/edit-skill.component';
   styleUrls: ['./skill-list-items.component.css']
 })
 export class SkillListItemsComponent implements AfterViewInit {
-  skill: Skill[] = [];
   subscription: Subscription;
 
+ @Input() skill: Skill[] = [];
 @Input() skillType: string;
 
   constructor(private skillS: SkillService,
@@ -26,12 +26,6 @@ export class SkillListItemsComponent implements AfterViewInit {
     isLogged = false;
 
   ngAfterViewInit(): void {
-    this.cargarSkills();
-
-    this.subscription = this.skillS.refresh$.subscribe(() => {
-      this.cargarSkills();
-    });
-
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -48,6 +42,7 @@ export class SkillListItemsComponent implements AfterViewInit {
   editarItem(objeto: Skill) {
     const ref = this.modalService.open(EditSkillComponent);
     ref.componentInstance.selectedSkill = objeto;
+    this.subscribeToRefresh();
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -70,11 +65,19 @@ export class SkillListItemsComponent implements AfterViewInit {
       );
     }
   }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    console.log('Observable cerrado');
+  
+  private subscribeToRefresh() {
+    if (!this.subscription) {
+      this.subscription = this.skillS.refresh$.subscribe(() => {
+        this.cargarSkills();
+      });
+    }
   }
 
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
 
+} 
 }

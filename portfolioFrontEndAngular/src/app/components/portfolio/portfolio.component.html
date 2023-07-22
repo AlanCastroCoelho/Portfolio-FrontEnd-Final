@@ -1,6 +1,12 @@
-<app-nav [ngClass]="{ 'hide-nav': hideNav}"></app-nav>
-<app-hero></app-hero>
-<app-about-me id="about-me" class="mt-4"></app-about-me>
-<app-skills id="skills" class="mt-5"></app-skills>
-<app-projecs id="projects"></app-projecs>
-<app-contact id="contact"></app-contact>
+<app-nav [ngClass]="{ 'hide-nav': hideNav}" [ngStyle]="{ 'opacity': loading ? '0' : '1' }"></app-nav>
+<div class="loader-cont bg-black" *ngIf="loading">
+    <app-spin-load></app-spin-load>
+          <app-loader-text></app-loader-text>
+      </div>
+<app-hero *ngIf="!loading"></app-hero>
+<app-about-me id="about-me" class="mt-4" (loadingStatus)="onLoadingStatusChange($event)" [hidden]="loading"></app-about-me>
+<div *ngIf="!loading">
+<app-skills  id="skills" class="mt-5" [hidden]="loading"></app-skills>
+<app-projecs id="projects" [hidden]="loading"></app-projecs>
+<app-contact id="contact" [hidden]="loading"></app-contact>
+</div>

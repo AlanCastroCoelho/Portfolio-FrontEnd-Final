@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { TokenService } from 'src/app/services/token.service';
 import { PersonaService } from 'src/app/services/persona.service';
 import { Persona } from 'src/app/Models/persona';
 
@@ -10,25 +9,20 @@ import { Persona } from 'src/app/Models/persona';
   styleUrls: ['./hero.component.min.css'],
 })
 export class HeroComponent implements OnInit {
-  persona: Persona;
   loading: boolean = false;
 
   tiempoEspera: number = 30000; // tiempo de espera máximo permitido en milisegundos
   subscription: Subscription;
 
-  constructor(public personaS: PersonaService,
-    private tokenService: TokenService) {}
+  constructor(public personaS: PersonaService) {}
 
  
 
    ngOnInit(): void {
-    this.cargarPersona();
-    this.subscription = this.personaS.refresh$.subscribe(() => {
-      this.cargarPersona();
-    });
+   /* this.cargarPersona();*/
   }
   
-  
+  /*
   cargarPersona(): void {
     const personaId = 1;
     this.loading = true;
@@ -43,7 +37,7 @@ export class HeroComponent implements OnInit {
       this.toggleBodyScroll();
     });
   }
-
+*/
   toggleBodyScroll(): void {
     if (this.loading) {
       document.body.classList.add('no-scroll');

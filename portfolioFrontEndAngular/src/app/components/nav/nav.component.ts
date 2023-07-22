@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, QueryList, ViewChildren, AfterContentInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -7,8 +7,10 @@ import { TokenService } from 'src/app/services/token.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.min.css'],
 })
-export class NavComponent implements OnInit , AfterViewInit{
+export class NavComponent implements OnInit, AfterViewInit{
+ 
   @ViewChildren('menuItems') menuItems!: QueryList<ElementRef>;
+
   isLogged = false;
   openMenu = false;
 
@@ -26,6 +28,8 @@ export class NavComponent implements OnInit , AfterViewInit{
     }
   }
 
+
+  
   onLogOut(): void {
     this.tokenService.logOut();
     window.location.reload();
@@ -56,9 +60,9 @@ export class NavComponent implements OnInit , AfterViewInit{
     } 
   }
 
-  ngAfterViewInit(): void {
-    this.letterEffect();
-   }
+ ngAfterViewInit(): void {
+     this.letterEffect();
+ }
  
    letterEffect():void{
     this.menuItems.forEach(item => {

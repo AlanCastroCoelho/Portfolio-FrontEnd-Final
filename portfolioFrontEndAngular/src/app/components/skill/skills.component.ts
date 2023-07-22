@@ -1,11 +1,9 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { map, Subscription } from 'rxjs';
 import { Skill } from 'src/app/Models/skill';
 import { SkillService } from 'src/app/services/skill.service';
 import { TokenService } from 'src/app/services/token.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { EditSkillComponent } from './edit-skill/edit-skill.component';
 
 @Component({
   selector: 'app-skills',
@@ -14,9 +12,8 @@ import { EditSkillComponent } from './edit-skill/edit-skill.component';
 })
 
 
-export class SkillsComponent implements AfterViewInit, OnDestroy {
-  skill: Skill[] = [];
-  subscription: Subscription;
+export class SkillsComponent implements OnInit {
+  skills: Skill[] = [];
   // Variables para Crear Nuevo Skill
   nombre: string;
   porcentaje: number = 50;
@@ -25,18 +22,13 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
   constructor(
     private skillS: SkillService,
     private tokenService: TokenService,
-    private router: Router,
-    private modalService: NgbModal
+    private router: Router
   ) {}
 
   isLogged = false;
 
-  ngAfterViewInit(): void {
-    this.cargarSkills();
-    this.subscription = this.skillS.refresh$.subscribe(() => {
-      this.cargarSkills();
-    });
-
+  ngOnInit(): void {
+        this.cargarSkills();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -46,11 +38,9 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
 
   cargarSkills(): void {
     this.skillS.lista().subscribe((data) => {
-      this.skill = data;
+      this.skills = data;
     });
   }
-
-
 
   onCreate(): void {
     const skill = new Skill(this.nombre, this.porcentaje, this.tipoSkill);
@@ -65,11 +55,4 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
       }
     );
   }
-
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    console.log('Observable cerrado');
-  }
-
 }

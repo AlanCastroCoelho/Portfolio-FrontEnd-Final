@@ -30,9 +30,6 @@ export class EducacionComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.cargarEducacion();
-    this.subscription = this.educacionS.refresh$.subscribe(() => {
-      this.cargarEducacion();
-    });
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -62,6 +59,7 @@ export class EducacionComponent implements AfterViewInit, OnDestroy {
   editarItem(educacion: Educacion) {
     const ref = this.modalService.open(EditEducacionComponent);
     ref.componentInstance.selectedEducation = educacion;
+    this.subscribeToRefresh();
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -78,8 +76,17 @@ export class EducacionComponent implements AfterViewInit, OnDestroy {
     this.seleccionado = i;
   }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    console.log('Observable cerrado');
+  private subscribeToRefresh() {
+    if (!this.subscription) {
+      this.subscription = this.educacionS.refresh$.subscribe(() => {
+        this.cargarEducacion();
+      });
+    }
   }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/Models/persona';
 import { Redes } from 'src/app/Models/redes';
@@ -16,6 +16,8 @@ import { EditPersonaComponent } from '../edit-persona/edit-persona.component';
   styleUrls: ['./about-me.component.min.css']
 })
 export class AboutMeComponent implements OnInit {
+  @Output() loadingStatus = new EventEmitter<boolean>();
+
   persona: Persona;
   redes: Redes[] = [];
   subscription: Subscription;
@@ -35,10 +37,7 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarPersona();
-    this.subscription = this.personaS.refresh$.subscribe(() => {
-      this.cargarPersona();
-    });
-    this.cargarRedes();
+
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -64,6 +63,8 @@ export class AboutMeComponent implements OnInit {
     const personaId = 1;
     this.personaS.detail(personaId).subscribe((data) => {
       this.persona = data;
+      this.cargarRedes();
+      this.loadingStatus.emit(false);
     });
   }
 
@@ -71,6 +72,7 @@ export class AboutMeComponent implements OnInit {
   cargarRedes(): void {
     this.redesService.lista().subscribe((data) => {
       this.redes = data;
+
     });
   }
 
@@ -114,6 +116,4 @@ export class AboutMeComponent implements OnInit {
       }
     );
   }
-
-
 }

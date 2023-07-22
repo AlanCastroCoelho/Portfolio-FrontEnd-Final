@@ -83,7 +83,6 @@ export class ItemPrjectComponent implements AfterViewInit {
     this.hoverRevealTransform = `translate(${translateX}%, ${translateY}%)`;
   }
 
-
   onMouseLeave(): void {
     this.hoverRevealTransform = '';
   }

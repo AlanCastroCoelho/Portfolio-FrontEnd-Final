@@ -40,10 +40,6 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.cargarProyectos();
-    this.subscription = this.projectsS.refresh$.subscribe(() => {
-      this.cargarProyectos();
-    });
-
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -78,6 +74,7 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
   editarItem(projects: Projects) {
     const ref = this.modalService.open(EditProjectsComponent);
     ref.componentInstance.selectedProject = projects;
+    this.subscribeToRefresh();
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -108,8 +105,17 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
     );
   }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    console.log('Observable cerrado');
+  private subscribeToRefresh() {
+    if (!this.subscription) {
+      this.subscription = this.projectsS.refresh$.subscribe(() => {
+        this.cargarProyectos();
+      });
+    }
   }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+}
 }

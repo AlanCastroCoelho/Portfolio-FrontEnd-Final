@@ -1,7 +1,6 @@
 <section
   class="container-fluid d-flex justify-content-center bg-black"
-  id="skills"
->
+  id="skills">
   <div class="row skills-section mt-2 p-0">
     <div class="row p-0 m-title">
       <div class="col p-0">
@@ -17,14 +16,16 @@
 
     <div class="row m-0 p-0">
       <div class="col-xl-6 col-12 from-left p-0 image-cont">
-        <app-skill-image-cont [skillTpe]="'front-end'"></app-skill-image-cont>
+        <app-skill-image-cont [skillTpe]="'front-end'"
+        ></app-skill-image-cont>
       </div>
 
       <div class="col-xl-6 col-12 progress-container">
 
         <div class="skill-inf-container">
 
-          <app-skill-list-items [skillType]="'front-end'">
+          <app-skill-list-items [skillType]="'front-end'"
+          [skill]="skills">
           </app-skill-list-items>
 
           <img
@@ -40,6 +41,7 @@
         <div class="skill-inf-container">
           <app-skill-list-items
             [skillType]="'back-end'"
+            [skill]="skills"
           ></app-skill-list-items>
 
           <img
@@ -62,6 +64,7 @@
         <div class="skill-inf-container">
           <app-skill-list-items
             [skillType]="'programs'"
+            [skill]="skills"
           ></app-skill-list-items>
 
           <img
@@ -75,7 +78,8 @@
       <div class="col-xl-6 col-12 progress-container">
         <div class="skill-inf-container">
           <app-skill-list-items
-            [skillType]="'soft'"></app-skill-list-items>
+            [skillType]="'soft'"
+            [skill]="skills"></app-skill-list-items>
 
           <img
             src="/assets/images/star-skill-fill.png"

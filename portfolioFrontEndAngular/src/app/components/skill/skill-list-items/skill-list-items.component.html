@@ -7,6 +7,14 @@
       <div class="list-info skills-title-language">
         <div class="stars-titls-container">
           <h5>{{ skill.nombre }}</h5>
+          <app-bttn-edit-del
+          *ngIf="isLogged"
+            [skill]="skill"
+            [skillId]="skill.id"
+            (bttnEditClicked)="editarItem($event)"
+            (bttnDeleteClciked)="delete($event)"
+          >
+          </app-bttn-edit-del>
         </div>
       </div>
       <div class="progress">
@@ -21,6 +29,7 @@
           [style.width.%]="skill.porcentaje">
           {{ skill.porcentaje }}%
         </div>
+
       </div>
     </div>
   </li>

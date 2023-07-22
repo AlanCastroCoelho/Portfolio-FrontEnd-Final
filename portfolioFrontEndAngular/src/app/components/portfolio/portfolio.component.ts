@@ -10,6 +10,8 @@ export class PortfolioComponent{
   hideNav = false;
   blurNav = false;
 
+  loading: boolean = true;
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event:Event) {
     const currentScrollPos = window.pageYOffset;
@@ -19,5 +21,18 @@ export class PortfolioComponent{
       this.hideNav = true;
     }
     this.prevScrollpos = currentScrollPos;
+  }
+
+  onLoadingStatusChange(status: boolean): void {
+    this.loading = status; 
+    this.toggleBodyScroll();
+  }
+
+  toggleBodyScroll(): void {
+    if (this.loading) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }
 }

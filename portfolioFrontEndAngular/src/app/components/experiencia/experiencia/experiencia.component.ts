@@ -36,9 +36,6 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarExperiencia();
-    this.subscription = this.sExperiencia.refresh$.subscribe(() => {
-      this.cargarExperiencia();
-    });
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -68,6 +65,7 @@ export class ExperienciaComponent implements OnInit {
   editarItem(experiencia: Experiencia) {
     const ref = this.modalService.open(EditExperienciaComponent);
     ref.componentInstance.selectedExp = experiencia;
+    this.subscribeToRefresh();
     ref.result.then(
       (yes) => {
         console.log('Ok Click');
@@ -97,8 +95,17 @@ export class ExperienciaComponent implements OnInit {
     this.seleccionado = i;
   }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    console.log('Observable cerrado');
+  private subscribeToRefresh() {
+    if (!this.subscription) {
+      this.subscription = this.sExperiencia.refresh$.subscribe(() => {
+        this.cargarExperiencia();
+      });
+    }
   }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+}
 }

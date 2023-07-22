@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.no-experience img {
+.no-experience .poster {
   filter: grayscale(100%);
   opacity: 0.6;
   width: 400px;
