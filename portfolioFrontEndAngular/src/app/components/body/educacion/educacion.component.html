@@ -1,0 +1,74 @@
+<section id="educacion">
+<div class="row e-cont">
+  <div class="title-cont">
+    <div class="text-wrapper inner">
+      / educacion / educacion / educacion / educacion / educacion / educacion /
+      educacion / educacion / educacion / educacion / educacion / educacion /
+      educacion / educacion / educacion / educacion / educacion / educacion
+    </div>
+    <div class="plst-wrp"></div>
+  </div>
+  <app-bttn-add dataTarget="Educacion" *ngIf="isLogged"></app-bttn-add>
+  <div class="full-cont">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let Educacion of educacion; let i = index"
+        (click)="selectEducacion(Educacion, i)"
+        [ngClass]="{ 'sel-back': i === seleccionado }"
+      >
+        <div class="name-cont">
+          <h2>{{ Educacion.nombreE }}</h2>
+          <img
+          *ngIf="!isLogged"
+            src="/assets/images/Star 1.png"
+            alt=""
+            class="star-8pts"
+            [ngClass]="{ 'str-view': i === seleccionado }"
+            />
+            <app-bttn-edit-del
+            *ngIf="isLogged"
+            [edu]="Educacion"
+            [eduId]="Educacion.id"
+            (bttnEditEdClicked)="editarItem($event)"
+            (bttnDeleteEdClciked)="delete($event)"
+          ></app-bttn-edit-del>
+        </div>
+      </li>
+    </ul>
+
+    <div class="descripcion">
+      <img
+        src="/assets/images/Star FillW.webp"
+        alt=""
+        class="star-fill"
+      />
+      <p *ngIf="!selectedE" class="desc-txt">
+        Selecciona una opción<br />
+        para + información
+      </p>
+      <p *ngIf="selectedE" class="desc-txt">{{ selectedE.descripcionE }}</p>
+      <div class="desc-footer" *ngIf="selectedE">
+        <div class="fecha-cnt">
+          <span>Inicio:</span>
+          <div class="number">
+            {{ selectedE.fechaInicio | date : "dd/MM/yyyy" }}
+          </div>
+          <div class="number number-2"></div>
+        </div>
+
+        <div class="fecha-cnt">
+          <span>Fin:</span>
+          <div class="number">
+            {{ selectedE.fechaFin | date : "dd/MM/yyyy" }}
+          </div>
+          <div class="number number-2"></div>
+        </div>
+      </div>
+      <div class="circle c-uno"></div>
+      <div class="circle c-dos"></div>
+      <div class="circle c-tres"></div>
+    </div>
+  </div>
+</div>
+</section>

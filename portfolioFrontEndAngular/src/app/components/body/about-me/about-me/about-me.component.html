@@ -1,0 +1,407 @@
+<section id="about-me-section">
+  <div class="container-fluid about-me-all bg-black">
+    <div class="container-fluid" id="about-me-section">
+      <div class="row justify-content-center title-cont m-title">
+        <div class="column-12 p-0">
+          <app-title-subtitle [section]="'about-me'"></app-title-subtitle>
+        </div>
+      </div>
+
+      <div class="row about-me-cont df-center">
+        <img src="/assets/images/C1.webp" alt="" class="cinta c-lft" />
+        <img src="/assets/images/C1.webp" alt="" class="cinta c-rght" />
+        <div class="blck-back">
+          <div
+            class="row"
+            *ngIf="isLogged"
+            class="d-flex justify-content-end align-items-center mb-4"
+          >
+            <div
+              class="edit-container df-center"
+              (click)="editarPersona(persona)"
+            >
+              <img class="edit-icon" src="/assets/images/create.svg" />
+              <span>Editar Datos</span>
+            </div>
+          </div>
+
+          <div class="row d-xl-flex d-md-none p-0 w-cien">
+            <div class="col about-me-head">
+              <img
+                src="/assets/images/Star 1.png"
+                alt=""
+                class="star-8pts star-head"
+              />
+
+              <div class="position-container border-left df-center">
+                <span class="pers-title">{{
+                  persona?.nombre + " Emanuel" + " " + persona?.apellido
+                }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row mt-4 d-flex align-items-center justify-content-center p-0 rw-about-mobile"
+          >
+            <!--Left para Responsive Tablet-->
+            <div
+              class="col-3 d-xl-none d-md-flex justify-content-center r-tablet"
+            >
+              <div
+                class="name-cont-rotate rotate d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/images/Star 1.png"
+                  alt=""
+                  class="star-8pts star-md mb-3"
+                />
+
+                <h2 class="nombre-rotate">
+                  {{ persona?.nombre }} {{ persona?.apellido }}
+                </h2>
+              </div>
+            </div>
+            <!-- ENDLeft para Responsive Tablet-->
+            <div
+              class="col-5 col-xxl-4 col-xl-5 col-md-6 d-flex justify-content-md-center col-photo-cont"
+            >
+              <div class="photo-container">
+                <img
+                  src="/assets/images/img-profile.webp"
+                  id="profile-photo"
+                  [alt]="
+                    'Fotografia de ' + persona?.nombre + ' ' + persona?.apellido
+                  "
+                />
+              </div>
+
+              <div class="title r-movil mt-3">
+                <div class="links">
+                  <ul>
+                    <li *ngFor="let red of redes">
+                      <a [href]="red.urlRed" target="_blank">
+                        <div class="about-items hover-effct">
+                          <img
+                            [src]="red.urlIcon"
+                            [alt]="
+                              'icono de ' +
+                              red.nombreR +
+                              '. Sigueme en ' +
+                              red.nombreR
+                            "
+                          />
+                        </div>
+                      </a>
+
+                      <app-bttn-edit-del
+                        *ngIf="isLogged"
+                        [redes]="red"
+                        [redId]="red.id"
+                        (bttnEditRClicked)="editItemRed($event)"
+                        (bttnDeleteRClciked)="deleteRed($event)"
+                      ></app-bttn-edit-del>
+                    </li>
+                  </ul>
+                  <div
+                    class="border-right about-items hover-effct hover-blue"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addRedSocial"
+                    *ngIf="isLogged"
+                  >
+                    <img src="/assets/images/plus-solid.svg" />
+                  </div>
+
+                  <!--Añadir Redes End-->
+                </div>
+              </div>
+              <div
+                class="modal fade"
+                id="addRedSocial"
+                tabindex="-1"
+                aria-labelledby="addRedSocial"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Nueva Red Social
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+                        <div class="row">
+                          <div>
+                            <form
+                              (ngSubmit)="onCreateRed()"
+                              novalidate
+                              #f="ngForm"
+                            >
+                              <div class="form-group">
+                                <label for="nombreR">Nombre Red</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="nombreR"
+                                  name="nombreR"
+                                  [(ngModel)]="nombreR"
+                                  required
+                                />
+                              </div>
+                              <div class="form-group">
+                                <label for="urlRed">Link Red</label>
+                                <input
+                                  type="string"
+                                  class="form-control"
+                                  id="urlRed"
+                                  name="urlRed"
+                                  [(ngModel)]="urlRed"
+                                  required
+                                />
+                              </div>
+                              <div class="form-group">
+                                <label for="urlIcon">Link Icon</label>
+                                <input
+                                  type="string"
+                                  class="form-control"
+                                  id="urlIcon"
+                                  name="urlIcon"
+                                  [(ngModel)]="urlIcon"
+                                  required
+                                />
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <button class="btn btn-primary">
+                                  Agregar Red
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cont-logo-m">
+                <img
+                  src="/assets/images/logo stayblessed-01.webp"
+                  alt=""
+                  class="logo-stayblessd"
+                />
+              </div>
+            </div>
+
+            <div class="col-7 d-md-none w-cien">
+              <div class="p-cont df-center">
+                <p
+                  class="text-paragraphs"
+                  id="about-me-paragraph"
+                  [innerHTML]="persona?.sobreMi"
+                ></p>
+              </div>
+            </div>
+            <!--Seccion Right para Responsive Tablet-->
+            <div
+              class="col-3 d-xl-none d-md-flex justify-content-center r-tablet"
+            >
+              <div
+                class="name-cont-rotate d-flex align-items-center justify-content-center"
+              >
+                <span class="position-txt">Full Stack Web Developer</span>
+
+                <img
+                  src="/assets/images/Star 1.png"
+                  alt=""
+                  class="star-8pts star-md mt-3"
+                />
+              </div>
+            </div>
+            <!--END Seccion Right para Responsive Tablet-->
+            <div class="col-xxl-8 col-xl-7 d-md-none d-xl-flex r-tablet">
+              <div class="p-cont from-right">
+                <p
+                  class="text-paragraphs"
+                  id="about-me-paragraph"
+                  [innerHTML]="persona?.sobreMi"
+                ></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row d-xl-none d-md-flex justify-content-center mt-4 r-tablet"
+          >
+            <div class="col">
+              <div class="p-cont">
+                <p
+                  class="text-paragraphs"
+                  id="about-me-paragraph"
+                  [innerHTML]="persona?.sobreMi"
+                >
+              </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4 r-tablet">
+            <div class="col about-me-footer df-center">
+              <div class="title">
+                <div class="border-right about-items">
+                  <img
+                    src="/assets/images/Star 1.png"
+                    alt=""
+                    class="star-8pts"
+                  />
+                </div>
+
+                <div class="border-right about-items">
+                  <span>Redes</span>
+                </div>
+
+                <div class="links">
+                  <ul>
+                    <li *ngFor="let red of redes">
+                      <a [href]="red.urlRed" target="_blank">
+                        <div class="border-right about-items hover-effct">
+                          <img [src]="red.urlIcon" alt="" />
+                        </div>
+                      </a>
+                      <app-bttn-edit-del
+                        *ngIf="isLogged"
+                        [redes]="red"
+                        [redId]="red.id"
+                        (bttnEditRClicked)="editItemRed($event)"
+                        (bttnDeleteRClciked)="deleteRed($event)"
+                      ></app-bttn-edit-del>
+                    </li>
+                  </ul>
+                  <div
+                    class="border-right about-items hover-effct hover-blue"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addRedSocial"
+                    *ngIf="isLogged"
+                  >
+                    <img src="/assets/images/plus-solid.svg" alt="" />
+                  </div>
+                  <div
+                    class="modal fade"
+                    id="addRedSocial"
+                    tabindex="-1"
+                    aria-labelledby="addRedSocial"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Nueva Red Social
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="row">
+                              <div>
+                                <form
+                                  (ngSubmit)="onCreateRed()"
+                                  novalidate
+                                  #f="ngForm"
+                                >
+                                  <div class="form-group">
+                                    <label for="nombreR">Nombre Red</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="nombreR"
+                                      name="nombreR"
+                                      [(ngModel)]="nombreR"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="urlRed">Link Red</label>
+                                    <input
+                                      type="string"
+                                      class="form-control"
+                                      id="urlRed"
+                                      name="urlRed"
+                                      [(ngModel)]="urlRed"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="urlIcon">Link Icon</label>
+                                    <input
+                                      type="string"
+                                      class="form-control"
+                                      id="urlIcon"
+                                      name="urlIcon"
+                                      [(ngModel)]="urlIcon"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary"
+                                      data-bs-dismiss="modal"
+                                    >
+                                      Close
+                                    </button>
+                                    <button class="btn btn-primary">
+                                      Agregar Red
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Añadir Redes End-->
+                </div>
+              </div>
+
+              <img
+                src="/assets/images/logo stayblessed-01.webp"
+                alt=""
+                class="logo-stayblessd"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 edu-exp-cont p-0">
+        <div class="col-12 p-0 mb-5 mt-5">
+          <app-educacion></app-educacion>
+        </div>
+
+        <div class="col-12 mt-5 mb-5">
+          <app-experiencia></app-experiencia>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
