@@ -9,7 +9,7 @@ Para dirigirte al repositorio del ***Backend*** haz [clic aquí](https://github.
 
 ✦ Se trata de una Single Page Application (SPA) que hace uso de tecnologías Frontend como HTML, CSS, Angular y Bootstrap para ofrecer una interfaz moderna y de alto rendimiento.
 
-✦ Tiene un sistema un login para administradores, el cual da acceso a las funciones CRUD (Crear, Leer, Actualizar, Borrar) para editar los componentes desde la misma web. 
+✦ Tiene un sistema un login para administradores, el cual da acceso a las funciones CRUD (Crear, Leer, Actualizar, Borrar) para editar los componentes desde la misma web segun el rol. 
 
 ## 📩 Contacto
 
